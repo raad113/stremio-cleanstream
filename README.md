@@ -138,6 +138,11 @@ A self-hosted server starts with the bundled data (376 titles, 1,608 skips) but 
 
 ## Self-Hosting
 
+### Production on your own server
+
+See **[deploy/README.md](deploy/README.md)** for a step-by-step guide: own domain, HTTPS,
+PostgreSQL and Redis kept private, and safe alongside another website on the same VPS.
+
 ### Docker (Recommended)
 
 ```bash
