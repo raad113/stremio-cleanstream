@@ -1,4 +1,4 @@
-From b14dda437f98e13c8a2181483dfe0e509cb8a2c6 Mon Sep 17 00:00:00 2001
+From 61d264b63762771918bdfe4d3c1932dba5a136f1 Mon Sep 17 00:00:00 2001
 From: raad113 <raad113@users.noreply.github.com>
 Date: Mon, 23 Nov 2026 09:35:24 +0000
 Subject: [PATCH] Clean Nuvio: automatic scene skipping with CleanStream
@@ -14,7 +14,7 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01DU7T9PNEyX3FGKvDVoCX1i
 ---
  .github/workflows/android-release.yml         |  267 -
- .github/workflows/build-clean-nuvio.yml       |   94 +
+ .github/workflows/build-clean-nuvio.yml       |  100 +
  .github/workflows/close-stale-issues.yml      |  103 -
  .github/workflows/close-unlabeled-issues.yml  |   98 -
  .../workflows/pr-full-debug-build-comment.yml |  111 -
@@ -22,16 +22,16 @@ Claude-Session: https://claude.ai/code/session_01DU7T9PNEyX3FGKvDVoCX1i
  .github/workflows/pr-template-check.yml       |  164 -
  .github/workflows/stale-needs-info.yml        |   81 -
  .github/workflows/triage-needs-info.yml       |  263 -
- CLEAN_NUVIO.md                                |   42 +
+ CLEAN_NUVIO.md                                |   52 +
  app/build.gradle.kts                          |   10 +-
  app/src/debug/res/values/strings.xml          |    2 +-
- .../nuvio/tv/core/cleanstream/CleanStream.kt  |  218 +
+ .../nuvio/tv/core/cleanstream/CleanStream.kt  |  251 +
  .../ui/screens/player/NuvioMpvSurfaceView.kt  |    7 +
  .../screens/player/PlayerRuntimeController.kt |    6 +
- .../PlayerRuntimeControllerCleanStream.kt     |  143 +
+ .../PlayerRuntimeControllerCleanStream.kt     |  149 +
  .../PlayerRuntimeControllerObservers.kt       |    5 +
  .../PlayerRuntimeControllerPlaybackEvents.kt  |    2 +
- .../settings/CleanStreamSettingsScreen.kt     |  220 +
+ .../settings/CleanStreamSettingsScreen.kt     |  241 +
  .../tv/ui/screens/settings/SettingsScreen.kt  |   30 +-
  app/src/main/res/values-ar/strings.xml        |    2 +-
  app/src/main/res/values-b+es+419/strings.xml  |    2 +-
@@ -71,8 +71,8 @@ Claude-Session: https://claude.ai/code/session_01DU7T9PNEyX3FGKvDVoCX1i
  app/src/main/res/values-zh-rCN/strings.xml    |    2 +-
  app/src/main/res/values-zh-rTW/strings.xml    |    2 +-
  app/src/main/res/values/strings.xml           |    2 +-
- .../core/cleanstream/CleanStreamClientTest.kt |   41 +
- 59 files changed, 4246 insertions(+), 4611 deletions(-)
+ .../core/cleanstream/CleanStreamClientTest.kt |   50 +
+ 59 files changed, 4331 insertions(+), 4611 deletions(-)
  delete mode 100644 .github/workflows/android-release.yml
  create mode 100644 .github/workflows/build-clean-nuvio.yml
  delete mode 100644 .github/workflows/close-stale-issues.yml
@@ -363,10 +363,10 @@ index b31b2e6..0000000
 -          gh release create "${release_args[@]}" "${release_apks[@]}"
 diff --git a/.github/workflows/build-clean-nuvio.yml b/.github/workflows/build-clean-nuvio.yml
 new file mode 100644
-index 0000000..d7277d9
+index 0000000..e1a3979
 --- /dev/null
 +++ b/.github/workflows/build-clean-nuvio.yml
-@@ -0,0 +1,94 @@
+@@ -0,0 +1,100 @@
 +# Builds the Clean Nuvio APK on every push to main (or on demand from the
 +# Actions tab) and publishes it as a GitHub release, so it can be installed
 +# on Android TV with the Downloader app or any file manager.
@@ -403,8 +403,14 @@ index 0000000..d7277d9
 +          java-version: "17"
 +          cache: gradle
 +
++      # Optional: your own service keys (TMDB_API_KEY, TRAKT_CLIENT_ID, ...),
++      # one KEY=value per line, stored in the CLEAN_NUVIO_LOCAL_PROPERTIES secret.
 +      - name: Prepare local properties
-+        run: touch local.properties local.dev.properties
++        env:
++          LOCAL_PROPERTIES: ${{ secrets.CLEAN_NUVIO_LOCAL_PROPERTIES }}
++        run: |
++          printf '%s\n' "$LOCAL_PROPERTIES" > local.properties
++          touch local.dev.properties
 +
 +      - name: Prepare signing key
 +        env:
@@ -1409,10 +1415,10 @@ index 7117991..0000000
 -            }
 diff --git a/CLEAN_NUVIO.md b/CLEAN_NUVIO.md
 new file mode 100644
-index 0000000..6d53f5d
+index 0000000..d1a4323
 --- /dev/null
 +++ b/CLEAN_NUVIO.md
-@@ -0,0 +1,42 @@
+@@ -0,0 +1,52 @@
 +# Clean Nuvio
 +
 +Clean Nuvio is an unofficial, modified version of [NuvioTV](https://github.com/NuvioMedia/NuvioTV)
@@ -1430,6 +1436,8 @@ index 0000000..6d53f5d
 +  choose the CleanStream server, and set each filter (nudity, sexual content and
 +  kissing, violence, language, drugs, frightening scenes) to Off, Low, Medium or High.
 +  High skips every flagged scene; Low skips only the strongest.
++* **Safety margin** (default 1 s) skips a little extra before and after each scene,
++  and **Timing adjustment** moves all skips earlier or later for a differently timed copy.
 +* It works with Nuvio's ExoPlayer and mpv players, and is paused for guests in a watch party.
 +
 +## Other changes from NuvioTV
@@ -1438,8 +1446,16 @@ index 0000000..6d53f5d
 +* The in-app updater is turned off, so it cannot replace itself with official Nuvio.
 +* Nuvio's GitHub workflows are replaced by `.github/workflows/build-clean-nuvio.yml`,
 +  which builds the APK and publishes it as a release.
-+* Nuvio account sync, Trakt and other services need keys that are not included,
-+  so those features are unavailable unless you add your own keys to `local.properties`.
++* Nuvio account sync, Trakt and other services need keys that are not included.
++  Add your own keys (for example `TMDB_API_KEY`, `TRAKT_CLIENT_ID`, `TRAKT_CLIENT_SECRET`)
++  as one `KEY=value` per line in the repository secret `CLEAN_NUVIO_LOCAL_PROPERTIES`.
++  Nuvio account sync uses the Nuvio team's own server and is not available.
++
++## Signing (so updates install over the old version)
++
++Add two repository secrets: `CLEAN_NUVIO_KEYSTORE_BASE64` (the keystore file, base64 encoded,
++key alias `cleannuvio`) and `CLEAN_NUVIO_KEYSTORE_PASSWORD`. Keep a copy of the keystore:
++without it, future builds cannot update an installed Clean Nuvio.
 +
 +## Installing on Android TV
 +
@@ -1508,10 +1524,10 @@ index f4a6336..261cf07 100644
  </resources>
 diff --git a/app/src/main/java/com/nuvio/tv/core/cleanstream/CleanStream.kt b/app/src/main/java/com/nuvio/tv/core/cleanstream/CleanStream.kt
 new file mode 100644
-index 0000000..d06e849
+index 0000000..93bd66c
 --- /dev/null
 +++ b/app/src/main/java/com/nuvio/tv/core/cleanstream/CleanStream.kt
-@@ -0,0 +1,218 @@
+@@ -0,0 +1,251 @@
 +package com.nuvio.tv.core.cleanstream
 +
 +import android.content.Context
@@ -1567,7 +1583,26 @@ index 0000000..d06e849
 +    val enabled: Boolean,
 +    val serverUrl: String,
 +    val levels: Map<CleanStreamCategory, CleanStreamLevel>,
++    /** Extra time skipped before and after every scene, to cover small timing differences. */
++    val marginMs: Long = 1_000L,
++    /** Moves every skip later (positive) or earlier (negative), for a differently timed copy. */
++    val offsetMs: Long = 0L,
 +)
++
++/** Choices offered in settings, cycled by pressing the row. */
++object CleanStreamTiming {
++    val MARGINS_MS = listOf(0L, 1_000L, 2_000L, 3_000L, 5_000L)
++    val OFFSETS_MS = listOf(0L, 500L, 1_000L, 2_000L, 3_000L, 5_000L, -5_000L, -3_000L, -2_000L, -1_000L, -500L)
++
++    fun nextAfter(options: List<Long>, current: Long): Long =
++        options[(options.indexOf(current).coerceAtLeast(0) + 1) % options.size]
++
++    fun label(ms: Long): String {
++        val seconds = ms / 1000.0
++        val text = if (seconds % 1.0 == 0.0) seconds.toLong().toString() else seconds.toString()
++        return if (ms > 0) "+$text s" else "$text s"
++    }
++}
 +
 +/** One stretch of video to skip (or, for channel "audio", to mute). */
 +data class CleanSkip(
@@ -1586,6 +1621,8 @@ index 0000000..d06e849
 +    private const val PREFS = "clean_stream_settings"
 +    private const val KEY_ENABLED = "enabled"
 +    private const val KEY_SERVER = "server_url"
++    private const val KEY_MARGIN = "margin_ms"
++    private const val KEY_OFFSET = "offset_ms"
 +
 +    /** Used until the viewer enters their own server in settings. */
 +    const val DEFAULT_SERVER_URL = "https://cleanstream.elfhosted.com"
@@ -1610,6 +1647,8 @@ index 0000000..d06e849
 +            levels = CleanStreamCategory.entries.associateWith { cat ->
 +                CleanStreamLevel.from(p.getString("level_${cat.key}", null)) ?: cat.defaultLevel
 +            },
++            marginMs = p.getLong(KEY_MARGIN, 1_000L),
++            offsetMs = p.getLong(KEY_OFFSET, 0L),
 +        )
 +    }
 +
@@ -1629,6 +1668,16 @@ index 0000000..d06e849
 +        val clean = url.trim().trimEnd('/').ifBlank { DEFAULT_SERVER_URL }
 +        prefs?.edit()?.putString(KEY_SERVER, clean)?.apply()
 +        state.value = state.value.copy(serverUrl = clean)
++    }
++
++    fun setMargin(ms: Long) {
++        prefs?.edit()?.putLong(KEY_MARGIN, ms)?.apply()
++        state.value = state.value.copy(marginMs = ms)
++    }
++
++    fun setOffset(ms: Long) {
++        prefs?.edit()?.putLong(KEY_OFFSET, ms)?.apply()
++        state.value = state.value.copy(offsetMs = ms)
 +    }
 +
 +    fun setLevel(category: CleanStreamCategory, level: CleanStreamLevel) {
@@ -1767,10 +1816,10 @@ index 01bf9ea..2e15098 100644
      internal var isUserExplicitSubtitleSelection: Boolean = false
 diff --git a/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeControllerCleanStream.kt b/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeControllerCleanStream.kt
 new file mode 100644
-index 0000000..435de61
+index 0000000..dbf8c96
 --- /dev/null
 +++ b/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeControllerCleanStream.kt
-@@ -0,0 +1,143 @@
+@@ -0,0 +1,149 @@
 +package com.nuvio.tv.ui.screens.player
 +
 +import android.os.SystemClock
@@ -1855,14 +1904,20 @@ index 0000000..435de61
 + */
 +internal fun PlayerRuntimeController.applyCleanStreamSkips(positionMs: Long) {
 +    val skips = cleanSkips
-+    if (skips.isEmpty() || !CleanStreamSettings.current.enabled) {
++    val config = CleanStreamSettings.current
++    if (skips.isEmpty() || !config.enabled) {
 +        releaseCleanStreamMute()
 +        return
 +    }
 +    // In a watch party only the host controls playback
 +    if (isPartyControlLocked) return
 +
-+    val active: CleanSkip? = skips.firstOrNull { positionMs >= it.startMs && positionMs < it.endMs - CLEAN_END_MARGIN_MS }
++    // Timing adjustment and safety margin from settings
++    val startShift = config.offsetMs - config.marginMs
++    val endShift = config.offsetMs + config.marginMs
++    val active: CleanSkip? = skips.firstOrNull {
++        positionMs >= it.startMs + startShift && positionMs < it.endMs + endShift - CLEAN_END_MARGIN_MS
++    }
 +
 +    // Leaving a muted scene: turn the sound back on
 +    if (cleanMutedKey != null && active?.key != cleanMutedKey) {
@@ -1884,7 +1939,7 @@ index 0000000..435de61
 +    cleanLastSeekAt = now
 +
 +    val duration = currentPlaybackDurationMs().takeIf { it > 0 } ?: Long.MAX_VALUE
-+    val target = (active.endMs + 50).coerceAtMost(duration)
++    val target = (active.endMs + endShift + 50).coerceIn(0L, duration)
 +    seekPlaybackTo(target, SeekParameters.EXACT, exact = true)
 +    scheduleProgressSyncAfterSeek()
 +    val seconds = ((active.endMs - active.startMs) / 1000).coerceAtLeast(1)
@@ -1959,10 +2014,10 @@ index b410b1d..a1652ea 100644
                          positionMs = pos,
 diff --git a/app/src/main/java/com/nuvio/tv/ui/screens/settings/CleanStreamSettingsScreen.kt b/app/src/main/java/com/nuvio/tv/ui/screens/settings/CleanStreamSettingsScreen.kt
 new file mode 100644
-index 0000000..a9d7b49
+index 0000000..33f62fb
 --- /dev/null
 +++ b/app/src/main/java/com/nuvio/tv/ui/screens/settings/CleanStreamSettingsScreen.kt
-@@ -0,0 +1,220 @@
+@@ -0,0 +1,241 @@
 +@file:OptIn(ExperimentalTvMaterial3Api::class)
 +
 +package com.nuvio.tv.ui.screens.settings
@@ -2010,6 +2065,7 @@ index 0000000..a9d7b49
 +import androidx.tv.material3.Text
 +import com.nuvio.tv.core.cleanstream.CleanStreamCategory
 +import com.nuvio.tv.core.cleanstream.CleanStreamSettings
++import com.nuvio.tv.core.cleanstream.CleanStreamTiming
 +import com.nuvio.tv.ui.components.NuvioDialog
 +import com.nuvio.tv.ui.theme.NuvioTheme
 +
@@ -2061,6 +2117,26 @@ index 0000000..a9d7b49
 +                            subtitle = "Where skip data is loaded from. Use your own server to share skips with family and friends",
 +                            value = config.serverUrl.removePrefix("https://").removePrefix("http://"),
 +                            onClick = { showServerDialog = true },
++                            enabled = config.enabled,
++                            modifier = Modifier
++                        )
++                    }
++                    item(key = "cleanstream_margin") {
++                        SettingsActionRow(
++                            title = "Safety margin",
++                            subtitle = "Also skip this much before and after each scene, in case your copy is timed a little differently",
++                            value = CleanStreamTiming.label(config.marginMs).removePrefix("+"),
++                            onClick = { CleanStreamSettings.setMargin(CleanStreamTiming.nextAfter(CleanStreamTiming.MARGINS_MS, config.marginMs)) },
++                            enabled = config.enabled,
++                            modifier = Modifier
++                        )
++                    }
++                    item(key = "cleanstream_offset") {
++                        SettingsActionRow(
++                            title = "Timing adjustment",
++                            subtitle = "If skips happen too early, choose a + value; if too late, a - value. Set it back to 0 s for other titles",
++                            value = CleanStreamTiming.label(config.offsetMs),
++                            onClick = { CleanStreamSettings.setOffset(CleanStreamTiming.nextAfter(CleanStreamTiming.OFFSETS_MS, config.offsetMs)) },
 +                            enabled = config.enabled,
 +                            modifier = Modifier
 +                        )
@@ -9508,10 +9584,10 @@ index 15e089b..325156e 100644
      <string name="type_movies">Movies</string>
 diff --git a/app/src/test/java/com/nuvio/tv/core/cleanstream/CleanStreamClientTest.kt b/app/src/test/java/com/nuvio/tv/core/cleanstream/CleanStreamClientTest.kt
 new file mode 100644
-index 0000000..3bb58ad
+index 0000000..85f8a8e
 --- /dev/null
 +++ b/app/src/test/java/com/nuvio/tv/core/cleanstream/CleanStreamClientTest.kt
-@@ -0,0 +1,41 @@
+@@ -0,0 +1,50 @@
 +package com.nuvio.tv.core.cleanstream
 +
 +import org.junit.Assert.assertEquals
@@ -9545,6 +9621,15 @@ index 0000000..3bb58ad
 +        assertEquals(9_000L, merged[0].endMs)
 +        assertEquals("both", merged[0].channel)
 +        assertEquals("Violence, Language", merged[0].label)
++    }
++
++    @Test
++    fun timingChoicesCycleAndLabel() {
++        assertEquals(2_000L, CleanStreamTiming.nextAfter(CleanStreamTiming.MARGINS_MS, 1_000L))
++        assertEquals(0L, CleanStreamTiming.nextAfter(CleanStreamTiming.MARGINS_MS, 5_000L))
++        assertEquals("+0.5 s", CleanStreamTiming.label(500L))
++        assertEquals("-2 s", CleanStreamTiming.label(-2_000L))
++        assertEquals("0 s", CleanStreamTiming.label(0L))
 +    }
 +
 +    @Test
