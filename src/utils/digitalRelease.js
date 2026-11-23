@@ -9,7 +9,8 @@
  * 4 digital, 5 physical (DVD/Blu-ray), 6 TV.
  */
 
-const TMDB_API_KEY = process.env.TMDB_API_KEY || '998d6fef6df9a4e1c2a5ff6631ec5af9';
+// Your own free TMDB key (themoviedb.org > Settings > API). Each developer must use their own key.
+const TMDB_API_KEY = process.env.TMDB_API_KEY || '';
 const REGION = (process.env.DIGITAL_RELEASE_REGION || 'US').toUpperCase();
 const TIMEOUT_MS = 8000;
 const CACHE_MS = 12 * 60 * 60 * 1000;

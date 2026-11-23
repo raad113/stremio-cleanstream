@@ -314,6 +314,11 @@ app.get('/configure', (req, res) => {
     <p class="note">
       The add-on shows skip warnings on Desktop, Android, iOS and Web.
     </p>
+    <p class="note" style="font-size: 0.75em;">
+      This product uses the TMDB API but is not endorsed or certified by TMDB.
+      CleanStream does not host, link to or provide any video. Skips apply only while you watch your own,
+      legally obtained copy; no edited copy is created.
+    </p>
 
     <div class="card" style="margin-top: 30px;">
       <h3>⏭️ Automatic skipping (Stremio Web)</h3>
@@ -463,6 +468,10 @@ async function startServer() {
     console.warn('⚠️  REDIS_URL set but connection failed, caching disabled');
   } else {
     console.log('ℹ️  No REDIS_URL set, caching disabled');
+  }
+
+  if (!process.env.TMDB_API_KEY) {
+    console.warn('ℹ️  No TMDB_API_KEY set: posters fall back to Stremio images, and digital release tags and Discover rows are off');
   }
 
   app.listen(PORT, () => {

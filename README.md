@@ -95,6 +95,18 @@ The **New digital releases** row lists popular films released digitally in the l
 
 TMDB-based rows come from the add-on's **CleanStream Discover** catalog, so their posters carry the digital release tag and the CleanStream band. Curated lists (franchises, directors, documentaries) are the public Trakt lists B.E.S.T. uses; Nuvio reads them itself, so those posters are Nuvio's own. B.E.S.T.'s adult list is left out, and its MDBList/TVDB rows (which need AIOMetadata) are replaced by equivalent TMDB rows.
 
+## Legal and Licensing
+
+This section explains how the project is meant to stay within the law. It is not legal advice; check the rules of the country where you run the server.
+
+* **No video is hosted, linked or provided.** CleanStream serves skip times, metadata and posters only. Use it only with copies you are entitled to watch.
+* **Filtering during playback only.** Scenes are skipped or muted while you watch; no edited copy is made or shared, and nothing is decrypted. In the United States this matches the Family Movie Act of 2005 (17 U.S.C. § 110(11)), which allows making parts of an authorised copy imperceptible during private home viewing as long as no fixed copy of the altered version is created. Services that copied or decrypted films to do this have lost in court (Disney Enterprises, Inc. v. VidAngel, Inc., 9th Cir. 2017).
+* **TMDB.** Each server must use its own TMDB API key (`TMDB_API_KEY`) and show the attribution "This product uses the TMDB API but is not endorsed or certified by TMDB". Non-commercial use only unless you have a commercial licence from TMDB.
+* **Skip data.** The bundled skip data comes from VideoSkip (credited below). Check the VideoSkip terms before redistributing the data commercially.
+* **Collection.** The ready-made collection is modelled on the B.E.S.T. community collection and uses public Trakt lists by their authors; credit them when sharing it.
+* **Privacy.** Votes are stored as a salted hash of IP address and browser, never the address itself; rate limits keep IP addresses in memory for up to an hour. Set `CLEANSTREAM_VOTE_SALT` to a long random secret. If others use your server, tell them what is stored.
+* **Licence.** CleanStream is MIT licensed (see `LICENSE`).
+
 ## Android TV and Nuvio
 
 | Feature | Stremio / Nuvio on Android TV | Stremio Web in a browser |
@@ -164,10 +176,10 @@ This runs with JSON file storage (no database required).
 | `CLEANSTREAM_BASE_URL` | Public URL of the server (also written into the auto-skip script) | `http://localhost:7000` |
 | `CLEANSTREAM_DATA_DIR` | Folder for JSON storage | `data/filters` |
 | `TRUST_PROXY` | Express `trust proxy` setting, e.g. `1` behind one proxy | (off) |
-| `CLEANSTREAM_VOTE_SALT` | Secret salt for anonymous voter ids | `cleanstream` |
+| `CLEANSTREAM_VOTE_SALT` | Secret salt for anonymous voter ids (set a long random value) | random at each start |
 | `CONTRIBUTE_LIMIT_PER_HOUR` | Contributions per IP per hour | `60` |
 | `VOTE_LIMIT_PER_HOUR` | Votes per IP per hour | `300` |
-| `TMDB_API_KEY` | TMDB key for catalogue posters | (built-in key) |
+| `TMDB_API_KEY` | Your own free TMDB key (posters, digital release tags, Discover rows) | (none: those features are off) |
 | `DIGITAL_RELEASE_REGION` | Country used for digital release dates | `US` |
 | `POSTER_SOURCE_TEMPLATE` | Optional poster source, `{imdbId}` is replaced | (TMDB, then metahub) |
 

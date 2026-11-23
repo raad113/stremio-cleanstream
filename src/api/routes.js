@@ -48,8 +48,15 @@ function parseConfig(query, defaults = DEFAULT_CONFIG) {
  * Anonymous, stable identifier for a visitor (used to stop repeat voting).
  * Only a salted hash is stored, never the IP address itself.
  */
+// Secret salt for anonymous voter ids. Without CLEANSTREAM_VOTE_SALT a random one is
+// made at start-up (more private than a public default, but votes can repeat after a restart).
+const VOTE_SALT = process.env.CLEANSTREAM_VOTE_SALT || crypto.randomBytes(32).toString('hex');
+if (!process.env.CLEANSTREAM_VOTE_SALT) {
+  console.warn('[API] CLEANSTREAM_VOTE_SALT is not set: using a random salt until the next restart');
+}
+
 function visitorIdFor(req) {
-  const salt = process.env.CLEANSTREAM_VOTE_SALT || 'cleanstream';
+  const salt = VOTE_SALT;
   return crypto
     .createHash('sha256')
     .update(`${salt}|${req.ip}|${req.get('user-agent') || ''}`)

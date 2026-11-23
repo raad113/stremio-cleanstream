@@ -20,7 +20,8 @@ const HEIGHT = 750;
 const FETCH_TIMEOUT_MS = 8000;
 const CACHE_LIMIT = 500;
 
-const TMDB_API_KEY = process.env.TMDB_API_KEY || '998d6fef6df9a4e1c2a5ff6631ec5af9';
+// Your own free TMDB key (themoviedb.org > Settings > API). Each developer must use their own key.
+const TMDB_API_KEY = process.env.TMDB_API_KEY || '';
 
 // Small in-memory cache: key -> JPEG buffer (oldest entries are dropped first)
 const cache = new Map();
