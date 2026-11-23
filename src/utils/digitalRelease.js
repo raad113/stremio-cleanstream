@@ -147,4 +147,4 @@ function digitalTagText(info, now = new Date()) {
   return null;
 }
 
-module.exports = { getDigitalRelease, newDigitalReleases, digitalStatusFromReleases, digitalTagText };
+module.exports = { getDigitalRelease, newDigitalReleases, digitalStatusFromReleases, digitalTagText, tmdb, cached, imdbIdForTmdb };

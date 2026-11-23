@@ -4,11 +4,12 @@
  */
 
 const { addonBuilder } = require('stremio-addon-sdk');
+const { presetNames } = require('../utils/tmdbDiscover');
 
 // Addon Manifest
 const manifest = {
   id: 'community.cleanstream',
-  version: '1.5.0',
+  version: '1.6.0',
   name: 'CleanStream',
   description: 'Family-friendly viewing - skip nudity, violence, and other unwanted content in movies and TV shows. Community-driven, free forever.',
   logo: 'https://raw.githubusercontent.com/cleanstream/cleanstream-stremio/main/assets/logo.png',
@@ -106,6 +107,25 @@ const manifest = {
       id: 'cleanstream-digital',
       name: 'New digital releases',
       extra: [
+        { name: 'skip', isRequired: false },
+      ],
+    },
+    // TMDB-based rows used by the ready-made Nuvio collection (and Stremio's Discover page)
+    {
+      type: 'movie',
+      id: 'cleanstream-discover',
+      name: 'CleanStream Discover',
+      extra: [
+        { name: 'genre', isRequired: true, options: presetNames('movie') },
+        { name: 'skip', isRequired: false },
+      ],
+    },
+    {
+      type: 'series',
+      id: 'cleanstream-discover',
+      name: 'CleanStream Discover',
+      extra: [
+        { name: 'genre', isRequired: true, options: presetNames('series') },
         { name: 'skip', isRequired: false },
       ],
     },

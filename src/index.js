@@ -79,6 +79,15 @@ function sendSkipper(req, res) {
 app.get('/skipper/cleanstream.user.js', sendSkipper);
 
 /**
+ * Ready-made Nuvio collection (Settings > Collections > Import > URL).
+ */
+const { buildCollection } = require('./collection/buildCollection');
+app.get('/collection.json', (req, res) => {
+  res.setHeader('Cache-Control', 'public, max-age=3600');
+  res.json(buildCollection());
+});
+
+/**
  * Poster with a "CleanStream" badge, used by the CleanStream catalog rows.
  * ?d= second badge line (e.g. "12 skips"), ?t= title for the fallback poster.
  */
@@ -318,6 +327,18 @@ app.get('/configure', (req, res) => {
       </a>
       <p style="color: #8892b0; font-size: 0.85em; margin-bottom: 0;">
         It skips flagged scenes, mutes flagged language, and shows Undo / 👍 / 👎 after each skip.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📚 Ready-made Nuvio collection</h3>
+      <p style="color: #8892b0; font-size: 0.9em;">
+        Movies, TV, decades, streaming services, family, franchises, documentaries, directors and genres,
+        modelled on the B.E.S.T. collection. Install this add-on in Nuvio first, then go to
+        <strong>Settings → Collections → Import → URL</strong> and enter:
+      </p>
+      <p style="font-family: monospace; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 6px; font-size: 0.85em;">
+        ${BASE_URL}/collection.json
       </p>
     </div>
 

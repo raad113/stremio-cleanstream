@@ -86,6 +86,15 @@ Films with no digital date on TMDB that came out more than six months ago (or ar
 
 The **New digital releases** row lists popular films released digitally in the last 60 days. Titles that already have CleanStream skips also show the CleanStream band.
 
+## Ready-made Nuvio Collection
+
+`/collection.json` is a Nuvio collection modelled on the B.E.S.T. community collection and reorganised for families: **CleanStream**, **Movies**, **TV Shows**, **Decades**, **Streaming** (Netflix, Prime Video, Disney+, Apple TV+, Paramount+, HBO Max, Starz), **Family & Animation**, **Franchises**, **Documentaries & Nature**, **Directors** and **Genres** (96 folders).
+
+1. Install the CleanStream add-on in Nuvio.
+2. Go to **Settings → Collections → Import → URL** and enter `https://<your-server>/collection.json`.
+
+TMDB-based rows come from the add-on's **CleanStream Discover** catalog, so their posters carry the digital release tag and the CleanStream band. Curated lists (franchises, directors, documentaries) are the public Trakt lists B.E.S.T. uses; Nuvio reads them itself, so those posters are Nuvio's own. B.E.S.T.'s adult list is left out, and its MDBList/TVDB rows (which need AIOMetadata) are replaced by equivalent TMDB rows.
+
 ## Android TV and Nuvio
 
 | Feature | Stremio / Nuvio on Android TV | Stremio Web in a browser |

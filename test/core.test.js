@@ -123,3 +123,36 @@ test('digital release status from TMDB release dates', () => {
   const old = digitalStatusFromReleases([rel('US', 3, '1997-12-19')], now, 'US');
   assert.strictEqual(old.status, 'digital');
 });
+
+test('ready-made collection passes the same checks as Nuvio import', () => {
+  const { buildCollection, ADDON_ID } = require('../src/collection/buildCollection');
+  const { manifest } = require('../src/addon/manifest');
+  const { presetNames } = require('../src/utils/tmdbDiscover');
+  const collections = buildCollection();
+  assert.ok(Array.isArray(collections) && collections.length > 0);
+
+  const folderIds = new Set();
+  const catalogIds = new Set(manifest.catalogs.map(c => `${c.type}:${c.id}`));
+  for (const c of collections) {
+    assert.ok(c.id && c.title && Array.isArray(c.folders), `collection ${c.title}`);
+    for (const f of c.folders) {
+      assert.ok(f.id && f.title && Array.isArray(f.sources) && f.sources.length, `folder ${f.title}`);
+      assert.ok(['POSTER', 'LANDSCAPE', 'SQUARE'].includes(f.tileShape));
+      assert.ok(!folderIds.has(f.id), `duplicate folder id ${f.id}`);
+      folderIds.add(f.id);
+      for (const s of f.sources) {
+        if (s.provider === 'addon') {
+          assert.strictEqual(s.addonId, ADDON_ID);
+          assert.ok(catalogIds.has(`${s.type}:${s.catalogId}`), `unknown catalog ${s.type}:${s.catalogId}`);
+          if (s.catalogId === 'cleanstream-discover') assert.ok(presetNames(s.type).includes(s.genre), `unknown row ${s.genre}`);
+        } else {
+          assert.strictEqual(s.provider, 'trakt');
+          assert.ok(Number.isInteger(s.traktListId));
+          assert.ok(['MOVIE', 'TV'].includes(s.mediaType));
+        }
+      }
+    }
+  }
+  const json = JSON.stringify(collections);
+  assert.ok(!/erotic/i.test(json), 'adult list must not be included');
+});

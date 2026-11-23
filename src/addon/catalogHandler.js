@@ -6,6 +6,7 @@
 
 const db = require('../database');
 const { newDigitalReleases } = require('../utils/digitalRelease');
+const { discover } = require('../utils/tmdbDiscover');
 
 const BASE_URL = () => process.env.CLEANSTREAM_BASE_URL || `http://localhost:${process.env.PORT || 7000}`;
 const PAGE_SIZE = 100;
@@ -92,6 +93,34 @@ async function digitalReleaseMetas(skip) {
 }
 
 /**
+ * "CleanStream Discover" rows (TMDB based). The row is chosen with ?genre=.
+ * Movie posters get the digital release tag; titles with skips get the band.
+ */
+async function discoverMetas(type, genre, skip) {
+  if (!genre) return [];
+  const page = Math.floor(skip / 20) + 1;
+  const items = await discover(type, genre, page);
+  return Promise.all(items.map(async item => {
+    let count = 0;
+    if (type === 'movie') {
+      const filters = await db.getFilters(item.imdbId);
+      count = filters ? filters.segments.length : 0;
+    }
+    return {
+      id: item.imdbId,
+      type,
+      name: item.title,
+      poster: count
+        ? posterUrl(item.imdbId, plural(count, 'skip'), item.title)
+        : posterUrl(item.imdbId, '', item.title, { band: false }),
+      posterShape: 'poster',
+      description: (count ? `CleanStream: ${plural(count, 'skip segment')} available. ` : '') + (item.overview || ''),
+      releaseInfo: item.year ? String(item.year) : undefined,
+    };
+  }));
+}
+
+/**
  * Handle catalog requests from Stremio
  * @param {object} args - { type, id, extra }
  */
@@ -100,6 +129,10 @@ async function catalogHandler({ type, id, extra }) {
   const search = extra?.search;
 
   try {
+    if (id === 'cleanstream-discover') {
+      return { metas: await discoverMetas(type, extra?.genre, skip), cacheMaxAge: 3600 };
+    }
+
     if (type === 'series') {
       let shows = await listShows();
       if (search) {
