@@ -1,29 +1,42 @@
 # Putting CleanStream online
 
-This guide installs CleanStream on a Linux VPS under its own domain. It can share a
+This guide installs CleanStream on a Linux VPS under its own free address. It can share a
 server with another website without touching it: CleanStream lives in its own folder
 (`/opt/cleanstream`), runs in its own Docker containers, and keeps its own database.
 
-Time needed: about 30 minutes, plus up to an hour for a new domain to start working.
+Time needed: about 30 minutes. Cost: nothing extra if you already have the server.
 
-## 1. Get a domain
+## 1. Get a free address (DuckDNS)
 
-Buy a domain for CleanStream from a registrar such as Cloudflare, Porkbun or Namecheap
-(about 10 to 15 USD a year). Avoid other companies' names in it (for example "nuvio",
-"netflix" or "stremio"); a neutral name such as `familyskips.com` avoids trademark trouble.
+[DuckDNS](https://www.duckdns.org) gives you a free, permanent address such as
+`familyskips.duckdns.org`, separate from any other website you run. HTTPS is free too
+(Caddy or certbot gets the certificate automatically).
 
-You can use the domain itself (`familyskips.com`) or a subdomain (`app.familyskips.com`).
+1. Open https://www.duckdns.org and sign in (GitHub, Google, Reddit or X account).
+2. Type a name in **sub domain**, for example `familyskips`, and press **add domain**.
+   Avoid other companies' names (for example "nuvio", "netflix" or "stremio").
+3. In the **current ip** box next to your new name, enter your server's public IP address
+   (step 3 prints it, or see your VPS dashboard) and press **update ip**.
 
-## 2. Point the domain at your server
+Your `DOMAIN` setting is then `familyskips.duckdns.org`. It usually works within a minute.
 
-Find your server's public IP address (step 3 prints it, or see your VPS dashboard).
-In the registrar's DNS settings add one record:
+Keep the DuckDNS **token** shown at the top of the page private; you do not need it here,
+because a VPS keeps the same IP address.
 
-| Type | Name | Value |
-|------|------|-------|
-| A | `@` (or `app` for a subdomain) | your server's IP address |
+> **Prefer your own name later?** A paid domain (about 10 to 15 USD a year from Cloudflare,
+> Porkbun or Namecheap) looks more professional and does not depend on a free service.
+> Point an **A** record (`@` or a subdomain) at the server's IP, change `DOMAIN` in `.env`,
+> and restart; nothing else changes.
 
-If you use Cloudflare, set the record to **DNS only** (grey cloud) until HTTPS works.
+## 2. Wait for the address to work
+
+Check from your own computer that the name points at the server:
+
+```bash
+ping familyskips.duckdns.org
+```
+
+It should show your server's IP address.
 
 ## 3. Check the server
 
