@@ -1,0 +1,131 @@
+{
+  "imdbId": "tt0166924",
+  "title": "Mulholland Drive",
+  "year": 2001,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r18o0148z2t79varl620",
+      "startMs": 1415950,
+      "endMs": 1438950,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "female, obscured",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.408Z"
+    },
+    {
+      "id": "cmk83r18r014az2t799fnsms7",
+      "startMs": 1450450,
+      "endMs": 1455450,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "female, obscured",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.412Z"
+    },
+    {
+      "id": "cmk83r18u014cz2t7equi22fd",
+      "startMs": 1463450,
+      "endMs": 1467950,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "female, obscured",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.415Z"
+    },
+    {
+      "id": "cmk83r18x014ez2t7wonf03n1",
+      "startMs": 3030260,
+      "endMs": 3037260,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "woman in underwear",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.418Z"
+    },
+    {
+      "id": "cmk83r191014gz2t7l5lsuz2t",
+      "startMs": 4617200,
+      "endMs": 4622700,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "man grabbing woman's behind",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.421Z"
+    },
+    {
+      "id": "cmk83r195014iz2t79g0wqc7x",
+      "startMs": 5922500,
+      "endMs": 6118670,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "female homosexual",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.425Z"
+    },
+    {
+      "id": "cmk83r198014kz2t7g2wdlmxy",
+      "startMs": 7286180,
+      "endMs": 7378010,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "female homosexual intercourse",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.428Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.405Z",
+  "updatedAt": "2026-01-10T09:31:49.220Z"
+}

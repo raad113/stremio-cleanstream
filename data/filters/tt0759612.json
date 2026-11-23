@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0759612",
+  "title": "Longford",
+  "year": 2006,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r12u010rz2t79hhcd6fp",
+      "startMs": 2766510,
+      "endMs": 2948150,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.198Z"
+    },
+    {
+      "id": "cmk83r12y010tz2t7j04uji5q",
+      "startMs": 2965210,
+      "endMs": 3014070,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.202Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.196Z",
+  "updatedAt": "2026-01-10T09:31:49.126Z"
+}

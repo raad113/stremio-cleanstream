@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt9770150",
+  "title": "Nomadland",
+  "year": 2021,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1sc01gbz2t7u2660br4",
+      "startMs": 2122630,
+      "endMs": 2181730,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.116Z"
+    },
+    {
+      "id": "cmk83r1sg01gdz2t7zaoa1fzv",
+      "startMs": 2740630,
+      "endMs": 2754130,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.120Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.113Z",
+  "updatedAt": "2026-01-10T09:31:49.441Z"
+}

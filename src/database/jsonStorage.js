@@ -1,7 +1,9 @@
 /**
- * CleanStream Database
- * Simple JSON-based storage for skip data
- * Can be upgraded to SQLite/PostgreSQL for production
+ * CleanStream JSON storage
+ *
+ * File-based storage used when DATABASE_URL is not set. Each title lives in
+ * data/filters/<id>.json. Episode ids such as "tt0944947:1:2" are stored as
+ * "tt0944947_1_2.json" so the file names are valid on every operating system.
  */
 
 const fs = require('fs');
@@ -9,153 +11,194 @@ const path = require('path');
 
 const DATA_DIR = process.env.CLEANSTREAM_DATA_DIR || path.join(__dirname, '../../data/filters');
 
-// Ensure data directory exists
+// Movie ids look like tt1234567; episode ids add :season:episode.
+const CONTENT_ID_PATTERN = /^tt\d{1,10}(:\d{1,4}:\d{1,5})?$/;
+
 if (!fs.existsSync(DATA_DIR)) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
 }
 
-/**
- * Get filters for a specific IMDB ID
- * @param {string} imdbId - IMDB ID (e.g., 'tt1234567')
- * @returns {object|null} Filter data or null if not found
- */
-function getFilters(imdbId) {
-  const filePath = path.join(DATA_DIR, `${imdbId}.json`);
-  
-  if (!fs.existsSync(filePath)) {
-    return null;
+// In-memory copy of every title, built on first use and kept in sync on writes.
+let index = null;
+
+function isValidContentId(id) {
+  return typeof id === 'string' && CONTENT_ID_PATTERN.test(id);
+}
+
+function fileFor(imdbId) {
+  if (!isValidContentId(imdbId)) {
+    throw new Error(`Invalid content id: ${imdbId}`);
   }
-  
-  try {
-    const data = fs.readFileSync(filePath, 'utf8');
-    return JSON.parse(data);
-  } catch (error) {
-    console.error(`Error reading filters for ${imdbId}:`, error);
-    return null;
+  return path.join(DATA_DIR, `${imdbId.replace(/:/g, '_')}.json`);
+}
+
+function loadIndex() {
+  if (index) return index;
+  index = new Map();
+  for (const file of fs.readdirSync(DATA_DIR)) {
+    if (!file.endsWith('.json')) continue;
+    try {
+      const data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, file), 'utf8'));
+      if (data && data.imdbId) index.set(data.imdbId, data);
+    } catch (error) {
+      console.error(`[JSON storage] Could not read ${file}:`, error.message);
+    }
   }
+  return index;
 }
 
 /**
- * Save filters for a specific IMDB ID
- * @param {string} imdbId - IMDB ID
- * @param {object} filterData - Filter data to save
+ * Get filters for a movie or episode id. Returns null when nothing is stored.
+ */
+function getFilters(imdbId) {
+  if (!isValidContentId(imdbId)) return null;
+  return loadIndex().get(imdbId) || null;
+}
+
+/**
+ * Save the full filter document for an id.
  */
 function saveFilters(imdbId, filterData) {
-  const filePath = path.join(DATA_DIR, `${imdbId}.json`);
-  
   try {
-    fs.writeFileSync(filePath, JSON.stringify(filterData, null, 2));
+    fs.writeFileSync(fileFor(imdbId), JSON.stringify(filterData, null, 2) + '\n');
+    loadIndex().set(imdbId, filterData);
     return true;
   } catch (error) {
-    console.error(`Error saving filters for ${imdbId}:`, error);
+    console.error(`[JSON storage] Error saving ${imdbId}:`, error.message);
     return false;
   }
 }
 
-/**
- * Add a new skip segment to a movie/show
- * @param {string} imdbId - IMDB ID
- * @param {object} segment - Skip segment data
- */
-function addSegment(imdbId, segment) {
-  let filterData = getFilters(imdbId) || createEmptyFilterData(imdbId);
-  
-  // Generate segment ID
-  segment.id = `seg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  segment.addedAt = new Date().toISOString();
-  segment.votes = { up: 0, down: 0 };
-  
-  filterData.segments.push(segment);
-  filterData.updatedAt = new Date().toISOString();
-  filterData.version++;
-  
-  saveFilters(imdbId, filterData);
-  return segment;
-}
-
-/**
- * Create empty filter data structure
- * @param {string} imdbId - IMDB ID
- */
 function createEmptyFilterData(imdbId) {
+  const now = new Date().toISOString();
   return {
     imdbId,
     title: null,
     year: null,
-    type: null, // 'movie' or 'series'
+    type: imdbId.includes(':') ? 'episode' : null,
     segments: [],
-    releases: [], // Different release versions (theatrical, streaming, etc.)
+    releases: [],
     version: 1,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
+    createdAt: now,
+    updatedAt: now,
   };
 }
 
 /**
- * List all available filter files
+ * Add a new skip segment and return it.
  */
-function listAllFilters() {
-  try {
-    const files = fs.readdirSync(DATA_DIR);
-    return files
-      .filter(f => f.endsWith('.json'))
-      .map(f => f.replace('.json', ''));
-  } catch (error) {
-    console.error('Error listing filters:', error);
-    return [];
-  }
+function addSegment(imdbId, segment) {
+  const filterData = getFilters(imdbId) || createEmptyFilterData(imdbId);
+  const { contributorIp, titleName, year, type, ...clean } = segment;
+
+  const stored = {
+    ...clean,
+    id: `seg_${Date.now()}_${Math.random().toString(36).slice(2, 11)}`,
+    addedAt: new Date().toISOString(),
+    votes: { up: 0, down: 0 },
+    verified: false,
+  };
+
+  if (!filterData.title && titleName) filterData.title = titleName;
+  if (!filterData.year && year) filterData.year = year;
+  if (!filterData.type && type) filterData.type = type;
+
+  filterData.segments.push(stored);
+  filterData.segments.sort((a, b) => a.startMs - b.startMs);
+  filterData.updatedAt = stored.addedAt;
+  filterData.version = (filterData.version || 1) + 1;
+
+  saveFilters(imdbId, filterData);
+  return stored;
 }
 
 /**
- * Vote on a segment
- * @param {string} imdbId - IMDB ID
- * @param {string} segmentId - Segment ID
- * @param {string} voteType - 'up' or 'down'
+ * Record a vote. Each visitor gets one vote per segment; voting the other way
+ * changes the earlier vote instead of adding a second one.
  */
-function voteSegment(imdbId, segmentId, voteType) {
+function voteSegment(imdbId, segmentId, voteType, visitorId) {
   const filterData = getFilters(imdbId);
-  if (!filterData) return false;
-  
+  if (!filterData) return { success: false, reason: 'not_found' };
+
   const segment = filterData.segments.find(s => s.id === segmentId);
-  if (!segment) return false;
-  
-  if (voteType === 'up') {
-    segment.votes.up++;
-  } else if (voteType === 'down') {
-    segment.votes.down++;
-  }
-  
+  if (!segment) return { success: false, reason: 'not_found' };
+
+  segment.votes = segment.votes || { up: 0, down: 0 };
+  segment.voters = segment.voters || {};
+  const previous = visitorId ? segment.voters[visitorId] : undefined;
+
+  if (previous === voteType) return { success: false, reason: 'already_voted' };
+  if (previous) segment.votes[previous] = Math.max(0, segment.votes[previous] - 1);
+
+  segment.votes[voteType] += 1;
+  if (visitorId) segment.voters[visitorId] = voteType;
+
   filterData.updatedAt = new Date().toISOString();
   saveFilters(imdbId, filterData);
-  return true;
+  return { success: true, changed: Boolean(previous) };
+}
+
+function listAllFilters() {
+  return [...loadIndex().keys()];
+}
+
+function summarize(t) {
+  return {
+    imdbId: t.imdbId,
+    title: t.title,
+    year: t.year,
+    type: t.type,
+    segmentCount: (t.segments || []).length,
+    updatedAt: t.updatedAt,
+  };
 }
 
 /**
- * Get statistics
+ * List titles that have segments, with the same sort options as PostgreSQL.
  */
-function getStats() {
-  const filters = listAllFilters();
-  let totalSegments = 0;
-  
-  filters.forEach(imdbId => {
-    const data = getFilters(imdbId);
-    if (data) {
-      totalSegments += data.segments.length;
-    }
-  });
-  
-  return {
-    totalMovies: filters.length,
-    totalSegments,
+function listTitles({ limit = 100, offset = 0, sortBy = 'recent', type } = {}) {
+  let titles = [...loadIndex().values()].filter(t => (t.segments || []).length > 0);
+  if (type) titles = titles.filter(t => (t.type || 'movie') === type);
+
+  const sorters = {
+    popular: (a, b) => b.segments.length - a.segments.length,
+    year: (a, b) => (b.year || 0) - (a.year || 0),
+    title: (a, b) => String(a.title || a.imdbId).localeCompare(String(b.title || b.imdbId)),
+    recent: (a, b) => String(b.updatedAt || '').localeCompare(String(a.updatedAt || '')),
   };
+  titles.sort(sorters[sortBy] || sorters.recent);
+
+  return titles.slice(offset, offset + limit).map(summarize);
+}
+
+function searchTitles(query) {
+  const q = String(query || '').toLowerCase();
+  return [...loadIndex().values()]
+    .filter(t => t.imdbId.toLowerCase().includes(q) || String(t.title || '').toLowerCase().includes(q))
+    .slice(0, 20)
+    .map(summarize);
+}
+
+function getStats() {
+  let totalSegments = 0;
+  let verifiedSegments = 0;
+  const titles = loadIndex();
+  for (const t of titles.values()) {
+    totalSegments += (t.segments || []).length;
+    verifiedSegments += (t.segments || []).filter(s => s.verified).length;
+  }
+  return { totalTitles: titles.size, totalSegments, verifiedSegments };
 }
 
 module.exports = {
+  isValidContentId,
   getFilters,
   saveFilters,
   addSegment,
   createEmptyFilterData,
   listAllFilters,
+  listTitles,
+  searchTitles,
   voteSegment,
   getStats,
   DATA_DIR,

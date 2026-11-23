@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt7959026",
+  "title": "The Mule",
+  "year": 2018,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r38402a1z2t7p8eg6l2d",
+      "startMs": 2771240,
+      "endMs": 2842180,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.981Z"
+    },
+    {
+      "id": "cmk83r38702a3z2t7khtvf2np",
+      "startMs": 3603570,
+      "endMs": 3919140,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.983Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.978Z",
+  "updatedAt": "2026-01-10T09:31:50.209Z"
+}

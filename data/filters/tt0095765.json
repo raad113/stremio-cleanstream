@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt0095765",
+  "title": "Cinema Paradiso",
+  "year": 1988,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qztp00b3z2t7r2oc8mv3",
+      "startMs": 2795780,
+      "endMs": 2836560,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.574Z"
+    },
+    {
+      "id": "cmk83qzts00b5z2t7bg96xvxt",
+      "startMs": 3784880,
+      "endMs": 3845440,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.577Z"
+    },
+    {
+      "id": "cmk83qztv00b7z2t73vle0ndy",
+      "startMs": 7151930,
+      "endMs": 7156520,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.580Z"
+    },
+    {
+      "id": "cmk83qztz00b9z2t7fi76urrx",
+      "startMs": 7208100,
+      "endMs": 7210890,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.584Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.571Z",
+  "updatedAt": "2026-01-10T09:31:48.499Z"
+}

@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt0111161",
+  "title": "The Shawshank Redemption",
+  "year": 1994,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3k802hgz2t7786sual5",
+      "startMs": 351930,
+      "endMs": 376200,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.417Z"
+    },
+    {
+      "id": "cmk83r3kb02hiz2t7t971sili",
+      "startMs": 854620,
+      "endMs": 950360,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.419Z"
+    },
+    {
+      "id": "cmk83r3ke02hkz2t7l239f2tb",
+      "startMs": 1420050,
+      "endMs": 1462160,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.422Z"
+    },
+    {
+      "id": "cmk83r3ki02hmz2t7czxfhsin",
+      "startMs": 1915420,
+      "endMs": 1919300,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.426Z"
+    },
+    {
+      "id": "cmk83r3kk02hoz2t7m5mqj4f4",
+      "startMs": 2598690,
+      "endMs": 2654840,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.429Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.414Z",
+  "updatedAt": "2026-01-10T09:31:50.348Z"
+}

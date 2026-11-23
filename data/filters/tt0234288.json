@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0234288",
+  "title": "Divided We Fall",
+  "year": 2000,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r03y00gqz2t7tim5bp9n",
+      "startMs": 4334280,
+      "endMs": 4457160,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "rape attempt",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.942Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.938Z",
+  "updatedAt": "2026-01-10T09:31:48.647Z"
+}

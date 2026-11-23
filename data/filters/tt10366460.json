@@ -1,0 +1,131 @@
+{
+  "imdbId": "tt10366460",
+  "title": "CODA",
+  "year": 2021,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzoj007yz2t7q7froxo1",
+      "startMs": 498690,
+      "endMs": 518490,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "Talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.387Z"
+    },
+    {
+      "id": "cmk83qzom0080z2t7geka8403",
+      "startMs": 523900,
+      "endMs": 529500,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "Talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.390Z"
+    },
+    {
+      "id": "cmk83qzop0082z2t7q3j2rcx8",
+      "startMs": 1241030,
+      "endMs": 1345250,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.393Z"
+    },
+    {
+      "id": "cmk83qzot0084z2t72zldo6lt",
+      "startMs": 2365610,
+      "endMs": 2373530,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.397Z"
+    },
+    {
+      "id": "cmk83qzow0086z2t7j35zgkda",
+      "startMs": 2648570,
+      "endMs": 2655440,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.400Z"
+    },
+    {
+      "id": "cmk83qzoy0088z2t754tha01z",
+      "startMs": 2698530,
+      "endMs": 2727130,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.403Z"
+    },
+    {
+      "id": "cmk83qzp1008az2t7ldlbcmex",
+      "startMs": 3340210,
+      "endMs": 3347130,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.406Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.384Z",
+  "updatedAt": "2026-01-10T09:31:48.439Z"
+}

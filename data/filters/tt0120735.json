@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0120735",
+  "title": "Lock, Stock and Two Smoking Barrels",
+  "year": 1998,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r12j010lz2t7m0qwlrdz",
+      "startMs": 1019350,
+      "endMs": 1122930,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.188Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.185Z",
+  "updatedAt": "2026-01-10T09:31:49.120Z"
+}

@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt7784604",
+  "title": "Hereditary",
+  "year": 2018,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0pq00t3z2t7uur2gobq",
+      "startMs": 7085250,
+      "endMs": 7092390,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.727Z"
+    },
+    {
+      "id": "cmk83r0pt00t5z2t7hv4bbavu",
+      "startMs": 7128560,
+      "endMs": 7158100,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.730Z"
+    },
+    {
+      "id": "cmk83r0pz00t7z2t7ago4kda7",
+      "startMs": 7208500,
+      "endMs": 7213810,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.736Z"
+    },
+    {
+      "id": "cmk83r0q200t9z2t7ujqylvou",
+      "startMs": 7368350,
+      "endMs": 7373110,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.739Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.724Z",
+  "updatedAt": "2026-01-10T09:31:48.922Z"
+}

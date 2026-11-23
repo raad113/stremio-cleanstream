@@ -5,8 +5,6 @@
  * Falls back gracefully when Redis is unavailable
  */
 
-const Redis = require('ioredis');
-
 let redis = null;
 let isConnected = false;
 
@@ -30,6 +28,8 @@ async function initialize() {
   }
   
   try {
+    // Loaded lazily so ioredis is only required when caching is enabled
+    const Redis = require('ioredis');
     redis = new Redis(redisUrl, {
       maxRetriesPerRequest: 3,
       retryDelayOnFailover: 100,

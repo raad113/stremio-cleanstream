@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt0107756",
+  "title": "Orlando",
+  "year": 1992,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1xd01j3z2t7zuzweu9p",
+      "startMs": 3427420,
+      "endMs": 3435920,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "female frontal",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.297Z"
+    },
+    {
+      "id": "cmk83r1xf01j5z2t7s3z2r1c9",
+      "startMs": 4708330,
+      "endMs": 4731820,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "female contour",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.300Z"
+    },
+    {
+      "id": "cmk83r1xj01j7z2t7j0xtlkzj",
+      "startMs": 4743890,
+      "endMs": 4830860,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "couple shown in bed",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.304Z"
+    },
+    {
+      "id": "cmk83r1xm01j9z2t742hmu5fc",
+      "startMs": 4937310,
+      "endMs": 4943820,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "couple kissing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.306Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.294Z",
+  "updatedAt": "2026-01-10T09:31:49.517Z"
+}

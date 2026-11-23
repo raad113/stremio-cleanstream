@@ -68,7 +68,7 @@ async function catalogHandler({ type, id, extra }) {
 
     if (search) {
       // Search mode
-      titles = await db.searchTitles(search);
+      titles = (await db.searchTitles(search)).filter(t => !t.type || t.type === 'movie');
     } else {
       // Browse mode - get titles with segments
       titles = await db.listTitles({
@@ -76,6 +76,7 @@ async function catalogHandler({ type, id, extra }) {
         offset: skip,
         hasSegments: true,
         sortBy: sortBy,
+        type: 'movie',
       });
     }
 

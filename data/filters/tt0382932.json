@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt0382932",
+  "title": "Ratatouille",
+  "year": 2007,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r28c01pcz2t7w3tr1i0c",
+      "startMs": 1358110,
+      "endMs": 1359400,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.693Z"
+    },
+    {
+      "id": "cmk83r28f01pez2t7cqkvfxmc",
+      "startMs": 2106980,
+      "endMs": 2108170,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "he**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.696Z"
+    },
+    {
+      "id": "cmk83r28i01pgz2t7h2ymtd8l",
+      "startMs": 4118810,
+      "endMs": 4122790,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "a man looks at a woman's rear",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.699Z"
+    },
+    {
+      "id": "cmk83r28m01piz2t7zaeleo4r",
+      "startMs": 5175730,
+      "endMs": 5176810,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "bl***y",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.703Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.690Z",
+  "updatedAt": "2026-01-10T09:31:49.658Z"
+}

@@ -1,0 +1,250 @@
+{
+  "imdbId": "tt11564570",
+  "title": "Glass Onion: A Knives Out Mystery",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0l100qmz2t7uv8xfy7h",
+      "startMs": 302100,
+      "endMs": 328060,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "sexual talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.557Z"
+    },
+    {
+      "id": "cmk83r0l500qoz2t7hs4x0k8e",
+      "startMs": 2314100,
+      "endMs": 2321100,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "buttocks statue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.561Z"
+    },
+    {
+      "id": "cmk83r0l900qqz2t7yg5qwz9i",
+      "startMs": 2363670,
+      "endMs": 2369670,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "bed scene",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.565Z"
+    },
+    {
+      "id": "cmk83r0lc00qsz2t72b3pe0wz",
+      "startMs": 2376170,
+      "endMs": 2380170,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "bed scene",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.569Z"
+    },
+    {
+      "id": "cmk83r0lh00quz2t7spqwkle4",
+      "startMs": 5179430,
+      "endMs": 5182350,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.573Z"
+    },
+    {
+      "id": "cmk83r0lm00qwz2t7db83i0sg",
+      "startMs": 5183350,
+      "endMs": 5186350,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.578Z"
+    },
+    {
+      "id": "cmk83r0lq00qyz2t79kx4w9ks",
+      "startMs": 5186350,
+      "endMs": 5191350,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.582Z"
+    },
+    {
+      "id": "cmk83r0lt00r0z2t7tth9robq",
+      "startMs": 5192980,
+      "endMs": 5204150,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.585Z"
+    },
+    {
+      "id": "cmk83r0lw00r2z2t7myxqxehw",
+      "startMs": 5204150,
+      "endMs": 5212850,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.588Z"
+    },
+    {
+      "id": "cmk83r0m000r4z2t7dpjhwlw2",
+      "startMs": 5212850,
+      "endMs": 5226350,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.592Z"
+    },
+    {
+      "id": "cmk83r0m300r6z2t7kr7a7kvh",
+      "startMs": 5229350,
+      "endMs": 5232850,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.596Z"
+    },
+    {
+      "id": "cmk83r0m600r8z2t7k91yeoro",
+      "startMs": 5232850,
+      "endMs": 5250850,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.599Z"
+    },
+    {
+      "id": "cmk83r0m900raz2t7cuhszs8l",
+      "startMs": 5250850,
+      "endMs": 5261350,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.602Z"
+    },
+    {
+      "id": "cmk83r0md00rcz2t7ve6bu27o",
+      "startMs": 5767640,
+      "endMs": 5779640,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "bed scene",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.605Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.553Z",
+  "updatedAt": "2026-01-10T09:31:48.864Z"
+}

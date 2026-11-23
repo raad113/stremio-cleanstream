@@ -1,0 +1,165 @@
+{
+  "imdbId": "tt0108358",
+  "title": "Tombstone",
+  "year": 1993,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3tv02myz2t7uoohea8b",
+      "startMs": 677470,
+      "endMs": 689200,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.764Z"
+    },
+    {
+      "id": "cmk83r3ty02n0z2t7b213z6x6",
+      "startMs": 706120,
+      "endMs": 711000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.767Z"
+    },
+    {
+      "id": "cmk83r3u102n2z2t7e4y9z42z",
+      "startMs": 726110,
+      "endMs": 732760,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.770Z"
+    },
+    {
+      "id": "cmk83r3u502n4z2t7tc8vloqb",
+      "startMs": 737940,
+      "endMs": 748620,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.774Z"
+    },
+    {
+      "id": "cmk83r3u902n6z2t78swm2wz8",
+      "startMs": 756240,
+      "endMs": 759120,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.777Z"
+    },
+    {
+      "id": "cmk83r3uc02n8z2t75faqoi1w",
+      "startMs": 798600,
+      "endMs": 805570,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.780Z"
+    },
+    {
+      "id": "cmk83r3uf02naz2t7qqlus5wc",
+      "startMs": 811390,
+      "endMs": 815040,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.783Z"
+    },
+    {
+      "id": "cmk83r3uj02ncz2t7kj3e6k4y",
+      "startMs": 3992260,
+      "endMs": 4061840,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.787Z"
+    },
+    {
+      "id": "cmk83r3um02nez2t7egnrj77r",
+      "startMs": 5675320,
+      "endMs": 5689280,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.790Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.761Z",
+  "updatedAt": "2026-01-10T09:31:50.474Z"
+}

@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt20561198",
+  "title": "The Promised Land",
+  "year": 2023,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3ho02g3z2t7je9g8yd9",
+      "startMs": 1873540,
+      "endMs": 1882660,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.325Z"
+    },
+    {
+      "id": "cmk83r3hs02g5z2t7t0fnxmgf",
+      "startMs": 2051500,
+      "endMs": 2061390,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.328Z"
+    },
+    {
+      "id": "cmk83r3hv02g7z2t7uoyfvkax",
+      "startMs": 3994220,
+      "endMs": 4074220,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.332Z"
+    },
+    {
+      "id": "cmk83r3i002g9z2t7vrzmu60m",
+      "startMs": 4484340,
+      "endMs": 4517520,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.336Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.321Z",
+  "updatedAt": "2026-01-10T09:31:50.311Z"
+}

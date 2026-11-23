@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0089822",
+  "title": "Police Academy 2: Their First Assignment",
+  "year": 1985,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r22301lrz2t7e6k4barx",
+      "startMs": 659220,
+      "endMs": 662720,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "Topless Sunbathing on beach",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.468Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.464Z",
+  "updatedAt": "2026-01-10T09:31:49.583Z"
+}

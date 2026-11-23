@@ -1,0 +1,182 @@
+{
+  "imdbId": "tt0110912",
+  "title": "Pulp Fiction",
+  "year": 1994,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r22l01lzz2t77w61dxsp",
+      "startMs": 4665550,
+      "endMs": 4685020,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "passionate kissing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.485Z"
+    },
+    {
+      "id": "cmk83r22p01m1z2t7p1azic96",
+      "startMs": 4863960,
+      "endMs": 4867210,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "partial male",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.489Z"
+    },
+    {
+      "id": "cmk83r22s01m3z2t7jvdefn7c",
+      "startMs": 4908050,
+      "endMs": 4926400,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "male. partial",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.492Z"
+    },
+    {
+      "id": "cmk83r22w01m5z2t70ttz76o9",
+      "startMs": 5505270,
+      "endMs": 5506450,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "shooting",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.496Z"
+    },
+    {
+      "id": "cmk83r22z01m7z2t7lcu4arcy",
+      "startMs": 5528910,
+      "endMs": 5534750,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "bloody",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.499Z"
+    },
+    {
+      "id": "cmk83r23201m9z2t7h6uhrfzs",
+      "startMs": 6303490,
+      "endMs": 6306820,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "male rape",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.502Z"
+    },
+    {
+      "id": "cmk83r23601mbz2t7z855xrtf",
+      "startMs": 6311680,
+      "endMs": 6316590,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "male rape",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.506Z"
+    },
+    {
+      "id": "cmk83r23a01mdz2t7ap778wdx",
+      "startMs": 6319940,
+      "endMs": 6332250,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "sword, no dismemberment",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.510Z"
+    },
+    {
+      "id": "cmk83r23d01mfz2t7h695l3jn",
+      "startMs": 6376660,
+      "endMs": 6379210,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "sword, no dismemberment",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.513Z"
+    },
+    {
+      "id": "cmk83r23g01mhz2t76m3op0au",
+      "startMs": 6802500,
+      "endMs": 6804580,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "shooting",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.516Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.482Z",
+  "updatedAt": "2026-01-10T09:31:49.591Z"
+}

@@ -1,0 +1,165 @@
+{
+  "imdbId": "tt0317248",
+  "title": "City of God",
+  "year": 2002,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzu500bcz2t71hvvtzme",
+      "startMs": 749460,
+      "endMs": 808320,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.589Z"
+    },
+    {
+      "id": "cmk83qzu800bez2t7pgq87i4l",
+      "startMs": 1439490,
+      "endMs": 1497620,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.592Z"
+    },
+    {
+      "id": "cmk83qzuc00bgz2t7oo2sl93x",
+      "startMs": 1593930,
+      "endMs": 1708970,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.596Z"
+    },
+    {
+      "id": "cmk83qzuf00biz2t7c8e3v3hr",
+      "startMs": 2058900,
+      "endMs": 2182990,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.599Z"
+    },
+    {
+      "id": "cmk83qzui00bkz2t7mk5mjcwc",
+      "startMs": 2271260,
+      "endMs": 2277480,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.602Z"
+    },
+    {
+      "id": "cmk83qzul00bmz2t7bujyc6ah",
+      "startMs": 4253440,
+      "endMs": 4315490,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.606Z"
+    },
+    {
+      "id": "cmk83qzup00boz2t7blyakdme",
+      "startMs": 4654710,
+      "endMs": 4671430,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.610Z"
+    },
+    {
+      "id": "cmk83qzus00bqz2t7bo3sji6s",
+      "startMs": 6524690,
+      "endMs": 6574080,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.613Z"
+    },
+    {
+      "id": "cmk83qzuv00bsz2t7rlc6gkum",
+      "startMs": 7379070,
+      "endMs": 7388770,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.616Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.586Z",
+  "updatedAt": "2026-01-10T09:31:48.504Z"
+}

@@ -1,0 +1,148 @@
+{
+  "imdbId": "tt0240772",
+  "title": "Ocean's Eleven",
+  "year": 2001,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1ti01gwz2t7hjhedekd",
+      "startMs": 386000,
+      "endMs": 393800,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.158Z"
+    },
+    {
+      "id": "cmk83r1tl01gyz2t7o75ssgni",
+      "startMs": 416600,
+      "endMs": 419440,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.162Z"
+    },
+    {
+      "id": "cmk83r1to01h0z2t76xzziyqk",
+      "startMs": 443870,
+      "endMs": 448140,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.165Z"
+    },
+    {
+      "id": "cmk83r1tr01h2z2t7x3p477o2",
+      "startMs": 452100,
+      "endMs": 455520,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.168Z"
+    },
+    {
+      "id": "cmk83r1tv01h4z2t7ylqfgv16",
+      "startMs": 464180,
+      "endMs": 498010,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.172Z"
+    },
+    {
+      "id": "cmk83r1tz01h6z2t7i6xxf7aq",
+      "startMs": 593050,
+      "endMs": 598290,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.175Z"
+    },
+    {
+      "id": "cmk83r1u201h8z2t72f8p86xy",
+      "startMs": 629050,
+      "endMs": 642700,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.178Z"
+    },
+    {
+      "id": "cmk83r1u501haz2t7wfnoetws",
+      "startMs": 2109460,
+      "endMs": 2122920,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.181Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.153Z",
+  "updatedAt": "2026-01-10T09:31:49.462Z"
+}

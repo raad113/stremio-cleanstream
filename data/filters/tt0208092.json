@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0208092",
+  "title": "Snatch",
+  "year": 2000,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2ei01svz2t7uqc8vryy",
+      "startMs": 3437490,
+      "endMs": 3488230,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.914Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.912Z",
+  "updatedAt": "2026-01-10T09:31:49.758Z"
+}

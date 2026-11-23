@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt18272884",
+  "title": "Padre Pio",
+  "year": 2023,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1yn01juz2t7e37wccsy",
+      "startMs": 3992630,
+      "endMs": 4013900,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "verbal",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.343Z"
+    },
+    {
+      "id": "cmk83r1yq01jwz2t7nl6rc7t2",
+      "startMs": 4525260,
+      "endMs": 4553720,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.347Z"
+    },
+    {
+      "id": "cmk83r1yu01jyz2t7rildvbmy",
+      "startMs": 4840010,
+      "endMs": 4867640,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.350Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.340Z",
+  "updatedAt": "2026-01-10T09:31:49.534Z"
+}

@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt5371168",
+  "title": "The Extraordinary Journey of the Fakir",
+  "year": 2018,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2u6021tz2t7tsbqp0kf",
+      "startMs": 2233000,
+      "endMs": 2305000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "verbal",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.478Z"
+    },
+    {
+      "id": "cmk83r2u9021vz2t70cvj031g",
+      "startMs": 2537010,
+      "endMs": 2597010,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "verbal",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.481Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.475Z",
+  "updatedAt": "2026-01-10T09:31:50.000Z"
+}

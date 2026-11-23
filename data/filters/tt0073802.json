@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0073802",
+  "title": "Three Days of the Condor",
+  "year": 1975,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3sl02m9z2t7fhdgrep5",
+      "startMs": 4037140,
+      "endMs": 4171590,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.718Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.715Z",
+  "updatedAt": "2026-01-10T09:31:50.456Z"
+}

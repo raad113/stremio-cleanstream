@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt6966692",
+  "title": "Green Book",
+  "year": 2018,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0nb00rtz2t7cf9wgmp8",
+      "startMs": 4428180,
+      "endMs": 4436930,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "male, covered",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.639Z"
+    },
+    {
+      "id": "cmk83r0ne00rvz2t7s3v0qdax",
+      "startMs": 4443190,
+      "endMs": 4445710,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "male, covered",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.642Z"
+    },
+    {
+      "id": "cmk83r0ni00rxz2t7apf4sfko",
+      "startMs": 4473240,
+      "endMs": 4477830,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "male, above shoulders",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.646Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.636Z",
+  "updatedAt": "2026-01-10T09:31:48.887Z"
+}

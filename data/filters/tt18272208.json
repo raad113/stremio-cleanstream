@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt18272208",
+  "title": "Here",
+  "year": 2024,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0pa00suz2t75t129lru",
+      "startMs": 1573460,
+      "endMs": 1600120,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.711Z"
+    },
+    {
+      "id": "cmk83r0pd00swz2t7bngqjeuk",
+      "startMs": 1968430,
+      "endMs": 2008430,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.714Z"
+    },
+    {
+      "id": "cmk83r0pg00syz2t7flh7cw19",
+      "startMs": 2359080,
+      "endMs": 2373590,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.717Z"
+    },
+    {
+      "id": "cmk83r0pj00t0z2t7ww8w2g3x",
+      "startMs": 3903940,
+      "endMs": 3941450,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.720Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.707Z",
+  "updatedAt": "2026-01-10T09:31:48.916Z"
+}

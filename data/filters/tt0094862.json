@@ -1,0 +1,505 @@
+{
+  "imdbId": "tt0094862",
+  "title": "Child's Play",
+  "year": 1988,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzqw009dz2t77m2jh3ut",
+      "startMs": 70500,
+      "endMs": 71850,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "Oh, sh*t",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.473Z"
+    },
+    {
+      "id": "cmk83qzqz009fz2t7gmfjl688",
+      "startMs": 77450,
+      "endMs": 78500,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "Oh, sh*t",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.476Z"
+    },
+    {
+      "id": "cmk83qzr2009hz2t78dqfzztv",
+      "startMs": 84790,
+      "endMs": 85860,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "G*d, no!",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.479Z"
+    },
+    {
+      "id": "cmk83qzr7009jz2t7zhvassaw",
+      "startMs": 187510,
+      "endMs": 188120,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "Oh, G*d",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.483Z"
+    },
+    {
+      "id": "cmk83qzra009lz2t7bteb6b6b",
+      "startMs": 194620,
+      "endMs": 195300,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "b*tch",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.486Z"
+    },
+    {
+      "id": "cmk83qzrd009nz2t7qx801hlv",
+      "startMs": 562950,
+      "endMs": 564210,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "Oh, G*d",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.490Z"
+    },
+    {
+      "id": "cmk83qzrg009pz2t73ipoyyhy",
+      "startMs": 733270,
+      "endMs": 733650,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "d*mn",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.493Z"
+    },
+    {
+      "id": "cmk83qzrk009rz2t7bpfcqdt5",
+      "startMs": 1492330,
+      "endMs": 1493450,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "thank G*d",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.497Z"
+    },
+    {
+      "id": "cmk83qzrn009tz2t7x2dpl4o9",
+      "startMs": 1856000,
+      "endMs": 1856500,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "b*tch",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.500Z"
+    },
+    {
+      "id": "cmk83qzrq009vz2t77jo4cfoa",
+      "startMs": 2506990,
+      "endMs": 2507640,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "b*stard",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.503Z"
+    },
+    {
+      "id": "cmk83qzru009xz2t7qgq61kjh",
+      "startMs": 2510850,
+      "endMs": 2511690,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "d*mn it",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.506Z"
+    },
+    {
+      "id": "cmk83qzrx009zz2t7sbp36cz7",
+      "startMs": 2693120,
+      "endMs": 2693900,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "d*mn it",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.510Z"
+    },
+    {
+      "id": "cmk83qzs100a1z2t7ii72cmju",
+      "startMs": 2715330,
+      "endMs": 2715790,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "b*tch",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.513Z"
+    },
+    {
+      "id": "cmk83qzs300a3z2t7sr8bjkbp",
+      "startMs": 2716440,
+      "endMs": 2716830,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "sl*t",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.516Z"
+    },
+    {
+      "id": "cmk83qzs600a5z2t7rq5f5a66",
+      "startMs": 2718270,
+      "endMs": 2718540,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "f*ck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.519Z"
+    },
+    {
+      "id": "cmk83qzsa00a7z2t74nmn4n43",
+      "startMs": 2864540,
+      "endMs": 2865200,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "G*d's sake",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.523Z"
+    },
+    {
+      "id": "cmk83qzsd00a9z2t7chuda256",
+      "startMs": 2888270,
+      "endMs": 2889790,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "G*dd*mn it!",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.526Z"
+    },
+    {
+      "id": "cmk83qzsg00abz2t7c1icfqwi",
+      "startMs": 3063070,
+      "endMs": 3064000,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "G*dd*mn it!",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.528Z"
+    },
+    {
+      "id": "cmk83qzsj00adz2t7gsd68c6v",
+      "startMs": 3259170,
+      "endMs": 3259850,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "*sshole.",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.531Z"
+    },
+    {
+      "id": "cmk83qzsn00afz2t7g7wkbyzx",
+      "startMs": 3308580,
+      "endMs": 3309580,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "Oh, God!",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.535Z"
+    },
+    {
+      "id": "cmk83qzsp00ahz2t759894xpj",
+      "startMs": 3604400,
+      "endMs": 3604740,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "b*tch",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.538Z"
+    },
+    {
+      "id": "cmk83qzss00ajz2t72o60jehg",
+      "startMs": 3624040,
+      "endMs": 3624780,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "f*cking",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.541Z"
+    },
+    {
+      "id": "cmk83qzsv00alz2t79zz7jwyk",
+      "startMs": 3764960,
+      "endMs": 3766060,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "Oh, my G*d",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.544Z"
+    },
+    {
+      "id": "cmk83qzsz00anz2t7ohm4pgh0",
+      "startMs": 4149790,
+      "endMs": 4150880,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "F*ck you",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.547Z"
+    },
+    {
+      "id": "cmk83qzt200apz2t7iesddmis",
+      "startMs": 4596950,
+      "endMs": 4598140,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "Oh, G*d",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.550Z"
+    },
+    {
+      "id": "cmk83qzt400arz2t78kkr88cw",
+      "startMs": 4783030,
+      "endMs": 4783280,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "h*ll",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.553Z"
+    },
+    {
+      "id": "cmk83qzt700atz2t7ld62kjl3",
+      "startMs": 4790600,
+      "endMs": 4791060,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "G*d",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.556Z"
+    },
+    {
+      "id": "cmk83qztb00avz2t75sl3h4ny",
+      "startMs": 4794810,
+      "endMs": 4796280,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "Oh, J*sus",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.559Z"
+    },
+    {
+      "id": "cmk83qztd00axz2t7fjsl3izt",
+      "startMs": 4907450,
+      "endMs": 4907730,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "G*d",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.562Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.470Z",
+  "updatedAt": "2026-01-10T09:31:48.470Z"
+}

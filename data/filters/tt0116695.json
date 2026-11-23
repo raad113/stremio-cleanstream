@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt0116695",
+  "title": "Jerry Maguire",
+  "year": 1996,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0y500y0z2t73z13dv5g",
+      "startMs": 978840,
+      "endMs": 1053860,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.030Z"
+    },
+    {
+      "id": "cmk83r0y800y2z2t7vq19rgj8",
+      "startMs": 4008590,
+      "endMs": 4022570,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": "male",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.032Z"
+    },
+    {
+      "id": "cmk83r0yc00y4z2t7228usfqw",
+      "startMs": 4202460,
+      "endMs": 4211770,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "male",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.036Z"
+    },
+    {
+      "id": "cmk83r0yf00y6z2t7vizo8ux8",
+      "startMs": 4724590,
+      "endMs": 5092220,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.040Z"
+    },
+    {
+      "id": "cmk83r0yi00y8z2t7lc7uayey",
+      "startMs": 6123800,
+      "endMs": 6146250,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "male",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.042Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.027Z",
+  "updatedAt": "2026-01-10T09:31:49.052Z"
+}

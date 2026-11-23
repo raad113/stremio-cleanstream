@@ -1,0 +1,131 @@
+{
+  "imdbId": "tt0177789",
+  "title": "Galaxy Quest",
+  "year": 1999,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0j400pnz2t71zzo4pjx",
+      "startMs": 5238000,
+      "endMs": 5240060,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.489Z"
+    },
+    {
+      "id": "cmk83r0j700ppz2t73u0s7u66",
+      "startMs": 5344480,
+      "endMs": 5348590,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.492Z"
+    },
+    {
+      "id": "cmk83r0ja00prz2t721aoqhyc",
+      "startMs": 5451670,
+      "endMs": 5454250,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.495Z"
+    },
+    {
+      "id": "cmk83r0jd00ptz2t7hhduru50",
+      "startMs": 5463020,
+      "endMs": 5469140,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.498Z"
+    },
+    {
+      "id": "cmk83r0jh00pvz2t789o4dkoz",
+      "startMs": 5650680,
+      "endMs": 5663090,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.502Z"
+    },
+    {
+      "id": "cmk83r0jl00pxz2t7naqyivgy",
+      "startMs": 5692200,
+      "endMs": 5700000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.505Z"
+    },
+    {
+      "id": "cmk83r0jo00pzz2t7cnge9i6f",
+      "startMs": 5762550,
+      "endMs": 5782770,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.508Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.484Z",
+  "updatedAt": "2026-01-10T09:31:48.839Z"
+}

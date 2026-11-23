@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0066769",
+  "title": "The Andromeda Strain",
+  "year": 1971,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2l201wqz2t7132bccxp",
+      "startMs": 1434510,
+      "endMs": 1444440,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "Female frontal",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.151Z"
+    },
+    {
+      "id": "cmk83r2l501wsz2t7e6lldhsi",
+      "startMs": 2793110,
+      "endMs": 2806060,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "Male behind",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.154Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.147Z",
+  "updatedAt": "2026-01-10T09:31:49.873Z"
+}

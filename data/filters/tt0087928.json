@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt0087928",
+  "title": "Police Academy",
+  "year": 1984,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r21q01lkz2t7gojgjxv4",
+      "startMs": 2213000,
+      "endMs": 2286000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "Voyeurism",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.455Z"
+    },
+    {
+      "id": "cmk83r21t01lmz2t7cof21rjt",
+      "startMs": 2778883,
+      "endMs": 2812636,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "Topless at party",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.457Z"
+    },
+    {
+      "id": "cmk83r21x01loz2t75hlprj02",
+      "startMs": 3102950,
+      "endMs": 3116701,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "Implied, Not Shown",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.461Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.450Z",
+  "updatedAt": "2026-01-10T09:31:49.579Z"
+}

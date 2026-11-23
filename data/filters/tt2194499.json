@@ -1,0 +1,131 @@
+{
+  "imdbId": "tt2194499",
+  "title": "About Time",
+  "year": 2013,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzcd000yz2t7p58dflag",
+      "startMs": 634320,
+      "endMs": 637240,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "bikinis",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.950Z"
+    },
+    {
+      "id": "cmk83qzct0018z2t70dwh3gh7",
+      "startMs": 2855690,
+      "endMs": 2983640,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "the entire adult scene above, if kids are watching",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.965Z"
+    },
+    {
+      "id": "cmk83qzch0010z2t793dit1rt",
+      "startMs": 2861980,
+      "endMs": 2899510,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "female undressing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.954Z"
+    },
+    {
+      "id": "cmk83qzck0012z2t7f6xtj2um",
+      "startMs": 2931090,
+      "endMs": 2937340,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "female undressing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.956Z"
+    },
+    {
+      "id": "cmk83qzcn0014z2t73hsoolk5",
+      "startMs": 2941940,
+      "endMs": 2955440,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "man and woman after sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.959Z"
+    },
+    {
+      "id": "cmk83qzcp0016z2t7hfzr4d71",
+      "startMs": 2957400,
+      "endMs": 2963230,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "male, suggestive",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.962Z"
+    },
+    {
+      "id": "cmk83qzcw001az2t7m8g99alk",
+      "startMs": 4106600,
+      "endMs": 4169560,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "female",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.968Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:03.947Z",
+  "updatedAt": "2026-01-10T09:31:48.257Z"
+}

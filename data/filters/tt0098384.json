@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0098384",
+  "title": "Steel Magnolias",
+  "year": 1989,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2ii01v9z2t7g8yt5smr",
+      "startMs": 3103320,
+      "endMs": 3165640,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.058Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.056Z",
+  "updatedAt": "2026-01-10T09:31:49.830Z"
+}

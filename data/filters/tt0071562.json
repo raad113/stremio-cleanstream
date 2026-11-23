@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt0071562",
+  "title": "The Godfather Part II",
+  "year": 1974,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2xg023rz2t76dtwd48o",
+      "startMs": 4167030,
+      "endMs": 4251370,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.597Z"
+    },
+    {
+      "id": "cmk83r2xj023tz2t70ue6mx0j",
+      "startMs": 4367170,
+      "endMs": 4421860,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.600Z"
+    },
+    {
+      "id": "cmk83r2xn023vz2t7vnvkybv3",
+      "startMs": 5714180,
+      "endMs": 5750890,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.604Z"
+    },
+    {
+      "id": "cmk83r2xq023xz2t7ysigqysw",
+      "startMs": 5807910,
+      "endMs": 5925630,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.606Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.594Z",
+  "updatedAt": "2026-01-10T09:31:50.050Z"
+}

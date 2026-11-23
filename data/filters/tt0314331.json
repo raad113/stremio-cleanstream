@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt0314331",
+  "title": "Love Actually",
+  "year": 2003,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r133010wz2t7pjqjb9ds",
+      "startMs": 886000,
+      "endMs": 927000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": "female, topless",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.207Z"
+    },
+    {
+      "id": "cmk83r135010yz2t7nfcb335f",
+      "startMs": 1468000,
+      "endMs": 1510000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": "female + male, full body",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.210Z"
+    },
+    {
+      "id": "cmk83r1390110z2t7vsmmrh2t",
+      "startMs": 3876000,
+      "endMs": 3883000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": "female, artwork in background",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.214Z"
+    },
+    {
+      "id": "cmk83r13c0112z2t7tc0yf3pl",
+      "startMs": 4279000,
+      "endMs": 4298000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": "female, topless",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.217Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.204Z",
+  "updatedAt": "2026-01-10T09:31:49.130Z"
+}

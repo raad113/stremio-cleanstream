@@ -13,7 +13,9 @@
  *   CLEANSTREAM_BASE_URL - Public URL of the server
  */
 
-const { serveHTTP, getRouter } = require('stremio-addon-sdk');
+const fs = require('fs');
+const path = require('path');
+const { getRouter } = require('stremio-addon-sdk');
 const cors = require('cors');
 const express = require('express');
 
@@ -42,6 +44,40 @@ const app = express();
 
 // Enable CORS for all routes
 app.use(cors());
+
+// Behind a reverse proxy (Docker, ElfHosted, Nginx) set TRUST_PROXY=1 so that
+// rate limits and vote de-duplication see the real client address.
+if (process.env.TRUST_PROXY) {
+  app.set('trust proxy', /^\d+$/.test(process.env.TRUST_PROXY) ? Number(process.env.TRUST_PROXY) : process.env.TRUST_PROXY);
+}
+
+/**
+ * Auto-skip userscript for Stremio Web.
+ * The server address and the viewer's filter choices are written into the
+ * script so it works straight after installation.
+ */
+const SKIPPER_TEMPLATE = fs.readFileSync(path.join(__dirname, 'skipper', 'cleanstream-skipper.user.js'), 'utf8');
+const SKIPPER_DEFAULTS = { nudity: 'high', sex: 'high', violence: 'medium', language: 'off', drugs: 'off', fear: 'off' };
+
+function sendSkipper(req, res) {
+  const config = { ...SKIPPER_DEFAULTS };
+  try {
+    const requested = req.params.config ? JSON.parse(decodeURIComponent(req.params.config)) : {};
+    for (const key of Object.keys(SKIPPER_DEFAULTS)) {
+      if (['off', 'low', 'medium', 'high'].includes(requested[key])) config[key] = requested[key];
+    }
+  } catch (e) {
+    // ignore a malformed config and use the defaults
+  }
+  const script = SKIPPER_TEMPLATE
+    .replace("'__CLEANSTREAM_SERVER__'", JSON.stringify(BASE_URL))
+    .replace('__CLEANSTREAM_CONFIG__', JSON.stringify(config));
+  res.setHeader('Content-Type', 'text/javascript; charset=utf-8');
+  res.send(script);
+}
+
+app.get('/skipper/cleanstream.user.js', sendSkipper);
+app.get('/skipper/:config/cleanstream.user.js', sendSkipper);
 
 // Redirect root to configure page
 app.get('/', (req, res) => {
@@ -149,7 +185,7 @@ app.get('/configure', (req, res) => {
         </div>
         <select id="nudity">
           <option value="off">Off</option>
-          <option value="low">Low</option>
+          <option value="low">Low (strongest only)</option>
           <option value="medium">Medium</option>
           <option value="high" selected>High (all)</option>
         </select>
@@ -162,7 +198,7 @@ app.get('/configure', (req, res) => {
         </div>
         <select id="sex">
           <option value="off">Off</option>
-          <option value="low">Low</option>
+          <option value="low">Low (strongest only)</option>
           <option value="medium">Medium</option>
           <option value="high" selected>High (all)</option>
         </select>
@@ -175,7 +211,7 @@ app.get('/configure', (req, res) => {
         </div>
         <select id="violence">
           <option value="off">Off</option>
-          <option value="low">Low</option>
+          <option value="low">Low (strongest only)</option>
           <option value="medium" selected>Medium</option>
           <option value="high">High (all)</option>
         </select>
@@ -188,7 +224,7 @@ app.get('/configure', (req, res) => {
         </div>
         <select id="language">
           <option value="off" selected>Off</option>
-          <option value="low">Low</option>
+          <option value="low">Low (strongest only)</option>
           <option value="medium">Medium</option>
           <option value="high">High (all)</option>
         </select>
@@ -201,7 +237,7 @@ app.get('/configure', (req, res) => {
         </div>
         <select id="drugs">
           <option value="off" selected>Off</option>
-          <option value="low">Low</option>
+          <option value="low">Low (strongest only)</option>
           <option value="medium">Medium</option>
           <option value="high">High (all)</option>
         </select>
@@ -214,7 +250,7 @@ app.get('/configure', (req, res) => {
         </div>
         <select id="fear">
           <option value="off" selected>Off</option>
-          <option value="low">Low</option>
+          <option value="low">Low (strongest only)</option>
           <option value="medium">Medium</option>
           <option value="high">High (all)</option>
         </select>
@@ -238,13 +274,31 @@ app.get('/configure', (req, res) => {
     </div>
     
     <p class="note">
-      Works on Desktop, Android, iOS, and Web.
+      The add-on shows skip warnings on Desktop, Android, iOS and Web.
     </p>
-    
+
     <div class="card" style="margin-top: 30px;">
-      <h3>🤝 Contribute</h3>
+      <h3>⏭️ Automatic skipping (Stremio Web)</h3>
       <p style="color: #8892b0; font-size: 0.9em;">
-        Help make more movies family-friendly! You can contribute skip data via our API.
+        Stremio's apps do not let add-ons control playback, so automatic skipping runs as a small
+        browser script for <strong>web.stremio.com</strong>. Install a userscript manager
+        (Tampermonkey or Violentmonkey) first, then click the button. Your filter choices above are included.
+      </p>
+      <a id="skipperBtn" class="install-btn" href="#" style="background: #f5a623;">
+        ⏭️ Install auto-skip script
+      </a>
+      <p style="color: #8892b0; font-size: 0.85em; margin-bottom: 0;">
+        It skips flagged scenes, mutes flagged language, and shows Undo / 👍 / 👎 after each skip.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🤝 Share skips with the community</h3>
+      <p style="color: #8892b0; font-size: 0.9em;">
+        While watching in Stremio Web with the script installed, press <strong>Alt+S</strong> when an
+        unwanted scene starts and <strong>Alt+E</strong> when it ends, then choose a category and press
+        <em>Share</em>. Every viewer of this server gets your skip straight away. Skips that collect
+        three more 👎 than 👍 are hidden automatically.
       </p>
       <p style="font-family: monospace; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 6px; font-size: 0.85em;">
         POST ${BASE_URL}/api/contribute/{imdbId}
@@ -285,6 +339,7 @@ app.get('/configure', (req, res) => {
       const webUrl = 'https://web.stremio.com/#/addons?addon=' + encodeURIComponent(manifestUrl);
       
       document.getElementById('installBtn').href = installUrl;
+      document.getElementById('skipperBtn').href = BASE_URL + '/skipper/' + configStr + '/cleanstream.user.js';
       document.getElementById('webBtn').href = webUrl;
       document.getElementById('manifestUrl').value = manifestUrl;
     }

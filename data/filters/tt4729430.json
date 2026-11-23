@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt4729430",
+  "title": "Klaus",
+  "year": 2019,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r10300z4z2t7eun56l45",
+      "startMs": 1997910,
+      "endMs": 1998970,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - Oh G**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.099Z"
+    },
+    {
+      "id": "cmk83r10500z6z2t767j77jh4",
+      "startMs": 2209260,
+      "endMs": 2214750,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "dorsal nudity - little wooden models of people mooning each other",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.102Z"
+    },
+    {
+      "id": "cmk83r10800z8z2t7wrmqqy1g",
+      "startMs": 4689840,
+      "endMs": 4690770,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - Oh G**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.105Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.096Z",
+  "updatedAt": "2026-01-10T09:31:49.082Z"
+}

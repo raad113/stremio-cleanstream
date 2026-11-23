@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0120689",
+  "title": "The Green Mile",
+  "year": 1999,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r30g025kz2t708sgx8hu",
+      "startMs": 3952180,
+      "endMs": 4103260,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.705Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.701Z",
+  "updatedAt": "2026-01-10T09:31:50.084Z"
+}

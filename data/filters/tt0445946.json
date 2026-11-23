@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0445946",
+  "title": "The Contract",
+  "year": 2006,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2qd01ztz2t75s6fc0is",
+      "startMs": 3014730,
+      "endMs": 3034930,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.342Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.339Z",
+  "updatedAt": "2026-01-10T09:31:49.946Z"
+}

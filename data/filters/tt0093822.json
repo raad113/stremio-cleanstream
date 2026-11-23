@@ -1,0 +1,216 @@
+{
+  "imdbId": "tt0093822",
+  "title": "Raising Arizona",
+  "year": 1987,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r25p01nqz2t7zieg0j9y",
+      "startMs": 415050,
+      "endMs": 416100,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "substitute for profanity",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.597Z"
+    },
+    {
+      "id": "cmk83r25t01nsz2t79hq6s2zc",
+      "startMs": 1127730,
+      "endMs": 1137880,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "magazine",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.601Z"
+    },
+    {
+      "id": "cmk83r25w01nuz2t7eay2ydro",
+      "startMs": 2155420,
+      "endMs": 2156320,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "slap to the rear",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.604Z"
+    },
+    {
+      "id": "cmk83r25z01nwz2t73u85z40l",
+      "startMs": 2465480,
+      "endMs": 2470770,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "sex joke",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.607Z"
+    },
+    {
+      "id": "cmk83r26201nyz2t7swj16qwy",
+      "startMs": 2480030,
+      "endMs": 2487780,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "discussion of swinging",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.610Z"
+    },
+    {
+      "id": "cmk83r26601o0z2t7ts9lyyxe",
+      "startMs": 2491340,
+      "endMs": 2510850,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "discussion of swinging",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.614Z"
+    },
+    {
+      "id": "cmk83r26901o2z2t73czsnp18",
+      "startMs": 2513240,
+      "endMs": 2527670,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "discussion of swinging",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.617Z"
+    },
+    {
+      "id": "cmk83r26c01o4z2t7eebjn4z5",
+      "startMs": 2532260,
+      "endMs": 2547420,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "discussion of swinging",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.620Z"
+    },
+    {
+      "id": "cmk83r26e01o6z2t7un4zeu16",
+      "startMs": 2654360,
+      "endMs": 2656170,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "magazine",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.623Z"
+    },
+    {
+      "id": "cmk83r26i01o8z2t7a109xte9",
+      "startMs": 2657880,
+      "endMs": 2658510,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "magazine",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.627Z"
+    },
+    {
+      "id": "cmk83r26l01oaz2t70bhkvhbl",
+      "startMs": 3242670,
+      "endMs": 3244940,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "mention of sex crime",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.630Z"
+    },
+    {
+      "id": "cmk83r26o01ocz2t7wte49z4k",
+      "startMs": 3368860,
+      "endMs": 3373070,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "magazine",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.632Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.594Z",
+  "updatedAt": "2026-01-10T09:31:49.629Z"
+}

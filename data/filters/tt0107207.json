@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0107207",
+  "title": "In the Name of the Father",
+  "year": 1993,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0w600wvz2t73jorvja9",
+      "startMs": 1006010,
+      "endMs": 1041780,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.958Z"
+    },
+    {
+      "id": "cmk83r0w900wxz2t79r3dcamk",
+      "startMs": 2607060,
+      "endMs": 2625850,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.961Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.956Z",
+  "updatedAt": "2026-01-10T09:31:49.020Z"
+}

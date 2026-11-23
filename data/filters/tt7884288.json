@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt7884288",
+  "title": "The Unknown Soldier",
+  "year": 2017,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3qz02lez2t7irvir2da",
+      "startMs": 3699170,
+      "endMs": 3740320,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.659Z"
+    },
+    {
+      "id": "cmk83r3r202lgz2t73sfvkpea",
+      "startMs": 4300860,
+      "endMs": 4369320,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.662Z"
+    },
+    {
+      "id": "cmk83r3r502liz2t7h9sgz2a0",
+      "startMs": 5190230,
+      "endMs": 5237660,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.665Z"
+    },
+    {
+      "id": "cmk83r3r702lkz2t7o0b7p0la",
+      "startMs": 8634410,
+      "endMs": 8650760,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.668Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.655Z",
+  "updatedAt": "2026-01-10T09:31:50.427Z"
+}

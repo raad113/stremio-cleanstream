@@ -18,6 +18,7 @@ module.exports = {
   
   // Check what's available
   isPostgresAvailable: repository.isPostgresAvailable,
+  isValidContentId: repository.isValidContentId,
   
   // Main repository functions
   getFilters: repository.getFilters,

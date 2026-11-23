@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt15398776",
+  "title": "Oppenheimer",
+  "year": 2023,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1x101iwz2t7dtyw6v9t",
+      "startMs": 1392670,
+      "endMs": 1487800,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.285Z"
+    },
+    {
+      "id": "cmk83r1x401iyz2t7u2qffx9j",
+      "startMs": 4488570,
+      "endMs": 4513630,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.288Z"
+    },
+    {
+      "id": "cmk83r1x701j0z2t7xytlbjo8",
+      "startMs": 4529150,
+      "endMs": 4620290,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.292Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.282Z",
+  "updatedAt": "2026-01-10T09:31:49.512Z"
+}

@@ -1,0 +1,165 @@
+{
+  "imdbId": "tt0389557",
+  "title": "Black Book",
+  "year": 2006,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzkb005kz2t7x16xqa36",
+      "startMs": 2351420,
+      "endMs": 2363020,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "woman dying pubic area",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.236Z"
+    },
+    {
+      "id": "cmk83qzkf005mz2t734vxxtv7",
+      "startMs": 2403770,
+      "endMs": 2410830,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "continuation of dying",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.239Z"
+    },
+    {
+      "id": "cmk83qzki005oz2t7xtcyj47b",
+      "startMs": 2450760,
+      "endMs": 2468670,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "topless female nudity, start of sex act",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.242Z"
+    },
+    {
+      "id": "cmk83qzkl005qz2t7g34m1clj",
+      "startMs": 3098150,
+      "endMs": 3258330,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "topless female nudity, beginning of sex act",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.246Z"
+    },
+    {
+      "id": "cmk83qzko005sz2t78uvvc9ij",
+      "startMs": 3315880,
+      "endMs": 3358180,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "full male frontal nudity, topless female nudity",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.248Z"
+    },
+    {
+      "id": "cmk83qzkr005uz2t7w4d57f4m",
+      "startMs": 4732550,
+      "endMs": 4839180,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "topless female; but important dialogue - he knows she's a spy",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.251Z"
+    },
+    {
+      "id": "cmk83qzku005wz2t7g6s6w3st",
+      "startMs": 5974540,
+      "endMs": 6004000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "topless female",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.254Z"
+    },
+    {
+      "id": "cmk83qzky005yz2t75xqnrogk",
+      "startMs": 7052940,
+      "endMs": 7140040,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "fast forward for nudity during collaborators' punishment",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.258Z"
+    },
+    {
+      "id": "cmk83qzl10060z2t7wveh2l5s",
+      "startMs": 7176560,
+      "endMs": 7209070,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "ditto",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.261Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.233Z",
+  "updatedAt": "2026-01-10T09:31:48.383Z"
+}

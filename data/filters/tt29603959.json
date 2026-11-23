@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt29603959",
+  "title": "Novocaine",
+  "year": 2025,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1sl01ggz2t7l7r46o8e",
+      "startMs": 1146690,
+      "endMs": 1406360,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.126Z"
+    },
+    {
+      "id": "cmk83r1so01giz2t704318y89",
+      "startMs": 4717890,
+      "endMs": 4727770,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.129Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.123Z",
+  "updatedAt": "2026-01-10T09:31:49.445Z"
+}

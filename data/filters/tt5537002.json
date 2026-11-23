@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt5537002",
+  "title": "Killers of the Flower Moon",
+  "year": 2023,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0zo00ywz2t7i4ehsqou",
+      "startMs": 2071000,
+      "endMs": 2133000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.085Z"
+    },
+    {
+      "id": "cmk83r0zr00yyz2t7dyzof9bg",
+      "startMs": 4131000,
+      "endMs": 4176180,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.088Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.081Z",
+  "updatedAt": "2026-01-10T09:31:49.074Z"
+}

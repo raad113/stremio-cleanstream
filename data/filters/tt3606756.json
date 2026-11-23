@@ -1,0 +1,165 @@
+{
+  "imdbId": "tt3606756",
+  "title": "Incredibles 2",
+  "year": 2018,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0wf00x0z2t75bbne49s",
+      "startMs": 2339380,
+      "endMs": 2341150,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - God",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.967Z"
+    },
+    {
+      "id": "cmk83r0wi00x2z2t7eet1ox3h",
+      "startMs": 3248500,
+      "endMs": 3249000,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "the he** out of it",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.970Z"
+    },
+    {
+      "id": "cmk83r0wl00x4z2t7i766jm25",
+      "startMs": 3422440,
+      "endMs": 3423210,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "da**ed",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.973Z"
+    },
+    {
+      "id": "cmk83r0wp00x6z2t7xfky8sz7",
+      "startMs": 3940630,
+      "endMs": 3941550,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "What the ...",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.977Z"
+    },
+    {
+      "id": "cmk83r0wr00x8z2t7qzsd0p8x",
+      "startMs": 3952090,
+      "endMs": 3953090,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - God",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.980Z"
+    },
+    {
+      "id": "cmk83r0wu00xaz2t7kfv0z159",
+      "startMs": 3985900,
+      "endMs": 3986710,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "What the ...",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.983Z"
+    },
+    {
+      "id": "cmk83r0wx00xcz2t7yb0ovoh4",
+      "startMs": 4032090,
+      "endMs": 4033300,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - God",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.985Z"
+    },
+    {
+      "id": "cmk83r0x100xez2t7wh4kfz99",
+      "startMs": 4135600,
+      "endMs": 4137850,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - God",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.989Z"
+    },
+    {
+      "id": "cmk83r0x400xgz2t7yscszyt5",
+      "startMs": 5703100,
+      "endMs": 5704470,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "What the ...",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.992Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.965Z",
+  "updatedAt": "2026-01-10T09:31:49.025Z"
+}

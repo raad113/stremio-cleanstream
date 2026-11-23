@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0068646",
+  "title": "The Godfather",
+  "year": 1972,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2x7023mz2t7o567wqi0",
+      "startMs": 1355510,
+      "endMs": 1392400,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.588Z"
+    },
+    {
+      "id": "cmk83r2xb023oz2t746zynr0z",
+      "startMs": 6657770,
+      "endMs": 6741530,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.592Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.584Z",
+  "updatedAt": "2026-01-10T09:31:50.046Z"
+}

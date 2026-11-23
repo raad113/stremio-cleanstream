@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt1160419",
+  "title": "Dune",
+  "year": 2021,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r05s00htz2t725mp3toc",
+      "startMs": 5277590,
+      "endMs": 5297040,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "implicit references to rape",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.008Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.005Z",
+  "updatedAt": "2026-01-10T09:31:48.674Z"
+}

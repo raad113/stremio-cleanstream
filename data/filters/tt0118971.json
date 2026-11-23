@@ -1,0 +1,165 @@
+{
+  "imdbId": "tt0118971",
+  "title": "The Devil's Advocate",
+  "year": 1997,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2s7020pz2t7uwqgjlaq",
+      "startMs": 93450,
+      "endMs": 113920,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "groping",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.407Z"
+    },
+    {
+      "id": "cmk83r2sa020rz2t7p06y4ej8",
+      "startMs": 3415970,
+      "endMs": 3518720,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "female",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.410Z"
+    },
+    {
+      "id": "cmk83r2sd020tz2t7u92ps3su",
+      "startMs": 3666500,
+      "endMs": 3819680,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "couple",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.413Z"
+    },
+    {
+      "id": "cmk83r2sg020vz2t7f1d0zffq",
+      "startMs": 4742240,
+      "endMs": 4749440,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "blood",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.416Z"
+    },
+    {
+      "id": "cmk83r2sl020xz2t7sucgmf0a",
+      "startMs": 6688360,
+      "endMs": 6692810,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "teeth",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.421Z"
+    },
+    {
+      "id": "cmk83r2so020zz2t7yaoijprq",
+      "startMs": 6761890,
+      "endMs": 6766850,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "blood",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.424Z"
+    },
+    {
+      "id": "cmk83r2sr0211z2t7jxb375q3",
+      "startMs": 7838710,
+      "endMs": 7930530,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "female",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.427Z"
+    },
+    {
+      "id": "cmk83r2su0213z2t719ri7kpc",
+      "startMs": 7958170,
+      "endMs": 7971310,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "female",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.430Z"
+    },
+    {
+      "id": "cmk83r2sy0215z2t7pefmsmws",
+      "startMs": 7973950,
+      "endMs": 7981210,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "female",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.434Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.403Z",
+  "updatedAt": "2026-01-10T09:31:49.976Z"
+}

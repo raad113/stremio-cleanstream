@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt30988739",
+  "title": "Black Bag",
+  "year": 2025,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzk2005fz2t7ejfvu7by",
+      "startMs": 322000,
+      "endMs": 344000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.227Z"
+    },
+    {
+      "id": "cmk83qzk5005hz2t7ibayes93",
+      "startMs": 1308000,
+      "endMs": 1378000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.229Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.224Z",
+  "updatedAt": "2026-01-10T09:31:48.378Z"
+}

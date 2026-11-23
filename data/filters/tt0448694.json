@@ -1,0 +1,182 @@
+{
+  "imdbId": "tt0448694",
+  "title": "Puss in Boots",
+  "year": 2011,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r24301mtz2t7yr59fd8h",
+      "startMs": 73900,
+      "endMs": 103020,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "implied shacking up",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.539Z"
+    },
+    {
+      "id": "cmk83r24601mvz2t736b1wr7i",
+      "startMs": 389250,
+      "endMs": 396230,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "a man starts to remove his underwear, before being asked to stop",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.542Z"
+    },
+    {
+      "id": "cmk83r24901mxz2t7u2ja4mup",
+      "startMs": 1570000,
+      "endMs": 1572020,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "stab finger",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.545Z"
+    },
+    {
+      "id": "cmk83r24d01mzz2t7m96c7wy1",
+      "startMs": 1574050,
+      "endMs": 1576200,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "stab finger",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.550Z"
+    },
+    {
+      "id": "cmk83r24g01n1z2t7ulapg1yy",
+      "startMs": 2768420,
+      "endMs": 2786110,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "a character changes into a suit without underwear underneath, to the disgust of those around him",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.553Z"
+    },
+    {
+      "id": "cmk83r24j01n3z2t7f3pik5gv",
+      "startMs": 3328230,
+      "endMs": 3346100,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "suggestive comments between the cats",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.556Z"
+    },
+    {
+      "id": "cmk83r24m01n5z2t7398pa3en",
+      "startMs": 3632770,
+      "endMs": 3653170,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "scary music with egg acting weird",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.559Z"
+    },
+    {
+      "id": "cmk83r24q01n7z2t7fu02wq8g",
+      "startMs": 3795080,
+      "endMs": 3801570,
+      "category": "drugs",
+      "subcategory": "drugs",
+      "severity": "low",
+      "channel": "both",
+      "comment": "catnip joke",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.563Z"
+    },
+    {
+      "id": "cmk83r24u01n9z2t7ivrdpwd6",
+      "startMs": 4742900,
+      "endMs": 4745650,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "suggestive talking",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.566Z"
+    },
+    {
+      "id": "cmk83r24x01nbz2t7giylnl61",
+      "startMs": 4756880,
+      "endMs": 4765840,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "a great great lover",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.569Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.536Z",
+  "updatedAt": "2026-01-10T09:31:49.607Z"
+}

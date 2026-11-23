@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt7098658",
+  "title": "Raazi",
+  "year": 2018,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r25c01njz2t7d6222jv5",
+      "startMs": 3280020,
+      "endMs": 3302730,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.584Z"
+    },
+    {
+      "id": "cmk83r25g01nlz2t7yfc1fwhk",
+      "startMs": 3809750,
+      "endMs": 3818080,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.588Z"
+    },
+    {
+      "id": "cmk83r25j01nnz2t7q2vnkmnm",
+      "startMs": 4246210,
+      "endMs": 4288630,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.591Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.581Z",
+  "updatedAt": "2026-01-10T09:31:49.622Z"
+}

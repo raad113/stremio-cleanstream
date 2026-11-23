@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt0471359",
+  "title": "Defenders of Riga",
+  "year": 2007,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r00u00eyz2t7ui5ann4k",
+      "startMs": 800450,
+      "endMs": 826230,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.830Z"
+    },
+    {
+      "id": "cmk83r00w00f0z2t77d31i3z8",
+      "startMs": 1195880,
+      "endMs": 1208640,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.833Z"
+    },
+    {
+      "id": "cmk83r00z00f2z2t78hj5x75b",
+      "startMs": 1586410,
+      "endMs": 1592120,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.836Z"
+    },
+    {
+      "id": "cmk83r01300f4z2t7ej3fvg5d",
+      "startMs": 1608210,
+      "endMs": 1644840,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.840Z"
+    },
+    {
+      "id": "cmk83r01600f6z2t7kfivoy3u",
+      "startMs": 1837820,
+      "endMs": 1854130,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.843Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.827Z",
+  "updatedAt": "2026-01-10T09:31:48.608Z"
+}

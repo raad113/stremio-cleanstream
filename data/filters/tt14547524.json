@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt14547524",
+  "title": "National Champions",
+  "year": 2021,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1m001chz2t78kjy0ahs",
+      "startMs": 395870,
+      "endMs": 511300,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.889Z"
+    },
+    {
+      "id": "cmk83r1m401cjz2t7gux8111a",
+      "startMs": 1118510,
+      "endMs": 1227730,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.893Z"
+    },
+    {
+      "id": "cmk83r1m701clz2t7hyctb9kq",
+      "startMs": 2468980,
+      "endMs": 2485620,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.896Z"
+    },
+    {
+      "id": "cmk83r1ma01cnz2t7a2sf6gkk",
+      "startMs": 3022630,
+      "endMs": 3026600,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.898Z"
+    },
+    {
+      "id": "cmk83r1md01cpz2t7fpurhq7d",
+      "startMs": 6072510,
+      "endMs": 6075890,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.901Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.886Z",
+  "updatedAt": "2026-01-10T09:31:49.366Z"
+}

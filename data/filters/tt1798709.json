@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt1798709",
+  "title": "Her",
+  "year": 2013,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0ot00slz2t78pfuey9o",
+      "startMs": 290000,
+      "endMs": 295000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.693Z"
+    },
+    {
+      "id": "cmk83r0ox00snz2t7tm6rsedh",
+      "startMs": 490000,
+      "endMs": 596000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.697Z"
+    },
+    {
+      "id": "cmk83r0p000spz2t7apjkc8yt",
+      "startMs": 2516000,
+      "endMs": 2582000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.700Z"
+    },
+    {
+      "id": "cmk83r0p300srz2t7a90vdwtt",
+      "startMs": 4695000,
+      "endMs": 4761000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.704Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.691Z",
+  "updatedAt": "2026-01-10T09:31:48.911Z"
+}

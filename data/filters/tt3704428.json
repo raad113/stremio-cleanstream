@@ -1,0 +1,148 @@
+{
+  "imdbId": "tt3704428",
+  "title": "Elvis",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r07000iiz2t7sa3y98tt",
+      "startMs": 1014000,
+      "endMs": 1016680,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.052Z"
+    },
+    {
+      "id": "cmk83r07300ikz2t719fvjbvr",
+      "startMs": 1035340,
+      "endMs": 1037090,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.055Z"
+    },
+    {
+      "id": "cmk83r07600imz2t7j6e2jap0",
+      "startMs": 1049580,
+      "endMs": 1090460,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.058Z"
+    },
+    {
+      "id": "cmk83r07a00ioz2t76stsdwgr",
+      "startMs": 1529740,
+      "endMs": 1559900,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.062Z"
+    },
+    {
+      "id": "cmk83r07c00iqz2t7ozme9emt",
+      "startMs": 3337940,
+      "endMs": 3350650,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.065Z"
+    },
+    {
+      "id": "cmk83r07f00isz2t7u064iy8d",
+      "startMs": 4901960,
+      "endMs": 4917680,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.068Z"
+    },
+    {
+      "id": "cmk83r07i00iuz2t72khjoq8h",
+      "startMs": 5749010,
+      "endMs": 5791970,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.071Z"
+    },
+    {
+      "id": "cmk83r07m00iwz2t7kaxzwiao",
+      "startMs": 7278630,
+      "endMs": 7327410,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.075Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.050Z",
+  "updatedAt": "2026-01-10T09:31:48.694Z"
+}

@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt8980868",
+  "title": "Purl",
+  "year": 2019,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r23n01mkz2t7ii7vmd0x",
+      "startMs": 287980,
+      "endMs": 292540,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "innuendo about removing clothing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.524Z"
+    },
+    {
+      "id": "cmk83r23q01mmz2t7nzhe0yno",
+      "startMs": 308640,
+      "endMs": 312060,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "kiss our a-word",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.527Z"
+    },
+    {
+      "id": "cmk83r23t01moz2t7wbrv3cdb",
+      "startMs": 346800,
+      "endMs": 354200,
+      "category": "drugs",
+      "subcategory": "drugs",
+      "severity": "low",
+      "channel": "both",
+      "comment": "several characters are seen drinking and holding wine bottles",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.530Z"
+    },
+    {
+      "id": "cmk83r23w01mqz2t7f7o4w7ae",
+      "startMs": 373240,
+      "endMs": 375970,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "sexist remark - leave the knitting at Nana's house",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.533Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.519Z",
+  "updatedAt": "2026-01-10T09:31:49.601Z"
+}

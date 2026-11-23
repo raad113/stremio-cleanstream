@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0104454",
+  "title": "Howards End",
+  "year": 1992,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0v200w9z2t76v0u3o64",
+      "startMs": 210370,
+      "endMs": 266100,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.918Z"
+    },
+    {
+      "id": "cmk83r0v500wbz2t7aa4doysb",
+      "startMs": 1513280,
+      "endMs": 1563880,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.921Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.914Z",
+  "updatedAt": "2026-01-10T09:31:48.996Z"
+}

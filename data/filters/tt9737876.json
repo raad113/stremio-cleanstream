@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt9737876",
+  "title": "Narvik",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1lv01cez2t7dfee9f0z",
+      "startMs": 565260,
+      "endMs": 634990,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.883Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.880Z",
+  "updatedAt": "2026-01-10T09:31:49.363Z"
+}

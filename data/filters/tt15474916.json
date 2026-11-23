@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt15474916",
+  "title": "Smile",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2ea01sqz2t78jocnv7s",
+      "startMs": 1010440,
+      "endMs": 1025110,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.906Z"
+    },
+    {
+      "id": "cmk83r2ed01ssz2t7qf7jxf7i",
+      "startMs": 5924000,
+      "endMs": 5952100,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.909Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.903Z",
+  "updatedAt": "2026-01-10T09:31:49.754Z"
+}

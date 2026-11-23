@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt0120070",
+  "title": "Savior",
+  "year": 1998,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2bh01r3z2t79z77wv41",
+      "startMs": 1988460,
+      "endMs": 1993460,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "breastfeeding",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.805Z"
+    },
+    {
+      "id": "cmk83r2bk01r5z2t7cxtoyz0r",
+      "startMs": 2926850,
+      "endMs": 2938850,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "checking breast",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.808Z"
+    },
+    {
+      "id": "cmk83r2bn01r7z2t7es15in80",
+      "startMs": 3278240,
+      "endMs": 3288740,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "breastfeeding",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.812Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.803Z",
+  "updatedAt": "2026-01-10T09:31:49.703Z"
+}

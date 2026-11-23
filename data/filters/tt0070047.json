@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt0070047",
+  "title": "The Exorcist",
+  "year": 1973,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2to021iz2t7bepcwg10",
+      "startMs": 1844360,
+      "endMs": 1915500,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "blasphemous",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.460Z"
+    },
+    {
+      "id": "cmk83r2tr021kz2t7e8t4fkmt",
+      "startMs": 2943290,
+      "endMs": 2949730,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "and verbal",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.463Z"
+    },
+    {
+      "id": "cmk83r2tu021mz2t7xfg7znmj",
+      "startMs": 4416000,
+      "endMs": 4422300,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "and blasphemous",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.466Z"
+    },
+    {
+      "id": "cmk83r2tx021oz2t7en0idnzi",
+      "startMs": 4429530,
+      "endMs": 4433640,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "and verbal",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.469Z"
+    },
+    {
+      "id": "cmk83r2u0021qz2t7cyo14e5g",
+      "startMs": 4453000,
+      "endMs": 4459540,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "and verbal",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.473Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.456Z",
+  "updatedAt": "2026-01-10T09:31:49.994Z"
+}

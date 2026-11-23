@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt12477480",
+  "title": "Decision to Leave",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r00500ekz2t7xfr4rg1k",
+      "startMs": 610970,
+      "endMs": 710090,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.805Z"
+    },
+    {
+      "id": "cmk83r00800emz2t74of8abku",
+      "startMs": 6875820,
+      "endMs": 6890100,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.808Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.802Z",
+  "updatedAt": "2026-01-10T09:31:48.598Z"
+}

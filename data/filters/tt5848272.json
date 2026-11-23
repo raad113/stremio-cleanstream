@@ -1,0 +1,284 @@
+{
+  "imdbId": "tt5848272",
+  "title": "Ralph Breaks the Internet",
+  "year": 2018,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r26v01ofz2t7s7k1z7z9",
+      "startMs": 613610,
+      "endMs": 614630,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "blasphemy euphemism - For Peter's sake",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.639Z"
+    },
+    {
+      "id": "cmk83r26y01ohz2t7l1jk2jvd",
+      "startMs": 638000,
+      "endMs": 639370,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.642Z"
+    },
+    {
+      "id": "cmk83r27101ojz2t73hgh59dd",
+      "startMs": 1265400,
+      "endMs": 1267250,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "blasphemy euphemism - Holy cow",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.645Z"
+    },
+    {
+      "id": "cmk83r27301olz2t76xadrbmd",
+      "startMs": 1886000,
+      "endMs": 1892080,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "a car flips over and wrecks, and another car is T-boned by a tanker truck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.648Z"
+    },
+    {
+      "id": "cmk83r27701onz2t70464y1r5",
+      "startMs": 1893590,
+      "endMs": 1898670,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "a flipped car explodes and burns",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.652Z"
+    },
+    {
+      "id": "cmk83r27a01opz2t7m8rcv8tu",
+      "startMs": 2157630,
+      "endMs": 2163960,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "a car rear-ends a delivery truck, causing it to flip and wreck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.655Z"
+    },
+    {
+      "id": "cmk83r27d01orz2t7mxgvdjhn",
+      "startMs": 2164610,
+      "endMs": 2166590,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "video",
+      "comment": "a flipped car is seen in the background",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.658Z"
+    },
+    {
+      "id": "cmk83r27g01otz2t7hc475y7g",
+      "startMs": 3301860,
+      "endMs": 3302800,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.661Z"
+    },
+    {
+      "id": "cmk83r27k01ovz2t7f4jfi37k",
+      "startMs": 3467840,
+      "endMs": 3482820,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "xenophobic joke - A young woman speaks in a Scottish accent, and the other characters say they cannot understand her, with one claiming she's \"from the other studio.\" They smile at her awkwardly. Offensive to the Scottish.",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.664Z"
+    },
+    {
+      "id": "cmk83r27n01oxz2t7ei7crixr",
+      "startMs": 3834900,
+      "endMs": 3836880,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "a clown pops out of a dumpster, singing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.667Z"
+    },
+    {
+      "id": "cmk83r27q01ozz2t7re3xg07s",
+      "startMs": 3851300,
+      "endMs": 3854590,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "a man sings about giving the audience a tattoo and brings a tattoo machine needle up to the camera, good to filter out for those who are afraid of needles",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.670Z"
+    },
+    {
+      "id": "cmk83r27t01p1z2t7xn6mptvp",
+      "startMs": 3923340,
+      "endMs": 3928500,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "a clown is seen, singing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.673Z"
+    },
+    {
+      "id": "cmk83r27x01p3z2t7wqas84hh",
+      "startMs": 4213300,
+      "endMs": 4350770,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "scene with a fleshy, worm-like character with two heads, could be unsettling for both kids and some adults, plot important dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.677Z"
+    },
+    {
+      "id": "cmk83r28001p5z2t7531fmn0q",
+      "startMs": 5527220,
+      "endMs": 5532970,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "homosexual kissing - a male frog kisses a man on the lips and winks, waking the man up",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.680Z"
+    },
+    {
+      "id": "cmk83r28301p7z2t7ppu8v1s6",
+      "startMs": 6104180,
+      "endMs": 6109520,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "video",
+      "comment": "photograph of a fleshy, worm-like character with two heads is shown, could be unsettling for both kids and some adults",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.683Z"
+    },
+    {
+      "id": "cmk83r28501p9z2t7woxrx6m5",
+      "startMs": 6117960,
+      "endMs": 6197560,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "scene with a cartoon bunny that explodes off-screen and causes a little girl to scream, may be disturbing for some",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.686Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.635Z",
+  "updatedAt": "2026-01-10T09:31:49.641Z"
+}

@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0329575",
+  "title": "Seabiscuit",
+  "year": 2003,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2cq01ruz2t78508o2yh",
+      "startMs": 1921650,
+      "endMs": 2070280,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.851Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.848Z",
+  "updatedAt": "2026-01-10T09:31:49.724Z"
+}

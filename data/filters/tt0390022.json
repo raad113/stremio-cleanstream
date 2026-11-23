@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt0390022",
+  "title": "Friday Night Lights",
+  "year": 2004,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0ie00p9z2t795w0kvc6",
+      "startMs": 773340,
+      "endMs": 775000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.463Z"
+    },
+    {
+      "id": "cmk83r0ih00pbz2t70pstpqcq",
+      "startMs": 967560,
+      "endMs": 1017350,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.465Z"
+    },
+    {
+      "id": "cmk83r0ik00pdz2t7it8ylb4l",
+      "startMs": 1034030,
+      "endMs": 1211570,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.468Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.459Z",
+  "updatedAt": "2026-01-10T09:31:48.828Z"
+}

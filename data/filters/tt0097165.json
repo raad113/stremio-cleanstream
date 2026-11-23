@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0097165",
+  "title": "Dead Poets Society",
+  "year": 1989,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzz800e2z2t7r8lv8nj4",
+      "startMs": 2329950,
+      "endMs": 2385490,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.772Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.769Z",
+  "updatedAt": "2026-01-10T09:31:48.583Z"
+}

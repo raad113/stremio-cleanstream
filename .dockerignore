@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log*
+.git
+.github
+.env
+.env.*
+test
+cleanstream_backup.sql
+data/videoskip-imports

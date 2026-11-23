@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt1482459",
+  "title": "The Lorax",
+  "year": 2012,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r36u029bz2t70et0jz4d",
+      "startMs": 3320230,
+      "endMs": 3323150,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "a woman suggestively shakes her rear end at the camera",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.935Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.932Z",
+  "updatedAt": "2026-01-10T09:31:50.184Z"
+}

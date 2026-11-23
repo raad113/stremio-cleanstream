@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt3262342",
+  "title": "Loving Vincent",
+  "year": 2017,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r13w011ez2t743hcv0py",
+      "startMs": 466910,
+      "endMs": 478040,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.237Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.233Z",
+  "updatedAt": "2026-01-10T09:31:49.147Z"
+}

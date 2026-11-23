@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0371746",
+  "title": "Iron Man",
+  "year": 2008,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0y000xxz2t7e0cytjdn",
+      "startMs": 526500,
+      "endMs": 630620,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.024Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.021Z",
+  "updatedAt": "2026-01-10T09:31:49.048Z"
+}

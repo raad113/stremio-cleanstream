@@ -58,8 +58,16 @@ async function getOrCreateTitle(imdbId, metadata = {}) {
  * Get filters/segments for a title
  */
 async function getFilters(imdbId) {
+  if (!jsonDb.isValidContentId(imdbId)) return null;
+
   if (!isPostgresAvailable()) {
-    return jsonDb.getFilters(imdbId);
+    const data = jsonDb.getFilters(imdbId);
+    if (!data) return null;
+    // Never expose who voted; return a copy without the per-visitor vote map
+    return {
+      ...data,
+      segments: data.segments.map(({ voters, ...seg }) => seg),
+    };
   }
   
   const prisma = getClient();
@@ -117,7 +125,7 @@ async function addSegment(imdbId, segmentData) {
   const title = await getOrCreateTitle(imdbId, {
     title: segmentData.titleName,
     year: segmentData.year,
-    type: segmentData.type,
+    type: segmentData.type || (imdbId.includes(':') ? 'episode' : undefined),
   });
   
   const segment = await prisma.segment.create({
@@ -189,10 +197,19 @@ async function updateTitleMetadata(imdbId, metadata) {
  */
 async function voteSegment(imdbId, segmentId, voteType, visitorId) {
   if (!isPostgresAvailable()) {
-    return jsonDb.voteSegment(imdbId, segmentId, voteType);
+    return jsonDb.voteSegment(imdbId, segmentId, voteType, visitorId);
   }
   
   const prisma = getClient();
+
+  // Make sure the segment exists and belongs to this title
+  const segment = await prisma.segment.findFirst({
+    where: { id: segmentId, title: { imdbId } },
+    select: { id: true },
+  });
+  if (!segment) {
+    return { success: false, reason: 'not_found' };
+  }
   
   // Check for existing vote
   const existingVote = await prisma.vote.findUnique({
@@ -318,12 +335,11 @@ async function getStats() {
  */
 async function listTitles(options = {}) {
   if (!isPostgresAvailable()) {
-    const ids = jsonDb.listAllFilters();
-    return ids.map(id => ({ imdbId: id }));
+    return jsonDb.listTitles(options);
   }
   
   const prisma = getClient();
-  const { limit = 100, offset = 0, hasSegments = true, sortBy = 'recent' } = options;
+  const { limit = 100, offset = 0, hasSegments = true, sortBy = 'recent', type } = options;
   
   // Determine orderBy based on sortBy
   let orderBy;
@@ -348,9 +364,10 @@ async function listTitles(options = {}) {
   }
   
   const titles = await prisma.title.findMany({
-    where: hasSegments ? {
-      segments: { some: {} },
-    } : undefined,
+    where: {
+      ...(hasSegments ? { segments: { some: {} } } : {}),
+      ...(type ? { type } : {}),
+    },
     take: limit,
     skip: offset,
     orderBy: orderBy,
@@ -375,9 +392,7 @@ async function listTitles(options = {}) {
  */
 async function searchTitles(query) {
   if (!isPostgresAvailable()) {
-    // Basic search for JSON storage
-    const ids = jsonDb.listAllFilters();
-    return ids.filter(id => id.includes(query)).map(id => ({ imdbId: id }));
+    return jsonDb.searchTitles(query);
   }
   
   const prisma = getClient();
@@ -397,7 +412,13 @@ async function searchTitles(query) {
     },
   });
   
-  return titles;
+  return titles.map(t => ({
+    imdbId: t.imdbId,
+    title: t.title,
+    year: t.year,
+    type: t.type,
+    segmentCount: t._count.segments,
+  }));
 }
 
 /**
@@ -415,7 +436,10 @@ async function bulkImportSegments(imdbId, segments, metadata = {}) {
   const prisma = getClient();
   
   // Ensure title exists
-  const title = await getOrCreateTitle(imdbId, metadata);
+  const title = await getOrCreateTitle(imdbId, {
+    ...metadata,
+    type: metadata.type || (imdbId.includes(':') ? 'episode' : undefined),
+  });
   
   // Bulk create segments
   const result = await prisma.segment.createMany({
@@ -437,6 +461,7 @@ async function bulkImportSegments(imdbId, segments, metadata = {}) {
 }
 
 module.exports = {
+  isValidContentId: jsonDb.isValidContentId,
   isPostgresAvailable,
   getOrCreateTitle,
   getFilters,

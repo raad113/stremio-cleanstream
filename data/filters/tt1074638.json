@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt1074638",
+  "title": "Skyfall",
+  "year": 2012,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2ds01sfz2t7nb62v307",
+      "startMs": 820550,
+      "endMs": 829270,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.888Z"
+    },
+    {
+      "id": "cmk83r2du01shz2t7ubvuv0gg",
+      "startMs": 921350,
+      "endMs": 948090,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.891Z"
+    },
+    {
+      "id": "cmk83r2dy01sjz2t7qfqve3q5",
+      "startMs": 1296260,
+      "endMs": 1348030,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.895Z"
+    },
+    {
+      "id": "cmk83r2e101slz2t7av39cdeh",
+      "startMs": 3188490,
+      "endMs": 3295730,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.898Z"
+    },
+    {
+      "id": "cmk83r2e401snz2t725a9r517",
+      "startMs": 3952320,
+      "endMs": 4026730,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.900Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.885Z",
+  "updatedAt": "2026-01-10T09:31:49.746Z"
+}

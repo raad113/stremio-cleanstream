@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt6751668",
+  "title": "Parasite",
+  "year": 2019,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r20n01l0z2t7mpri835c",
+      "startMs": 5308540,
+      "endMs": 5413980,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "marital encounter, not very explicit",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.416Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.413Z",
+  "updatedAt": "2026-01-10T09:31:49.555Z"
+}

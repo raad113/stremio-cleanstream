@@ -1,0 +1,250 @@
+{
+  "imdbId": "tt2278388",
+  "title": "The Grand Budapest Hotel",
+  "year": 2014,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2xv0240z2t7jqhshlmi",
+      "startMs": 473240,
+      "endMs": 476440,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.612Z"
+    },
+    {
+      "id": "cmk83r2xz0242z2t7dfslqzes",
+      "startMs": 897000,
+      "endMs": 923650,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.616Z"
+    },
+    {
+      "id": "cmk83r2y20244z2t776rp5cix",
+      "startMs": 1112160,
+      "endMs": 1114660,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.619Z"
+    },
+    {
+      "id": "cmk83r2y50246z2t7kqh0pump",
+      "startMs": 1166750,
+      "endMs": 1188490,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.622Z"
+    },
+    {
+      "id": "cmk83r2y80248z2t7th8w8wgt",
+      "startMs": 1336590,
+      "endMs": 1350500,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.625Z"
+    },
+    {
+      "id": "cmk83r2yd024az2t70nzhy80w",
+      "startMs": 1696180,
+      "endMs": 1721670,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.629Z"
+    },
+    {
+      "id": "cmk83r2yf024cz2t7luxcdi43",
+      "startMs": 1729590,
+      "endMs": 1753910,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.632Z"
+    },
+    {
+      "id": "cmk83r2yi024ez2t7zc3x47ql",
+      "startMs": 1866680,
+      "endMs": 1869590,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.635Z"
+    },
+    {
+      "id": "cmk83r2yl024gz2t7xcnbnphw",
+      "startMs": 2009980,
+      "endMs": 2018720,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.638Z"
+    },
+    {
+      "id": "cmk83r2yq024iz2t7qmj2mnap",
+      "startMs": 2558900,
+      "endMs": 2714670,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.643Z"
+    },
+    {
+      "id": "cmk83r2yv024kz2t7abbvanel",
+      "startMs": 3259680,
+      "endMs": 3277540,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.647Z"
+    },
+    {
+      "id": "cmk83r2yy024mz2t7f3x16am0",
+      "startMs": 3519330,
+      "endMs": 3535570,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.650Z"
+    },
+    {
+      "id": "cmk83r2z1024oz2t7jsu73v1b",
+      "startMs": 4150250,
+      "endMs": 4178510,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.653Z"
+    },
+    {
+      "id": "cmk83r2z4024qz2t72hgn7cy0",
+      "startMs": 4328640,
+      "endMs": 4332110,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.657Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.609Z",
+  "updatedAt": "2026-01-10T09:31:50.056Z"
+}

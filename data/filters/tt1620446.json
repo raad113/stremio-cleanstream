@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt1620446",
+  "title": "Day & Night",
+  "year": 2010,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzyf00dnz2t7u0aldgjt",
+      "startMs": 160030,
+      "endMs": 195370,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "two abstract beings ogle a woman in a bikini, followed by a group of men and women in swimsuits",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.744Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.741Z",
+  "updatedAt": "2026-01-10T09:31:48.569Z"
+}

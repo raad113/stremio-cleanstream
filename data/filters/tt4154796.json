@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt4154796",
+  "title": "Avengers: Endgame",
+  "year": 2019,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzi0004cz2t7plciorud",
+      "startMs": 2416000,
+      "endMs": 2453400,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "swearing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.153Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.150Z",
+  "updatedAt": "2026-01-10T09:31:48.342Z"
+}

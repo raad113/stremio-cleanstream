@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0077416",
+  "title": "The Deer Hunter",
+  "year": 1978,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2rn020fz2t77v2yi8v4",
+      "startMs": 2986770,
+      "endMs": 3144220,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "full male",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.387Z"
+    },
+    {
+      "id": "cmk83r2rq020hz2t7bt2fb48l",
+      "startMs": 6144440,
+      "endMs": 6304660,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.390Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.384Z",
+  "updatedAt": "2026-01-10T09:31:49.966Z"
+}

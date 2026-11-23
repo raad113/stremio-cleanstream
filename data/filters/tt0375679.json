@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt0375679",
+  "title": "Crash",
+  "year": 2005,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzwd00ckz2t763gexizw",
+      "startMs": 1202600,
+      "endMs": 1265080,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.670Z"
+    },
+    {
+      "id": "cmk83qzwh00cmz2t7x3psnr4h",
+      "startMs": 1430750,
+      "endMs": 1451120,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.674Z"
+    },
+    {
+      "id": "cmk83qzwk00coz2t7fo3r1mdg",
+      "startMs": 2291860,
+      "endMs": 2392690,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.677Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.667Z",
+  "updatedAt": "2026-01-10T09:31:48.537Z"
+}

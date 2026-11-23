@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0113277",
+  "title": "Heat",
+  "year": 1995,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0ok00sgz2t7ao4ewi2b",
+      "startMs": 258870,
+      "endMs": 334230,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.684Z"
+    },
+    {
+      "id": "cmk83r0on00siz2t7gilq4fo0",
+      "startMs": 3359660,
+      "endMs": 3404420,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.688Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.680Z",
+  "updatedAt": "2026-01-10T09:31:48.907Z"
+}

@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt8368512",
+  "title": "The Courier",
+  "year": 2020,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2qi01zwz2t736bq3cmz",
+      "startMs": 2277910,
+      "endMs": 2315800,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.347Z"
+    },
+    {
+      "id": "cmk83r2qn01zyz2t776h1dpy1",
+      "startMs": 4829870,
+      "endMs": 4856560,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "male",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.352Z"
+    },
+    {
+      "id": "cmk83r2qs0200z2t7zj1ekuf1",
+      "startMs": 6088480,
+      "endMs": 6112130,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "male",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.356Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.344Z",
+  "updatedAt": "2026-01-10T09:31:49.949Z"
+}

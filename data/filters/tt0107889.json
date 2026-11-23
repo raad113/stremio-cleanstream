@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0107889",
+  "title": "The Program",
+  "year": 1993,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3he02fyz2t78qzi1sib",
+      "startMs": 3932390,
+      "endMs": 3981270,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "rape",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.314Z"
+    },
+    {
+      "id": "cmk83r3hh02g0z2t7g6peereu",
+      "startMs": 4970460,
+      "endMs": 4997000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "male back",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.317Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.311Z",
+  "updatedAt": "2026-01-10T09:31:50.306Z"
+}

@@ -1,0 +1,624 @@
+{
+  "imdbId": "tt0457510",
+  "title": "Nacho Libre",
+  "year": 2006,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1iq01adz2t7is0j974l",
+      "startMs": 596630,
+      "endMs": 613850,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "fighting / slapping",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.770Z"
+    },
+    {
+      "id": "cmk83r1it01afz2t7vszkun6t",
+      "startMs": 864120,
+      "endMs": 872770,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "both",
+      "comment": "buttload, crap",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.773Z"
+    },
+    {
+      "id": "cmk83r1iv01ahz2t7o923oar0",
+      "startMs": 1111580,
+      "endMs": 1146330,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "slapping/hitting/kicking/choking",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.776Z"
+    },
+    {
+      "id": "cmk83r1iy01ajz2t7hjkrelhr",
+      "startMs": 1237000,
+      "endMs": 1238340,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man hit with melon in chest",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.779Z"
+    },
+    {
+      "id": "cmk83r1j301alz2t749qqwmjl",
+      "startMs": 1255700,
+      "endMs": 1258840,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "video",
+      "comment": "man shoots arrow and hits another man in back",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.783Z"
+    },
+    {
+      "id": "cmk83r1j501anz2t799etv0s0",
+      "startMs": 1260310,
+      "endMs": 1261970,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man's butt crack shown",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.786Z"
+    },
+    {
+      "id": "cmk83r1j801apz2t7bkjx053o",
+      "startMs": 1275380,
+      "endMs": 1277930,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "video",
+      "comment": "man bucked by bull horns",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.789Z"
+    },
+    {
+      "id": "cmk83r1jb01arz2t72rfv1v2y",
+      "startMs": 1291800,
+      "endMs": 1300000,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man attacked by bees",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.791Z"
+    },
+    {
+      "id": "cmk83r1jh01avz2t7gmt4zviz",
+      "startMs": 1305840,
+      "endMs": 1313550,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "slow-mo of men's junk as they run",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.798Z"
+    },
+    {
+      "id": "cmk83r1jf01atz2t7bmnnh36x",
+      "startMs": 1436500,
+      "endMs": 1438500,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man clotheslines another man",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.795Z"
+    },
+    {
+      "id": "cmk83r1jk01axz2t7kw2a5gg4",
+      "startMs": 1445390,
+      "endMs": 1459190,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man tears another man's hair out",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.800Z"
+    },
+    {
+      "id": "cmk83r1jn01azz2t71encugen",
+      "startMs": 1478430,
+      "endMs": 1480930,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man punches another",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.803Z"
+    },
+    {
+      "id": "cmk83r1jr01b1z2t7nj56if35",
+      "startMs": 1495250,
+      "endMs": 1496250,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man slaps another",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.807Z"
+    },
+    {
+      "id": "cmk83r1jt01b3z2t7i1h40kfi",
+      "startMs": 1497470,
+      "endMs": 1503080,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man slams another's head to ground",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.810Z"
+    },
+    {
+      "id": "cmk83r1jw01b5z2t7xo4c7eas",
+      "startMs": 1520900,
+      "endMs": 1522920,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man kicks another in back of head",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.812Z"
+    },
+    {
+      "id": "cmk83r1jz01b7z2t7r5rml5xn",
+      "startMs": 1792670,
+      "endMs": 1794270,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man force dunks another man's head in water",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.815Z"
+    },
+    {
+      "id": "cmk83r1k301b9z2t7902x4qhk",
+      "startMs": 1845280,
+      "endMs": 1992680,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "wrestlers dressed and act like beasts",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.819Z"
+    },
+    {
+      "id": "cmk83r1k801bdz2t7odlp87og",
+      "startMs": 1853090,
+      "endMs": 1989070,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "wrestlers fighting",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.825Z"
+    },
+    {
+      "id": "cmk83r1k501bbz2t7djo4yjap",
+      "startMs": 2002960,
+      "endMs": 2013190,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "wrestlers dressed and act like beasts",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.822Z"
+    },
+    {
+      "id": "cmk83r1kb01bfz2t7w9azrkrm",
+      "startMs": 2003000,
+      "endMs": 2012490,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "wrestlers fighting",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.827Z"
+    },
+    {
+      "id": "cmk83r1kf01bhz2t7hznnkl3l",
+      "startMs": 2059920,
+      "endMs": 2074570,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "animal parts hanging for sale in market",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.831Z"
+    },
+    {
+      "id": "cmk83r1kh01bjz2t7n7wazx4v",
+      "startMs": 2383670,
+      "endMs": 2385670,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man punches another in face",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.834Z"
+    },
+    {
+      "id": "cmk83r1kk01blz2t7tn7nn3kf",
+      "startMs": 2401690,
+      "endMs": 2408690,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man attacks and chokes another",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.837Z"
+    },
+    {
+      "id": "cmk83r1kn01bnz2t7bkh7mumu",
+      "startMs": 2638780,
+      "endMs": 2722460,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "men wrestling, hitting",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.840Z"
+    },
+    {
+      "id": "cmk83r1kr01bpz2t7ji2vp4bl",
+      "startMs": 3402090,
+      "endMs": 3404590,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "man stabbed in eye",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.843Z"
+    },
+    {
+      "id": "cmk83r1ku01brz2t7567psrcg",
+      "startMs": 3431210,
+      "endMs": 3434920,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "both",
+      "comment": "d*uche",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.846Z"
+    },
+    {
+      "id": "cmk83r1kx01btz2t7lz0zxy9e",
+      "startMs": 3721070,
+      "endMs": 3723630,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man with clothes on fire",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.849Z"
+    },
+    {
+      "id": "cmk83r1l001bvz2t7bx9hbw8k",
+      "startMs": 3730630,
+      "endMs": 3742760,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man runs with clothes on fire",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.852Z"
+    },
+    {
+      "id": "cmk83r1l401bxz2t7u7trmp0f",
+      "startMs": 3909230,
+      "endMs": 3995690,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "various wrestling moves and fighting",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.856Z"
+    },
+    {
+      "id": "cmk83r1l701bzz2t72yzjniba",
+      "startMs": 4296310,
+      "endMs": 4297810,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man's foot run over by vehicle",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.859Z"
+    },
+    {
+      "id": "cmk83r1la01c1z2t763qvo7a0",
+      "startMs": 4498170,
+      "endMs": 4515470,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man has oil rubbed all over his body",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.862Z"
+    },
+    {
+      "id": "cmk83r1lc01c3z2t7dgzcy1tn",
+      "startMs": 4755270,
+      "endMs": 4904260,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "men wrestling",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.865Z"
+    },
+    {
+      "id": "cmk83r1lg01c5z2t73htgvuk6",
+      "startMs": 4914000,
+      "endMs": 4920060,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man with boot on neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.869Z"
+    },
+    {
+      "id": "cmk83r1lj01c7z2t7udh945gg",
+      "startMs": 4925000,
+      "endMs": 4929980,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man with boot on neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.871Z"
+    },
+    {
+      "id": "cmk83r1lm01c9z2t7ybcankay",
+      "startMs": 4937210,
+      "endMs": 4968060,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "men wrestling",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.874Z"
+    },
+    {
+      "id": "cmk83r1lo01cbz2t7g81zbdiq",
+      "startMs": 5001590,
+      "endMs": 5023140,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "men wrestling",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.877Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.766Z",
+  "updatedAt": "2026-01-10T09:31:49.328Z"
+}

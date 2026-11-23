@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt0080339",
+  "title": "Airplane!",
+  "year": 1980,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzej0029z2t7qblwkq3d",
+      "startMs": 1418510,
+      "endMs": 1423100,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "kissing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.027Z"
+    },
+    {
+      "id": "cmk83qzem002bz2t7ivd5w4al",
+      "startMs": 2526970,
+      "endMs": 2530720,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "breasts shaking",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.030Z"
+    },
+    {
+      "id": "cmk83qzeo002dz2t7qmrwbelx",
+      "startMs": 2708490,
+      "endMs": 2713070,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "simulated sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.033Z"
+    },
+    {
+      "id": "cmk83qzes002fz2t79z09cqtf",
+      "startMs": 2717920,
+      "endMs": 2726680,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "simulated sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.037Z"
+    },
+    {
+      "id": "cmk83qzev002hz2t7zovnzbbr",
+      "startMs": 2825140,
+      "endMs": 2827640,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "topless female taking whole screen",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.039Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.024Z",
+  "updatedAt": "2026-01-10T09:31:48.290Z"
+}

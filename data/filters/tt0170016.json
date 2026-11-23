@@ -1,0 +1,114 @@
+{
+  "imdbId": "tt0170016",
+  "title": "How the Grinch Stole Christmas",
+  "year": 2000,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0u400vpz2t7v238c4gm",
+      "startMs": 310260,
+      "endMs": 312930,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "jump scare, a large creature with red eyes and sharp teeth jumps out of a door toward the camera, though it's revealed thereafter to be fake",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.885Z"
+    },
+    {
+      "id": "cmk83r0u800vrz2t7k1egfpgw",
+      "startMs": 315110,
+      "endMs": 317610,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "both",
+      "comment": "humanoid teenagers run from a large, actually fake, creature with red eyes and sharp teeth",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.888Z"
+    },
+    {
+      "id": "cmk83r0ua00vtz2t7he6gye5e",
+      "startMs": 320590,
+      "endMs": 328400,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "video",
+      "comment": "the large creature with red eyes and sharp teeth is shown to be fake, albeit still unsettling, with a dog providing the creature's sounds",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.891Z"
+    },
+    {
+      "id": "cmk83r0ue00vvz2t7dpqlf4dm",
+      "startMs": 2871310,
+      "endMs": 2883300,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "A man unintentionally makes inappropriate contact with a woman",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.895Z"
+    },
+    {
+      "id": "cmk83r0uh00vxz2t70zimc3q5",
+      "startMs": 4526540,
+      "endMs": 4528950,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "video",
+      "comment": "immodest v-neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.897Z"
+    },
+    {
+      "id": "cmk83r0uk00vzz2t7xbll28n6",
+      "startMs": 4530600,
+      "endMs": 4531820,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "video",
+      "comment": "immodest v-neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.900Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.882Z",
+  "updatedAt": "2026-01-10T09:31:48.983Z"
+}

@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt0109830",
+  "title": "Forrest Gump",
+  "year": 1994,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0bz00lcz2t78b60d2ex",
+      "startMs": 1621390,
+      "endMs": 1769340,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.231Z"
+    },
+    {
+      "id": "cmk83r0c100lez2t7oyzqv3yf",
+      "startMs": 2143880,
+      "endMs": 2425820,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.234Z"
+    },
+    {
+      "id": "cmk83r0c400lgz2t76jdqjgut",
+      "startMs": 4903830,
+      "endMs": 5041040,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.237Z"
+    },
+    {
+      "id": "cmk83r0c700liz2t78od2actt",
+      "startMs": 6590480,
+      "endMs": 6652750,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.239Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.227Z",
+  "updatedAt": "2026-01-10T09:31:48.768Z"
+}

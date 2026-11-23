@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0112818",
+  "title": "Dead Man Walking",
+  "year": 1995,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzyz00dxz2t7t2exc8nu",
+      "startMs": 6438250,
+      "endMs": 6581150,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.763Z"
+    },
+    {
+      "id": "cmk83qzz200dzz2t7m7f7fk98",
+      "startMs": 6644990,
+      "endMs": 6669730,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.766Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.760Z",
+  "updatedAt": "2026-01-10T09:31:48.580Z"
+}

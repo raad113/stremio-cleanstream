@@ -225,13 +225,14 @@ function parseFilterLine(line) {
  * @param {string} timestamp - Format: HH:MM:SS.mmm
  */
 function parseTimestamp(timestamp) {
-  const match = timestamp.match(/(\d{2}):(\d{2}):(\d{2})\.(\d{3})/);
+  // WebVTT allows "HH:MM:SS.mmm", "H:MM:SS.mmm" and "MM:SS.mmm"
+  const match = String(timestamp).match(/(?:(\d+):)?(\d{1,2}):(\d{2})[.,](\d{1,3})/);
   if (!match) return 0;
   
-  const hours = parseInt(match[1]);
+  const hours = parseInt(match[1] || '0');
   const minutes = parseInt(match[2]);
   const seconds = parseInt(match[3]);
-  const ms = parseInt(match[4]);
+  const ms = parseInt(match[4].padEnd(3, '0'));
   
   return (hours * 3600 + minutes * 60 + seconds) * 1000 + ms;
 }

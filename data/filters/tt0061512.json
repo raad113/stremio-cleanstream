@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0061512",
+  "title": "Cool Hand Luke",
+  "year": 1967,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzvy00ccz2t7dwqmxdq5",
+      "startMs": 1213020,
+      "endMs": 1237300,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.654Z"
+    },
+    {
+      "id": "cmk83qzw100cez2t711x8yyzh",
+      "startMs": 1355430,
+      "endMs": 1598740,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.657Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.651Z",
+  "updatedAt": "2026-01-10T09:31:48.529Z"
+}

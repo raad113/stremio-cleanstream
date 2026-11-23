@@ -6,6 +6,15 @@
 const db = require('../database');
 const { CATEGORIES } = require('./mcf');
 
+// A segment is hidden once the community has clearly rejected it:
+// at least this many more downvotes than upvotes.
+const DISPUTED_VOTE_MARGIN = 3;
+
+function isDisputed(segment) {
+  const votes = segment.votes || { up: 0, down: 0 };
+  return (votes.down || 0) - (votes.up || 0) >= DISPUTED_VOTE_MARGIN;
+}
+
 // Severity level ordering for comparison
 const SEVERITY_LEVELS = {
   off: 0,
@@ -13,6 +22,20 @@ const SEVERITY_LEVELS = {
   medium: 2,
   high: 3,
 };
+
+/**
+ * The user's level says how strict the filter is (matching the configure page):
+ *   high   -> skip every flagged scene (low, medium and high severity)
+ *   medium -> skip medium and high severity scenes
+ *   low    -> skip only high severity scenes
+ *   off    -> skip nothing
+ */
+function meetsFilterLevel(severity, userLevel) {
+  const strictness = SEVERITY_LEVELS[userLevel] || 0;
+  if (strictness === 0) return false;
+  const minimumSeverity = 4 - strictness; // high->1, medium->2, low->3
+  return (SEVERITY_LEVELS[severity] || 0) >= minimumSeverity;
+}
 
 /**
  * Generate skip segments for a movie/show based on user preferences
@@ -47,15 +70,18 @@ async function generateSkips(imdbId, userConfig = {}) {
     const category = segment.category;
     const severity = segment.severity;
     const userThreshold = config[category];
+
+    // Ignore segments the community has voted down
+    if (isDisputed(segment)) {
+      continue;
+    }
     
     // Skip if user hasn't enabled this category
     if (!userThreshold || userThreshold === 'off') {
       continue;
     }
     
-    // Include segment if its severity meets or exceeds user threshold
-    // e.g., if user sets "medium", include "medium" and "high" severity segments
-    if (SEVERITY_LEVELS[severity] >= SEVERITY_LEVELS[userThreshold]) {
+    if (meetsFilterLevel(severity, userThreshold)) {
       skips.push({
         id: segment.id,
         startMs: segment.startMs,
@@ -67,6 +93,7 @@ async function generateSkips(imdbId, userConfig = {}) {
         subcategory: segment.subcategory,
         severity,
         channel: segment.channel || 'both',
+        sourceIds: [segment.id],
         description: segment.comment || generateDescription(category, severity),
       });
     }
@@ -94,6 +121,9 @@ function mergeOverlappingSkips(skips) {
       last.endMs = Math.max(last.endMs, current.endMs);
       last.endTime = formatTimeForDisplay(last.endMs);
       last.duration = last.endMs - last.startMs;
+      last.sourceIds = [...(last.sourceIds || []), ...(current.sourceIds || [])];
+      // A merged block is only "audio only" if every part is audio only
+      if (current.channel !== last.channel) last.channel = 'both';
       
       // Combine descriptions
       if (current.category !== last.category) {
@@ -200,4 +230,6 @@ module.exports = {
   formatTimeForDisplay,
   formatVTTTimestamp,
   SEVERITY_LEVELS,
+  isDisputed,
+  meetsFilterLevel,
 };

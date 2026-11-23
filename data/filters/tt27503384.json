@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt27503384",
+  "title": "Perfect Days",
+  "year": 2023,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r21a01lcz2t73p7tu56d",
+      "startMs": 1391620,
+      "endMs": 1419900,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.438Z"
+    },
+    {
+      "id": "cmk83r21e01lez2t7j9mnqgu0",
+      "startMs": 3010020,
+      "endMs": 3071920,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.442Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.435Z",
+  "updatedAt": "2026-01-10T09:31:49.571Z"
+}

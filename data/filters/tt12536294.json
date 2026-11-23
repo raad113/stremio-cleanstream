@@ -1,0 +1,114 @@
+{
+  "imdbId": "tt12536294",
+  "title": "Spencer",
+  "year": 2021,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2gt01u8z2t7so1bcgqv",
+      "startMs": 1719480,
+      "endMs": 1757860,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.998Z"
+    },
+    {
+      "id": "cmk83r2gw01uaz2t7jkxnbpwx",
+      "startMs": 2185960,
+      "endMs": 2200440,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.001Z"
+    },
+    {
+      "id": "cmk83r2gz01ucz2t7axsrvchp",
+      "startMs": 2851280,
+      "endMs": 2877890,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.003Z"
+    },
+    {
+      "id": "cmk83r2h201uez2t7rbxpjhea",
+      "startMs": 4485350,
+      "endMs": 4509520,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.006Z"
+    },
+    {
+      "id": "cmk83r2h601ugz2t7rjvmfyjx",
+      "startMs": 4544650,
+      "endMs": 4547800,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "Audio",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.010Z"
+    },
+    {
+      "id": "cmk83r2h801uiz2t7mm2jg0gf",
+      "startMs": 5760520,
+      "endMs": 5891300,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.013Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.994Z",
+  "updatedAt": "2026-01-10T09:31:49.801Z"
+}

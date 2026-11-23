@@ -1,0 +1,182 @@
+{
+  "imdbId": "tt0066921",
+  "title": "A Clockwork Orange",
+  "year": 1971,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzb60008z2t7ely97xkm",
+      "startMs": 288530,
+      "endMs": 344750,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "mob rape",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.907Z"
+    },
+    {
+      "id": "cmk83qzb9000az2t7lljore7g",
+      "startMs": 356430,
+      "endMs": 365600,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "rape continues",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.910Z"
+    },
+    {
+      "id": "cmk83qzbc000cz2t7dc1ju9ow",
+      "startMs": 728410,
+      "endMs": 800700,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "another rape",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.913Z"
+    },
+    {
+      "id": "cmk83qzbg000ez2t78f3mzzzl",
+      "startMs": 1426070,
+      "endMs": 1473190,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "homosexual fondling",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.917Z"
+    },
+    {
+      "id": "cmk83qzbj000gz2t7d6gx4v7g",
+      "startMs": 1700070,
+      "endMs": 1743440,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "explicit",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.919Z"
+    },
+    {
+      "id": "cmk83qzbm000iz2t7o95e5yxl",
+      "startMs": 2429870,
+      "endMs": 2575410,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "fight with phallic statue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.923Z"
+    },
+    {
+      "id": "cmk83qzbp000kz2t7wypgp01t",
+      "startMs": 3408600,
+      "endMs": 3441210,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "topless females",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.925Z"
+    },
+    {
+      "id": "cmk83qzbt000mz2t790phf7xr",
+      "startMs": 4391040,
+      "endMs": 4406060,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "third rape",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.929Z"
+    },
+    {
+      "id": "cmk83qzbv000oz2t7gmsz1cha",
+      "startMs": 5038130,
+      "endMs": 5042300,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "topless female",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.932Z"
+    },
+    {
+      "id": "cmk83qzby000qz2t7wvzjigfy",
+      "startMs": 5053370,
+      "endMs": 5168240,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "topless female",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.935Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:03.903Z",
+  "updatedAt": "2026-01-10T09:31:48.236Z"
+}

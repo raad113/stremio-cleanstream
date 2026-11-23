@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt0083658",
+  "title": "Blade Runner",
+  "year": 1982,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzl60063z2t7kap2t91k",
+      "startMs": 3247430,
+      "endMs": 3284450,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.266Z"
+    },
+    {
+      "id": "cmk83qzla0065z2t7myoowifq",
+      "startMs": 3285800,
+      "endMs": 3290690,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.270Z"
+    },
+    {
+      "id": "cmk83qzld0067z2t7f8bj2pw2",
+      "startMs": 5555800,
+      "endMs": 5584890,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.273Z"
+    },
+    {
+      "id": "cmk83qzlf0069z2t7gjioyza7",
+      "startMs": 5593080,
+      "endMs": 5604100,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.276Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.264Z",
+  "updatedAt": "2026-01-10T09:31:48.393Z"
+}

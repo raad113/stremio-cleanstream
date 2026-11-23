@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt0465538",
+  "title": "Michael Clayton",
+  "year": 2007,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r16p0133z2t7bi4le2mf",
+      "startMs": 1701180,
+      "endMs": 1708740,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.337Z"
+    },
+    {
+      "id": "cmk83r16s0135z2t7c3bk5ito",
+      "startMs": 1751100,
+      "endMs": 1757370,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.340Z"
+    },
+    {
+      "id": "cmk83r16w0137z2t78yax4soy",
+      "startMs": 3624830,
+      "endMs": 3636360,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.344Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.334Z",
+  "updatedAt": "2026-01-10T09:31:49.189Z"
+}

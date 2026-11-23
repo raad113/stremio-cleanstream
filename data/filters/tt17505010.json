@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt17505010",
+  "title": "Horizon: An American Saga - Chapter 1",
+  "year": 2024,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0sp00uuz2t7m05lmdke",
+      "startMs": 7246000,
+      "endMs": 7387000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.834Z"
+    },
+    {
+      "id": "cmk83r0ss00uwz2t7pz390l6y",
+      "startMs": 8810000,
+      "endMs": 8960000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.837Z"
+    },
+    {
+      "id": "cmk83r0sw00uyz2t74fnft33o",
+      "startMs": 9225000,
+      "endMs": 9298000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.840Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.830Z",
+  "updatedAt": "2026-01-10T09:31:48.962Z"
+}

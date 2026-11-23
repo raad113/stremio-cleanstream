@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt0073486",
+  "title": "One Flew Over the Cuckoo's Nest",
+  "year": 1975,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1vp01i5z2t7sga0yndl",
+      "startMs": 1854650,
+      "endMs": 1882640,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.237Z"
+    },
+    {
+      "id": "cmk83r1vt01i7z2t74hrere3h",
+      "startMs": 3072860,
+      "endMs": 3092860,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "picture",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.242Z"
+    },
+    {
+      "id": "cmk83r1vw01i9z2t7kv0tmiqn",
+      "startMs": 3803240,
+      "endMs": 3808020,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "picture",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.244Z"
+    },
+    {
+      "id": "cmk83r1vz01ibz2t7i3d5iauh",
+      "startMs": 5329690,
+      "endMs": 5349170,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.247Z"
+    },
+    {
+      "id": "cmk83r1w201idz2t7a7t9s9h7",
+      "startMs": 6907180,
+      "endMs": 6936030,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "picture",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.250Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.234Z",
+  "updatedAt": "2026-01-10T09:31:49.493Z"
+}

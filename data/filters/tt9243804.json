@@ -1,0 +1,233 @@
+{
+  "imdbId": "tt9243804",
+  "title": "The Green Knight",
+  "year": 2021,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2za024tz2t7mb1c7wv9",
+      "startMs": 1356710,
+      "endMs": 1358210,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "decapitation",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.662Z"
+    },
+    {
+      "id": "cmk83r2zd024vz2t76dqzlim4",
+      "startMs": 1358820,
+      "endMs": 1360320,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "head rolling on floor",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.665Z"
+    },
+    {
+      "id": "cmk83r2zg024xz2t7zy3374kg",
+      "startMs": 1388850,
+      "endMs": 1392850,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "headless body rises",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.669Z"
+    },
+    {
+      "id": "cmk83r2zj024zz2t7qbuyq9h3",
+      "startMs": 1397010,
+      "endMs": 1401010,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "headless body walking",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.671Z"
+    },
+    {
+      "id": "cmk83r2zm0251z2t71z165dam",
+      "startMs": 1402840,
+      "endMs": 1404470,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "head on floor",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.674Z"
+    },
+    {
+      "id": "cmk83r2zo0253z2t7ipy7q2vf",
+      "startMs": 1406490,
+      "endMs": 1419040,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "decapitated head",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.677Z"
+    },
+    {
+      "id": "cmk83r2zs0255z2t7ywbsbszn",
+      "startMs": 1420910,
+      "endMs": 1427420,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "video",
+      "comment": "head talks",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.681Z"
+    },
+    {
+      "id": "cmk83r2zv0257z2t706tfk16j",
+      "startMs": 4291440,
+      "endMs": 4309440,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "giants with breasts",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.684Z"
+    },
+    {
+      "id": "cmk83r305025dz2t7zx9lq9s5",
+      "startMs": 5453310,
+      "endMs": 5637650,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "steamy scene, no actual sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.693Z"
+    },
+    {
+      "id": "cmk83r2zy0259z2t7g0njsa52",
+      "startMs": 5588720,
+      "endMs": 5609340,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "apparent sex, but quite steamy",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.686Z"
+    },
+    {
+      "id": "cmk83r301025bz2t7i9infwkj",
+      "startMs": 5633240,
+      "endMs": 5637240,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "man's hand with semen on it",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.689Z"
+    },
+    {
+      "id": "cmk83r307025fz2t77mj8sccc",
+      "startMs": 6657540,
+      "endMs": 6689170,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "intercourse, not very explicit",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.696Z"
+    },
+    {
+      "id": "cmk83r30a025hz2t7hao9wfrc",
+      "startMs": 7365670,
+      "endMs": 7380670,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "severed head drops",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.699Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.659Z",
+  "updatedAt": "2026-01-10T09:31:50.069Z"
+}

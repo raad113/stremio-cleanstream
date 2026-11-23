@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0079400",
+  "title": "The Kids Are Alright",
+  "year": 1979,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r35c028fz2t764l08yh3",
+      "startMs": 1409550,
+      "endMs": 1439050,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.881Z"
+    },
+    {
+      "id": "cmk83r35f028hz2t7pa75f5gz",
+      "startMs": 3778930,
+      "endMs": 3787430,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.884Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.878Z",
+  "updatedAt": "2026-01-10T09:31:50.162Z"
+}

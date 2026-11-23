@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt0099810",
+  "title": "The Hunt for Red October",
+  "year": 1990,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r32h026rz2t7fkn7vnxn",
+      "startMs": 1120420,
+      "endMs": 1140650,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "killing a man in close quarters",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.778Z"
+    },
+    {
+      "id": "cmk83r32k026tz2t75r1sbz4i",
+      "startMs": 1379170,
+      "endMs": 1388180,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "dead body in bag",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.781Z"
+    },
+    {
+      "id": "cmk83r32n026vz2t7mkq9t294",
+      "startMs": 7212190,
+      "endMs": 7220090,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man bleeding from gunshot",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.783Z"
+    },
+    {
+      "id": "cmk83r32r026xz2t7p20j8d5m",
+      "startMs": 7589100,
+      "endMs": 7590920,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "man shoots man, close range",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.787Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.775Z",
+  "updatedAt": "2026-01-10T09:31:50.119Z"
+}

@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt1483013",
+  "title": "Oblivion",
+  "year": 2013,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1t701grz2t7vnfr6t3g",
+      "startMs": 188980,
+      "endMs": 195770,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.147Z"
+    },
+    {
+      "id": "cmk83r1ta01gtz2t7ejm52i8q",
+      "startMs": 1500330,
+      "endMs": 1669420,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.151Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.144Z",
+  "updatedAt": "2026-01-10T09:31:49.458Z"
+}

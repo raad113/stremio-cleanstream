@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt14849194",
+  "title": "The Holdovers",
+  "year": 2023,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r31z026hz2t7dtbeeuo5",
+      "startMs": 659090,
+      "endMs": 661290,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.760Z"
+    },
+    {
+      "id": "cmk83r323026jz2t7eetagv63",
+      "startMs": 2149690,
+      "endMs": 2157260,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.764Z"
+    },
+    {
+      "id": "cmk83r326026lz2t7cll1e20w",
+      "startMs": 3688670,
+      "endMs": 3691010,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.766Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.757Z",
+  "updatedAt": "2026-01-10T09:31:50.110Z"
+}

@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt2397535",
+  "title": "Predestination",
+  "year": 2014,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r22b01luz2t7lbyxzh8p",
+      "startMs": 1147720,
+      "endMs": 1155720,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "explicit intercourse, though little is seen",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.476Z"
+    },
+    {
+      "id": "cmk83r22f01lwz2t7wg7rogdf",
+      "startMs": 2534230,
+      "endMs": 2537730,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "male, from side",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.479Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.472Z",
+  "updatedAt": "2026-01-10T09:31:49.588Z"
+}

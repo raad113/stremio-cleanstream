@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt10648342",
+  "title": "Thor: Love and Thunder",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3s602m1z2t7tab7t4ts",
+      "startMs": 3525600,
+      "endMs": 3665570,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.702Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.699Z",
+  "updatedAt": "2026-01-10T09:31:50.449Z"
+}

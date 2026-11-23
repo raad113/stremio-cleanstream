@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt7201846",
+  "title": "Cyrano, My Love",
+  "year": 2018,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzx800czz2t767tmq7ye",
+      "startMs": 2869420,
+      "endMs": 2907170,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.700Z"
+    },
+    {
+      "id": "cmk83qzxb00d1z2t7sgrl4wrj",
+      "startMs": 3854480,
+      "endMs": 3905680,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.703Z"
+    },
+    {
+      "id": "cmk83qzxe00d3z2t79aecvskx",
+      "startMs": 4809560,
+      "endMs": 4856280,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.706Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.696Z",
+  "updatedAt": "2026-01-10T09:31:48.551Z"
+}

@@ -1,26 +1,21 @@
 /**
  * Database Seed Script
- * Imports skip data from seed-data.json into PostgreSQL
+ * Imports the bundled skip data (data/filters/*.json) into PostgreSQL
  */
 
 const { PrismaClient } = require('@prisma/client');
-const fs = require('fs');
-const path = require('path');
+const { loadSeedTitles } = require('../src/database/seedSource');
 
 const prisma = new PrismaClient();
 
 async function seed() {
   console.log('Seeding database...');
 
-  // Try to load seed data from JSON file
-  const seedFile = path.join(__dirname, '..', 'data', 'seed-data.json');
-  
-  if (!fs.existsSync(seedFile)) {
-    console.log('No seed-data.json found, skipping seed.');
+  const titles = loadSeedTitles();
+  if (titles.length === 0) {
+    console.log('No bundled seed data found in data/filters, skipping seed.');
     return;
   }
-
-  const titles = JSON.parse(fs.readFileSync(seedFile, 'utf-8'));
   console.log(`Found ${titles.length} titles to import`);
 
   let importedTitles = 0;
@@ -66,7 +61,7 @@ async function seed() {
             category: seg.category,
             subcategory: seg.subcategory || seg.category,
             severity: seg.severity,
-            channel: seg.channel,
+            channel: seg.channel || 'both',
             comment: seg.comment,
             contributor: seg.contributor || 'videoskip-import',
           },

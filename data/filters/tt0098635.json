@@ -1,0 +1,165 @@
+{
+  "imdbId": "tt0098635",
+  "title": "When Harry Met Sally...",
+  "year": 1989,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3y802p1z2t72koflbug",
+      "startMs": 371270,
+      "endMs": 371590,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "sh*t",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.921Z"
+    },
+    {
+      "id": "cmk83r3yc02p3z2t77v8pnew3",
+      "startMs": 1643600,
+      "endMs": 1643960,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "f*ck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.925Z"
+    },
+    {
+      "id": "cmk83r3yf02p5z2t7897bf89s",
+      "startMs": 1691540,
+      "endMs": 1692040,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "sh*t",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.928Z"
+    },
+    {
+      "id": "cmk83r3yk02p7z2t7250z5dv0",
+      "startMs": 1700400,
+      "endMs": 1700930,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "f*cking",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.933Z"
+    },
+    {
+      "id": "cmk83r3yn02p9z2t7itcg0h40",
+      "startMs": 2761000,
+      "endMs": 2829180,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "Woman loudly fakes orgasm. Done humorously",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.936Z"
+    },
+    {
+      "id": "cmk83r3yq02pbz2t7fh1jbcg5",
+      "startMs": 3791940,
+      "endMs": 3792530,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "f*ck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.939Z"
+    },
+    {
+      "id": "cmk83r3yu02pdz2t7a31mz3n7",
+      "startMs": 4635280,
+      "endMs": 4636610,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "big t*ts",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.943Z"
+    },
+    {
+      "id": "cmk83r3yy02pfz2t7lftq3vvl",
+      "startMs": 4850200,
+      "endMs": 4850990,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "F*ck you",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.947Z"
+    },
+    {
+      "id": "cmk83r3z102phz2t7exqkwrvr",
+      "startMs": 5284090,
+      "endMs": 5285060,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "sh*t",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.950Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.918Z",
+  "updatedAt": "2026-01-10T09:31:50.539Z"
+}

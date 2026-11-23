@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt4995540",
+  "title": "Being the Ricardos",
+  "year": 2021,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzja0050z2t781zrrn3j",
+      "startMs": 291670,
+      "endMs": 344480,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.198Z"
+    },
+    {
+      "id": "cmk83qzjd0052z2t7n2pp85jz",
+      "startMs": 1474860,
+      "endMs": 1717460,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.201Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.195Z",
+  "updatedAt": "2026-01-10T09:31:48.364Z"
+}

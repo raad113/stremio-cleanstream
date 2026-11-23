@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt1877830",
+  "title": "The Batman",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2m201x5z2t7mizd2q3c",
+      "startMs": 2038800,
+      "endMs": 2071180,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.187Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.183Z",
+  "updatedAt": "2026-01-10T09:31:49.885Z"
+}

@@ -1,0 +1,437 @@
+{
+  "imdbId": "tt7466442",
+  "title": "The Bob's Burgers Movie",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2n501xsz2t7u3i5lfzg",
+      "startMs": 179510,
+      "endMs": 181050,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "topless said",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.225Z"
+    },
+    {
+      "id": "cmk83r2n701xuz2t7m05deacs",
+      "startMs": 257900,
+      "endMs": 266370,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "singing -- butt",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.228Z"
+    },
+    {
+      "id": "cmk83r2nb01xwz2t7z95esj7e",
+      "startMs": 295810,
+      "endMs": 299310,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "singing -- rear end",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.231Z"
+    },
+    {
+      "id": "cmk83r2ne01xyz2t7lrkhz8jl",
+      "startMs": 471620,
+      "endMs": 472620,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "spoken reference to genitals",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.234Z"
+    },
+    {
+      "id": "cmk83r2nh01y0z2t7rxam0ba7",
+      "startMs": 912370,
+      "endMs": 987970,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "boy in underwear",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.237Z"
+    },
+    {
+      "id": "cmk83r2nk01y2z2t7eui0dq6p",
+      "startMs": 2548420,
+      "endMs": 2550110,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "woman tugs at crotch area of costume",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.240Z"
+    },
+    {
+      "id": "cmk83r2nn01y4z2t73jpvp786",
+      "startMs": 2554420,
+      "endMs": 2556120,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "\"s*x sells\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.244Z"
+    },
+    {
+      "id": "cmk83r2nq01y6z2t72dhl71mu",
+      "startMs": 2557020,
+      "endMs": 2557720,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "\"s*x\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.247Z"
+    },
+    {
+      "id": "cmk83r2nt01y8z2t7bvima9va",
+      "startMs": 2635920,
+      "endMs": 2637520,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "boy refers to adult bookstore",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.249Z"
+    },
+    {
+      "id": "cmk83r2nv01yaz2t7qwzdr5ts",
+      "startMs": 2725770,
+      "endMs": 2726320,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "\"s*xy\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.252Z"
+    },
+    {
+      "id": "cmk83r2nz01ycz2t7tp07312j",
+      "startMs": 2730520,
+      "endMs": 2731320,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "reference to prostitution",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.256Z"
+    },
+    {
+      "id": "cmk83r2o201yez2t7ln9j5ufj",
+      "startMs": 2750020,
+      "endMs": 2750620,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "\"s*xy",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.258Z"
+    },
+    {
+      "id": "cmk83r2o501ygz2t70up1of8s",
+      "startMs": 3018020,
+      "endMs": 3019020,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "boy refers to childbirth while stretching",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.261Z"
+    },
+    {
+      "id": "cmk83r2o701yiz2t7xhb14apy",
+      "startMs": 3169420,
+      "endMs": 3170120,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "\"boobs\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.264Z"
+    },
+    {
+      "id": "cmk83r2ob01ykz2t7oiqofsfz",
+      "startMs": 3174720,
+      "endMs": 3203300,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "girl fantasizes about boy in underwear",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.267Z"
+    },
+    {
+      "id": "cmk83r2oe01ymz2t7nwuaxssw",
+      "startMs": 3342060,
+      "endMs": 3342760,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "man asks children if they heard him urinate, not explicitly sexual",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.270Z"
+    },
+    {
+      "id": "cmk83r2og01yoz2t79cw6uhai",
+      "startMs": 3394720,
+      "endMs": 3396470,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "\"penis\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.273Z"
+    },
+    {
+      "id": "cmk83r2oj01yqz2t7dqbsqeoe",
+      "startMs": 3606960,
+      "endMs": 3607620,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "\"butt\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.275Z"
+    },
+    {
+      "id": "cmk83r2on01ysz2t7e5qr29xm",
+      "startMs": 3858620,
+      "endMs": 3859220,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "\"kegels\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.279Z"
+    },
+    {
+      "id": "cmk83r2oq01yuz2t78jvzyuhp",
+      "startMs": 4397320,
+      "endMs": 4398380,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "\"bare-bottomed\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.282Z"
+    },
+    {
+      "id": "cmk83r2os01ywz2t7ehmmb4f9",
+      "startMs": 4418190,
+      "endMs": 4419490,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "\"pulled down pants\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.285Z"
+    },
+    {
+      "id": "cmk83r2ov01yyz2t7vt3s0lsn",
+      "startMs": 4830640,
+      "endMs": 4831340,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "\"nipple\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.288Z"
+    },
+    {
+      "id": "cmk83r2oz01z0z2t7q1jlsfvt",
+      "startMs": 4992710,
+      "endMs": 4995410,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "reference to grinding",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.291Z"
+    },
+    {
+      "id": "cmk83r2p101z2z2t7harfshl2",
+      "startMs": 5355240,
+      "endMs": 5357990,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man asks if animal is trying to mate with his boat",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.294Z"
+    },
+    {
+      "id": "cmk83r2p401z4z2t70y5ufn76",
+      "startMs": 5598690,
+      "endMs": 5601660,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "boy shakes butt at crowd while singing \"shake your burger buns\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.297Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.222Z",
+  "updatedAt": "2026-01-10T09:31:49.903Z"
+}

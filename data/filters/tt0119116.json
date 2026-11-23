@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt0119116",
+  "title": "The Fifth Element",
+  "year": 1997,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2v5022dz2t7lrkuy0e2",
+      "startMs": 1624020,
+      "endMs": 1629440,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "female from side, not revealing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.514Z"
+    },
+    {
+      "id": "cmk83r2v8022fz2t7zrj4cp6e",
+      "startMs": 1641950,
+      "endMs": 1646120,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "female from side, not revealing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.517Z"
+    },
+    {
+      "id": "cmk83r2vc022hz2t7c7clvd6u",
+      "startMs": 1659270,
+      "endMs": 1689290,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "scantily clothed female, nothing seen",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.521Z"
+    },
+    {
+      "id": "cmk83r2vf022jz2t7gohexhc0",
+      "startMs": 1700990,
+      "endMs": 1704300,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "scantily clothed female, nothing seen",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.523Z"
+    },
+    {
+      "id": "cmk83r2vi022lz2t7xv18fosa",
+      "startMs": 2879760,
+      "endMs": 2886010,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "distant female undressing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.526Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.511Z",
+  "updatedAt": "2026-01-10T09:31:50.018Z"
+}

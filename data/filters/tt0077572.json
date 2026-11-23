@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0077572",
+  "title": "Force 10 from Navarone",
+  "year": 1978,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0bs00l9z2t7ftv6868n",
+      "startMs": 1990720,
+      "endMs": 2076680,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.225Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.221Z",
+  "updatedAt": "2026-01-10T09:31:48.765Z"
+}

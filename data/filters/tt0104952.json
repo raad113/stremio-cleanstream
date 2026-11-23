@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0104952",
+  "title": "My Cousin Vinny",
+  "year": 1992,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1i801a3z2t76fjy7c2i",
+      "startMs": 3535880,
+      "endMs": 3542020,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.752Z"
+    },
+    {
+      "id": "cmk83r1ia01a5z2t7rfz63u0j",
+      "startMs": 3905890,
+      "endMs": 3938260,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.755Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.749Z",
+  "updatedAt": "2026-01-10T09:31:49.318Z"
+}

@@ -1,0 +1,828 @@
+{
+  "imdbId": "tt0088247",
+  "title": "The Terminator",
+  "year": 1984,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3ld02i2z2t7wet477bi",
+      "startMs": 238630,
+      "endMs": 238910,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "What the h*ll?",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.457Z"
+    },
+    {
+      "id": "cmk83r3lg02i4z2t7lwo5hnnb",
+      "startMs": 239760,
+      "endMs": 241760,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "G*dd*mn son of a b*tch...",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.460Z"
+    },
+    {
+      "id": "cmk83r3lk02i6z2t7cgeqp4ia",
+      "startMs": 257400,
+      "endMs": 258060,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "What the h*ll?",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.464Z"
+    },
+    {
+      "id": "cmk83r3ln02i8z2t7473iy1iw",
+      "startMs": 268080,
+      "endMs": 273480,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "Profile of naked man with rear nudity",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.467Z"
+    },
+    {
+      "id": "cmk83r3lq02iaz2t7w539fu60",
+      "startMs": 299560,
+      "endMs": 311090,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "video",
+      "comment": "male rear nudity",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.471Z"
+    },
+    {
+      "id": "cmk83r3lt02icz2t71o994hyw",
+      "startMs": 324770,
+      "endMs": 327860,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "frontal male nudity",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.474Z"
+    },
+    {
+      "id": "cmk83r3lx02iez2t78l3ttshg",
+      "startMs": 356460,
+      "endMs": 358300,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "video",
+      "comment": "male rear nudity",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.478Z"
+    },
+    {
+      "id": "cmk83r3m002igz2t7lwrnqdb2",
+      "startMs": 358250,
+      "endMs": 359680,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "F*ck you, *sshole!",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.481Z"
+    },
+    {
+      "id": "cmk83r3m302iiz2t73dhyod5i",
+      "startMs": 361910,
+      "endMs": 362830,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "video",
+      "comment": "male rear nudity",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.484Z"
+    },
+    {
+      "id": "cmk83r3m602ikz2t74xcqn3n2",
+      "startMs": 365860,
+      "endMs": 366530,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "video",
+      "comment": "quick side male nudity",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.487Z"
+    },
+    {
+      "id": "cmk83r3ma02imz2t7wyg7w0ou",
+      "startMs": 370340,
+      "endMs": 370840,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "brief side male nudity",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.491Z"
+    },
+    {
+      "id": "cmk83r3md02ioz2t7qkrscxyh",
+      "startMs": 370680,
+      "endMs": 372340,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "Bloody fist shown",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.494Z"
+    },
+    {
+      "id": "cmk83r3mg02iqz2t7jaxdq9gi",
+      "startMs": 372220,
+      "endMs": 374010,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "Dead body shown",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.496Z"
+    },
+    {
+      "id": "cmk83r3mj02isz2t7zaqzcmmd",
+      "startMs": 379060,
+      "endMs": 384020,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "bloody hand seen",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.499Z"
+    },
+    {
+      "id": "cmk83r3mm02iuz2t75fnw3h4u",
+      "startMs": 396030,
+      "endMs": 397480,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "bullsh*t",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.503Z"
+    },
+    {
+      "id": "cmk83r3mp02iwz2t7gruvkp7c",
+      "startMs": 411260,
+      "endMs": 413850,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "male rear nudity",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.506Z"
+    },
+    {
+      "id": "cmk83r3ms02iyz2t7ieuh4uol",
+      "startMs": 459410,
+      "endMs": 462490,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "male rear nudity",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.508Z"
+    },
+    {
+      "id": "cmk83r3mv02j0z2t7m3hxi11g",
+      "startMs": 478140,
+      "endMs": 479090,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "son of a b*tch",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.511Z"
+    },
+    {
+      "id": "cmk83r3mz02j2z2t7n2qhdbay",
+      "startMs": 1260990,
+      "endMs": 1286190,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "sexual dialog over the phone",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.515Z"
+    },
+    {
+      "id": "cmk83r3n102j4z2t7dpos2vhn",
+      "startMs": 1288750,
+      "endMs": 1289920,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "Oh, G*d",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.518Z"
+    },
+    {
+      "id": "cmk83r3n502j6z2t7ozwz7rka",
+      "startMs": 1306640,
+      "endMs": 1310510,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "Sexual dialog over the phone",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.521Z"
+    },
+    {
+      "id": "cmk83r3n702j8z2t7emowdkbb",
+      "startMs": 1312310,
+      "endMs": 1313740,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "You f*cking sh*ts!",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.524Z"
+    },
+    {
+      "id": "cmk83r3nb02jaz2t74rlelk6s",
+      "startMs": 1433420,
+      "endMs": 1434650,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "G*d!",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.528Z"
+    },
+    {
+      "id": "cmk83r3ne02jcz2t7vt45spr6",
+      "startMs": 1447760,
+      "endMs": 1448220,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "D*mn it",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.531Z"
+    },
+    {
+      "id": "cmk83r3nh02jez2t70ak4b18v",
+      "startMs": 1506360,
+      "endMs": 1507570,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "Oh, sh*t.",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.534Z"
+    },
+    {
+      "id": "cmk83r3nk02jgz2t73ddzmy4s",
+      "startMs": 1573710,
+      "endMs": 1574250,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "sh*t.",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.537Z"
+    },
+    {
+      "id": "cmk83r3no02jiz2t7rxwcaqur",
+      "startMs": 1578290,
+      "endMs": 1578730,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "g*dd*mn",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.541Z"
+    },
+    {
+      "id": "cmk83r3nr02jkz2t771gkvtk9",
+      "startMs": 1600000,
+      "endMs": 1600310,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "sh*t",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.544Z"
+    },
+    {
+      "id": "cmk83r3nu02jmz2t7fms9fvuc",
+      "startMs": 1902320,
+      "endMs": 1903950,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "woman shot",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.547Z"
+    },
+    {
+      "id": "cmk83r3nx02joz2t7o0r3oloq",
+      "startMs": 2841980,
+      "endMs": 2842950,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "motherf*ckers",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.550Z"
+    },
+    {
+      "id": "cmk83r3o102jqz2t7gx3xp60e",
+      "startMs": 3141230,
+      "endMs": 3144350,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "man cuts into arm",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.554Z"
+    },
+    {
+      "id": "cmk83r3o502jsz2t7tfam0d7t",
+      "startMs": 3164020,
+      "endMs": 3176570,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "open arm wound seen with robotics inside",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.557Z"
+    },
+    {
+      "id": "cmk83r3o802juz2t7ecg2kdmz",
+      "startMs": 3192510,
+      "endMs": 3193090,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "f*cking",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.560Z"
+    },
+    {
+      "id": "cmk83r3oa02jwz2t7qlnd2est",
+      "startMs": 3199900,
+      "endMs": 3200400,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "d*mn",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.563Z"
+    },
+    {
+      "id": "cmk83r3of02jyz2t75pefck9j",
+      "startMs": 3224100,
+      "endMs": 3224520,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "scr*wed",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.567Z"
+    },
+    {
+      "id": "cmk83r3ok02k0z2t70cbj7lfb",
+      "startMs": 3296290,
+      "endMs": 3298670,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "human-like robot cuts out eye",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.572Z"
+    },
+    {
+      "id": "cmk83r3on02k2z2t79dwv9kmq",
+      "startMs": 3311320,
+      "endMs": 3315690,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "human-like robot pulls out eye",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.575Z"
+    },
+    {
+      "id": "cmk83r3oq02k4z2t7mx9wn16j",
+      "startMs": 3465800,
+      "endMs": 3466240,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "f*cking",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.578Z"
+    },
+    {
+      "id": "cmk83r3ou02k6z2t7by2odo1x",
+      "startMs": 3922940,
+      "endMs": 3924410,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "Oh, my G*d!",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.582Z"
+    },
+    {
+      "id": "cmk83r3ox02k8z2t7e05ihfgg",
+      "startMs": 3954490,
+      "endMs": 3955780,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "J*sus",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.585Z"
+    },
+    {
+      "id": "cmk83r3p002kaz2t7mwi0niu0",
+      "startMs": 4470140,
+      "endMs": 4471640,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "F*ck you, *sshole.",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.588Z"
+    },
+    {
+      "id": "cmk83r3p302kcz2t709g3eedr",
+      "startMs": 4491000,
+      "endMs": 4492670,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "G*dd*mn!",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.591Z"
+    },
+    {
+      "id": "cmk83r3p702kez2t7yxrn1s75",
+      "startMs": 4929700,
+      "endMs": 4973940,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "Sex scene between a man and woman with nudity.",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.595Z"
+    },
+    {
+      "id": "cmk83r3pa02kgz2t7qjkfwzor",
+      "startMs": 5145230,
+      "endMs": 5146260,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "Oh, my G*d!",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.598Z"
+    },
+    {
+      "id": "cmk83r3pd02kiz2t7bfuxbc20",
+      "startMs": 5197150,
+      "endMs": 5198090,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "Son of a b*tch!",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.601Z"
+    },
+    {
+      "id": "cmk83r3pg02kkz2t7ne8g8c3d",
+      "startMs": 5702670,
+      "endMs": 5704170,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "motherf*cker.",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.604Z"
+    },
+    {
+      "id": "cmk83r3pk02kmz2t71vigp2g3",
+      "startMs": 5938820,
+      "endMs": 5939490,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "f*cker",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.608Z"
+    },
+    {
+      "id": "cmk83r3pn02koz2t7eu260lwd",
+      "startMs": 6096260,
+      "endMs": 6096460,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "G*d",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.611Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.454Z",
+  "updatedAt": "2026-01-10T09:31:50.366Z"
+}

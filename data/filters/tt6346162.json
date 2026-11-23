@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt6346162",
+  "title": "Newsies",
+  "year": 2017,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1oz01ebz2t732txfx2i",
+      "startMs": 1443720,
+      "endMs": 1478740,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "scene with small child gawking at scantily clad showgirls",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.996Z"
+    },
+    {
+      "id": "cmk83r1p201edz2t7qz6p885w",
+      "startMs": 1733750,
+      "endMs": 1758180,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "mildly suggestive scene of a burlesque show, probably",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.999Z"
+    },
+    {
+      "id": "cmk83r1p501efz2t7txr3btwq",
+      "startMs": 1802150,
+      "endMs": 1804440,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "brief shot of dancing girls",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.002Z"
+    },
+    {
+      "id": "cmk83r1pa01ehz2t7pb98e3w5",
+      "startMs": 1853560,
+      "endMs": 1857990,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "brief shot of dancing girls",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.006Z"
+    },
+    {
+      "id": "cmk83r1pd01ejz2t7yhwulu2x",
+      "startMs": 1884220,
+      "endMs": 1886700,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "brief shot of dancing girls",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.009Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.992Z",
+  "updatedAt": "2026-01-10T09:31:49.401Z"
+}

@@ -1,0 +1,165 @@
+{
+  "imdbId": "tt1853728",
+  "title": "Django Unchained",
+  "year": 2012,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r04300gtz2t769axhefy",
+      "startMs": 464260,
+      "endMs": 467620,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.948Z"
+    },
+    {
+      "id": "cmk83r04600gvz2t79xmwm50u",
+      "startMs": 754820,
+      "endMs": 760830,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.951Z"
+    },
+    {
+      "id": "cmk83r04a00gxz2t7vmtsp1s2",
+      "startMs": 2279350,
+      "endMs": 2283550,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.955Z"
+    },
+    {
+      "id": "cmk83r04d00gzz2t7m7ym9agl",
+      "startMs": 3900990,
+      "endMs": 4031010,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.958Z"
+    },
+    {
+      "id": "cmk83r04g00h1z2t7xemtcb2w",
+      "startMs": 5587260,
+      "endMs": 5691340,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.960Z"
+    },
+    {
+      "id": "cmk83r04j00h3z2t7w1mx0eoi",
+      "startMs": 7905030,
+      "endMs": 8055920,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.963Z"
+    },
+    {
+      "id": "cmk83r04m00h5z2t7t5rq4ry3",
+      "startMs": 8248540,
+      "endMs": 8457000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.967Z"
+    },
+    {
+      "id": "cmk83r04p00h7z2t7m0old5qz",
+      "startMs": 9141410,
+      "endMs": 9151830,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.970Z"
+    },
+    {
+      "id": "cmk83r04s00h9z2t7qd2293vq",
+      "startMs": 9339870,
+      "endMs": 9485980,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.973Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.945Z",
+  "updatedAt": "2026-01-10T09:31:48.651Z"
+}

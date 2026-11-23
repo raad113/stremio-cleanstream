@@ -11,12 +11,12 @@ const db = require('../database');
  * Stremio passes config as part of the addon URL
  */
 function parseUserConfig(config) {
-  // Default configuration - sensible defaults for family viewing
-  // Lower threshold = more filtering (skip more content)
+  // Default configuration - same defaults as the configure page.
+  // Higher level = stricter filter (high skips every flagged scene).
   const defaults = {
-    nudity: 'low',     // Skip all nudity (low, medium, high)
-    sex: 'low',        // Skip all sexual content
-    violence: 'medium', // Skip medium+ violence
+    nudity: 'high',     // Skip all nudity
+    sex: 'high',        // Skip all sexual content
+    violence: 'medium', // Skip medium and high severity violence
     language: 'off',   // Don't skip language by default
     drugs: 'off',      // Don't skip drug content by default
     fear: 'off',       // Don't skip scary scenes by default
@@ -43,10 +43,12 @@ function parseUserConfig(config) {
 async function subtitlesHandler({ type, id, config }) {
   console.log(`[CleanStream] Subtitle request for ${type}:${id}`);
   
-  // Parse IMDB ID from the request
-  // Format: tt1234567 or tt1234567:1:2 (for series with season:episode)
-  const parts = id.split(':');
-  const imdbId = parts[0];
+  // Movies use tt1234567; series episodes use tt1234567:season:episode.
+  // Skip timings are specific to each episode, so the full id is the key.
+  const imdbId = id;
+  if (!db.isValidContentId(imdbId)) {
+    return { subtitles: [] };
+  }
   
   // Check if we have filter data for this content
   const filterData = await db.getFilters(imdbId);

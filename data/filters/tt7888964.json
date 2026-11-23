@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt7888964",
+  "title": "Nobody",
+  "year": 2021,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1s301g6z2t7qtjuxt4q",
+      "startMs": 2041600,
+      "endMs": 2050580,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.108Z"
+    },
+    {
+      "id": "cmk83r1s601g8z2t7n39s1uqh",
+      "startMs": 2758460,
+      "endMs": 2768980,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.111Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.104Z",
+  "updatedAt": "2026-01-10T09:31:49.435Z"
+}

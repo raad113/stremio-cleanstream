@@ -1,0 +1,131 @@
+{
+  "imdbId": "tt1431045",
+  "title": "Deadpool",
+  "year": 2016,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzzf00e5z2t72jl4q5cx",
+      "startMs": 1344960,
+      "endMs": 1347220,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.780Z"
+    },
+    {
+      "id": "cmk83qzzj00e7z2t7k3979khx",
+      "startMs": 3498230,
+      "endMs": 3501110,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.783Z"
+    },
+    {
+      "id": "cmk83qzzl00e9z2t73isa0drv",
+      "startMs": 3723190,
+      "endMs": 3724820,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.786Z"
+    },
+    {
+      "id": "cmk83qzzq00ebz2t7slnt7sy8",
+      "startMs": 3724530,
+      "endMs": 3726500,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.790Z"
+    },
+    {
+      "id": "cmk83qzzt00edz2t7qk1hro3o",
+      "startMs": 4012880,
+      "endMs": 4015010,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.793Z"
+    },
+    {
+      "id": "cmk83qzzv00efz2t7oixil2nr",
+      "startMs": 4126560,
+      "endMs": 4129190,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.796Z"
+    },
+    {
+      "id": "cmk83qzzy00ehz2t7dbdrfmn2",
+      "startMs": 4948680,
+      "endMs": 4952810,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.799Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.777Z",
+  "updatedAt": "2026-01-10T09:31:48.587Z"
+}

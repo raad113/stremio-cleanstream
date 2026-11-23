@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt1320082",
+  "title": "The Concert",
+  "year": 2009,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2q201zmz2t7ll7w5wmx",
+      "startMs": 1606300,
+      "endMs": 1614330,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "on a distant TV",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.330Z"
+    },
+    {
+      "id": "cmk83r2q401zoz2t7x6g98svv",
+      "startMs": 2850770,
+      "endMs": 2867030,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dancer",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.333Z"
+    },
+    {
+      "id": "cmk83r2q701zqz2t7ctie96cg",
+      "startMs": 5879510,
+      "endMs": 5882010,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "video",
+      "comment": "two men kissing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.335Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.327Z",
+  "updatedAt": "2026-01-10T09:31:49.941Z"
+}

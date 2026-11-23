@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt2380307",
+  "title": "Coco",
+  "year": 2017,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzv800byz2t7af6w90pp",
+      "startMs": 622900,
+      "endMs": 624160,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - Dios",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.628Z"
+    },
+    {
+      "id": "cmk83qzvb00c0z2t7080v5twz",
+      "startMs": 1345000,
+      "endMs": 1346180,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - Dios",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.631Z"
+    },
+    {
+      "id": "cmk83qzvf00c2z2t7pxumrcy5",
+      "startMs": 2271090,
+      "endMs": 2275760,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "video",
+      "comment": "implied nudity",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.635Z"
+    },
+    {
+      "id": "cmk83qzvi00c4z2t7ri66dm02",
+      "startMs": 2698120,
+      "endMs": 2707830,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.638Z"
+    },
+    {
+      "id": "cmk83qzvl00c6z2t78p3gdupf",
+      "startMs": 4587770,
+      "endMs": 4588800,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - Dios",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.642Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.625Z",
+  "updatedAt": "2026-01-10T09:31:48.518Z"
+}

@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt11827628",
+  "title": "Memory",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r16a012uz2t72g38fafv",
+      "startMs": 3765550,
+      "endMs": 3773710,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.322Z"
+    },
+    {
+      "id": "cmk83r16d012wz2t7e2b1k7l5",
+      "startMs": 3806460,
+      "endMs": 3814400,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.325Z"
+    },
+    {
+      "id": "cmk83r16f012yz2t7s4n70sv9",
+      "startMs": 4045150,
+      "endMs": 4053320,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.328Z"
+    },
+    {
+      "id": "cmk83r16j0130z2t7mub4iml4",
+      "startMs": 4057150,
+      "endMs": 4060090,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.332Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.319Z",
+  "updatedAt": "2026-01-10T09:31:49.183Z"
+}

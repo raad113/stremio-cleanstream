@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0120863",
+  "title": "The Thin Red Line",
+  "year": 1998,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3ps02krz2t7yinnbvp2",
+      "startMs": 5044410,
+      "endMs": 5141080,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.617Z"
+    },
+    {
+      "id": "cmk83r3px02ktz2t7v0ibtspw",
+      "startMs": 7538980,
+      "endMs": 7550540,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.622Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.614Z",
+  "updatedAt": "2026-01-10T09:31:50.408Z"
+}

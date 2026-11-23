@@ -1,0 +1,131 @@
+{
+  "imdbId": "tt1856101",
+  "title": "Blade Runner 2049",
+  "year": 2017,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzll006cz2t7mpzioexq",
+      "startMs": 1968060,
+      "endMs": 1999980,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.282Z"
+    },
+    {
+      "id": "cmk83qzlo006ez2t79mrag648",
+      "startMs": 2232490,
+      "endMs": 2584300,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.284Z"
+    },
+    {
+      "id": "cmk83qzlr006gz2t74u7nq60m",
+      "startMs": 5125470,
+      "endMs": 5551750,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.287Z"
+    },
+    {
+      "id": "cmk83qzlu006iz2t7aipb4lhr",
+      "startMs": 5796630,
+      "endMs": 5816120,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.290Z"
+    },
+    {
+      "id": "cmk83qzlx006kz2t7srhtece5",
+      "startMs": 6069220,
+      "endMs": 6120190,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.294Z"
+    },
+    {
+      "id": "cmk83qzm2006mz2t7dmov3ne6",
+      "startMs": 7371690,
+      "endMs": 7397220,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.298Z"
+    },
+    {
+      "id": "cmk83qzm4006oz2t7n430p8z1",
+      "startMs": 8214220,
+      "endMs": 8291460,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.301Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.278Z",
+  "updatedAt": "2026-01-10T09:31:48.399Z"
+}

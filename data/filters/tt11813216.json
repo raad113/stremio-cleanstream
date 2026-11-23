@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt11813216",
+  "title": "The Banshees of Inisherin",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2lq01wyz2t7st24x1ft",
+      "startMs": 884810,
+      "endMs": 925320,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.174Z"
+    },
+    {
+      "id": "cmk83r2lt01x0z2t7rtwt2tv1",
+      "startMs": 980300,
+      "endMs": 1015260,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.177Z"
+    },
+    {
+      "id": "cmk83r2lw01x2z2t79lgb41e4",
+      "startMs": 1888990,
+      "endMs": 2002400,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.180Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.171Z",
+  "updatedAt": "2026-01-10T09:31:49.881Z"
+}

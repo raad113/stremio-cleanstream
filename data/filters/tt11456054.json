@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt11456054",
+  "title": "Run Hide Fight",
+  "year": 2021,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2aj01qkz2t79vibad4l",
+      "startMs": 3094050,
+      "endMs": 3140130,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.771Z"
+    },
+    {
+      "id": "cmk83r2am01qmz2t7cumqeygs",
+      "startMs": 3202070,
+      "endMs": 3256620,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.775Z"
+    },
+    {
+      "id": "cmk83r2ap01qoz2t79ghxznj9",
+      "startMs": 3393330,
+      "endMs": 3409650,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.778Z"
+    },
+    {
+      "id": "cmk83r2as01qqz2t7ipe7kwc3",
+      "startMs": 3554030,
+      "endMs": 3596140,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.781Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.768Z",
+  "updatedAt": "2026-01-10T09:31:49.688Z"
+}

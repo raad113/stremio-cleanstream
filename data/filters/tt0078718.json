@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt0078718",
+  "title": "...And Justice for All",
+  "year": 1979,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r43602rgz2t7uuvhx9p9",
+      "startMs": 2297440,
+      "endMs": 2319890,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:10.099Z"
+    },
+    {
+      "id": "cmk83r43a02riz2t7g5cyymq8",
+      "startMs": 2646930,
+      "endMs": 2750110,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "in bed diologue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:10.103Z"
+    },
+    {
+      "id": "cmk83r43d02rkz2t7jccsymow",
+      "startMs": 2851630,
+      "endMs": 2874230,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "end of scene",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:10.106Z"
+    },
+    {
+      "id": "cmk83r43j02rmz2t7c6i8092n",
+      "startMs": 4114730,
+      "endMs": 4358000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "and in bed dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:10.111Z"
+    },
+    {
+      "id": "cmk83r43m02roz2t7pu3p095u",
+      "startMs": 5947320,
+      "endMs": 5971730,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": "explicit photographs",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:10.115Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:10.095Z",
+  "updatedAt": "2026-01-10T09:31:50.596Z"
+}

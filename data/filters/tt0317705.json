@@ -1,0 +1,114 @@
+{
+  "imdbId": "tt0317705",
+  "title": "The Incredibles",
+  "year": 2004,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r33d027az2t7ecusuqsq",
+      "startMs": 2599240,
+      "endMs": 2600200,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - my G**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.809Z"
+    },
+    {
+      "id": "cmk83r33g027cz2t7l15nho6i",
+      "startMs": 2613680,
+      "endMs": 2614260,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - my G**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.812Z"
+    },
+    {
+      "id": "cmk83r33i027ez2t7lhhel8br",
+      "startMs": 2636250,
+      "endMs": 2637720,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "reference to deities",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.815Z"
+    },
+    {
+      "id": "cmk83r33l027gz2t7x1qm2vxb",
+      "startMs": 3792350,
+      "endMs": 3793740,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - my G**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.818Z"
+    },
+    {
+      "id": "cmk83r33p027iz2t7mc3iqsxc",
+      "startMs": 4252500,
+      "endMs": 4253530,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - oh my G**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.821Z"
+    },
+    {
+      "id": "cmk83r33s027kz2t7jejsfrs7",
+      "startMs": 5232200,
+      "endMs": 5232670,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - godforsaken",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.824Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.806Z",
+  "updatedAt": "2026-01-10T09:31:50.134Z"
+}

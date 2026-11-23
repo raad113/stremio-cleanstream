@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt0116282",
+  "title": "Fargo",
+  "year": 1996,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r09a00jtz2t7iwn8go99",
+      "startMs": 683170,
+      "endMs": 725270,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.134Z"
+    },
+    {
+      "id": "cmk83r09d00jvz2t7osy35me1",
+      "startMs": 3925180,
+      "endMs": 4077780,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.138Z"
+    },
+    {
+      "id": "cmk83r09g00jxz2t71v5a500z",
+      "startMs": 5320030,
+      "endMs": 5335670,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.140Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.131Z",
+  "updatedAt": "2026-01-10T09:31:48.730Z"
+}

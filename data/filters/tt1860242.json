@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt1860242",
+  "title": "The Highwaymen",
+  "year": 2019,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r31c0263z2t743wpux63",
+      "startMs": 7064250,
+      "endMs": 7074760,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "bloody shooting",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.737Z"
+    },
+    {
+      "id": "cmk83r31g0265z2t7aqpw4or9",
+      "startMs": 7077320,
+      "endMs": 7080000,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "bloody shooting",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.741Z"
+    },
+    {
+      "id": "cmk83r31j0267z2t7ezadxvqn",
+      "startMs": 7115250,
+      "endMs": 7142350,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "bloody corpses",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.743Z"
+    },
+    {
+      "id": "cmk83r31m0269z2t7ybwggin0",
+      "startMs": 7147420,
+      "endMs": 7157450,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "bloody corpses",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.746Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.734Z",
+  "updatedAt": "2026-01-10T09:31:50.100Z"
+}

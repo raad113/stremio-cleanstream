@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt1959563",
+  "title": "The Hitman's Bodyguard",
+  "year": 2017,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r31s026cz2t73nwrpwgz",
+      "startMs": 2389000,
+      "endMs": 2402000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "actually blasphemy",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.752Z"
+    },
+    {
+      "id": "cmk83r31v026ez2t7pppckqq8",
+      "startMs": 4346000,
+      "endMs": 4349000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.755Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.748Z",
+  "updatedAt": "2026-01-10T09:31:50.105Z"
+}

@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt0137523",
+  "title": "Fight Club",
+  "year": 1999,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0aa00kez2t7uo8nqybl",
+      "startMs": 2918000,
+      "endMs": 2936000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dream",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.170Z"
+    },
+    {
+      "id": "cmk83r0ad00kgz2t7zz453oz6",
+      "startMs": 3342810,
+      "endMs": 3345600,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "sex heard upstairs",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.173Z"
+    },
+    {
+      "id": "cmk83r0af00kiz2t7v2kr5gxz",
+      "startMs": 3347490,
+      "endMs": 3356150,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "sex heard upstairs",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.176Z"
+    },
+    {
+      "id": "cmk83r0aj00kkz2t75ou9ff48",
+      "startMs": 3523190,
+      "endMs": 3532690,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "woman grabs man's crotch",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.179Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.167Z",
+  "updatedAt": "2026-01-10T09:31:48.746Z"
+}

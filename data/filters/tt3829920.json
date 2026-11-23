@@ -1,0 +1,114 @@
+{
+  "imdbId": "tt3829920",
+  "title": "Only the Brave",
+  "year": 2017,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1w801igz2t7p634by9h",
+      "startMs": 406820,
+      "endMs": 520860,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.257Z"
+    },
+    {
+      "id": "cmk83r1wb01iiz2t7pt3nq9mc",
+      "startMs": 543440,
+      "endMs": 589850,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.260Z"
+    },
+    {
+      "id": "cmk83r1we01ikz2t7247pqavm",
+      "startMs": 892230,
+      "endMs": 975120,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.263Z"
+    },
+    {
+      "id": "cmk83r1wi01imz2t7zpklews7",
+      "startMs": 2482890,
+      "endMs": 2506000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.267Z"
+    },
+    {
+      "id": "cmk83r1wl01ioz2t7saixan3y",
+      "startMs": 4105000,
+      "endMs": 4150620,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.269Z"
+    },
+    {
+      "id": "cmk83r1wo01iqz2t775avjvsu",
+      "startMs": 5852290,
+      "endMs": 5856440,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.273Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.254Z",
+  "updatedAt": "2026-01-10T09:31:49.500Z"
+}

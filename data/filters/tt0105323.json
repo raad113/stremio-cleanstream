@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt0105323",
+  "title": "Scent of a Woman",
+  "year": 1992,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2bt01raz2t7g8du8f6r",
+      "startMs": 2102990,
+      "endMs": 2352590,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.817Z"
+    },
+    {
+      "id": "cmk83r2bw01rcz2t7pwkcm6qc",
+      "startMs": 5341290,
+      "endMs": 5425870,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.820Z"
+    },
+    {
+      "id": "cmk83r2bz01rez2t7lu10m72h",
+      "startMs": 5512320,
+      "endMs": 5576390,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.824Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.815Z",
+  "updatedAt": "2026-01-10T09:31:49.707Z"
+}

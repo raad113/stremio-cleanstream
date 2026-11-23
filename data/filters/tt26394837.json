@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt26394837",
+  "title": "Code 3",
+  "year": 2025,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzvs00c9z2t7riapn661",
+      "startMs": 1125000,
+      "endMs": 1158000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.648Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.644Z",
+  "updatedAt": "2026-01-10T09:31:48.526Z"
+}

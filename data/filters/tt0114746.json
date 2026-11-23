@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt0114746",
+  "title": "Twelve Monkeys",
+  "year": 1995,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3vk02ntz2t750ex7wof",
+      "startMs": 998740,
+      "endMs": 1037980,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.824Z"
+    },
+    {
+      "id": "cmk83r3vn02nvz2t7hpk3azn2",
+      "startMs": 2712290,
+      "endMs": 2718260,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.827Z"
+    },
+    {
+      "id": "cmk83r3vs02nxz2t7ap27pawk",
+      "startMs": 5652670,
+      "endMs": 5655670,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.832Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.820Z",
+  "updatedAt": "2026-01-10T09:31:50.497Z"
+}

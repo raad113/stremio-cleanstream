@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt6828390",
+  "title": "Mr. Jones",
+  "year": 2019,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r17y013sz2t76ndat0jh",
+      "startMs": 1421330,
+      "endMs": 1441380,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.382Z"
+    },
+    {
+      "id": "cmk83r180013uz2t7pxk0p1ic",
+      "startMs": 1511720,
+      "endMs": 1811270,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.385Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.379Z",
+  "updatedAt": "2026-01-10T09:31:49.210Z"
+}

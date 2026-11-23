@@ -1,0 +1,114 @@
+{
+  "imdbId": "tt1675434",
+  "title": "The Intouchables",
+  "year": 2011,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r34c027wz2t7hcxqcgv6",
+      "startMs": 1796470,
+      "endMs": 1807850,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.845Z"
+    },
+    {
+      "id": "cmk83r34f027yz2t7r7ywol8t",
+      "startMs": 2181510,
+      "endMs": 2258440,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "Innuendo",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.848Z"
+    },
+    {
+      "id": "cmk83r34j0280z2t7gqu620bl",
+      "startMs": 2351170,
+      "endMs": 2368550,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.851Z"
+    },
+    {
+      "id": "cmk83r34n0282z2t7rql0rsht",
+      "startMs": 2574880,
+      "endMs": 2706710,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.856Z"
+    },
+    {
+      "id": "cmk83r34r0284z2t7jglq9zvd",
+      "startMs": 3768980,
+      "endMs": 3797550,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.860Z"
+    },
+    {
+      "id": "cmk83r34u0286z2t7akcdmppf",
+      "startMs": 5402600,
+      "endMs": 5552050,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.863Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.841Z",
+  "updatedAt": "2026-01-10T09:31:50.148Z"
+}

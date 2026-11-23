@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt5070062",
+  "title": "I'll Find You",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0vl00wkz2t7arrgex54",
+      "startMs": 2129820,
+      "endMs": 2148220,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.937Z"
+    },
+    {
+      "id": "cmk83r0vo00wmz2t7mfwil0c2",
+      "startMs": 5257290,
+      "endMs": 5266180,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.941Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.935Z",
+  "updatedAt": "2026-01-10T09:31:49.009Z"
+}

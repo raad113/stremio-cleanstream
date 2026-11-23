@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt9051908",
+  "title": "Living",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r12e010iz2t7dzqnc1ux",
+      "startMs": 2062500,
+      "endMs": 2278990,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.183Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.180Z",
+  "updatedAt": "2026-01-10T09:31:49.116Z"
+}

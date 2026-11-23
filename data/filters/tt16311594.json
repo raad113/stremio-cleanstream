@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt16311594",
+  "title": "F1",
+  "year": 2025,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r09100joz2t7j1rrzsts",
+      "startMs": 5732650,
+      "endMs": 5765280,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.125Z"
+    },
+    {
+      "id": "cmk83r09300jqz2t7vefl3f96",
+      "startMs": 5842010,
+      "endMs": 5860470,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.128Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.122Z",
+  "updatedAt": "2026-01-10T09:31:48.726Z"
+}

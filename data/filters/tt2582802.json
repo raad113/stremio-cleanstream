@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt2582802",
+  "title": "Whiplash",
+  "year": 2014,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3z902pkz2t7tctxpdz0",
+      "startMs": 1685950,
+      "endMs": 1701220,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.957Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.954Z",
+  "updatedAt": "2026-01-10T09:31:50.549Z"
+}

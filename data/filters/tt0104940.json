@@ -1,0 +1,233 @@
+{
+  "imdbId": "tt0104940",
+  "title": "The Muppet Christmas Carol",
+  "year": 1992,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r38d02a6z2t74klmjf0d",
+      "startMs": 622910,
+      "endMs": 623660,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "inappropriate use of the phrase \"frozen assets\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.990Z"
+    },
+    {
+      "id": "cmk83r38g02a8z2t7omxo8kee",
+      "startMs": 1347290,
+      "endMs": 1348670,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "da**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.993Z"
+    },
+    {
+      "id": "cmk83r38j02aaz2t7apqk4lz7",
+      "startMs": 1382220,
+      "endMs": 1383040,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "possible idiomatic blasphemy - godlike",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.995Z"
+    },
+    {
+      "id": "cmk83r38m02acz2t7oihqjhii",
+      "startMs": 2419040,
+      "endMs": 2427520,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "immodest v-neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.998Z"
+    },
+    {
+      "id": "cmk83r38p02aez2t73ws11a9s",
+      "startMs": 2452250,
+      "endMs": 2474360,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "immodest v-neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.002Z"
+    },
+    {
+      "id": "cmk83r38s02agz2t7kqkb5c2s",
+      "startMs": 2479300,
+      "endMs": 2487770,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "immodest v-neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.005Z"
+    },
+    {
+      "id": "cmk83r38v02aiz2t7un3zlswi",
+      "startMs": 2496700,
+      "endMs": 2501000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "immodest v-neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.008Z"
+    },
+    {
+      "id": "cmk83r38y02akz2t7ii1uay9q",
+      "startMs": 2509710,
+      "endMs": 2513110,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "immodest v-neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.010Z"
+    },
+    {
+      "id": "cmk83r39202amz2t77d1a9mjr",
+      "startMs": 2528070,
+      "endMs": 2537750,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "immodest v-neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.014Z"
+    },
+    {
+      "id": "cmk83r39502aoz2t7n6gagqy4",
+      "startMs": 2543330,
+      "endMs": 2555540,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "immodest v-neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.017Z"
+    },
+    {
+      "id": "cmk83r39802aqz2t7y7nd4dnz",
+      "startMs": 2578000,
+      "endMs": 2585300,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "immodest v-neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.020Z"
+    },
+    {
+      "id": "cmk83r39a02asz2t7piqa5nf4",
+      "startMs": 2601730,
+      "endMs": 2612210,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "immodest v-neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.023Z"
+    },
+    {
+      "id": "cmk83r39e02auz2t7x3wf31lb",
+      "startMs": 2619880,
+      "endMs": 2625270,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "immodest v-neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.027Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.986Z",
+  "updatedAt": "2026-01-10T09:31:50.214Z"
+}

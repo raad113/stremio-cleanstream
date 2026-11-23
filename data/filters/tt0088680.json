@@ -1,0 +1,182 @@
+{
+  "imdbId": "tt0088680",
+  "title": "After Hours",
+  "year": 1985,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzda001iz2t7y84uq2tz",
+      "startMs": 701810,
+      "endMs": 706810,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "woman in underwear",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.983Z"
+    },
+    {
+      "id": "cmk83qzdd001kz2t7f1ll7bw0",
+      "startMs": 1208850,
+      "endMs": 1219850,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "topless woman",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.985Z"
+    },
+    {
+      "id": "cmk83qzdh001mz2t7scd3t3tr",
+      "startMs": 1308750,
+      "endMs": 1312750,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "couple having sex seen through window",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.989Z"
+    },
+    {
+      "id": "cmk83qzdk001oz2t7ouz33w92",
+      "startMs": 2232860,
+      "endMs": 2243360,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "image painted on wall",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.992Z"
+    },
+    {
+      "id": "cmk83qzdm001qz2t7fkb7hrq8",
+      "startMs": 2895560,
+      "endMs": 2922040,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "woman in underwear",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.995Z"
+    },
+    {
+      "id": "cmk83qzdp001sz2t7j671r7dz",
+      "startMs": 3353310,
+      "endMs": 3361190,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "video",
+      "comment": "men kissing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.998Z"
+    },
+    {
+      "id": "cmk83qzdt001uz2t71zwdlrb0",
+      "startMs": 3373340,
+      "endMs": 3379320,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "video",
+      "comment": "men kissing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.002Z"
+    },
+    {
+      "id": "cmk83qzdw001wz2t77it9zh9z",
+      "startMs": 3385820,
+      "endMs": 3395180,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "men kissing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.004Z"
+    },
+    {
+      "id": "cmk83qzdz001yz2t7d97pmk7o",
+      "startMs": 3405650,
+      "endMs": 3408950,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "video",
+      "comment": "men kissing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.007Z"
+    },
+    {
+      "id": "cmk83qze10020z2t7rdj3ctzg",
+      "startMs": 4474000,
+      "endMs": 4483000,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "man shot seen through window",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.010Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:03.980Z",
+  "updatedAt": "2026-01-10T09:31:48.271Z"
+}

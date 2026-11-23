@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0363163",
+  "title": "Downfall",
+  "year": 2004,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r04z00hcz2t7fmjvfjf2",
+      "startMs": 3169010,
+      "endMs": 3195910,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.979Z"
+    },
+    {
+      "id": "cmk83r05100hez2t7ie7rqsqv",
+      "startMs": 4994220,
+      "endMs": 5032690,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.982Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.975Z",
+  "updatedAt": "2026-01-10T09:31:48.661Z"
+}

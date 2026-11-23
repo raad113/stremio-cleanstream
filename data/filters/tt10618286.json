@@ -1,0 +1,148 @@
+{
+  "imdbId": "tt10618286",
+  "title": "Mank",
+  "year": 2020,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r14v011zz2t731m1wx5b",
+      "startMs": 501870,
+      "endMs": 510850,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.272Z"
+    },
+    {
+      "id": "cmk83r14y0121z2t7mnuaq73f",
+      "startMs": 817690,
+      "endMs": 820200,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.275Z"
+    },
+    {
+      "id": "cmk83r1510123z2t7031xusbb",
+      "startMs": 838290,
+      "endMs": 841110,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.278Z"
+    },
+    {
+      "id": "cmk83r1540125z2t7eaanvmb7",
+      "startMs": 856640,
+      "endMs": 859880,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.280Z"
+    },
+    {
+      "id": "cmk83r1580127z2t74uiashhk",
+      "startMs": 868490,
+      "endMs": 872700,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.284Z"
+    },
+    {
+      "id": "cmk83r15a0129z2t7140qffpy",
+      "startMs": 888380,
+      "endMs": 904880,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.287Z"
+    },
+    {
+      "id": "cmk83r15d012bz2t7zbkux2d3",
+      "startMs": 927080,
+      "endMs": 934800,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.290Z"
+    },
+    {
+      "id": "cmk83r15g012dz2t78hf81et7",
+      "startMs": 5629360,
+      "endMs": 5651340,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.293Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.268Z",
+  "updatedAt": "2026-01-10T09:31:49.164Z"
+}

@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt7638348",
+  "title": "Boss Level",
+  "year": 2021,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzmv0074z2t76eazb13w",
+      "startMs": 2212040,
+      "endMs": 2254540,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "heterosexual",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.328Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.324Z",
+  "updatedAt": "2026-01-10T09:31:48.414Z"
+}

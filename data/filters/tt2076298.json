@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt2076298",
+  "title": "Ip Man 4: The Finale",
+  "year": 2019,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0xt00xuz2t73hglkltx",
+      "startMs": 1206280,
+      "endMs": 1216240,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.018Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.015Z",
+  "updatedAt": "2026-01-10T09:31:49.045Z"
+}

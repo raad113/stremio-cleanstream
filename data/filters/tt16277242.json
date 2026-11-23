@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt16277242",
+  "title": "Society of the Snow",
+  "year": 2023,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2et01t1z2t7bbrneo1t",
+      "startMs": 168930,
+      "endMs": 182060,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.925Z"
+    },
+    {
+      "id": "cmk83r2ex01t3z2t7w6lkehiq",
+      "startMs": 7635000,
+      "endMs": 7655710,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.929Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.922Z",
+  "updatedAt": "2026-01-10T09:31:49.766Z"
+}

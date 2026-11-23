@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0081573",
+  "title": "Superman II",
+  "year": 1980,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2jr01w0z2t7w2r3k4tg",
+      "startMs": 4495000,
+      "endMs": 4531000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.104Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.099Z",
+  "updatedAt": "2026-01-10T09:31:49.849Z"
+}

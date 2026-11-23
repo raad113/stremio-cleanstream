@@ -1,0 +1,131 @@
+{
+  "imdbId": "tt1069238",
+  "title": "Departures",
+  "year": 2008,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r01c00f9z2t70lp8cxx7",
+      "startMs": 37550,
+      "endMs": 502940,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.848Z"
+    },
+    {
+      "id": "cmk83r01f00fbz2t7aocxx6d4",
+      "startMs": 1846400,
+      "endMs": 1867550,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.852Z"
+    },
+    {
+      "id": "cmk83r01i00fdz2t7n2swyzs0",
+      "startMs": 2266600,
+      "endMs": 2272940,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.855Z"
+    },
+    {
+      "id": "cmk83r01l00ffz2t7mnaz2nts",
+      "startMs": 2303100,
+      "endMs": 2309070,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.858Z"
+    },
+    {
+      "id": "cmk83r01p00fhz2t7awq1mk4n",
+      "startMs": 2549820,
+      "endMs": 2612490,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.861Z"
+    },
+    {
+      "id": "cmk83r01s00fjz2t75q0obmb3",
+      "startMs": 4233420,
+      "endMs": 4250870,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.865Z"
+    },
+    {
+      "id": "cmk83r01v00flz2t76hxi5r9z",
+      "startMs": 4998000,
+      "endMs": 5054050,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.868Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.845Z",
+  "updatedAt": "2026-01-10T09:31:48.615Z"
+}

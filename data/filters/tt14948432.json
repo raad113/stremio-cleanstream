@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt14948432",
+  "title": "Red One",
+  "year": 2024,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r29101pqz2t7k4khj8cj",
+      "startMs": 3016000,
+      "endMs": 3020000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.717Z"
+    },
+    {
+      "id": "cmk83r29401psz2t77foa0m7m",
+      "startMs": 3119000,
+      "endMs": 3134000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.720Z"
+    },
+    {
+      "id": "cmk83r29801puz2t7ngju8cl1",
+      "startMs": 3200000,
+      "endMs": 3213000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.724Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.714Z",
+  "updatedAt": "2026-01-10T09:31:49.667Z"
+}

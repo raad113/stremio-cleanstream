@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt6473066",
+  "title": "Clouds",
+  "year": 2020,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzv200bvz2t74ob8j1b7",
+      "startMs": 4120370,
+      "endMs": 4248540,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.623Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.618Z",
+  "updatedAt": "2026-01-10T09:31:48.513Z"
+}

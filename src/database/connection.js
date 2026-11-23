@@ -7,11 +7,12 @@
  * - Connection pooling
  */
 
-const { PrismaClient } = require('@prisma/client');
 const { exec } = require('child_process');
 const { promisify } = require('util');
 const fs = require('fs');
 const path = require('path');
+
+const { loadSeedTitles } = require('./seedSource');
 
 const execAsync = promisify(exec);
 
@@ -23,6 +24,8 @@ let prisma = null;
  */
 function getClient() {
   if (!prisma) {
+    // Loaded lazily so the addon runs in JSON mode without Prisma being generated
+    const { PrismaClient } = require('@prisma/client');
     prisma = new PrismaClient({
       log: process.env.NODE_ENV === 'development' 
         ? ['query', 'info', 'warn', 'error']
@@ -104,7 +107,7 @@ async function generateClient() {
 
 /**
  * Auto-seed database if empty
- * Only seeds if there are no titles in the database and seed-data.json exists
+ * Only seeds if there are no titles in the database
  */
 async function autoSeed() {
   const client = getClient();
@@ -117,17 +120,13 @@ async function autoSeed() {
       return true;
     }
     
-    // Check if seed file exists
-    const seedFile = path.join(process.cwd(), 'data', 'seed-data.json');
-    if (!fs.existsSync(seedFile)) {
-      console.log('[Database] No seed-data.json found, skipping seed');
+    const data = loadSeedTitles();
+    if (data.length === 0) {
+      console.log('[Database] No bundled seed data found, skipping seed');
       return true;
     }
-    
-    console.log('[Database] Database is empty, auto-seeding from seed-data.json...');
-    
-    const data = JSON.parse(fs.readFileSync(seedFile, 'utf-8'));
-    console.log(`[Database] Found ${data.length} titles to import`);
+
+    console.log(`[Database] Database is empty, seeding ${data.length} titles from data/filters...`);
     
     let importedTitles = 0;
     let importedSegments = 0;
@@ -155,8 +154,9 @@ async function autoSeed() {
             category: s.category,
             severity: s.severity,
             subcategory: s.subcategory || s.category,
+            channel: s.channel || 'both',
             comment: s.comment,
-            contributor: s.contributor || 'videoskip'
+            contributor: s.contributor || 'videoskip-import'
           }
         });
         importedSegments++;
@@ -227,6 +227,9 @@ async function disconnect() {
  * Health check
  */
 async function healthCheck() {
+  if (!process.env.DATABASE_URL) {
+    return { status: 'not_configured', type: 'json' };
+  }
   try {
     const client = getClient();
     await client.$queryRaw`SELECT 1`;

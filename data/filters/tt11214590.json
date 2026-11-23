@@ -1,0 +1,114 @@
+{
+  "imdbId": "tt11214590",
+  "title": "House of Gucci",
+  "year": 2021,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0tj00vcz2t7j96xvelg",
+      "startMs": 1460080,
+      "endMs": 1552240,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.864Z"
+    },
+    {
+      "id": "cmk83r0tm00vez2t7bo1lb4ws",
+      "startMs": 2289000,
+      "endMs": 2370360,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.867Z"
+    },
+    {
+      "id": "cmk83r0tq00vgz2t7s1o60n7f",
+      "startMs": 2898590,
+      "endMs": 2937440,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.870Z"
+    },
+    {
+      "id": "cmk83r0tt00viz2t7n7f1zdza",
+      "startMs": 6903800,
+      "endMs": 6941890,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.873Z"
+    },
+    {
+      "id": "cmk83r0tw00vkz2t7gx1xc3wh",
+      "startMs": 7767920,
+      "endMs": 7785000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.876Z"
+    },
+    {
+      "id": "cmk83r0ty00vmz2t7qt4v7qbo",
+      "startMs": 8118680,
+      "endMs": 8143720,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.879Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.861Z",
+  "updatedAt": "2026-01-10T09:31:48.975Z"
+}

@@ -1,0 +1,165 @@
+{
+  "imdbId": "tt0119488",
+  "title": "L.A. Confidential",
+  "year": 1997,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r10e00zbz2t7t33diddg",
+      "startMs": 721230,
+      "endMs": 724150,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "woman undressing, seen from behind",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.111Z"
+    },
+    {
+      "id": "cmk83r10h00zdz2t76015qbnc",
+      "startMs": 725400,
+      "endMs": 728740,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "couple embracing, topless woman seen from side",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.114Z"
+    },
+    {
+      "id": "cmk83r10k00zfz2t7uim9nz74",
+      "startMs": 1687940,
+      "endMs": 1690450,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "topless woman in photograph",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.117Z"
+    },
+    {
+      "id": "cmk83r10o00zhz2t7gksl7bug",
+      "startMs": 1699620,
+      "endMs": 1701710,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "topless woman in photograph",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.121Z"
+    },
+    {
+      "id": "cmk83r10r00zjz2t7cplegx7i",
+      "startMs": 2103190,
+      "endMs": 2104860,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "female cadaver",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.124Z"
+    },
+    {
+      "id": "cmk83r10u00zlz2t72uvmiyob",
+      "startMs": 2106950,
+      "endMs": 2109870,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "female cadaver",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.126Z"
+    },
+    {
+      "id": "cmk83r10x00znz2t7xpj56vsi",
+      "startMs": 3842210,
+      "endMs": 3849300,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "nude couple in photographs",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.129Z"
+    },
+    {
+      "id": "cmk83r11100zpz2t7ahsqunyv",
+      "startMs": 4062060,
+      "endMs": 4067900,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "kissing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.133Z"
+    },
+    {
+      "id": "cmk83r11400zrz2t7jqjd9ro7",
+      "startMs": 5779840,
+      "endMs": 5791000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "passionate kissing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.136Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.108Z",
+  "updatedAt": "2026-01-10T09:31:49.087Z"
+}

@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt6710474",
+  "title": "Everything Everywhere All at Once",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r08h00jdz2t72m70g5hq",
+      "startMs": 195180,
+      "endMs": 239130,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "HS",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.105Z"
+    },
+    {
+      "id": "cmk83r08k00jfz2t7d8t4x1lg",
+      "startMs": 7834670,
+      "endMs": 7858540,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "HS",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.109Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.102Z",
+  "updatedAt": "2026-01-10T09:31:48.716Z"
+}

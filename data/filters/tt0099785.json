@@ -1,0 +1,386 @@
+{
+  "imdbId": "tt0099785",
+  "title": "Home Alone",
+  "year": 1990,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0qq00tlz2t7dqgljllq",
+      "startMs": 248180,
+      "endMs": 248680,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "\"Puke breath\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.763Z"
+    },
+    {
+      "id": "cmk83r0qt00tnz2t7a1ggsdj9",
+      "startMs": 253060,
+      "endMs": 253590,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "cr*p",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.766Z"
+    },
+    {
+      "id": "cmk83r0qw00tpz2t7s5eridi3",
+      "startMs": 295260,
+      "endMs": 350000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "Female, Poster",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.768Z"
+    },
+    {
+      "id": "cmk83r0r000trz2t71xmppiic",
+      "startMs": 307380,
+      "endMs": 317510,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "A boy makes a comment about nude beaches",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.772Z"
+    },
+    {
+      "id": "cmk83r0r300ttz2t7trf25q07",
+      "startMs": 337300,
+      "endMs": 338170,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "a**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.775Z"
+    },
+    {
+      "id": "cmk83r0r600tvz2t7bngnkcnf",
+      "startMs": 728900,
+      "endMs": 730320,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "\"Families suck\"",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.779Z"
+    },
+    {
+      "id": "cmk83r0r900txz2t7ebgp5gy2",
+      "startMs": 1186000,
+      "endMs": 1208060,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "boy in brothers room, inappropriate poster",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.781Z"
+    },
+    {
+      "id": "cmk83r0rd00tzz2t7gkguznn3",
+      "startMs": 1349030,
+      "endMs": 1424060,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "A boy is seen looking at a Playboy magazine",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.785Z"
+    },
+    {
+      "id": "cmk83r0rg00u1z2t7ywdjpa4z",
+      "startMs": 1439500,
+      "endMs": 1439900,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "h*ll",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.788Z"
+    },
+    {
+      "id": "cmk83r0rj00u3z2t7zcub7zda",
+      "startMs": 2186000,
+      "endMs": 2241000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "A boy in brothers room inappropriate poster",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.791Z"
+    },
+    {
+      "id": "cmk83r0rl00u5z2t7fk0pj7bf",
+      "startMs": 2553980,
+      "endMs": 2554900,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "d*mn",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.794Z"
+    },
+    {
+      "id": "cmk83r0rp00u7z2t729dtaapk",
+      "startMs": 2838800,
+      "endMs": 2839210,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "butt",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.798Z"
+    },
+    {
+      "id": "cmk83r0rs00u9z2t79m3qbyus",
+      "startMs": 2898380,
+      "endMs": 2899090,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "h*ll",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.800Z"
+    },
+    {
+      "id": "cmk83r0rv00ubz2t78tmtdipp",
+      "startMs": 3061800,
+      "endMs": 3062090,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "butt",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.803Z"
+    },
+    {
+      "id": "cmk83r0rx00udz2t7fj1kowcr",
+      "startMs": 3327690,
+      "endMs": 3328400,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sh**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.806Z"
+    },
+    {
+      "id": "cmk83r0s100ufz2t7vl9cttfj",
+      "startMs": 3332340,
+      "endMs": 3332800,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "h*ll",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.810Z"
+    },
+    {
+      "id": "cmk83r0s400uhz2t7eyjlevmr",
+      "startMs": 3507380,
+      "endMs": 3507800,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "h*ll",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.813Z"
+    },
+    {
+      "id": "cmk83r0s700ujz2t77qhzafl8",
+      "startMs": 3838480,
+      "endMs": 3839380,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "d*mn",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.815Z"
+    },
+    {
+      "id": "cmk83r0sa00ulz2t70gwngexx",
+      "startMs": 3930000,
+      "endMs": 3932000,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "son of a",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.818Z"
+    },
+    {
+      "id": "cmk83r0sd00unz2t7ofyrf5ao",
+      "startMs": 5035890,
+      "endMs": 5036300,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "h*ll",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.822Z"
+    },
+    {
+      "id": "cmk83r0sg00upz2t7a9pcf23i",
+      "startMs": 5038180,
+      "endMs": 5038680,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "h*ll",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.825Z"
+    },
+    {
+      "id": "cmk83r0sj00urz2t7qj0hi86x",
+      "startMs": 5242680,
+      "endMs": 5243300,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "a**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.828Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.760Z",
+  "updatedAt": "2026-01-10T09:31:48.938Z"
+}

@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt31121295",
+  "title": "Deep Cover",
+  "year": 2025,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r00e00epz2t7u42qrqz5",
+      "startMs": 2320000,
+      "endMs": 2356000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.815Z"
+    },
+    {
+      "id": "cmk83r00h00erz2t7oje2kg5a",
+      "startMs": 4512000,
+      "endMs": 4522000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.818Z"
+    },
+    {
+      "id": "cmk83r00l00etz2t7arnqyffu",
+      "startMs": 4533000,
+      "endMs": 4548000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.821Z"
+    },
+    {
+      "id": "cmk83r00n00evz2t7u1qwh9aw",
+      "startMs": 4565000,
+      "endMs": 4590000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.824Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.811Z",
+  "updatedAt": "2026-01-10T09:31:48.603Z"
+}

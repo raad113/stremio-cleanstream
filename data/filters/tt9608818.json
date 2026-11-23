@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt9608818",
+  "title": "Our Friend",
+  "year": 2019,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1xr01jcz2t71awd5uu8",
+      "startMs": 402130,
+      "endMs": 482700,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.311Z"
+    },
+    {
+      "id": "cmk83r1xv01jez2t74arrpqwb",
+      "startMs": 819340,
+      "endMs": 843110,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.315Z"
+    },
+    {
+      "id": "cmk83r1xx01jgz2t7gdhinbyg",
+      "startMs": 2158000,
+      "endMs": 2188880,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.318Z"
+    },
+    {
+      "id": "cmk83r1y001jiz2t7ydup9b87",
+      "startMs": 2816490,
+      "endMs": 2819970,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "audio",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.321Z"
+    },
+    {
+      "id": "cmk83r1y301jkz2t7ey4wjck9",
+      "startMs": 6276930,
+      "endMs": 6305180,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.324Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.309Z",
+  "updatedAt": "2026-01-10T09:31:49.523Z"
+}

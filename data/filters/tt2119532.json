@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt2119532",
+  "title": "Hacksaw Ridge",
+  "year": 2016,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0nv00s3z2t7ix79rugq",
+      "startMs": 1676850,
+      "endMs": 1715100,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "male",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.660Z"
+    },
+    {
+      "id": "cmk83r0ny00s5z2t75p1wzuc1",
+      "startMs": 1772660,
+      "endMs": 1981350,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "male",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.663Z"
+    },
+    {
+      "id": "cmk83r0o100s7z2t7kfj6mw3r",
+      "startMs": 3814830,
+      "endMs": 3862780,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.666Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.655Z",
+  "updatedAt": "2026-01-10T09:31:48.895Z"
+}

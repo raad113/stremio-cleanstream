@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt1458175",
+  "title": "The Next Three Days",
+  "year": 2010,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r39k02axz2t75zue0han",
+      "startMs": 170780,
+      "endMs": 194080,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.032Z"
+    },
+    {
+      "id": "cmk83r39n02azz2t7h5671yw5",
+      "startMs": 222620,
+      "endMs": 243060,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.035Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.029Z",
+  "updatedAt": "2026-01-10T09:31:50.226Z"
+}

@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt3661210",
+  "title": "The Dig",
+  "year": 2021,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2t40218z2t795aiagut",
+      "startMs": 3647310,
+      "endMs": 3724060,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.441Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.437Z",
+  "updatedAt": "2026-01-10T09:31:49.985Z"
+}

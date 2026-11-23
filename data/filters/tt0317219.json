@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt0317219",
+  "title": "Cars",
+  "year": 2006,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzp8008dz2t7zdt3cltd",
+      "startMs": 1863080,
+      "endMs": 1867260,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "a male car looks a female car up and down and says all she has to do is stand there and let him look at her",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.412Z"
+    },
+    {
+      "id": "cmk83qzpb008fz2t7j4r3ywou",
+      "startMs": 2425300,
+      "endMs": 2426320,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "he**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.415Z"
+    },
+    {
+      "id": "cmk83qzpd008hz2t788l81b0d",
+      "startMs": 3070250,
+      "endMs": 3071840,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy - Lord",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.418Z"
+    },
+    {
+      "id": "cmk83qzph008jz2t72um7mu0v",
+      "startMs": 3173000,
+      "endMs": 3173380,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "he**",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.421Z"
+    },
+    {
+      "id": "cmk83qzpk008lz2t7ahtk10uc",
+      "startMs": 5242030,
+      "endMs": 5247540,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "a female car makes a potentially suggestive remark",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.424Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.409Z",
+  "updatedAt": "2026-01-10T09:31:48.446Z"
+}

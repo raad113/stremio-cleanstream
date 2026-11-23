@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0151804",
+  "title": "Office Space",
+  "year": 1999,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r1uc01hdz2t7xffl6j3s",
+      "startMs": 848000,
+      "endMs": 854000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "topless female on TV for a few seconds",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.188Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.185Z",
+  "updatedAt": "2026-01-10T09:31:49.472Z"
+}

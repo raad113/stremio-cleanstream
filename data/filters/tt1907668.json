@@ -1,0 +1,131 @@
+{
+  "imdbId": "tt1907668",
+  "title": "Flight",
+  "year": 2012,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0ao00knz2t7i8p3u3x7",
+      "startMs": 27630,
+      "endMs": 229790,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.185Z"
+    },
+    {
+      "id": "cmk83r0ar00kpz2t7jvbfqmbp",
+      "startMs": 391750,
+      "endMs": 568960,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.188Z"
+    },
+    {
+      "id": "cmk83r0av00krz2t72y6e9wqd",
+      "startMs": 783720,
+      "endMs": 892100,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.192Z"
+    },
+    {
+      "id": "cmk83r0ay00ktz2t7qaaga929",
+      "startMs": 940980,
+      "endMs": 1028870,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.194Z"
+    },
+    {
+      "id": "cmk83r0b100kvz2t70m8nwnh7",
+      "startMs": 2108750,
+      "endMs": 2139870,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.197Z"
+    },
+    {
+      "id": "cmk83r0b300kxz2t7o469nty8",
+      "startMs": 2269020,
+      "endMs": 2302370,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.200Z"
+    },
+    {
+      "id": "cmk83r0b700kzz2t7odpjism3",
+      "startMs": 3695610,
+      "endMs": 3829040,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.204Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.182Z",
+  "updatedAt": "2026-01-10T09:31:48.751Z"
+}

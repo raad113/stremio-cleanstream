@@ -1,12 +1,19 @@
 {
   "name": "cleanstream",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "description": "Stremio addon for family-friendly viewing - skip unwanted scenes in movies and TV shows",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "node --watch src/index.js",
-    "contribute": "node src/cli/contribute.js"
+    "contribute": "node src/cli/contribute.js",
+    "import:backup": "node scripts/backup-to-json.js",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:seed": "node prisma/seed.js",
+    "db:studio": "prisma studio",
+    "test": "node --test test/*.test.js"
   },
   "keywords": [
     "stremio",
@@ -21,14 +28,21 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cleanstream/cleanstream-stremio"
+    "url": "https://github.com/raad113/stremio-cleanstream"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "@prisma/client": "^5.22.0",
     "cors": "^2.8.5",
     "express": "^5.2.1",
+    "ioredis": "^5.11.1",
+    "pg": "^8.23.1",
+    "prisma": "^5.22.0",
     "stremio-addon-sdk": "^1.6.10"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   }
 }

@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0926084",
+  "title": "Harry Potter and the Deathly Hallows: Part 1",
+  "year": 2010,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0od00sdz2t7bsi7mw10",
+      "startMs": 6099560,
+      "endMs": 6113550,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.678Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.675Z",
+  "updatedAt": "2026-01-10T09:31:48.904Z"
+}

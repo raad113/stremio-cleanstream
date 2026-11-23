@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt0088763",
+  "title": "Back to the Future",
+  "year": 1985,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzi7004fz2t7wzq32be8",
+      "startMs": 2499080,
+      "endMs": 2516890,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "peeping tom",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.160Z"
+    },
+    {
+      "id": "cmk83qzia004hz2t7qwhv6kmi",
+      "startMs": 2848000,
+      "endMs": 2849480,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "grabbing thigh",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.163Z"
+    },
+    {
+      "id": "cmk83qzid004jz2t7e6m3xdwh",
+      "startMs": 4410520,
+      "endMs": 4416200,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "touch bra",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.166Z"
+    },
+    {
+      "id": "cmk83qzih004lz2t7o6wli2vw",
+      "startMs": 4674680,
+      "endMs": 4709560,
+      "category": "drugs",
+      "subcategory": "drugs",
+      "severity": "low",
+      "channel": "both",
+      "comment": "drinking",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.170Z"
+    },
+    {
+      "id": "cmk83qzil004nz2t7wi2ts6nj",
+      "startMs": 4698150,
+      "endMs": 4709560,
+      "category": "drugs",
+      "subcategory": "drugs",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "drinking and smoking",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.173Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.157Z",
+  "updatedAt": "2026-01-10T09:31:48.348Z"
+}

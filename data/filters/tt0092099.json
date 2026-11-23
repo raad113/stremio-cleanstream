@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt0092099",
+  "title": "Top Gun",
+  "year": 1986,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3ur02nhz2t7t1xix78u",
+      "startMs": 1149240,
+      "endMs": 1179570,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.796Z"
+    },
+    {
+      "id": "cmk83r3uw02njz2t7gkl963cv",
+      "startMs": 3236000,
+      "endMs": 3329300,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.801Z"
+    },
+    {
+      "id": "cmk83r3v002nlz2t7z0dx2pft",
+      "startMs": 3827510,
+      "endMs": 3846750,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.804Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.793Z",
+  "updatedAt": "2026-01-10T09:31:50.487Z"
+}

@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt29768334",
+  "title": "Train Dreams",
+  "year": 2025,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3v802noz2t7cw4yfipw",
+      "startMs": 1114830,
+      "endMs": 1152340,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.812Z"
+    },
+    {
+      "id": "cmk83r3vc02nqz2t7b7zi491k",
+      "startMs": 2090380,
+      "endMs": 2116610,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.816Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.809Z",
+  "updatedAt": "2026-01-10T09:31:50.493Z"
+}

@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt5519340",
+  "title": "Bright",
+  "year": 2017,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzn7007az2t7s66ilv6f",
+      "startMs": 3727690,
+      "endMs": 3731440,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "topless female dancer",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.339Z"
+    },
+    {
+      "id": "cmk83qznc007cz2t7imuvglw5",
+      "startMs": 3736440,
+      "endMs": 3739780,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "topless female dancer",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.344Z"
+    },
+    {
+      "id": "cmk83qznf007ez2t772yc132p",
+      "startMs": 3746450,
+      "endMs": 3748540,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "topless female dancer",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.348Z"
+    },
+    {
+      "id": "cmk83qznj007gz2t7cy95t3tj",
+      "startMs": 3750620,
+      "endMs": 3752710,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "full frontal female very brief, plus topless dancers",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.352Z"
+    },
+    {
+      "id": "cmk83qznn007iz2t7p6xw3cpd",
+      "startMs": 3754370,
+      "endMs": 3755620,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "topless female dancers",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.355Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.336Z",
+  "updatedAt": "2026-01-10T09:31:48.421Z"
+}

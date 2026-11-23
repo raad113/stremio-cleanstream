@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt21454134",
+  "title": "The Bikeriders",
+  "year": 2024,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2mv01xnz2t75ardxgqf",
+      "startMs": 3513000,
+      "endMs": 3518000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.216Z"
+    },
+    {
+      "id": "cmk83r2mz01xpz2t76zlzngsr",
+      "startMs": 4906000,
+      "endMs": 5022000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.220Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.213Z",
+  "updatedAt": "2026-01-10T09:31:49.898Z"
+}

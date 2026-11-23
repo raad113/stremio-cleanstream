@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt0066999",
+  "title": "Dirty Harry",
+  "year": 1971,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r03700gcz2t7flt9l51h",
+      "startMs": 1430230,
+      "endMs": 1717640,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.916Z"
+    },
+    {
+      "id": "cmk83r03a00gez2t762s0yddc",
+      "startMs": 2297850,
+      "endMs": 2362090,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.918Z"
+    },
+    {
+      "id": "cmk83r03d00ggz2t7dbhnfgmf",
+      "startMs": 4238090,
+      "endMs": 4260000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.921Z"
+    },
+    {
+      "id": "cmk83r03f00giz2t7kbhiba90",
+      "startMs": 4541800,
+      "endMs": 4661800,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.924Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.912Z",
+  "updatedAt": "2026-01-10T09:31:48.638Z"
+}

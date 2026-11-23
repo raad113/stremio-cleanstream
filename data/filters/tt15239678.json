@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt15239678",
+  "title": "Dune: Part Two",
+  "year": 2024,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r06a00i3z2t7lqbkqwk6",
+      "startMs": 3559000,
+      "endMs": 3634000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.027Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.023Z",
+  "updatedAt": "2026-01-10T09:31:48.681Z"
+}

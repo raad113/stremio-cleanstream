@@ -1,0 +1,114 @@
+{
+  "imdbId": "tt0124298",
+  "title": "Blast from the Past",
+  "year": 1999,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzma006rz2t7v5hqno66",
+      "startMs": 2600400,
+      "endMs": 2634730,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.307Z"
+    },
+    {
+      "id": "cmk83qzmd006tz2t78tyt6ohk",
+      "startMs": 2970580,
+      "endMs": 2982470,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.310Z"
+    },
+    {
+      "id": "cmk83qzmg006vz2t7vb69a084",
+      "startMs": 3409830,
+      "endMs": 3435510,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.312Z"
+    },
+    {
+      "id": "cmk83qzmi006xz2t7di9i4k4w",
+      "startMs": 3964320,
+      "endMs": 3979290,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.315Z"
+    },
+    {
+      "id": "cmk83qzmm006zz2t7lkknzkrw",
+      "startMs": 4286580,
+      "endMs": 4304780,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.319Z"
+    },
+    {
+      "id": "cmk83qzmp0071z2t7du0saegj",
+      "startMs": 5116020,
+      "endMs": 5184860,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.322Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.303Z",
+  "updatedAt": "2026-01-10T09:31:48.407Z"
+}

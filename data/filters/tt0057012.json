@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0057012",
+  "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+  "year": 1964,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r05m00hqz2t786i2havh",
+      "startMs": 716660,
+      "endMs": 912390,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.002Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.998Z",
+  "updatedAt": "2026-01-10T09:31:48.670Z"
+}

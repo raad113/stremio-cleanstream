@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt9214832",
+  "title": "Emma.",
+  "year": 2020,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r07r00izz2t7qdj5s2ds",
+      "startMs": 451890,
+      "endMs": 486460,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.080Z"
+    },
+    {
+      "id": "cmk83r07u00j1z2t73mz2lt5f",
+      "startMs": 689200,
+      "endMs": 711330,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.083Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.077Z",
+  "updatedAt": "2026-01-10T09:31:48.702Z"
+}

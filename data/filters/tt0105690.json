@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0105690",
+  "title": "Under Siege",
+  "year": 1992,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3wh02o8z2t7s7uv5ifw",
+      "startMs": 2593350,
+      "endMs": 2625770,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.858Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.854Z",
+  "updatedAt": "2026-01-10T09:31:50.511Z"
+}

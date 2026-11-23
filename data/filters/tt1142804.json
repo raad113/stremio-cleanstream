@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt1142804",
+  "title": "Within the Whirlwind",
+  "year": 2009,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r40g02q5z2t758bxdlzd",
+      "startMs": 5160000,
+      "endMs": 5207000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "sex act",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:10.001Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.997Z",
+  "updatedAt": "2026-01-10T09:31:50.564Z"
+}

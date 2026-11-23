@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt5363618",
+  "title": "Sound of Metal",
+  "year": 2020,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2fa01tbz2t71ri4mtak",
+      "startMs": 504580,
+      "endMs": 511330,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.943Z"
+    },
+    {
+      "id": "cmk83r2fd01tdz2t7svpktzjz",
+      "startMs": 3934670,
+      "endMs": 4000820,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.945Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.940Z",
+  "updatedAt": "2026-01-10T09:31:49.774Z"
+}

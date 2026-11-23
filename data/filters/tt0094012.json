@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0094012",
+  "title": "Spaceballs",
+  "year": 1987,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2fu01tnz2t7wr7imcg6",
+      "startMs": 1908670,
+      "endMs": 1912300,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.963Z"
+    },
+    {
+      "id": "cmk83r2fx01tpz2t7nvxx705x",
+      "startMs": 2430690,
+      "endMs": 2432400,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.966Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.959Z",
+  "updatedAt": "2026-01-10T09:31:49.785Z"
+}

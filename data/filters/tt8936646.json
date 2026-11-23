@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt8936646",
+  "title": "Extraction",
+  "year": 2020,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r08v00jlz2t7lol7xen6",
+      "startMs": 3821360,
+      "endMs": 3825860,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "very brief",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.120Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.116Z",
+  "updatedAt": "2026-01-10T09:31:48.723Z"
+}

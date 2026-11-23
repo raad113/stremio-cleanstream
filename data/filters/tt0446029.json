@@ -1,0 +1,114 @@
+{
+  "imdbId": "tt0446029",
+  "title": "Scott Pilgrim vs. the World",
+  "year": 2010,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2c501rhz2t7givgg0z2",
+      "startMs": 404680,
+      "endMs": 445480,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "gay introduction",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.829Z"
+    },
+    {
+      "id": "cmk83r2c801rjz2t7dct9e4ae",
+      "startMs": 1429540,
+      "endMs": 1532920,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "and sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.832Z"
+    },
+    {
+      "id": "cmk83r2cc01rlz2t7l9bw685v",
+      "startMs": 2131650,
+      "endMs": 2145650,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "gay",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.836Z"
+    },
+    {
+      "id": "cmk83r2cf01rnz2t7echc0vcc",
+      "startMs": 2539000,
+      "endMs": 2543980,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.839Z"
+    },
+    {
+      "id": "cmk83r2ci01rpz2t7bc0617l5",
+      "startMs": 3472760,
+      "endMs": 3500000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "gay",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.842Z"
+    },
+    {
+      "id": "cmk83r2ck01rrz2t7oyvumqgg",
+      "startMs": 5308100,
+      "endMs": 5362030,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "gay",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:07.845Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:07.826Z",
+  "updatedAt": "2026-01-10T09:31:49.712Z"
+}

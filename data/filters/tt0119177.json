@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt0119177",
+  "title": "Gattaca",
+  "year": 1997,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0jv00q2z2t7tz1arhck",
+      "startMs": 381070,
+      "endMs": 420910,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.515Z"
+    },
+    {
+      "id": "cmk83r0jy00q4z2t7u9k7nmh9",
+      "startMs": 4436870,
+      "endMs": 4623980,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.518Z"
+    },
+    {
+      "id": "cmk83r0k100q6z2t796gnj0y4",
+      "startMs": 5725440,
+      "endMs": 5751510,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.521Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.511Z",
+  "updatedAt": "2026-01-10T09:31:48.847Z"
+}

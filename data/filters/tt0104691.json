@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0104691",
+  "title": "The Last of the Mohicans",
+  "year": 1992,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r35l028kz2t77sk5pap3",
+      "startMs": 3353800,
+      "endMs": 3447910,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.890Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.886Z",
+  "updatedAt": "2026-01-10T09:31:50.166Z"
+}

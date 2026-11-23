@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0112682",
+  "title": "The City of Lost Children",
+  "year": 1995,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2pn01zez2t7re5inncx",
+      "startMs": 3397000,
+      "endMs": 3458870,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.316Z"
+    },
+    {
+      "id": "cmk83r2pq01zgz2t7lekjgll0",
+      "startMs": 4815920,
+      "endMs": 4823170,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.319Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.312Z",
+  "updatedAt": "2026-01-10T09:31:49.932Z"
+}

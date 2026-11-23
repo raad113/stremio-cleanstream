@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt12672536",
+  "title": "The Three Musketeers: D'Artagnan",
+  "year": 2023,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3q302kwz2t7vodsbsg1",
+      "startMs": 2174830,
+      "endMs": 2194740,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.627Z"
+    },
+    {
+      "id": "cmk83r3q602kyz2t7a07qol19",
+      "startMs": 2207670,
+      "endMs": 2216390,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.631Z"
+    },
+    {
+      "id": "cmk83r3qa02l0z2t7dp5qzeia",
+      "startMs": 2226600,
+      "endMs": 2232340,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.634Z"
+    },
+    {
+      "id": "cmk83r3qd02l2z2t7w19apys4",
+      "startMs": 2502480,
+      "endMs": 2504770,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.638Z"
+    },
+    {
+      "id": "cmk83r3qh02l4z2t7iesj7bxn",
+      "startMs": 2511350,
+      "endMs": 2519770,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "video",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.641Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.624Z",
+  "updatedAt": "2026-01-10T09:31:50.414Z"
+}

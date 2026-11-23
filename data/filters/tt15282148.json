@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt15282148",
+  "title": "A Beautiful Life",
+  "year": 2023,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzas0002z2t7z8oc2muw",
+      "startMs": 2846350,
+      "endMs": 2983390,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:03.892Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:03.882Z",
+  "updatedAt": "2026-01-10T09:31:48.224Z"
+}

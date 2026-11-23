@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt1205489",
+  "title": "Gran Torino",
+  "year": 2008,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0n400rqz2t7tyh5mpdp",
+      "startMs": 4400200,
+      "endMs": 4404410,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.632Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.628Z",
+  "updatedAt": "2026-01-10T09:31:48.883Z"
+}

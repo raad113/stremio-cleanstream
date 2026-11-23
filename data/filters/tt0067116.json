@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0067116",
+  "title": "The French Connection",
+  "year": 1971,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2x1023jz2t7y088qe5m",
+      "startMs": 2162240,
+      "endMs": 2366590,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.582Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.579Z",
+  "updatedAt": "2026-01-10T09:31:50.042Z"
+}

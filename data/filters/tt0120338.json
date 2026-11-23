@@ -5,65 +5,59 @@
   "type": "movie",
   "segments": [
     {
-      "id": "seg_titanic_001",
-      "startMs": 3780000,
-      "endMs": 3840000,
+      "id": "cmk83r3ti02mrz2t7zyxuwzmh",
+      "startMs": 4923740,
+      "endMs": 5048640,
       "category": "nudity",
-      "subcategory": "toplessness",
-      "severity": "high",
-      "channel": "video",
-      "comment": "Drawing scene - partial nudity",
-      "contributor": "sample",
-      "addedAt": "2025-01-01T00:00:00Z",
-      "votes": { "up": 45, "down": 3 }
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "topless female",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.751Z"
     },
     {
-      "id": "seg_titanic_002",
-      "startMs": 4020000,
-      "endMs": 4140000,
+      "id": "cmk83r3tl02mtz2t7p17ie64y",
+      "startMs": 5433770,
+      "endMs": 5442530,
       "category": "sex",
-      "subcategory": "coitus",
+      "subcategory": "sex",
       "severity": "medium",
       "channel": "both",
-      "comment": "Car scene - implied intimacy",
-      "contributor": "sample",
-      "addedAt": "2025-01-01T00:00:00Z",
-      "votes": { "up": 38, "down": 2 }
+      "comment": "non-explicit",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.754Z"
     },
     {
-      "id": "seg_titanic_003",
-      "startMs": 9000000,
-      "endMs": 9300000,
-      "category": "fear",
-      "subcategory": "death",
-      "severity": "high",
-      "channel": "both",
-      "comment": "Ship sinking - people dying in water",
-      "contributor": "sample",
-      "addedAt": "2025-01-01T00:00:00Z",
-      "votes": { "up": 25, "down": 5 }
-    },
-    {
-      "id": "seg_titanic_004",
-      "startMs": 9600000,
-      "endMs": 9660000,
-      "category": "violence",
-      "subcategory": "murder",
+      "id": "cmk83r3tp02mvz2t72unmcv9r",
+      "startMs": 5471750,
+      "endMs": 5527010,
+      "category": "sex",
+      "subcategory": "sex",
       "severity": "medium",
       "channel": "both",
-      "comment": "Officer shoots passenger then self",
-      "contributor": "sample",
-      "addedAt": "2025-01-01T00:00:00Z",
-      "votes": { "up": 30, "down": 1 }
+      "comment": "non-explicit",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.757Z"
     }
   ],
-  "releases": [
-    {
-      "name": "Theatrical",
-      "runtime": 11640000
-    }
-  ],
+  "releases": [],
   "version": 1,
-  "createdAt": "2025-01-01T00:00:00Z",
-  "updatedAt": "2025-01-01T00:00:00Z"
+  "createdAt": "2026-01-10T09:28:09.748Z",
+  "updatedAt": "2026-01-10T09:31:50.469Z"
 }

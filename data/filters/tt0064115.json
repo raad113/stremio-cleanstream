@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0064115",
+  "title": "Butch Cassidy and the Sundance Kid",
+  "year": 1969,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83qzo9007tz2t7qiv7o8tf",
+      "startMs": 1371000,
+      "endMs": 1571000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.378Z"
+    },
+    {
+      "id": "cmk83qzoc007vz2t7pzm8uzcn",
+      "startMs": 2385000,
+      "endMs": 2444000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.381Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.375Z",
+  "updatedAt": "2026-01-10T09:31:48.435Z"
+}

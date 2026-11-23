@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0399201",
+  "title": "The Island",
+  "year": 2005,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r356028cz2t7o1pvq9nx",
+      "startMs": 6457210,
+      "endMs": 6503500,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "passionate kissing",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.875Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.872Z",
+  "updatedAt": "2026-01-10T09:31:50.159Z"
+}

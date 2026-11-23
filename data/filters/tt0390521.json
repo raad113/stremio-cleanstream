@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0390521",
+  "title": "Super Size Me",
+  "year": 2004,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2in01vcz2t7sgwpm3xq",
+      "startMs": 3904940,
+      "endMs": 3961920,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "descriptive talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.064Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.061Z",
+  "updatedAt": "2026-01-10T09:31:49.834Z"
+}

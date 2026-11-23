@@ -1,0 +1,97 @@
+{
+  "imdbId": "tt0107616",
+  "title": "Much Ado About Nothing",
+  "year": 1993,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r186013xz2t7eeu9fgd1",
+      "startMs": 386790,
+      "endMs": 507490,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.391Z"
+    },
+    {
+      "id": "cmk83r189013zz2t7n2nhfn50",
+      "startMs": 1447450,
+      "endMs": 1493500,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.394Z"
+    },
+    {
+      "id": "cmk83r18c0141z2t7yi9f9rff",
+      "startMs": 3452490,
+      "endMs": 3462130,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.396Z"
+    },
+    {
+      "id": "cmk83r18g0143z2t7k24fyagm",
+      "startMs": 3472850,
+      "endMs": 3482730,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.400Z"
+    },
+    {
+      "id": "cmk83r18j0145z2t7btg3ph77",
+      "startMs": 3496350,
+      "endMs": 3503380,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.403Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.388Z",
+  "updatedAt": "2026-01-10T09:31:49.214Z"
+}

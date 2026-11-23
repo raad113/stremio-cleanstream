@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt0218967",
+  "title": "The Family Man",
+  "year": 2000,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r2uk0221z2t714njorm3",
+      "startMs": 216000,
+      "endMs": 273000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.493Z"
+    },
+    {
+      "id": "cmk83r2uo0223z2t7hp6f6au0",
+      "startMs": 2380000,
+      "endMs": 2430000,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.497Z"
+    },
+    {
+      "id": "cmk83r2ur0225z2t7huv93bgm",
+      "startMs": 2985000,
+      "endMs": 3210000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.499Z"
+    },
+    {
+      "id": "cmk83r2uu0227z2t7qo065w24",
+      "startMs": 3910000,
+      "endMs": 4051000,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.502Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.490Z",
+  "updatedAt": "2026-01-10T09:31:50.009Z"
+}

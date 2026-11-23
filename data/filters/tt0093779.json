@@ -1,0 +1,1457 @@
+{
+  "imdbId": "tt0093779",
+  "title": "The Princess Bride",
+  "year": 1987,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3a302b7z2t7ml3k3rrc",
+      "startMs": 252720,
+      "endMs": 255870,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "video",
+      "comment": "silhouette of beginning of a kiss",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.051Z"
+    },
+    {
+      "id": "cmk83r3a602b9z2t7aar0w2fu",
+      "startMs": 317140,
+      "endMs": 319640,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "some pecks",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.054Z"
+    },
+    {
+      "id": "cmk83r3a802bbz2t7li2fomyy",
+      "startMs": 714020,
+      "endMs": 718110,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "eel runs into her",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.057Z"
+    },
+    {
+      "id": "cmk83r3ab02bdz2t707jvcjvc",
+      "startMs": 727290,
+      "endMs": 736760,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "eel tries to eat her",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.060Z"
+    },
+    {
+      "id": "cmk83r3af02bfz2t7wgnauybf",
+      "startMs": 735470,
+      "endMs": 736390,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "eel opens mouth to eat her",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.064Z"
+    },
+    {
+      "id": "cmk83r3ai02bhz2t74dymghco",
+      "startMs": 783750,
+      "endMs": 784510,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "eel charges her, is hit by punch",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.066Z"
+    },
+    {
+      "id": "cmk83r3al02bjz2t7kt9ks2md",
+      "startMs": 1000850,
+      "endMs": 1001790,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.069Z"
+    },
+    {
+      "id": "cmk83r3ao02blz2t75dnh49xt",
+      "startMs": 1494690,
+      "endMs": 1495250,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "head strike for the knockout",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.072Z"
+    },
+    {
+      "id": "cmk83r3as02bnz2t7n1d90l5a",
+      "startMs": 1580440,
+      "endMs": 1581500,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "deity reference, may or may not be considered blasphemous",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.076Z"
+    },
+    {
+      "id": "cmk83r3au02bpz2t7xbfomn8l",
+      "startMs": 1654640,
+      "endMs": 1655560,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "slams against rock",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.079Z"
+    },
+    {
+      "id": "cmk83r3ax02brz2t735yemxyf",
+      "startMs": 1689530,
+      "endMs": 1690270,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "choke hold collapse",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.082Z"
+    },
+    {
+      "id": "cmk83r3b002btz2t7qgiac3ed",
+      "startMs": 1709450,
+      "endMs": 1710810,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sexual reference - dream of large women",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.085Z"
+    },
+    {
+      "id": "cmk83r3b402bvz2t7krmux4gf",
+      "startMs": 1826350,
+      "endMs": 1827520,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "personal insult mild - morons",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.088Z"
+    },
+    {
+      "id": "cmk83r3b702bxz2t7hhihirrp",
+      "startMs": 2037350,
+      "endMs": 2038220,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "personal insult mild - you fool",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.091Z"
+    },
+    {
+      "id": "cmk83r3ba02bzz2t7koyyckcy",
+      "startMs": 2408130,
+      "endMs": 2413670,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "long kiss",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.094Z"
+    },
+    {
+      "id": "cmk83r3bc02c1z2t7u5orbv0e",
+      "startMs": 2667150,
+      "endMs": 2668420,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "falls into quicksand",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.097Z"
+    },
+    {
+      "id": "cmk83r3bg02c3z2t7o6khlofy",
+      "startMs": 2746510,
+      "endMs": 2755400,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "scary rat noise",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.100Z"
+    },
+    {
+      "id": "cmk83r3bj02c5z2t793oqohje",
+      "startMs": 2752440,
+      "endMs": 2755070,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "scary rat wiggles its nose",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.103Z"
+    },
+    {
+      "id": "cmk83r3bm02c7z2t73dx7casf",
+      "startMs": 2797840,
+      "endMs": 2804250,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "rat bites his hand",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.106Z"
+    },
+    {
+      "id": "cmk83r3bo02c9z2t72cjgpj6w",
+      "startMs": 2812820,
+      "endMs": 2816360,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "scary rat face",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.109Z"
+    },
+    {
+      "id": "cmk83r3bs02cbz2t7uj9xv0ve",
+      "startMs": 2842880,
+      "endMs": 2855070,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "rat bites leg, shoulder",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.113Z"
+    },
+    {
+      "id": "cmk83r3bv02cdz2t73e02u9eb",
+      "startMs": 2859050,
+      "endMs": 2861190,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "explosion - rat gets singed",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.115Z"
+    },
+    {
+      "id": "cmk83r3by02cfz2t7hfe5v8mc",
+      "startMs": 2865530,
+      "endMs": 2867980,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "bloodied shoulder",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.119Z"
+    },
+    {
+      "id": "cmk83r3c102chz2t7g716bd7s",
+      "startMs": 2874480,
+      "endMs": 2883000,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "non human killing - stabs rat repeatedly",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.121Z"
+    },
+    {
+      "id": "cmk83r3c402cjz2t7mv904fee",
+      "startMs": 2886820,
+      "endMs": 2889090,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "bloodied shoulder",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.125Z"
+    },
+    {
+      "id": "cmk83r3c702clz2t7wnly9106",
+      "startMs": 2903440,
+      "endMs": 2907460,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.128Z"
+    },
+    {
+      "id": "cmk83r3ca02cnz2t7ba8hgrbw",
+      "startMs": 2913610,
+      "endMs": 2915210,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.130Z"
+    },
+    {
+      "id": "cmk83r3cd02cpz2t72ajhq0a1",
+      "startMs": 2917090,
+      "endMs": 2918380,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.133Z"
+    },
+    {
+      "id": "cmk83r3ch02crz2t7mi2aybdt",
+      "startMs": 2920000,
+      "endMs": 2923250,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.137Z"
+    },
+    {
+      "id": "cmk83r3cj02ctz2t7p63z3q81",
+      "startMs": 2947760,
+      "endMs": 2954480,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.140Z"
+    },
+    {
+      "id": "cmk83r3cm02cvz2t7jg618gcp",
+      "startMs": 2958030,
+      "endMs": 2963590,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.143Z"
+    },
+    {
+      "id": "cmk83r3cp02cxz2t7n2a1ao0w",
+      "startMs": 2965980,
+      "endMs": 2968280,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.146Z"
+    },
+    {
+      "id": "cmk83r3ct02czz2t7lnqvkd02",
+      "startMs": 2975250,
+      "endMs": 2980320,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.150Z"
+    },
+    {
+      "id": "cmk83r3cw02d1z2t7s2l1rfb6",
+      "startMs": 2988670,
+      "endMs": 2990030,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.152Z"
+    },
+    {
+      "id": "cmk83r3cz02d3z2t7opn972fi",
+      "startMs": 3005780,
+      "endMs": 3012530,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.155Z"
+    },
+    {
+      "id": "cmk83r3d202d5z2t7vebl9ddn",
+      "startMs": 3024150,
+      "endMs": 3026730,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.158Z"
+    },
+    {
+      "id": "cmk83r3d602d7z2t79n0js500",
+      "startMs": 3047090,
+      "endMs": 3069750,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.162Z"
+    },
+    {
+      "id": "cmk83r3d802d9z2t7rk37pt7c",
+      "startMs": 3089780,
+      "endMs": 3100550,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.165Z"
+    },
+    {
+      "id": "cmk83r3db02dbz2t73z5pm404",
+      "startMs": 3288940,
+      "endMs": 3289590,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "personal attack mild - shut up",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.167Z"
+    },
+    {
+      "id": "cmk83r3de02ddz2t7d9ewrdk7",
+      "startMs": 3449300,
+      "endMs": 3453480,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "shirtless man on stretcher",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.170Z"
+    },
+    {
+      "id": "cmk83r3dh02dfz2t7skdg6bot",
+      "startMs": 3473690,
+      "endMs": 3477110,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "shirtless man on stretcher",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.174Z"
+    },
+    {
+      "id": "cmk83r3dk02dhz2t72nnjs9j3",
+      "startMs": 3501840,
+      "endMs": 3504550,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "shirtless man on stretcher",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.177Z"
+    },
+    {
+      "id": "cmk83r3dn02djz2t7dyj804ym",
+      "startMs": 3513980,
+      "endMs": 3516320,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "shirtless man on stretcher",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.180Z"
+    },
+    {
+      "id": "cmk83r3dq02dlz2t7c7jl12es",
+      "startMs": 3653440,
+      "endMs": 3655630,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "slight head wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.182Z"
+    },
+    {
+      "id": "cmk83r3du02dnz2t72mqfqnpm",
+      "startMs": 3657880,
+      "endMs": 3659170,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "slight head wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.186Z"
+    },
+    {
+      "id": "cmk83r3dw02dpz2t7jkr260hc",
+      "startMs": 3720690,
+      "endMs": 3721530,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "punches away other brute squad member",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.189Z"
+    },
+    {
+      "id": "cmk83r3dz02drz2t7xm3qwuz0",
+      "startMs": 3955610,
+      "endMs": 3959710,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "shirtless man on stretcher",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.192Z"
+    },
+    {
+      "id": "cmk83r3e202dtz2t732ahpm32",
+      "startMs": 3974610,
+      "endMs": 3977190,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "both",
+      "comment": "shirtless man on stretcher",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.194Z"
+    },
+    {
+      "id": "cmk83r3e602dvz2t7t4mn63b7",
+      "startMs": 3974630,
+      "endMs": 3987400,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "high",
+      "channel": "audio",
+      "comment": "torture death",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.198Z"
+    },
+    {
+      "id": "cmk83r3e902dxz2t74qi3k0jp",
+      "startMs": 3983960,
+      "endMs": 3986440,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "high",
+      "channel": "both",
+      "comment": "torture death",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.201Z"
+    },
+    {
+      "id": "cmk83r3ec02dzz2t7g43ntgqo",
+      "startMs": 4051590,
+      "endMs": 4052500,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "says \"father\" referring to his father but sounds like prayer",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.204Z"
+    },
+    {
+      "id": "cmk83r3ef02e1z2t7fnck255m",
+      "startMs": 4122900,
+      "endMs": 4129000,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "shoulder wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.207Z"
+    },
+    {
+      "id": "cmk83r3ei02e3z2t7v3iotyi7",
+      "startMs": 4167350,
+      "endMs": 4167960,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.211Z"
+    },
+    {
+      "id": "cmk83r3el02e5z2t7lpsoq0uy",
+      "startMs": 4907110,
+      "endMs": 4911190,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "low",
+      "channel": "both",
+      "comment": "multiple sword swipe deaths",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.213Z"
+    },
+    {
+      "id": "cmk83r3eo02e7z2t72engdce6",
+      "startMs": 4974400,
+      "endMs": 4984060,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "low",
+      "channel": "video",
+      "comment": "light cleavage",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.216Z"
+    },
+    {
+      "id": "cmk83r3er02e9z2t74do7pni8",
+      "startMs": 5042280,
+      "endMs": 5046020,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "knife wound with blood",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.219Z"
+    },
+    {
+      "id": "cmk83r3eu02ebz2t73ubvhfjc",
+      "startMs": 5111300,
+      "endMs": 5114430,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "bodily part reference mild - there's a shortage of perfect breasts in this world",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.223Z"
+    },
+    {
+      "id": "cmk83r3ex02edz2t7z3lagakk",
+      "startMs": 5119470,
+      "endMs": 5130860,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "she kisses him with pecks on the neck",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.226Z"
+    },
+    {
+      "id": "cmk83r3f002efz2t746wy4u9q",
+      "startMs": 5136050,
+      "endMs": 5137900,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "pulls knife out",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.228Z"
+    },
+    {
+      "id": "cmk83r3f302ehz2t7i9yb30d4",
+      "startMs": 5141150,
+      "endMs": 5143840,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "bloodied knife wound",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.231Z"
+    },
+    {
+      "id": "cmk83r3f702ejz2t71u37gbbs",
+      "startMs": 5156590,
+      "endMs": 5159680,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "blood not flowing though",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.235Z"
+    },
+    {
+      "id": "cmk83r3fa02elz2t7125gyf9g",
+      "startMs": 5166530,
+      "endMs": 5167690,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "blood from other wound present",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.238Z"
+    },
+    {
+      "id": "cmk83r3fc02enz2t7wvah8f8w",
+      "startMs": 5169000,
+      "endMs": 5183520,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "multiple blood wounds",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.241Z"
+    },
+    {
+      "id": "cmk83r3ff02epz2t7gvr2x6tp",
+      "startMs": 5185440,
+      "endMs": 5191970,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "blood from multiple wounds",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.244Z"
+    },
+    {
+      "id": "cmk83r3fj02erz2t7ple20htr",
+      "startMs": 5193970,
+      "endMs": 5195980,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "blood from multiple wounds",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.247Z"
+    },
+    {
+      "id": "cmk83r3fm02etz2t7br30ur36",
+      "startMs": 5207360,
+      "endMs": 5214110,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "blood from multiple wounds, stabs",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.250Z"
+    },
+    {
+      "id": "cmk83r3fo02evz2t70owtp2xu",
+      "startMs": 5215430,
+      "endMs": 5237030,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "slashes his cheeks, and stabs him",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.253Z"
+    },
+    {
+      "id": "cmk83r3fr02exz2t7y4senwsb",
+      "startMs": 5230100,
+      "endMs": 5231100,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "fatal sword stab",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.256Z"
+    },
+    {
+      "id": "cmk83r3fv02ezz2t7f5jmn5kr",
+      "startMs": 5232920,
+      "endMs": 5237030,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "both",
+      "comment": "you son of a b-word",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.259Z"
+    },
+    {
+      "id": "cmk83r3fy02f1z2t70nykipj7",
+      "startMs": 5237030,
+      "endMs": 5237500,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "blood on shirt",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.262Z"
+    },
+    {
+      "id": "cmk83r3g102f3z2t7pq3bnc66",
+      "startMs": 5237500,
+      "endMs": 5248600,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "paces back with wounds, falls down dead, some blood wounds",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.265Z"
+    },
+    {
+      "id": "cmk83r3g302f5z2t72j9pty6r",
+      "startMs": 5313180,
+      "endMs": 5318850,
+      "category": "fear",
+      "subcategory": "fear",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "mentions cutting things off",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.268Z"
+    },
+    {
+      "id": "cmk83r3g702f7z2t7vqrta77p",
+      "startMs": 5348190,
+      "endMs": 5349090,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "medium",
+      "channel": "audio",
+      "comment": "idiomatic blasphemy",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.272Z"
+    },
+    {
+      "id": "cmk83r3ga02f9z2t74av4hwpy",
+      "startMs": 5366970,
+      "endMs": 5367510,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "personal insult mild - pig",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.275Z"
+    },
+    {
+      "id": "cmk83r3gd02fbz2t757x7yu6v",
+      "startMs": 5415960,
+      "endMs": 5419440,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "blood on sword, clothes",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.278Z"
+    },
+    {
+      "id": "cmk83r3gg02fdz2t7bse1ygjm",
+      "startMs": 5424970,
+      "endMs": 5426250,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "blood on shirt",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.280Z"
+    },
+    {
+      "id": "cmk83r3gj02ffz2t7hf0819d4",
+      "startMs": 5427930,
+      "endMs": 5429210,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "blood on shirt",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.284Z"
+    },
+    {
+      "id": "cmk83r3gm02fhz2t73oo1i6on",
+      "startMs": 5435520,
+      "endMs": 5438360,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "blood on shirt, hand",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.287Z"
+    },
+    {
+      "id": "cmk83r3gp02fjz2t7pdwy0lsa",
+      "startMs": 5443600,
+      "endMs": 5446850,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "blood on shirt",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.290Z"
+    },
+    {
+      "id": "cmk83r3gs02flz2t7q8a3zymg",
+      "startMs": 5448220,
+      "endMs": 5450510,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "dried blood on hand",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.292Z"
+    },
+    {
+      "id": "cmk83r3gw02fnz2t7e1i99q31",
+      "startMs": 5490350,
+      "endMs": 5494940,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "blood on hand",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.296Z"
+    },
+    {
+      "id": "cmk83r3gy02fpz2t7kl9wk34w",
+      "startMs": 5494940,
+      "endMs": 5501640,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "blood on shirt",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.299Z"
+    },
+    {
+      "id": "cmk83r3h102frz2t7497evjhy",
+      "startMs": 5556360,
+      "endMs": 5565550,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "passionate kiss",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.302Z"
+    },
+    {
+      "id": "cmk83r3h402ftz2t782zm4y2j",
+      "startMs": 5633850,
+      "endMs": 5637350,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "prolonged kiss",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.305Z"
+    },
+    {
+      "id": "cmk83r3h802fvz2t7ql1is42c",
+      "startMs": 5647770,
+      "endMs": 5649070,
+      "category": "violence",
+      "subcategory": "violence",
+      "severity": "medium",
+      "channel": "video",
+      "comment": "sword stabs",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.308Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.047Z",
+  "updatedAt": "2026-01-10T09:31:50.236Z"
+}

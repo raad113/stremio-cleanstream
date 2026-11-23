@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt2361509",
+  "title": "The Intern",
+  "year": 2015,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r33x027nz2t7ow6kid02",
+      "startMs": 1681590,
+      "endMs": 1779140,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "massage",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.830Z"
+    },
+    {
+      "id": "cmk83r341027pz2t70u1ut4qh",
+      "startMs": 2264850,
+      "endMs": 2298960,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.833Z"
+    },
+    {
+      "id": "cmk83r343027rz2t7m4on2qfk",
+      "startMs": 2823940,
+      "endMs": 2942350,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "massage",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.836Z"
+    },
+    {
+      "id": "cmk83r346027tz2t7y55daj60",
+      "startMs": 6439520,
+      "endMs": 6670080,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.839Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.827Z",
+  "updatedAt": "2026-01-10T09:31:50.142Z"
+}

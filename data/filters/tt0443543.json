@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0443543",
+  "title": "The Illusionist",
+  "year": 2006,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r32w0270z2t72dkljdtr",
+      "startMs": 2583090,
+      "endMs": 2936110,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.792Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.789Z",
+  "updatedAt": "2026-01-10T09:31:50.125Z"
+}

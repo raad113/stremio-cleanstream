@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt0234215",
+  "title": "The Matrix Reloaded",
+  "year": 2003,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r37m029rz2t7s38d0ut5",
+      "startMs": 1743490,
+      "endMs": 1939350,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "high",
+      "channel": "both",
+      "comment": "explicit",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.963Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.960Z",
+  "updatedAt": "2026-01-10T09:31:50.201Z"
+}

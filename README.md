@@ -25,20 +25,48 @@ See [Self-Hosting](#self-hosting) below.
 
 ## ⚠️ Current Status
 
-**Working now:** Shows on-screen warnings before scenes you want to skip, telling you when to manually skip.
+**In every Stremio app:** the add-on shows on-screen warnings before scenes you want to skip, so you can skip them yourself.
 
-**Coming soon:** Auto-skip functionality via browser extension.
+**Automatic skipping in Stremio Web:** install the auto-skip userscript from the `/configure` page (see [Automatic skipping](#automatic-skipping-stremio-web)). Stremio's desktop, Android, iOS and TV apps do not let add-ons control playback, so automatic skipping is only possible in the browser.
 
 ## Features
 
 - 🎯 **Configurable filters** - Choose what to skip: nudity, violence, language, drugs, fear
-- 📊 **Severity levels** - Filter by low/medium/high intensity
+- 📊 **Filter levels** - High skips every flagged scene, Medium skips medium and strong scenes, Low skips only the strongest
+- ⏭️ **Automatic skipping** - Userscript for Stremio Web that skips or mutes scenes
 - 📚 **"CleanStream Ready" Catalog** - Browse movies with skip data in Stremio's Discover section
-- 🎬 **376+ movies** - Pre-loaded with skip data from VideoSkip
+- 🎬 **376 movies, 1,608 skips** - Pre-loaded with skip data from VideoSkip (in `data/filters`, used by both storage modes)
 - 🤝 **Community contributions** - Add skip timestamps for movies you watch
 - 📥 **MCF compatible** - Import/export MovieContentFilter format
 - 🗳️ **Voting system** - Upvote accurate timestamps, downvote mistakes
 - 🐳 **Docker ready** - One command deployment with PostgreSQL + Redis
+
+## Automatic Skipping (Stremio Web)
+
+1. Install a userscript manager in your browser: [Tampermonkey](https://www.tampermonkey.net/) or [Violentmonkey](https://violentmonkey.github.io/). Both work in Chrome, Edge, Firefox (including Firefox for Android) and Safari.
+2. Open `https://<your-server>/configure`, choose your filters and click **Install auto-skip script**.
+3. Watch on [web.stremio.com](https://web.stremio.com). A small "CleanStream: N skips" badge appears at the top of the player.
+
+The script jumps over flagged scenes and mutes scenes marked as audio only (for example, profanity). After each skip it shows **Undo**, **👍** and **👎**.
+
+| Shortcut | Action |
+|----------|--------|
+| `Alt+S` | Mark the start of a scene to share |
+| `Alt+E` | Mark the end and open the share form |
+| `Alt+C` | Turn auto-skip on or off |
+| `Alt+←` / `Alt+→` | Shift all skips 0.5 s earlier or later (for a different cut of the film) |
+| `Alt+H` | Show help |
+
+## Community Sharing
+
+Skips are shared through the server the add-on is installed from. Everyone who uses the same server sees the same data.
+
+* **Adding skips:** use `Alt+S` / `Alt+E` in Stremio Web, the `npm run contribute` CLI, or `POST /api/contribute/:id`. A new skip is served to everyone straight away.
+* **Voting:** each viewer gets one vote per skip (stored as an anonymous salted hash, never the IP address). A skip with three more 👎 than 👍 stops being served.
+* **Series:** skips are stored per episode (`tt0944947:1:2`), because timings differ between episodes.
+* **Abuse limits:** contributions and votes are rate-limited per IP (`CONTRIBUTE_LIMIT_PER_HOUR`, `VOTE_LIMIT_PER_HOUR`). Set `TRUST_PROXY=1` behind a reverse proxy so the limits see real client addresses.
+
+A self-hosted server starts with the bundled data (376 titles, 1,608 skips) but does not sync with other servers, including the public instance. To pool contributions, a group of people should install the add-on from one shared server.
 
 ## How It Works
 
@@ -85,7 +113,13 @@ This runs with JSON file storage (no database required).
 | `PORT` | Server port | `7000` |
 | `DATABASE_URL` | PostgreSQL connection string | (uses JSON files if not set) |
 | `REDIS_URL` | Redis connection string | (caching disabled if not set) |
-| `CLEANSTREAM_BASE_URL` | Public URL of the server | `http://localhost:7000` |
+| `CLEANSTREAM_BASE_URL` | Public URL of the server (also written into the auto-skip script) | `http://localhost:7000` |
+| `CLEANSTREAM_DATA_DIR` | Folder for JSON storage | `data/filters` |
+| `TRUST_PROXY` | Express `trust proxy` setting, e.g. `1` behind one proxy | (off) |
+| `CLEANSTREAM_VOTE_SALT` | Secret salt for anonymous voter ids | `cleanstream` |
+| `CONTRIBUTE_LIMIT_PER_HOUR` | Contributions per IP per hour | `60` |
+| `VOTE_LIMIT_PER_HOUR` | Votes per IP per hour | `300` |
+| `TMDB_API_KEY` | TMDB key for catalogue posters | (built-in key) |
 
 ### Example
 

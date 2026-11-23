@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt2222042",
+  "title": "Love and Monsters",
+  "year": 2020,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r13h0115z2t7fii983ln",
+      "startMs": 165530,
+      "endMs": 170950,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "video",
+      "comment": "couple in bed, distant",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.222Z"
+    },
+    {
+      "id": "cmk83r13l0117z2t7rxqilqeu",
+      "startMs": 212500,
+      "endMs": 226260,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "video",
+      "comment": "couple's legs in bed",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.225Z"
+    },
+    {
+      "id": "cmk83r13o0119z2t7mj2h6n4z",
+      "startMs": 233000,
+      "endMs": 240500,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "video",
+      "comment": "couple's legs in bed",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.228Z"
+    },
+    {
+      "id": "cmk83r13q011bz2t7fj2untvk",
+      "startMs": 741050,
+      "endMs": 753560,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "both",
+      "comment": "couple fondling in car",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:06.231Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:06.219Z",
+  "updatedAt": "2026-01-10T09:31:49.137Z"
+}

@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt0098554",
+  "title": "Uncle Buck",
+  "year": 1989,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3w502o3z2t7epolg3q2",
+      "startMs": 2391510,
+      "endMs": 2393260,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.846Z"
+    },
+    {
+      "id": "cmk83r3wa02o5z2t78ans9ofb",
+      "startMs": 3756070,
+      "endMs": 3759380,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "low",
+      "channel": "audio",
+      "comment": "sex",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:09.851Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:09.842Z",
+  "updatedAt": "2026-01-10T09:31:50.506Z"
+}

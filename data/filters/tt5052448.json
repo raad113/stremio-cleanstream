@@ -1,0 +1,46 @@
+{
+  "imdbId": "tt5052448",
+  "title": "Get Out",
+  "year": 2017,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r0kf00qcz2t7trhciq1e",
+      "startMs": 1566170,
+      "endMs": 1597580,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.536Z"
+    },
+    {
+      "id": "cmk83r0kj00qez2t7xmmb0nm7",
+      "startMs": 3055650,
+      "endMs": 3081880,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "talk",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:05.540Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:05.532Z",
+  "updatedAt": "2026-01-10T09:31:48.855Z"
+}

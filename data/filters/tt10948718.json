@@ -1,0 +1,29 @@
+{
+  "imdbId": "tt10948718",
+  "title": "The Heist of the Century",
+  "year": 2020,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r3170260z2t7jy9tpm42",
+      "startMs": 117270,
+      "endMs": 125570,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.732Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.729Z",
+  "updatedAt": "2026-01-10T09:31:50.096Z"
+}

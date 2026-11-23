@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt0095016",
+  "title": "Die Hard",
+  "year": 1988,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r02200foz2t7fy4arknq",
+      "startMs": 1404930,
+      "endMs": 1424340,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.875Z"
+    },
+    {
+      "id": "cmk83r02600fqz2t7ohesa9lp",
+      "startMs": 2536570,
+      "endMs": 2555070,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.879Z"
+    },
+    {
+      "id": "cmk83r02900fsz2t71f6slm2g",
+      "startMs": 2879910,
+      "endMs": 2886680,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.882Z"
+    },
+    {
+      "id": "cmk83r02c00fuz2t7fm0n40hf",
+      "startMs": 7089730,
+      "endMs": 7096410,
+      "category": "language",
+      "subcategory": "language",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.885Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.871Z",
+  "updatedAt": "2026-01-10T09:31:48.623Z"
+}

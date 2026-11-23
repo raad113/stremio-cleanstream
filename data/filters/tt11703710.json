@@ -1,0 +1,80 @@
+{
+  "imdbId": "tt11703710",
+  "title": "Downton Abbey: A New Era",
+  "year": 2022,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r05600hhz2t7m6h3b67x",
+      "startMs": 2908070,
+      "endMs": 2964010,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "HS dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.987Z"
+    },
+    {
+      "id": "cmk83r05a00hjz2t7g9p2a6up",
+      "startMs": 5118590,
+      "endMs": 5279920,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "HS dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.991Z"
+    },
+    {
+      "id": "cmk83r05d00hlz2t7bmvpcsnb",
+      "startMs": 5927740,
+      "endMs": 5948160,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "HS dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.993Z"
+    },
+    {
+      "id": "cmk83r05g00hnz2t7xz0c7a7b",
+      "startMs": 6214180,
+      "endMs": 6294890,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": "HS dialogue",
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:04.996Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:04.984Z",
+  "updatedAt": "2026-01-10T09:31:48.664Z"
+}

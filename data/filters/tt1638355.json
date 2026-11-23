@@ -1,0 +1,63 @@
+{
+  "imdbId": "tt1638355",
+  "title": "The Man from U.N.C.L.E.",
+  "year": 2015,
+  "type": "movie",
+  "segments": [
+    {
+      "id": "cmk83r375029hz2t7u165vxx2",
+      "startMs": 2042220,
+      "endMs": 2266730,
+      "category": "nudity",
+      "subcategory": "nudity",
+      "severity": "high",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.946Z"
+    },
+    {
+      "id": "cmk83r378029jz2t7srnsclkk",
+      "startMs": 3982710,
+      "endMs": 4019830,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.949Z"
+    },
+    {
+      "id": "cmk83r37b029lz2t7af6o36mg",
+      "startMs": 4041720,
+      "endMs": 4132540,
+      "category": "sex",
+      "subcategory": "sex",
+      "severity": "medium",
+      "channel": "both",
+      "comment": null,
+      "contributor": "videoskip-import",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "verified": false,
+      "addedAt": "2026-01-10T09:28:08.951Z"
+    }
+  ],
+  "releases": [],
+  "version": 1,
+  "createdAt": "2026-01-10T09:28:08.943Z",
+  "updatedAt": "2026-01-10T09:31:50.190Z"
+}
