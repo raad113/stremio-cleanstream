@@ -295,7 +295,9 @@ app.get('/configure', (req, res) => {
     <div class="card">
       <h3>🤝 Share skips with the community</h3>
       <p style="color: #8892b0; font-size: 0.9em;">
-        While watching in Stremio Web with the script installed, press <strong>Alt+S</strong> when an
+        <strong>Two clicks:</strong> click the <strong>♥ Mark scene</strong> button in the player when a kissing or
+        sexual scene starts and again when it ends. It is shared automatically, with nothing to fill in.<br><br>
+        For other kinds of scenes, press <strong>Alt+S</strong> when an
         unwanted scene starts and <strong>Alt+E</strong> when it ends, then choose a category and press
         <em>Share</em>. Every viewer of this server gets your skip straight away. Skips that collect
         three more 👎 than 👍 are hidden automatically.

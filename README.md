@@ -49,19 +49,30 @@ See [Self-Hosting](#self-hosting) below.
 
 The script jumps over flagged scenes and mutes scenes marked as audio only (for example, profanity). After each skip it shows **Undo**, **👍** and **👎**.
 
+### Quick mark: two clicks to share a kissing or sexual scene
+
+A **♥ Mark scene** button appears at the bottom right of the player when you move the mouse.
+
+1. Click it when the scene starts. The button turns red and counts the seconds.
+2. Click it again when the scene ends.
+3. The scene is shared five seconds later. Click the button during those five seconds (or press `Esc`) to cancel.
+
+No form appears. The scene is saved as "sex" with the strength chosen once in the script's settings (mild, moderate or strong; moderate by default). Clicks less than one second apart are ignored. `Alt+K` does the same as the button.
+
 | Shortcut | Action |
 |----------|--------|
 | `Alt+S` | Mark the start of a scene to share |
 | `Alt+E` | Mark the end and open the share form |
 | `Alt+C` | Turn auto-skip on or off |
 | `Alt+←` / `Alt+→` | Shift all skips 0.5 s earlier or later (for a different cut of the film) |
+| `Alt+K` | Same as the ♥ quick-mark button |
 | `Alt+H` | Show help |
 
 ## Community Sharing
 
 Skips are shared through the server the add-on is installed from. Everyone who uses the same server sees the same data.
 
-* **Adding skips:** use `Alt+S` / `Alt+E` in Stremio Web, the `npm run contribute` CLI, or `POST /api/contribute/:id`. A new skip is served to everyone straight away.
+* **Adding skips:** use the ♥ button (two clicks) or `Alt+S` / `Alt+E` in Stremio Web, the `npm run contribute` CLI, or `POST /api/contribute/:id`. A new skip is served to everyone straight away.
 * **Voting:** each viewer gets one vote per skip (stored as an anonymous salted hash, never the IP address). A skip with three more 👎 than 👍 stops being served.
 * **Series:** skips are stored per episode (`tt0944947:1:2`), because timings differ between episodes.
 * **Abuse limits:** contributions and votes are rate-limited per IP (`CONTRIBUTE_LIMIT_PER_HOUR`, `VOTE_LIMIT_PER_HOUR`). Set `TRUST_PROXY=1` behind a reverse proxy so the limits see real client addresses.

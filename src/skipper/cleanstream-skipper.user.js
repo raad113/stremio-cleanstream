@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CleanStream Auto-Skip for Stremio Web
 // @namespace    cleanstream
-// @version      1.0.0
+// @version      1.1.0
 // @description  Automatically skips (or mutes) unwanted scenes in Stremio Web using CleanStream community skip data, and lets you add and vote on skips.
 // @match        https://web.stremio.com/*
 // @match        https://*.strem.io/*
@@ -30,6 +30,12 @@
  *   Alt+C        turn auto-skip on/off
  *   Alt+← / →    shift all skips 0.5 s earlier/later (for a different cut)
  *   Alt+H        show help
+ *   Alt+K        same as the ♥ quick-mark button (see below)
+ *
+ * Quick mark (♥ button, bottom right of the player)
+ *   Click once when a kissing or sexual scene starts and once when it ends.
+ *   The skip is shared automatically as "sex" a few seconds later; the
+ *   only thing to choose (once, in settings) is how strong these scenes are.
  */
 
 (function () {
@@ -112,6 +118,7 @@
     lastJump: 0,
     markStart: null,
     formOpen: false,
+    quickSeverity: store.get('quickSeverity', 'medium'),
   };
 
   /* ---------------------------------------------------------------- */
@@ -166,9 +173,12 @@
       state.contentId = id;
       state.mutedBySkip = null;
       state.markStart = null;
+      resetQuickMark();
       if (id) loadSkips(id); else renderBadge();
     }
-    if (!id || !state.enabled || state.formOpen || state.skips.length === 0) return;
+    renderQuickButton();
+    // Pause auto-skip while the viewer is timing a scene, so the end mark is right
+    if (!id || !state.enabled || state.formOpen || quick.startMs !== null || state.skips.length === 0) return;
 
     const video = findVideo();
     if (!video || video.seeking || !(video.duration > 0)) return;
@@ -227,6 +237,13 @@
     .cs-panel .cs-primary{background:#64ffda;color:#1a1a2e;border-color:#64ffda}
     .cs-panel small{color:#8892b0}
     .cs-panel option{color:#000}
+    .cs-quick{position:fixed;right:24px;bottom:110px;z-index:2147483646;font:600 14px/1 system-ui,sans-serif;
+      background:rgba(20,22,40,.85);color:#fff;border:1px solid rgba(255,105,180,.6);border-radius:999px;
+      padding:11px 16px;cursor:pointer;transition:opacity .3s;user-select:none}
+    .cs-quick.idle{opacity:0;pointer-events:none}
+    .cs-quick.recording{background:#c2185b;border-color:#ff80ab;animation:cs-pulse 1.2s infinite}
+    .cs-quick.pending{background:#37474f;border-color:#90a4ae}
+    @keyframes cs-pulse{50%{box-shadow:0 0 0 8px rgba(255,64,129,.25)}}
   `;
   const style = document.createElement('style');
   style.textContent = css;
@@ -312,12 +329,16 @@
       return el('label', {}, [cat[0].toUpperCase() + cat.slice(1), select]);
     });
     const enabled = el('input', { type: 'checkbox', checked: state.enabled });
+    const quickSeverity = el('select', {}, [
+      ['low', 'mild (kissing)'], ['medium', 'moderate'], ['high', 'strong (explicit)'],
+    ].map(([v, t]) => el('option', { value: v, textContent: t, selected: state.quickSeverity === v })));
 
     const panel = el('div', { className: 'cs-panel' }, [
       el('h3', { textContent: 'CleanStream auto-skip' }),
       el('label', {}, ['Auto-skip enabled', enabled]),
       el('small', { textContent: '"high" skips every flagged scene in a category; "low" skips only the strongest ones.' }),
       ...rows,
+      el('label', {}, ['♥ button saves scenes as', quickSeverity]),
       el('small', { textContent: 'Shortcuts: Alt+S / Alt+E mark a scene to share, Alt+C on/off, Alt+← / Alt+→ fix timing.' }),
       el('div', { className: 'cs-row' }, [
         el('button', { textContent: 'Cancel', onclick: closePanel }),
@@ -327,6 +348,8 @@
           onclick: () => {
             for (const cat of Object.keys(selects)) state.config[cat] = selects[cat].value;
             state.enabled = enabled.checked;
+            state.quickSeverity = quickSeverity.value;
+            store.set('quickSeverity', state.quickSeverity);
             store.set('config', state.config);
             store.set('enabled', state.enabled);
             closePanel();
@@ -405,10 +428,122 @@
   }
 
   /* ---------------------------------------------------------------- */
+  /* Quick mark: one click at the start, one click at the end         */
+  /* ---------------------------------------------------------------- */
+
+  const QUICK_SEND_DELAY_MS = 5000; // time to press Cancel after the second click
+  const QUICK_IDLE_MS = 3000;       // the button hides when the mouse is still
+
+  const quick = { startMs: null, pending: null, lastActivity: Date.now() };
+  let quickButton = null;
+
+  // Show the button whenever the viewer moves the mouse or touches the screen
+  ['mousemove', 'touchstart', 'keydown'].forEach(evt =>
+    document.addEventListener(evt, () => { quick.lastActivity = Date.now(); }, { passive: true, capture: true }));
+
+  function resetQuickMark() {
+    if (quick.pending) clearTimeout(quick.pending.timer);
+    quick.startMs = null;
+    quick.pending = null;
+  }
+
+  function renderQuickButton() {
+    const show = state.contentId && findVideo() && !state.formOpen;
+    if (!show) {
+      if (quickButton) quickButton.remove();
+      quickButton = null;
+      return;
+    }
+    if (!quickButton) {
+      quickButton = el('div', { className: 'cs-quick', title: 'Mark a kissing or sexual scene (Alt+K)', onclick: onQuickClick });
+      document.body.appendChild(quickButton);
+    }
+    const video = findVideo();
+    const nowMs = Math.round(video.currentTime * 1000);
+    let label;
+    let mode = '';
+    if (quick.pending) {
+      const left = Math.max(0, Math.ceil((quick.pending.sendAt - Date.now()) / 1000));
+      label = `Sharing in ${left}s… click to cancel`;
+      mode = 'pending';
+    } else if (quick.startMs !== null) {
+      label = `● ${formatClock(Math.max(0, nowMs - quick.startMs))}  click when the scene ends`;
+      mode = 'recording';
+    } else {
+      label = '♥ Mark scene';
+      if (Date.now() - quick.lastActivity > QUICK_IDLE_MS) mode = 'idle';
+    }
+    if (quickButton.textContent !== label) quickButton.textContent = label;
+    quickButton.className = 'cs-quick' + (mode ? ' ' + mode : '');
+  }
+
+  function onQuickClick(e) {
+    if (e) { e.preventDefault(); e.stopPropagation(); }
+    const video = findVideo();
+    if (!video || !state.contentId) return;
+    const nowMs = Math.round(video.currentTime * 1000);
+
+    // Third click while waiting: cancel
+    if (quick.pending) {
+      resetQuickMark();
+      toast('Cancelled. Nothing was shared.');
+      return;
+    }
+
+    // First click: start timing
+    if (quick.startMs === null) {
+      quick.startMs = nowMs;
+      return;
+    }
+
+    // Second click: finish and share after a short delay
+    const startMs = quick.startMs;
+    quick.startMs = null;
+    if (nowMs - startMs < 1000) {
+      toast('That was under a second, so it was not saved. Click once at the start and once at the end.');
+      return;
+    }
+    const contentId = state.contentId;
+    quick.pending = {
+      sendAt: Date.now() + QUICK_SEND_DELAY_MS,
+      timer: setTimeout(() => sendQuickMark(contentId, startMs, nowMs), QUICK_SEND_DELAY_MS),
+    };
+  }
+
+  async function sendQuickMark(contentId, startMs, endMs) {
+    quick.pending = null;
+    try {
+      const res = await request('POST', `/api/contribute/${encodeURIComponent(contentId)}`, {
+        startMs: Math.round(startMs - state.offsetMs),
+        endMs: Math.round(endMs - state.offsetMs),
+        category: 'sex',
+        subcategory: 'sex',
+        severity: state.quickSeverity,
+        channel: 'both',
+        comment: 'Kissing / sexual scene (quick mark)',
+        contributor: 'quick-mark',
+        title: document.title.replace(/\s*[-|]\s*Stremio.*$/i, '') || undefined,
+      });
+      if (!res.ok) throw new Error((res.data && res.data.error) || 'HTTP ' + res.status);
+      toast(`Shared ✓  ${formatClock(startMs)} – ${formatClock(endMs)}. Thank you!`);
+      if (contentId === state.contentId) loadSkips(contentId);
+    } catch (err) {
+      toast('Could not share the scene: ' + err.message);
+    }
+  }
+
+  /* ---------------------------------------------------------------- */
   /* Keyboard shortcuts                                               */
   /* ---------------------------------------------------------------- */
 
   document.addEventListener('keydown', e => {
+    // Escape cancels a quick mark in progress
+    if (e.key === 'Escape' && (quick.startMs !== null || quick.pending)) {
+      resetQuickMark();
+      toast('Cancelled. Nothing was shared.');
+      e.stopPropagation();
+      return;
+    }
     if (!e.altKey || !state.contentId || state.formOpen) return;
     const video = findVideo();
     const nowMs = video ? Math.round(video.currentTime * 1000) : 0;
@@ -441,8 +576,12 @@
         toast(`Skip timing shifted ${(state.offsetMs / 1000).toFixed(1)} s`);
         renderBadge();
         break;
+      case 'KeyK':
+        quick.lastActivity = Date.now();
+        onQuickClick();
+        break;
       case 'KeyH':
-        toast('Alt+S / Alt+E: mark a scene to share · Alt+C: on/off · Alt+← / Alt+→: fix timing');
+        toast('♥ button or Alt+K: click at start and end of a kissing/sexual scene · Alt+S / Alt+E: share any scene · Alt+C: on/off · Alt+← / Alt+→: fix timing');
         break;
       default:
         handled = false;
