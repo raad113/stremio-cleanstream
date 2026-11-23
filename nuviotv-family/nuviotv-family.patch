@@ -1,12 +1,13 @@
-From 61d264b63762771918bdfe4d3c1932dba5a136f1 Mon Sep 17 00:00:00 2001
+From d7deb3683599321839c2f6fed45bc12ef33cd3ea Mon Sep 17 00:00:00 2001
 From: raad113 <raad113@users.noreply.github.com>
 Date: Mon, 23 Nov 2026 09:35:24 +0000
-Subject: [PATCH] Clean Nuvio: automatic scene skipping with CleanStream
+Subject: [PATCH] NuvioTv-Family: automatic scene skipping with CleanStream
 
 - Skip (or mute, for language) scenes flagged on a CleanStream server while
   playing, on both ExoPlayer and mpv; notice shown in the player
-- Settings > Integrations > Clean Nuvio: on/off, server URL, filter levels
-- App renamed to "Clean Nuvio" with app ID com.cleannuvio.tv; in-app updater off
+- Settings > Integrations > NuvioTv-Family: on/off, server URL, filter levels,
+  safety margin and timing adjustment
+- App renamed to "NuvioTv-Family" with app ID com.nuviotvfamily.tv; in-app updater off
 - GitHub workflow that builds the APK and publishes it as a release
 - Unit tests for the filter logic
 
@@ -14,7 +15,7 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01DU7T9PNEyX3FGKvDVoCX1i
 ---
  .github/workflows/android-release.yml         |  267 -
- .github/workflows/build-clean-nuvio.yml       |  100 +
+ .github/workflows/build-nuviotv-family.yml    |  100 +
  .github/workflows/close-stale-issues.yml      |  103 -
  .github/workflows/close-unlabeled-issues.yml  |   98 -
  .../workflows/pr-full-debug-build-comment.yml |  111 -
@@ -22,7 +23,7 @@ Claude-Session: https://claude.ai/code/session_01DU7T9PNEyX3FGKvDVoCX1i
  .github/workflows/pr-template-check.yml       |  164 -
  .github/workflows/stale-needs-info.yml        |   81 -
  .github/workflows/triage-needs-info.yml       |  263 -
- CLEAN_NUVIO.md                                |   52 +
+ NUVIOTV_FAMILY.md                             |   52 +
  app/build.gradle.kts                          |   10 +-
  app/src/debug/res/values/strings.xml          |    2 +-
  .../nuvio/tv/core/cleanstream/CleanStream.kt  |  251 +
@@ -74,7 +75,7 @@ Claude-Session: https://claude.ai/code/session_01DU7T9PNEyX3FGKvDVoCX1i
  .../core/cleanstream/CleanStreamClientTest.kt |   50 +
  59 files changed, 4331 insertions(+), 4611 deletions(-)
  delete mode 100644 .github/workflows/android-release.yml
- create mode 100644 .github/workflows/build-clean-nuvio.yml
+ create mode 100644 .github/workflows/build-nuviotv-family.yml
  delete mode 100644 .github/workflows/close-stale-issues.yml
  delete mode 100644 .github/workflows/close-unlabeled-issues.yml
  delete mode 100644 .github/workflows/pr-full-debug-build-comment.yml
@@ -82,7 +83,7 @@ Claude-Session: https://claude.ai/code/session_01DU7T9PNEyX3FGKvDVoCX1i
  delete mode 100644 .github/workflows/pr-template-check.yml
  delete mode 100644 .github/workflows/stale-needs-info.yml
  delete mode 100644 .github/workflows/triage-needs-info.yml
- create mode 100644 CLEAN_NUVIO.md
+ create mode 100644 NUVIOTV_FAMILY.md
  create mode 100644 app/src/main/java/com/nuvio/tv/core/cleanstream/CleanStream.kt
  create mode 100644 app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeControllerCleanStream.kt
  create mode 100644 app/src/main/java/com/nuvio/tv/ui/screens/settings/CleanStreamSettingsScreen.kt
@@ -361,22 +362,22 @@ index b31b2e6..0000000
 -            release_args+=(--draft)
 -          fi
 -          gh release create "${release_args[@]}" "${release_apks[@]}"
-diff --git a/.github/workflows/build-clean-nuvio.yml b/.github/workflows/build-clean-nuvio.yml
+diff --git a/.github/workflows/build-nuviotv-family.yml b/.github/workflows/build-nuviotv-family.yml
 new file mode 100644
-index 0000000..e1a3979
+index 0000000..e4d47d3
 --- /dev/null
-+++ b/.github/workflows/build-clean-nuvio.yml
++++ b/.github/workflows/build-nuviotv-family.yml
 @@ -0,0 +1,100 @@
-+# Builds the Clean Nuvio APK on every push to main (or on demand from the
++# Builds the NuvioTv-Family APK on every push to main (or on demand from the
 +# Actions tab) and publishes it as a GitHub release, so it can be installed
 +# on Android TV with the Downloader app or any file manager.
 +#
-+# Signing: add repository secrets CLEAN_NUVIO_KEYSTORE_BASE64 (a base64
-+# encoded .jks whose key alias is "cleannuvio") and CLEAN_NUVIO_KEYSTORE_PASSWORD
++# Signing: add repository secrets NUVIOTV_FAMILY_KEYSTORE_BASE64 (a base64
++# encoded .jks whose key alias is "nuviotvfamily") and NUVIOTV_FAMILY_KEYSTORE_PASSWORD
 +# so every build is signed with the same key and installs as an update.
 +# Without them, each build gets a new key and the old app must be uninstalled first.
 +
-+name: Build Clean Nuvio
++name: Build NuvioTv-Family
 +
 +on:
 +  push:
@@ -404,32 +405,32 @@ index 0000000..e1a3979
 +          cache: gradle
 +
 +      # Optional: your own service keys (TMDB_API_KEY, TRAKT_CLIENT_ID, ...),
-+      # one KEY=value per line, stored in the CLEAN_NUVIO_LOCAL_PROPERTIES secret.
++      # one KEY=value per line, stored in the NUVIOTV_FAMILY_LOCAL_PROPERTIES secret.
 +      - name: Prepare local properties
 +        env:
-+          LOCAL_PROPERTIES: ${{ secrets.CLEAN_NUVIO_LOCAL_PROPERTIES }}
++          LOCAL_PROPERTIES: ${{ secrets.NUVIOTV_FAMILY_LOCAL_PROPERTIES }}
 +        run: |
 +          printf '%s\n' "$LOCAL_PROPERTIES" > local.properties
 +          touch local.dev.properties
 +
 +      - name: Prepare signing key
 +        env:
-+          KEYSTORE_BASE64: ${{ secrets.CLEAN_NUVIO_KEYSTORE_BASE64 }}
-+          KEYSTORE_PASSWORD: ${{ secrets.CLEAN_NUVIO_KEYSTORE_PASSWORD }}
++          KEYSTORE_BASE64: ${{ secrets.NUVIOTV_FAMILY_KEYSTORE_BASE64 }}
++          KEYSTORE_PASSWORD: ${{ secrets.NUVIOTV_FAMILY_KEYSTORE_PASSWORD }}
 +        run: |
 +          if [ -n "$KEYSTORE_BASE64" ]; then
-+            printf '%s' "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/clean-nuvio.jks"
++            printf '%s' "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/nuviotv-family.jks"
 +            PASS="$KEYSTORE_PASSWORD"
 +          else
-+            echo "::warning::No CLEAN_NUVIO_KEYSTORE_BASE64 secret: using a one-off signing key. Uninstall the previous build before installing this one."
++            echo "::warning::No NUVIOTV_FAMILY_KEYSTORE_BASE64 secret: using a one-off signing key. Uninstall the previous build before installing this one."
 +            PASS=android
-+            keytool -genkeypair -keystore "$RUNNER_TEMP/clean-nuvio.jks" -storepass "$PASS" \
-+              -alias cleannuvio -keypass "$PASS" -dname "CN=Clean Nuvio" \
++            keytool -genkeypair -keystore "$RUNNER_TEMP/nuviotv-family.jks" -storepass "$PASS" \
++              -alias nuviotvfamily -keypass "$PASS" -dname "CN=NuvioTv-Family" \
 +              -keyalg RSA -keysize 2048 -validity 10000
 +          fi
 +          {
-+            echo "NUVIO_RELEASE_STORE_FILE=$RUNNER_TEMP/clean-nuvio.jks"
-+            echo "NUVIO_RELEASE_KEY_ALIAS=cleannuvio"
++            echo "NUVIO_RELEASE_STORE_FILE=$RUNNER_TEMP/nuviotv-family.jks"
++            echo "NUVIO_RELEASE_KEY_ALIAS=nuviotvfamily"
 +            echo "NUVIO_RELEASE_KEY_PASSWORD=$PASS"
 +            echo "NUVIO_RELEASE_STORE_PASSWORD=$PASS"
 +          } >> "$GITHUB_ENV"
@@ -439,7 +440,7 @@ index 0000000..e1a3979
 +          python3 native/usenet/scripts/fetch_prebuilts.py
 +          python3 native/usenet/scripts/check_prebuilts.py
 +
-+      - name: Unit tests (Clean Nuvio and skip logic)
++      - name: Unit tests (NuvioTv-Family and skip logic)
 +        run: ./gradlew :app:testFullDebugUnitTest --tests 'com.nuvio.tv.core.cleanstream.*' --tests '*MergeSkipIntervals*' --stacktrace
 +
 +      - name: Build APK
@@ -451,12 +452,12 @@ index 0000000..e1a3979
 +          APK=$(find app/build/outputs/apk/full/debug -name '*.apk' | head -n 1)
 +          test -n "$APK"
 +          mkdir -p dist
-+          cp "$APK" "dist/CleanNuvio-${{ github.run_number }}.apk"
-+          echo "file=dist/CleanNuvio-${{ github.run_number }}.apk" >> "$GITHUB_OUTPUT"
++          cp "$APK" "dist/NuvioTv-Family-${{ github.run_number }}.apk"
++          echo "file=dist/NuvioTv-Family-${{ github.run_number }}.apk" >> "$GITHUB_OUTPUT"
 +
 +      - uses: actions/upload-artifact@v4
 +        with:
-+          name: CleanNuvio-${{ github.run_number }}
++          name: NuvioTv-Family-${{ github.run_number }}
 +          path: ${{ steps.apk.outputs.file }}
 +
 +      - name: Publish release
@@ -464,7 +465,7 @@ index 0000000..e1a3979
 +          GH_TOKEN: ${{ github.token }}
 +        run: |
 +          gh release create "clean-nuvio-${{ github.run_number }}" "${{ steps.apk.outputs.file }}" \
-+            --title "Clean Nuvio build ${{ github.run_number }}" \
++            --title "NuvioTv-Family build ${{ github.run_number }}" \
 +            --notes "Automatic build of commit ${GITHUB_SHA::7}. Install the APK on Android TV (for example with the Downloader app)." \
 +            --latest
 diff --git a/.github/workflows/close-stale-issues.yml b/.github/workflows/close-stale-issues.yml
@@ -1413,15 +1414,15 @@ index 7117991..0000000
 -                await github.rest.issues.removeLabel({ owner, repo, issue_number, name: NEEDS_INFO });
 -              } catch (_) {}
 -            }
-diff --git a/CLEAN_NUVIO.md b/CLEAN_NUVIO.md
+diff --git a/NUVIOTV_FAMILY.md b/NUVIOTV_FAMILY.md
 new file mode 100644
-index 0000000..d1a4323
+index 0000000..d8fe3cb
 --- /dev/null
-+++ b/CLEAN_NUVIO.md
++++ b/NUVIOTV_FAMILY.md
 @@ -0,0 +1,52 @@
-+# Clean Nuvio
++# NuvioTv-Family
 +
-+Clean Nuvio is an unofficial, modified version of [NuvioTV](https://github.com/NuvioMedia/NuvioTV)
++NuvioTv-Family is an unofficial, modified version of [NuvioTV](https://github.com/NuvioMedia/NuvioTV)
 +that skips unwanted scenes automatically, using skip data from a
 +[CleanStream](https://github.com/raad113/stremio-cleanstream) server.
 +It is not made or supported by the Nuvio team.
@@ -1432,7 +1433,7 @@ index 0000000..d1a4323
 +  CleanStream server are jumped over. Scenes flagged as "audio only" (for example
 +  strong language) are muted instead. A short notice ("Skipped 12s: Violence")
 +  appears each time.
-+* **Settings → Integrations → Clean Nuvio (CleanStream).** Turn skipping on or off,
++* **Settings → Integrations → NuvioTv-Family (CleanStream).** Turn skipping on or off,
 +  choose the CleanStream server, and set each filter (nudity, sexual content and
 +  kissing, violence, language, drugs, frightening scenes) to Off, Low, Medium or High.
 +  High skips every flagged scene; Low skips only the strongest.
@@ -1442,24 +1443,24 @@ index 0000000..d1a4323
 +
 +## Other changes from NuvioTV
 +
-+* App name "Clean Nuvio" and app ID `com.cleannuvio.tv`, so it installs next to the official app.
++* App name "NuvioTv-Family" and app ID `com.nuviotvfamily.tv`, so it installs next to the official app.
 +* The in-app updater is turned off, so it cannot replace itself with official Nuvio.
-+* Nuvio's GitHub workflows are replaced by `.github/workflows/build-clean-nuvio.yml`,
++* Nuvio's GitHub workflows are replaced by `.github/workflows/build-nuviotv-family.yml`,
 +  which builds the APK and publishes it as a release.
 +* Nuvio account sync, Trakt and other services need keys that are not included.
 +  Add your own keys (for example `TMDB_API_KEY`, `TRAKT_CLIENT_ID`, `TRAKT_CLIENT_SECRET`)
-+  as one `KEY=value` per line in the repository secret `CLEAN_NUVIO_LOCAL_PROPERTIES`.
++  as one `KEY=value` per line in the repository secret `NUVIOTV_FAMILY_LOCAL_PROPERTIES`.
 +  Nuvio account sync uses the Nuvio team's own server and is not available.
 +
 +## Signing (so updates install over the old version)
 +
-+Add two repository secrets: `CLEAN_NUVIO_KEYSTORE_BASE64` (the keystore file, base64 encoded,
-+key alias `cleannuvio`) and `CLEAN_NUVIO_KEYSTORE_PASSWORD`. Keep a copy of the keystore:
-+without it, future builds cannot update an installed Clean Nuvio.
++Add two repository secrets: `NUVIOTV_FAMILY_KEYSTORE_BASE64` (the keystore file, base64 encoded,
++key alias `nuviotvfamily`) and `NUVIOTV_FAMILY_KEYSTORE_PASSWORD`. Keep a copy of the keystore:
++without it, future builds cannot update an installed NuvioTv-Family.
 +
 +## Installing on Android TV
 +
-+1. Open the repository's **Releases** page and copy the link to the latest `CleanNuvio-*.apk`.
++1. Open the repository's **Releases** page and copy the link to the latest `NuvioTv-Family-*.apk`.
 +2. On the TV, install the **Downloader** app, enter the link and install the APK
 +   (allow "install unknown apps" for Downloader when asked).
 +
@@ -1472,7 +1473,7 @@ index 0000000..d1a4323
 +New files: `core/cleanstream/CleanStream.kt`, `PlayerRuntimeControllerCleanStream.kt`,
 +`CleanStreamSettingsScreen.kt` and `CleanStreamClientTest.kt`.
 diff --git a/app/build.gradle.kts b/app/build.gradle.kts
-index 6542d3b..f19f97f 100644
+index 6542d3b..cdbca77 100644
 --- a/app/build.gradle.kts
 +++ b/app/build.gradle.kts
 @@ -135,7 +135,7 @@ android {
@@ -1480,7 +1481,7 @@ index 6542d3b..f19f97f 100644
  
      defaultConfig {
 -        applicationId = "com.nuvio.tv"
-+        applicationId = "com.cleannuvio.tv" // Clean Nuvio: installs next to the official Nuvio
++        applicationId = "com.nuviotvfamily.tv" // NuvioTv-Family: installs next to the official Nuvio
          testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
          minSdk = 24
          targetSdk = 36
@@ -1491,7 +1492,7 @@ index 6542d3b..f19f97f 100644
 -        buildConfigField("String", "GITHUB_OWNER", "\"NuvioMedia\"")
 -        buildConfigField("String", "GITHUB_REPO", "\"NuvioTV\"")
 +        buildConfigField("String", "GITHUB_OWNER", "\"raad113\"")
-+        buildConfigField("String", "GITHUB_REPO", "\"CleanNuvio\"")
++        buildConfigField("String", "GITHUB_REPO", "\"NuvioTv-Family\"")
      }
  
      flavorDimensions += "distribution"
@@ -1500,7 +1501,7 @@ index 6542d3b..f19f97f 100644
              dimension = "distribution"
              buildConfigField("boolean", "FEATURE_PLUGINS_ENABLED", "true")
 -            buildConfigField("boolean", "FEATURE_IN_APP_UPDATES_ENABLED", "true")
-+            buildConfigField("boolean", "FEATURE_IN_APP_UPDATES_ENABLED", "false") // Clean Nuvio
++            buildConfigField("boolean", "FEATURE_IN_APP_UPDATES_ENABLED", "false") // NuvioTv-Family
              buildConfigField("boolean", "FEATURE_IN_APP_TRAILERS_ENABLED", "true")
              buildConfigField("boolean", "FEATURE_EXTERNAL_TRAILERS_ENABLED", "true")
              buildConfigField("boolean", "FEATURE_EXTERNAL_PLAYBACK_KEEP_ALIVE_ENABLED", "true")
@@ -1509,22 +1510,22 @@ index 6542d3b..f19f97f 100644
      onVariants(selector().withBuildType("debug")) { variant ->
          val isPlaystore = variant.productFlavors.any { it.second == "playstore" }
 -        variant.applicationId.set(if (isPlaystore) "com.nuvio.appdebug" else "com.nuviodebug.com")
-+        variant.applicationId.set(if (isPlaystore) "com.nuvio.appdebug" else "com.cleannuvio.debug")
++        variant.applicationId.set(if (isPlaystore) "com.nuvio.appdebug" else "com.nuviotvfamily.debug")
      }
      // Only the full flavor ships the in-app updater.
      onVariants(selector().withFlavor("distribution" to "full")) { variant ->
 diff --git a/app/src/debug/res/values/strings.xml b/app/src/debug/res/values/strings.xml
-index f4a6336..261cf07 100644
+index f4a6336..2888a13 100644
 --- a/app/src/debug/res/values/strings.xml
 +++ b/app/src/debug/res/values/strings.xml
 @@ -1,3 +1,3 @@
  <resources>
 -    <string name="app_name">Nuvio Debug</string>
-+    <string name="app_name">Clean Nuvio Debug</string>
++    <string name="app_name">NuvioTv-Family Debug</string>
  </resources>
 diff --git a/app/src/main/java/com/nuvio/tv/core/cleanstream/CleanStream.kt b/app/src/main/java/com/nuvio/tv/core/cleanstream/CleanStream.kt
 new file mode 100644
-index 0000000..93bd66c
+index 0000000..53893bf
 --- /dev/null
 +++ b/app/src/main/java/com/nuvio/tv/core/cleanstream/CleanStream.kt
 @@ -0,0 +1,251 @@
@@ -1544,7 +1545,7 @@ index 0000000..93bd66c
 +import java.net.URLEncoder
 +
 +/**
-+ * Clean Nuvio: family-friendly scene skipping powered by a CleanStream server.
++ * NuvioTv-Family: family-friendly scene skipping powered by a CleanStream server.
 + *
 + * The player asks [CleanStreamClient] for the skip list of the title being
 + * watched, then jumps over flagged scenes (or mutes them, for language) while
@@ -1711,7 +1712,7 @@ index 0000000..93bd66c
 +                connectTimeout = TIMEOUT_MS
 +                readTimeout = TIMEOUT_MS
 +                setRequestProperty("Accept", "application/json")
-+                setRequestProperty("User-Agent", "CleanNuvio")
++                setRequestProperty("User-Agent", "NuvioTv-Family")
 +            }
 +            try {
 +                if (connection.responseCode != 200) return@withContext emptyList()
@@ -1780,14 +1781,14 @@ index 0000000..93bd66c
 +    }
 +}
 diff --git a/app/src/main/java/com/nuvio/tv/ui/screens/player/NuvioMpvSurfaceView.kt b/app/src/main/java/com/nuvio/tv/ui/screens/player/NuvioMpvSurfaceView.kt
-index ead04aa..3838b54 100644
+index ead04aa..8d51c42 100644
 --- a/app/src/main/java/com/nuvio/tv/ui/screens/player/NuvioMpvSurfaceView.kt
 +++ b/app/src/main/java/com/nuvio/tv/ui/screens/player/NuvioMpvSurfaceView.kt
 @@ -324,6 +324,13 @@ class NuvioMpvSurfaceView @JvmOverloads constructor(
          mpv.setPropertyDouble("speed", speed.toDouble())
      }
  
-+    /** Clean Nuvio: mute or unmute during scenes flagged for language. */
++    /** NuvioTv-Family: mute or unmute during scenes flagged for language. */
 +    fun setCleanStreamMuted(muted: Boolean) {
 +        if (!initialized) return
 +        runCatching { mpv.setPropertyBoolean("mute", muted) }
@@ -1798,7 +1799,7 @@ index ead04aa..3838b54 100644
          if (!initialized) return
          val clampedDb = db.coerceIn(AUDIO_AMPLIFICATION_MIN_DB, AUDIO_AMPLIFICATION_MAX_DB)
 diff --git a/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeController.kt b/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeController.kt
-index 01bf9ea..2e15098 100644
+index 01bf9ea..a3f7755 100644
 --- a/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeController.kt
 +++ b/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeController.kt
 @@ -575,6 +575,12 @@ class PlayerRuntimeController(
@@ -1806,7 +1807,7 @@ index 01bf9ea..2e15098 100644
      internal var skipIntroFetchedKey: String? = null
      internal val autoSkippedIntervalKeys: MutableSet<String> = mutableSetOf()
 +
-+    // Clean Nuvio: CleanStream scene skipping (see PlayerRuntimeControllerCleanStream.kt)
++    // NuvioTv-Family: CleanStream scene skipping (see PlayerRuntimeControllerCleanStream.kt)
 +    internal var cleanSkips: List<com.nuvio.tv.core.cleanstream.CleanSkip> = emptyList()
 +    internal var cleanSkipsKey: String? = null
 +    internal var cleanMutedKey: String? = null
@@ -1816,7 +1817,7 @@ index 01bf9ea..2e15098 100644
      internal var isUserExplicitSubtitleSelection: Boolean = false
 diff --git a/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeControllerCleanStream.kt b/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeControllerCleanStream.kt
 new file mode 100644
-index 0000000..dbf8c96
+index 0000000..a359212
 --- /dev/null
 +++ b/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeControllerCleanStream.kt
 @@ -0,0 +1,149 @@
@@ -1833,7 +1834,7 @@ index 0000000..dbf8c96
 +import kotlinx.coroutines.withTimeoutOrNull
 +
 +/*
-+ * Clean Nuvio: automatic skipping of flagged scenes.
++ * NuvioTv-Family: automatic skipping of flagged scenes.
 + *
 + * fetchCleanStreamSkips() runs whenever the player loads skip data for a title.
 + * applyCleanStreamSkips() runs on every progress tick (about twice a second)
@@ -1873,7 +1874,7 @@ index 0000000..dbf8c96
 +        if (cleanSkipsKey == requestKey) {
 +            cleanSkips = skips
 +            if (skips.isNotEmpty()) {
-+                showCleanStreamNotice("Clean Nuvio: ${skips.size} scene${if (skips.size == 1) "" else "s"} will be skipped")
++                showCleanStreamNotice("NuvioTv-Family: ${skips.size} scene${if (skips.size == 1) "" else "s"} will be skipped")
 +            }
 +        }
 +    }
@@ -1970,14 +1971,14 @@ index 0000000..dbf8c96
 +    }
 +}
 diff --git a/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeControllerObservers.kt b/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeControllerObservers.kt
-index 66fefc2..53e927d 100644
+index 66fefc2..010b46a 100644
 --- a/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeControllerObservers.kt
 +++ b/app/src/main/java/com/nuvio/tv/ui/screens/player/PlayerRuntimeControllerObservers.kt
 @@ -506,6 +506,9 @@ internal fun PlayerRuntimeController.observeSubtitleSettings() {
              autoSkipSegmentTypes = settings.autoSkipSegmentTypes
              playerSettingsInitialized = true
  
-+            // Clean Nuvio: load CleanStream skips even when intro skipping is off
++            // NuvioTv-Family: load CleanStream skips even when intro skipping is off
 +            fetchCleanStreamSkips(contentId, currentSeason, currentEpisode)
 +
              // Fetch parental guide on first settings emission (after we know
@@ -1987,7 +1988,7 @@ index 66fefc2..53e927d 100644
  }
  
  internal fun PlayerRuntimeController.fetchSkipIntervals(id: String?, season: Int?, episode: Int?) {
-+    // Clean Nuvio: load family-friendly skips independently of the intro-skip setting
++    // NuvioTv-Family: load family-friendly skips independently of the intro-skip setting
 +    fetchCleanStreamSkips(id, season, episode)
      if (!skipIntroEnabled) return
      if (id.isNullOrBlank()) return
@@ -2014,7 +2015,7 @@ index b410b1d..a1652ea 100644
                          positionMs = pos,
 diff --git a/app/src/main/java/com/nuvio/tv/ui/screens/settings/CleanStreamSettingsScreen.kt b/app/src/main/java/com/nuvio/tv/ui/screens/settings/CleanStreamSettingsScreen.kt
 new file mode 100644
-index 0000000..33f62fb
+index 0000000..720faa5
 --- /dev/null
 +++ b/app/src/main/java/com/nuvio/tv/ui/screens/settings/CleanStreamSettingsScreen.kt
 @@ -0,0 +1,241 @@
@@ -2070,7 +2071,7 @@ index 0000000..33f62fb
 +import com.nuvio.tv.ui.theme.NuvioTheme
 +
 +/**
-+ * Clean Nuvio settings: turn automatic skipping on or off, choose the
++ * NuvioTv-Family settings: turn automatic skipping on or off, choose the
 + * CleanStream server, and set how strict each filter is.
 + * Changes apply to the next title you play.
 + */
@@ -2084,7 +2085,7 @@ index 0000000..33f62fb
 +
 +    Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
 +        SettingsDetailHeader(
-+            title = "Clean Nuvio",
++            title = "NuvioTv-Family",
 +            subtitle = "Automatically skip or mute unwanted scenes using CleanStream community data"
 +        )
 +
@@ -2260,7 +2261,7 @@ index 0000000..33f62fb
 +    }
 +}
 diff --git a/app/src/main/java/com/nuvio/tv/ui/screens/settings/SettingsScreen.kt b/app/src/main/java/com/nuvio/tv/ui/screens/settings/SettingsScreen.kt
-index 9923f36..5eb2a85 100644
+index 9923f36..e4eeebd 100644
 --- a/app/src/main/java/com/nuvio/tv/ui/screens/settings/SettingsScreen.kt
 +++ b/app/src/main/java/com/nuvio/tv/ui/screens/settings/SettingsScreen.kt
 @@ -110,7 +110,8 @@ private enum class IntegrationSettingsSection {
@@ -2343,7 +2344,7 @@ index 9923f36..5eb2a85 100644
                              }
 +                            item(key = "integration_hub_cleanstream") {
 +                                SettingsActionRow(
-+                                    title = "Clean Nuvio (CleanStream)",
++                                    title = "NuvioTv-Family (CleanStream)",
 +                                    subtitle = "Automatic skipping of unwanted scenes",
 +                                    leadingIcon = Icons.Default.FastForward,
 +                                    onClick = { onSelectSection(IntegrationSettingsSection.CleanStream) },
@@ -2371,40 +2372,40 @@ index 9923f36..5eb2a85 100644
  }
  
 diff --git a/app/src/main/res/values-ar/strings.xml b/app/src/main/res/values-ar/strings.xml
-index a7da4ac..7d4f317 100644
+index a7da4ac..3850ccd 100644
 --- a/app/src/main/res/values-ar/strings.xml
 +++ b/app/src/main/res/values-ar/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">متابعة المشاهدة</string>
      <string name="type_movies">أفلام</string>
      <string name="type_movie">فيلم</string>
 diff --git a/app/src/main/res/values-b+es+419/strings.xml b/app/src/main/res/values-b+es+419/strings.xml
-index a70595f..2ca25e4 100644
+index a70595f..d95b73b 100644
 --- a/app/src/main/res/values-b+es+419/strings.xml
 +++ b/app/src/main/res/values-b+es+419/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Seguir viendo</string>
      <string name="type_movie">Película</string>
      <string name="type_movies">Películas</string>
 diff --git a/app/src/main/res/values-b+sr+Latn/strings.xml b/app/src/main/res/values-b+sr+Latn/strings.xml
-index f8fb602..251257e 100644
+index f8fb602..8fd0abd 100644
 --- a/app/src/main/res/values-b+sr+Latn/strings.xml
 +++ b/app/src/main/res/values-b+sr+Latn/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Nastavi gledanje</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Filmovi</string>
 diff --git a/app/src/main/res/values-bg/strings.xml b/app/src/main/res/values-bg/strings.xml
-index 4818c98..e3c93ca 100644
+index 4818c98..f1bf945 100644
 --- a/app/src/main/res/values-bg/strings.xml
 +++ b/app/src/main/res/values-bg/strings.xml
 @@ -1,3396 +1,3396 @@
@@ -5805,7 +5806,7 @@ index 4818c98..e3c93ca 100644
 -    <string name="stream_resume_from_percent">Възобновяване от %1$d%%</string>
 -</resources>
 +<resources> 
-+    <string name="app_name">Clean Nuvio</string> 
++    <string name="app_name">NuvioTv-Family</string> 
 +    <string name="tv_channel_continue_watching">Продължи гледането</string> 
 +    <string name="type_movie">Филм</string>
 +    <string name="type_movies">Филми</string>
@@ -9201,208 +9202,208 @@ index 4818c98..e3c93ca 100644
 +    <string name="stream_resume_from_percent">Възобновяване от %1$d%%</string>
 +</resources>
 diff --git a/app/src/main/res/values-bn/strings.xml b/app/src/main/res/values-bn/strings.xml
-index eb91e13..9e0ff97 100644
+index eb91e13..fd66bbf 100644
 --- a/app/src/main/res/values-bn/strings.xml
 +++ b/app/src/main/res/values-bn/strings.xml
 @@ -1,6 +1,6 @@
  <?xml version='1.0' encoding='utf-8'?>
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">দেখা চালিয়ে যান</string>
      <string name="type_movie">মুভি</string>
      <string name="type_movies">সিনেমা</string>
 diff --git a/app/src/main/res/values-bs/strings.xml b/app/src/main/res/values-bs/strings.xml
-index eabc0b7..5d269ce 100644
+index eabc0b7..4fb0e4b 100644
 --- a/app/src/main/res/values-bs/strings.xml
 +++ b/app/src/main/res/values-bs/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="type_movie">Film</string>
      <string name="type_series">Serija</string>
      <string name="type_unknown">Nepoznato</string>
 diff --git a/app/src/main/res/values-cs/strings.xml b/app/src/main/res/values-cs/strings.xml
-index 1d4ac48..a334c5a 100644
+index 1d4ac48..9263839 100644
 --- a/app/src/main/res/values-cs/strings.xml
 +++ b/app/src/main/res/values-cs/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Pokračovat ve sledování</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Filmy</string>
 diff --git a/app/src/main/res/values-da/strings.xml b/app/src/main/res/values-da/strings.xml
-index babada6..38d21e5 100644
+index babada6..38adb84 100644
 --- a/app/src/main/res/values-da/strings.xml
 +++ b/app/src/main/res/values-da/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Fortsæt med at se</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Film</string>
 diff --git a/app/src/main/res/values-de/strings.xml b/app/src/main/res/values-de/strings.xml
-index 8a7b999..b0f0a20 100644
+index 8a7b999..ece16d8 100644
 --- a/app/src/main/res/values-de/strings.xml
 +++ b/app/src/main/res/values-de/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Continue Watching</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Movies</string>
 diff --git a/app/src/main/res/values-el/strings.xml b/app/src/main/res/values-el/strings.xml
-index a4b048d..eea1f0b 100644
+index a4b048d..4def0e9 100644
 --- a/app/src/main/res/values-el/strings.xml
 +++ b/app/src/main/res/values-el/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -  <string name="app_name">Nuvio</string>
-+  <string name="app_name">Clean Nuvio</string>
++  <string name="app_name">NuvioTv-Family</string>
    <string name="tv_channel_continue_watching">Συνέχεια παρακολούθησης</string>
    <string name="type_movie">Ταινία</string>
    <string name="type_movies">Ταινίες</string>
 diff --git a/app/src/main/res/values-es/strings.xml b/app/src/main/res/values-es/strings.xml
-index 4e4aeb6..db5efc8 100644
+index 4e4aeb6..30c58ba 100644
 --- a/app/src/main/res/values-es/strings.xml
 +++ b/app/src/main/res/values-es/strings.xml
 @@ -1,6 +1,6 @@
  <?xml version="1.0" encoding="utf-8"?>
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Continuar viendo</string>
      <string name="type_movie">Película</string>
      <string name="type_movies">Películas</string>
 diff --git a/app/src/main/res/values-fr/strings.xml b/app/src/main/res/values-fr/strings.xml
-index fa9e412..eea7d83 100644
+index fa9e412..3fafb33 100644
 --- a/app/src/main/res/values-fr/strings.xml
 +++ b/app/src/main/res/values-fr/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Continuer à regarder</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Films</string>
 diff --git a/app/src/main/res/values-hi/strings.xml b/app/src/main/res/values-hi/strings.xml
-index 62a0d97..478db0a 100644
+index 62a0d97..9efc2e8 100644
 --- a/app/src/main/res/values-hi/strings.xml
 +++ b/app/src/main/res/values-hi/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="type_movie">फ़िल्म</string>
      <string name="type_series">सीरीज़</string>
      <string name="type_unknown">अज्ञात</string>
 diff --git a/app/src/main/res/values-hr/strings.xml b/app/src/main/res/values-hr/strings.xml
-index ea1a93c..0143803 100644
+index ea1a93c..fd91ff1 100644
 --- a/app/src/main/res/values-hr/strings.xml
 +++ b/app/src/main/res/values-hr/strings.xml
 @@ -1,6 +1,6 @@
  <?xml version="1.0" encoding="utf-8"?>
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Nastavi gledati</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Filmovi</string>
 diff --git a/app/src/main/res/values-hu/strings.xml b/app/src/main/res/values-hu/strings.xml
-index d31d00b..fe8d7a6 100644
+index d31d00b..eb0a54e 100644
 --- a/app/src/main/res/values-hu/strings.xml
 +++ b/app/src/main/res/values-hu/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Megtekintés folytatása</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Filmek</string>
 diff --git a/app/src/main/res/values-in/strings.xml b/app/src/main/res/values-in/strings.xml
-index b368a20..6ae06a1 100644
+index b368a20..1443b4b 100644
 --- a/app/src/main/res/values-in/strings.xml
 +++ b/app/src/main/res/values-in/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Lanjutkan Menonton</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Film</string>
 diff --git a/app/src/main/res/values-it/strings.xml b/app/src/main/res/values-it/strings.xml
-index 954fbe3..3fff3a6 100644
+index 954fbe3..347dd49 100644
 --- a/app/src/main/res/values-it/strings.xml
 +++ b/app/src/main/res/values-it/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -<string name="app_name">Nuvio</string>
-+<string name="app_name">Clean Nuvio</string>
++<string name="app_name">NuvioTv-Family</string>
  <string name="tv_channel_continue_watching">Continua a guardare</string>
  <string name="type_movie">Film</string>
  <string name="type_movies">Film</string>
 diff --git a/app/src/main/res/values-iw/strings.xml b/app/src/main/res/values-iw/strings.xml
-index bab8e37..6ad1e98 100644
+index bab8e37..fbb11af 100644
 --- a/app/src/main/res/values-iw/strings.xml
 +++ b/app/src/main/res/values-iw/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">המשך צפייה</string>
      <string name="type_movie">סרט</string>
      <string name="type_movies">סרטים</string>
 diff --git a/app/src/main/res/values-ja/strings.xml b/app/src/main/res/values-ja/strings.xml
-index e0ea635..8eaf0e4 100644
+index e0ea635..5ef1ecb 100644
 --- a/app/src/main/res/values-ja/strings.xml
 +++ b/app/src/main/res/values-ja/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">視聴を続ける</string>
      <string name="type_movie">映画</string>
      <string name="type_movies">映画</string>
 diff --git a/app/src/main/res/values-lt/strings.xml b/app/src/main/res/values-lt/strings.xml
-index d7961ff..3efb933 100644
+index d7961ff..c23a0d2 100644
 --- a/app/src/main/res/values-lt/strings.xml
 +++ b/app/src/main/res/values-lt/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="type_movie">Filmas</string>
      <string name="type_series">Serialas</string>
      <string name="type_unknown">Nežinoma</string>
 diff --git a/app/src/main/res/values-nl/strings.xml b/app/src/main/res/values-nl/strings.xml
-index 210f58e..240b540 100644
+index 210f58e..028f849 100644
 --- a/app/src/main/res/values-nl/strings.xml
 +++ b/app/src/main/res/values-nl/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Verder kijken</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Films</string>
 diff --git a/app/src/main/res/values-no/strings.xml b/app/src/main/res/values-no/strings.xml
-index 77af884..9758bd3 100644
+index 77af884..3d400aa 100644
 --- a/app/src/main/res/values-no/strings.xml
 +++ b/app/src/main/res/values-no/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="type_movie">Film</string>
      <string name="type_series">Serie</string>
      <string name="type_unknown">Ukjent</string>
 diff --git a/app/src/main/res/values-pl/strings.xml b/app/src/main/res/values-pl/strings.xml
-index c762489..a81cf99 100644
+index c762489..4d83aaf 100644
 --- a/app/src/main/res/values-pl/strings.xml
 +++ b/app/src/main/res/values-pl/strings.xml
 @@ -1460,7 +1460,7 @@
@@ -9410,89 +9411,89 @@ index c762489..a81cf99 100644
      <string name="genre_western">Western</string>
  
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="type_unknown">Nieznany</string>
  
      <string name="cd_play">Odtwórz</string>
 diff --git a/app/src/main/res/values-pt-rBR/strings.xml b/app/src/main/res/values-pt-rBR/strings.xml
-index b056244..fd3fe70 100644
+index b056244..b21c24e 100644
 --- a/app/src/main/res/values-pt-rBR/strings.xml
 +++ b/app/src/main/res/values-pt-rBR/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Continuar Assistindo</string>
      <string name="type_movie">Filme</string>
      <string name="type_movies">Filmes</string>
 diff --git a/app/src/main/res/values-pt-rPT/strings.xml b/app/src/main/res/values-pt-rPT/strings.xml
-index 1e2699a..e514ff6 100644
+index 1e2699a..a45052d 100644
 --- a/app/src/main/res/values-pt-rPT/strings.xml
 +++ b/app/src/main/res/values-pt-rPT/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Continuar a ver</string>
      <string name="type_movie">Filme</string>
      <string name="type_movies">Filmes</string>
 diff --git a/app/src/main/res/values-ro/strings.xml b/app/src/main/res/values-ro/strings.xml
-index e1350ef..d489737 100644
+index e1350ef..7eabde7 100644
 --- a/app/src/main/res/values-ro/strings.xml
 +++ b/app/src/main/res/values-ro/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="type_movie">Film</string>
      <string name="type_series">Serial</string>
  
 diff --git a/app/src/main/res/values-ru/strings.xml b/app/src/main/res/values-ru/strings.xml
-index 7249aca..0f6ea04 100644
+index 7249aca..63835a1 100644
 --- a/app/src/main/res/values-ru/strings.xml
 +++ b/app/src/main/res/values-ru/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="type_movie">Фильм</string>
      <string name="type_series">Сериал</string>
      <string name="type_unknown">Неизвестно</string>
 diff --git a/app/src/main/res/values-sk/strings.xml b/app/src/main/res/values-sk/strings.xml
-index e352a8f..c51ff86 100644
+index e352a8f..dcfd22f 100644
 --- a/app/src/main/res/values-sk/strings.xml
 +++ b/app/src/main/res/values-sk/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Pokračovať v sledovaní</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Filmy</string>
 diff --git a/app/src/main/res/values-sl/strings.xml b/app/src/main/res/values-sl/strings.xml
-index d598a7d..800afb0 100644
+index d598a7d..6226e17 100644
 --- a/app/src/main/res/values-sl/strings.xml
 +++ b/app/src/main/res/values-sl/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Nadaljuj z ogledom</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Filmi</string>
 diff --git a/app/src/main/res/values-sq/strings.xml b/app/src/main/res/values-sq/strings.xml
-index 7f6f026..0eab993 100644
+index 7f6f026..a880e49 100644
 --- a/app/src/main/res/values-sq/strings.xml
 +++ b/app/src/main/res/values-sq/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Vazhdo shikimin</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Filma</string>
 diff --git a/app/src/main/res/values-sv/strings.xml b/app/src/main/res/values-sv/strings.xml
-index a8e4572..984b7ad 100644
+index a8e4572..4bf8e3e 100644
 --- a/app/src/main/res/values-sv/strings.xml
 +++ b/app/src/main/res/values-sv/strings.xml
 @@ -1229,7 +1229,7 @@
@@ -9500,85 +9501,85 @@ index a8e4572..984b7ad 100644
  
      <!-- App name -->
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
  
      <!-- WebConfigServers -->
      <string name="web_manage_addons_title">Hantera tillägg</string>
 diff --git a/app/src/main/res/values-ta/strings.xml b/app/src/main/res/values-ta/strings.xml
-index 3ec99b7..3adb03e 100644
+index 3ec99b7..475cabd 100644
 --- a/app/src/main/res/values-ta/strings.xml
 +++ b/app/src/main/res/values-ta/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">நுவியோ</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">தொடர்ந்து பார்க்கவும்</string>
      <string name="type_movie">திரைப்படம்</string>
      <string name="type_movies">திரைப்படங்கள்</string>
 diff --git a/app/src/main/res/values-tr/strings.xml b/app/src/main/res/values-tr/strings.xml
-index 40f5359..a37a669 100644
+index 40f5359..47e8851 100644
 --- a/app/src/main/res/values-tr/strings.xml
 +++ b/app/src/main/res/values-tr/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">İzlemeye Devam Et</string>
      <string name="type_movie">Film</string>
      <string name="type_movies">Filmler</string>
 diff --git a/app/src/main/res/values-uk/strings.xml b/app/src/main/res/values-uk/strings.xml
-index 5139d50..7af787e 100644
+index 5139d50..ed43adc 100644
 --- a/app/src/main/res/values-uk/strings.xml
 +++ b/app/src/main/res/values-uk/strings.xml
 @@ -1,6 +1,6 @@
  <?xml version="1.0" encoding="utf-8"?>
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Продовжити перегляд</string>
      <string name="type_movie">Фільм</string>
      <string name="type_movies">Фільми</string>
 diff --git a/app/src/main/res/values-vi/strings.xml b/app/src/main/res/values-vi/strings.xml
-index 0594c2b..35bc31e 100644
+index 0594c2b..8c2af51 100644
 --- a/app/src/main/res/values-vi/strings.xml
 +++ b/app/src/main/res/values-vi/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Tiếp tục xem</string>
      <string name="type_movie">Phim</string>
      <string name="type_movies">Phim</string>
 diff --git a/app/src/main/res/values-zh-rCN/strings.xml b/app/src/main/res/values-zh-rCN/strings.xml
-index 2a9ccdb..38f02f3 100644
+index 2a9ccdb..7ad4dc2 100644
 --- a/app/src/main/res/values-zh-rCN/strings.xml
 +++ b/app/src/main/res/values-zh-rCN/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">继续观看</string>
      <string name="type_movie">电影</string>
      <string name="type_movies">电影</string>
 diff --git a/app/src/main/res/values-zh-rTW/strings.xml b/app/src/main/res/values-zh-rTW/strings.xml
-index 4a3f191..586f6c9 100644
+index 4a3f191..ad0fc15 100644
 --- a/app/src/main/res/values-zh-rTW/strings.xml
 +++ b/app/src/main/res/values-zh-rTW/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">繼續觀看</string>
      <string name="type_movie">電影</string>
      <string name="type_movies">電影</string>
 diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
-index 15e089b..325156e 100644
+index 15e089b..f0a8c6a 100644
 --- a/app/src/main/res/values/strings.xml
 +++ b/app/src/main/res/values/strings.xml
 @@ -1,5 +1,5 @@
  <resources>
 -    <string name="app_name">Nuvio</string>
-+    <string name="app_name">Clean Nuvio</string>
++    <string name="app_name">NuvioTv-Family</string>
      <string name="tv_channel_continue_watching">Continue Watching</string>
      <string name="type_movie">Movie</string>
      <string name="type_movies">Movies</string>
