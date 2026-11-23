@@ -25,6 +25,9 @@ services:
       REDIS_URL: redis://redis:6379
     ports:
       - "127.0.0.1:${CLEANSTREAM_PORT:-7000}:7000"
+    networks:
+      - default
+      - public
     depends_on:
       postgres:
         condition: service_healthy
@@ -81,6 +84,13 @@ services:
       - caddy-config:/config
     depends_on:
       - cleanstream
+
+networks:
+  # Only the CleanStream app joins this network, never the database or Redis.
+  # A web server running in another Docker project (for example your other
+  # website's Caddy) can join it to reach CleanStream at http://cleanstream:7000.
+  public:
+    name: cleanstream-public
 
 volumes:
   postgres-data:

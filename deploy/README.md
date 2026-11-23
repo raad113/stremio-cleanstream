@@ -106,7 +106,54 @@ sudo certbot --nginx -d your-domain.com
 `nginx -t` checks the configuration before reloading, so a mistake cannot take your
 other website down. Your other site's files are not changed.
 
-### C. Apache already uses ports 80 and 443
+### C. Another website's Caddy runs in Docker on ports 80 and 443
+
+Start CleanStream without its own Caddy:
+
+```bash
+docker compose up -d --build
+```
+
+Then let the existing Caddy pass your CleanStream address on to it. Only the CleanStream
+app is reachable this way; its database and Redis stay private.
+
+1. Add this block at the end of the other website's `Caddyfile` (replace the address):
+
+   ```
+   familyskips.duckdns.org {
+   	encode gzip
+   	reverse_proxy cleanstream:7000
+   }
+   ```
+
+2. In the other website's `docker-compose.yml`, connect its Caddy service to CleanStream's network:
+
+   ```yaml
+   services:
+     caddy:
+       # ...existing settings stay as they are...
+       networks:
+         - default
+         - cleanstream-public
+
+   networks:
+     cleanstream-public:
+       external: true
+   ```
+
+   If its Caddy service already lists `networks:`, add `cleanstream-public` to that list
+   and keep the others.
+
+3. Apply it from the other website's folder:
+
+   ```bash
+   docker compose up -d caddy
+   ```
+
+Caddy gets the HTTPS certificate for the new address automatically. The other website
+keeps running; its Caddy restarts for a second or two.
+
+### D. Apache already uses ports 80 and 443
 
 Ask me for the Apache version of step B; it works the same way.
 
