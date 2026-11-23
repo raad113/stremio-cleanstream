@@ -8,7 +8,7 @@ const { addonBuilder } = require('stremio-addon-sdk');
 // Addon Manifest
 const manifest = {
   id: 'community.cleanstream',
-  version: '1.3.0',
+  version: '1.4.0',
   name: 'CleanStream',
   description: 'Family-friendly viewing - skip nudity, violence, and other unwanted content in movies and TV shows. Community-driven, free forever.',
   logo: 'https://raw.githubusercontent.com/cleanstream/cleanstream-stremio/main/assets/logo.png',
@@ -99,6 +99,15 @@ const manifest = {
       name: 'CleanStream - By Year',
       extra: [
         { name: 'skip', isRequired: false },
+      ],
+    },
+    {
+      type: 'series',
+      id: 'cleanstream-series',
+      name: 'CleanStream - TV Shows',
+      extra: [
+        { name: 'skip', isRequired: false },
+        { name: 'search', isRequired: false },
       ],
     },
     {

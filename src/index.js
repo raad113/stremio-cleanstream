@@ -77,6 +77,27 @@ function sendSkipper(req, res) {
 }
 
 app.get('/skipper/cleanstream.user.js', sendSkipper);
+
+/**
+ * Poster with a "CleanStream" badge, used by the CleanStream catalog rows.
+ * ?d= second badge line (e.g. "12 skips"), ?t= title for the fallback poster.
+ */
+const { getBadgedPoster } = require('./utils/posterBadge');
+app.get('/poster/:imdbId.jpg', async (req, res) => {
+  const { imdbId } = req.params;
+  if (!/^tt\d{1,10}$/.test(imdbId)) return res.status(400).end();
+  const detail = String(req.query.d || 'Family-friendly skips').slice(0, 30);
+  const title = req.query.t ? String(req.query.t).slice(0, 80) : undefined;
+  try {
+    const jpeg = await getBadgedPoster(imdbId, { detail, title });
+    res.setHeader('Content-Type', 'image/jpeg');
+    res.setHeader('Cache-Control', 'public, max-age=86400');
+    res.send(jpeg);
+  } catch (err) {
+    console.error('[Poster] Failed for', imdbId, err.message);
+    res.status(500).end();
+  }
+});
 app.get('/skipper/:config/cleanstream.user.js', sendSkipper);
 
 // Redirect root to configure page

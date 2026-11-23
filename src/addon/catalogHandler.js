@@ -1,45 +1,66 @@
 /**
  * Stremio Catalog Handler
- * Provides a "CleanStream Ready" catalog showing movies with skip data
+ * "CleanStream" rows for movies and TV shows that have skip data.
+ * Every poster carries a CleanStream badge (see src/utils/posterBadge.js).
  */
 
 const db = require('../database');
 
-const TMDB_API_KEY = process.env.TMDB_API_KEY || '998d6fef6df9a4e1c2a5ff6631ec5af9';
-const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
-
-// Cache for TMDB lookups
-const posterCache = new Map();
+const BASE_URL = () => process.env.CLEANSTREAM_BASE_URL || `http://localhost:${process.env.PORT || 7000}`;
+const PAGE_SIZE = 100;
 
 /**
- * Fetch poster URL from TMDB by IMDB ID
+ * URL of the badged poster served by this addon.
  */
-async function fetchPosterFromTMDB(imdbId) {
-  // Check cache first
-  if (posterCache.has(imdbId)) {
-    return posterCache.get(imdbId);
-  }
+function posterUrl(imdbId, detail, title) {
+  const params = new URLSearchParams({ d: detail });
+  if (title) params.set('t', title);
+  return `${BASE_URL()}/poster/${imdbId}.jpg?${params}`;
+}
 
-  try {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/find/${imdbId}?api_key=${TMDB_API_KEY}&external_source=imdb_id`
-    );
-    const data = await response.json();
-    
-    let posterPath = null;
-    if (data.movie_results && data.movie_results.length > 0) {
-      posterPath = data.movie_results[0].poster_path;
-    } else if (data.tv_results && data.tv_results.length > 0) {
-      posterPath = data.tv_results[0].poster_path;
-    }
+const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 
-    const posterUrl = posterPath ? `${TMDB_IMAGE_BASE}${posterPath}` : null;
-    posterCache.set(imdbId, posterUrl);
-    return posterUrl;
-  } catch (error) {
-    console.error(`[CleanStream] TMDB fetch error for ${imdbId}:`, error.message);
-    return null;
+function movieMeta(title) {
+  const count = title.segmentCount || 0;
+  return {
+    id: title.imdbId,
+    type: 'movie',
+    name: title.title || title.imdbId,
+    poster: posterUrl(title.imdbId, plural(count, 'skip'), title.title),
+    posterShape: 'poster',
+    description: `CleanStream: ${plural(count, 'skip segment')} available`,
+    year: title.year,
+    releaseInfo: title.year ? String(title.year) : undefined,
+  };
+}
+
+/**
+ * Group episode entries (tt123:1:2) into one entry per show.
+ */
+async function listShows() {
+  const episodes = await db.listTitles({ limit: 5000, type: 'episode', sortBy: 'recent' });
+  const shows = new Map();
+  for (const ep of episodes) {
+    const showId = ep.imdbId.split(':')[0];
+    const show = shows.get(showId) || { imdbId: showId, title: null, episodes: 0, skips: 0 };
+    show.episodes += 1;
+    show.skips += ep.segmentCount || 0;
+    // Episode titles are often "Show - S1E2"; keep the part before the dash
+    if (!show.title && ep.title) show.title = ep.title.split(/\s+[-–|]\s+/)[0];
+    shows.set(showId, show);
   }
+  return [...shows.values()];
+}
+
+function showMeta(show) {
+  return {
+    id: show.imdbId,
+    type: 'series',
+    name: show.title || show.imdbId,
+    poster: posterUrl(show.imdbId, `${plural(show.episodes, 'episode')} ready`, show.title),
+    posterShape: 'poster',
+    description: `CleanStream: skips for ${plural(show.episodes, 'episode')} (${plural(show.skips, 'skip')})`,
+  };
 }
 
 /**
@@ -47,62 +68,32 @@ async function fetchPosterFromTMDB(imdbId) {
  * @param {object} args - { type, id, extra }
  */
 async function catalogHandler({ type, id, extra }) {
-  console.log(`[CleanStream] Catalog request: ${type}/${id}`, extra);
-
-  if (type !== 'movie') {
-    return { metas: [] };
-  }
-
-  // Determine sort order based on catalog id
-  let sortBy = 'recent'; // default
-  if (id === 'cleanstream-recent') sortBy = 'recent';
-  else if (id === 'cleanstream-popular') sortBy = 'popular';
-  else if (id === 'cleanstream-year') sortBy = 'year';
-  else if (id === 'cleanstream-all' || id === 'cleanstream-movies') sortBy = 'title';
-
-  const skip = extra?.skip ? parseInt(extra.skip) : 0;
+  const skip = extra?.skip ? parseInt(extra.skip, 10) || 0 : 0;
   const search = extra?.search;
 
   try {
-    let titles;
-
-    if (search) {
-      // Search mode
-      titles = (await db.searchTitles(search)).filter(t => !t.type || t.type === 'movie');
-    } else {
-      // Browse mode - get titles with segments
-      titles = await db.listTitles({
-        limit: 100,
-        offset: skip,
-        hasSegments: true,
-        sortBy: sortBy,
-        type: 'movie',
-      });
+    if (type === 'series') {
+      let shows = await listShows();
+      if (search) {
+        const q = search.toLowerCase();
+        shows = shows.filter(s => String(s.title || s.imdbId).toLowerCase().includes(q));
+      }
+      return { metas: shows.slice(skip, skip + PAGE_SIZE).map(showMeta), cacheMaxAge: 600 };
     }
 
-    console.log(`[CleanStream] Found ${titles.length} titles (sorted by ${sortBy})`);
+    if (type !== 'movie') return { metas: [] };
 
-    // Fetch posters from TMDB (in parallel, with limit)
-    const metasWithPosters = await Promise.all(
-      titles.map(async (title) => {
-        const poster = title.posterUrl || await fetchPosterFromTMDB(title.imdbId);
-        return {
-          id: title.imdbId,
-          type: 'movie',
-          name: title.title || title.imdbId,
-          poster: poster || `https://via.placeholder.com/300x450/1a1a2e/00d4aa?text=${encodeURIComponent(title.title || title.imdbId)}`,
-          description: `CleanStream: ${title.segmentCount || 0} skip segments available`,
-          year: title.year,
-          releaseInfo: title.year ? String(title.year) : undefined,
-        };
-      })
-    );
+    const sortBy = { 'cleanstream-popular': 'popular', 'cleanstream-year': 'year', 'cleanstream-all': 'title', 'cleanstream-movies': 'title' }[id] || 'recent';
 
-    return { metas: metasWithPosters };
+    const titles = search
+      ? (await db.searchTitles(search)).filter(t => !t.type || t.type === 'movie')
+      : await db.listTitles({ limit: PAGE_SIZE, offset: skip, hasSegments: true, sortBy, type: 'movie' });
+
+    return { metas: titles.map(movieMeta), cacheMaxAge: 600 };
   } catch (error) {
     console.error('[CleanStream] Catalog error:', error);
     return { metas: [] };
   }
 }
 
-module.exports = { catalogHandler };
+module.exports = { catalogHandler, posterUrl };

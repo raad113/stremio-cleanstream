@@ -1,7 +1,7 @@
 FROM node:20-alpine
 
-# Install OpenSSL for Prisma
-RUN apk add --no-cache openssl
+# OpenSSL for Prisma; fonts for the poster badge text
+RUN apk add --no-cache openssl fontconfig ttf-dejavu
 
 WORKDIR /app
 

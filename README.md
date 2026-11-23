@@ -68,6 +68,22 @@ No form appears. The scene is saved as "sex" with the strength chosen once in th
 | `Alt+K` | Same as the ♥ quick-mark button |
 | `Alt+H` | Show help |
 
+## Poster Badges
+
+Every title in the CleanStream rows (movies and the new **CleanStream - TV Shows** row) uses a poster with a green **✓ CleanStream** band showing the number of skips, or the number of episodes ready for a show. The server builds these images itself (`/poster/<imdbId>.jpg`), so they appear in any app that shows add-on catalogues: Stremio, Nuvio, and their Android TV versions.
+
+Posters come from TMDB, then from Stremio's public poster service. Set `POSTER_SOURCE_TEMPLATE` (for example `https://example.com/posters/{imdbId}.jpg`) to use another source. Rows from other add-ons (Cinemeta, TMDB, AIOMetadata) keep their own posters; an add-on cannot change them.
+
+## Android TV and Nuvio
+
+| Feature | Stremio / Nuvio on Android TV | Stremio Web in a browser |
+|---------|-------------------------------|--------------------------|
+| CleanStream rows with badged posters | Yes | Yes |
+| On-screen warnings (the "CleanStream" subtitle track) | Yes | Stremio Web does not load add-on subtitles |
+| Automatic skipping and ♥ quick mark | No: TV apps do not let add-ons control playback | Yes, with the userscript |
+
+NuvioTV has built-in skipping for intros and credits, but its skip sources (IntroDB, AniSkip, Anime-Skip) are fixed when the app is built, so CleanStream cannot be added as a source from the app. Automatic skipping on Android TV would need a modified NuvioTV build (it is open source, GPL-3.0).
+
 ## Community Sharing
 
 Skips are shared through the server the add-on is installed from. Everyone who uses the same server sees the same data.
@@ -131,6 +147,7 @@ This runs with JSON file storage (no database required).
 | `CONTRIBUTE_LIMIT_PER_HOUR` | Contributions per IP per hour | `60` |
 | `VOTE_LIMIT_PER_HOUR` | Votes per IP per hour | `300` |
 | `TMDB_API_KEY` | TMDB key for catalogue posters | (built-in key) |
+| `POSTER_SOURCE_TEMPLATE` | Optional poster source, `{imdbId}` is replaced | (TMDB, then metahub) |
 
 ### Example
 

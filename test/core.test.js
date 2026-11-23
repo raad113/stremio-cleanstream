@@ -88,3 +88,18 @@ test('MCF timestamps accept every WebVTT form', () => {
   assert.strictEqual(parseTimestamp('01:10.500'), 70500);
   assert.strictEqual(parseTimestamp('1:02:03.004'), 3723004);
 });
+
+test('poster badge renders onto an image', async () => {
+  const sharp = require('sharp');
+  const { badgeSvg } = require('../src/utils/posterBadge');
+  const out = await sharp({ create: { width: 500, height: 750, channels: 3, background: '#123456' } })
+    .composite([{ input: badgeSvg('12 skips'), top: 0, left: 0 }])
+    .jpeg()
+    .toBuffer();
+  const meta = await sharp(out).metadata();
+  assert.strictEqual(meta.width, 500);
+  assert.strictEqual(meta.height, 750);
+  // The badge band (bottom) is green, the top is the original colour
+  const { data } = await sharp(out).extract({ left: 250, top: 700, width: 1, height: 1 }).raw().toBuffer({ resolveWithObject: true });
+  assert.ok(data[1] > data[0] && data[1] > 90, 'bottom band should be green');
+});
