@@ -74,6 +74,18 @@ Every title in the CleanStream rows (movies and the new **CleanStream - TV Shows
 
 Posters come from TMDB, then from Stremio's public poster service. Set `POSTER_SOURCE_TEMPLATE` (for example `https://example.com/posters/{imdbId}.jpg`) to use another source. Rows from other add-ons (Cinemeta, TMDB, AIOMetadata) keep their own posters; an add-on cannot change them.
 
+## Digital Release Tags and New Digital Releases
+
+Movie posters served by CleanStream also carry a tag in the top-right corner, based on TMDB release dates:
+
+* **DIGITAL** (blue): the film can already be streamed or rented at home.
+* **DIGITAL 12 DEC** (amber): not out digitally yet; the date is the expected digital release.
+* **IN CINEMAS** (amber): only in cinemas so far, with no digital date announced.
+
+Films with no digital date on TMDB that came out more than six months ago (or are on DVD/Blu-ray) count as digital. Dates use the US release by default; set `DIGITAL_RELEASE_REGION` (for example `SA` or `GB`) to prefer another country, falling back to any country.
+
+The **New digital releases** row lists popular films released digitally in the last 60 days. Titles that already have CleanStream skips also show the CleanStream band.
+
 ## Android TV and Nuvio
 
 | Feature | Stremio / Nuvio on Android TV | Stremio Web in a browser |
@@ -147,6 +159,7 @@ This runs with JSON file storage (no database required).
 | `CONTRIBUTE_LIMIT_PER_HOUR` | Contributions per IP per hour | `60` |
 | `VOTE_LIMIT_PER_HOUR` | Votes per IP per hour | `300` |
 | `TMDB_API_KEY` | TMDB key for catalogue posters | (built-in key) |
+| `DIGITAL_RELEASE_REGION` | Country used for digital release dates | `US` |
 | `POSTER_SOURCE_TEMPLATE` | Optional poster source, `{imdbId}` is replaced | (TMDB, then metahub) |
 
 ### Example

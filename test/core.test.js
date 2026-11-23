@@ -103,3 +103,23 @@ test('poster badge renders onto an image', async () => {
   const { data } = await sharp(out).extract({ left: 250, top: 700, width: 1, height: 1 }).raw().toBuffer({ resolveWithObject: true });
   assert.ok(data[1] > data[0] && data[1] > 90, 'bottom band should be green');
 });
+
+test('digital release status from TMDB release dates', () => {
+  const { digitalStatusFromReleases, digitalTagText } = require('../src/utils/digitalRelease');
+  const now = new Date('2026-11-23T00:00:00Z');
+  const rel = (region, type, date) => ({ iso_3166_1: region, release_dates: [{ type, release_date: date }] });
+
+  const out = digitalStatusFromReleases([rel('US', 3, '2026-08-01'), rel('US', 4, '2026-10-10')], now, 'US');
+  assert.deepStrictEqual(out, { status: 'digital', date: '2026-10-10' });
+  assert.strictEqual(digitalTagText(out, now), 'DIGITAL');
+
+  const soon = digitalStatusFromReleases([rel('US', 3, '2026-11-01'), rel('US', 4, '2026-12-12')], now, 'US');
+  assert.deepStrictEqual(soon, { status: 'upcoming', date: '2026-12-12' });
+  assert.strictEqual(digitalTagText(soon, now), 'DIGITAL 12 DEC');
+
+  const cinema = digitalStatusFromReleases([rel('US', 3, '2026-11-10')], now, 'US');
+  assert.strictEqual(digitalTagText(cinema, now), 'IN CINEMAS');
+
+  const old = digitalStatusFromReleases([rel('US', 3, '1997-12-19')], now, 'US');
+  assert.strictEqual(old.status, 'digital');
+});

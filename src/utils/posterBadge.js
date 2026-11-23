@@ -132,12 +132,29 @@ function badgeSvg(detail) {
 }
 
 /**
+ * Digital release tag in the top-right corner: green when the film is out
+ * digitally, amber with the expected date when it is not yet.
+ */
+function digitalTagSvg(text) {
+  const upcoming = text !== 'DIGITAL';
+  const fontSize = 26;
+  const width = Math.round(text.length * fontSize * 0.66) + 34;
+  const x = WIDTH - width - 16;
+  return Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}">
+    <rect x="${x}" y="16" width="${width}" height="46" rx="10" fill="${upcoming ? '#f5a623' : '#1565c0'}" fill-opacity="0.95"/>
+    <text x="${x + width / 2}" y="48" text-anchor="middle" font-family="DejaVu Sans, Inter, Arial, sans-serif"
+      font-size="${fontSize}" font-weight="700" fill="${upcoming ? '#1a1a2e' : '#ffffff'}">${escapeXml(text)}</text>
+  </svg>`);
+}
+
+/**
  * Return a JPEG poster with the CleanStream badge.
  * @param {string} imdbId - tt1234567
- * @param {object} options - { detail: second badge line, title: fallback title }
+ * @param {object} options - { detail: second badge line, title: fallback title,
+ *   digitalTag: text for the corner tag (or null), band: false to leave out the CleanStream band }
  */
-async function getBadgedPoster(imdbId, { detail = 'Family-friendly skips', title } = {}) {
-  const key = `${imdbId}|${detail}`;
+async function getBadgedPoster(imdbId, { detail = 'Family-friendly skips', title, digitalTag = null, band = true } = {}) {
+  const key = `${imdbId}|${detail}|${digitalTag || ''}|${band}`;
   if (cache.has(key)) return cache.get(key);
 
   const base = await fetchBasePoster(imdbId);
@@ -153,8 +170,12 @@ async function getBadgedPoster(imdbId, { detail = 'Family-friendly skips', title
     baseJpeg = await sharp(placeholderSvg(title || imdbId)).jpeg().toBuffer();
   }
 
+  const layers = [];
+  if (band) layers.push({ input: badgeSvg(detail), top: 0, left: 0 });
+  if (digitalTag) layers.push({ input: digitalTagSvg(digitalTag), top: 0, left: 0 });
+
   const output = await sharp(baseJpeg)
-    .composite([{ input: badgeSvg(detail), top: 0, left: 0 }])
+    .composite(layers)
     .jpeg({ quality: 84, mozjpeg: true })
     .toBuffer();
 
@@ -162,4 +183,4 @@ async function getBadgedPoster(imdbId, { detail = 'Family-friendly skips', title
   return base ? remember(key, output) : output;
 }
 
-module.exports = { getBadgedPoster, badgeSvg };
+module.exports = { getBadgedPoster, badgeSvg, digitalTagSvg };

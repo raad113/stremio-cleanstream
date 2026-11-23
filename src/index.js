@@ -83,13 +83,21 @@ app.get('/skipper/cleanstream.user.js', sendSkipper);
  * ?d= second badge line (e.g. "12 skips"), ?t= title for the fallback poster.
  */
 const { getBadgedPoster } = require('./utils/posterBadge');
+const { getDigitalRelease, digitalTagText } = require('./utils/digitalRelease');
 app.get('/poster/:imdbId.jpg', async (req, res) => {
   const { imdbId } = req.params;
   if (!/^tt\d{1,10}$/.test(imdbId)) return res.status(400).end();
   const detail = String(req.query.d || 'Family-friendly skips').slice(0, 30);
   const title = req.query.t ? String(req.query.t).slice(0, 80) : undefined;
+  const band = req.query.band !== '0';
   try {
-    const jpeg = await getBadgedPoster(imdbId, { detail, title });
+    // Digital release tag for movies (skipped for TV shows and with ?digital=0)
+    let digitalTag = null;
+    if (req.query.digital !== '0') {
+      const info = await Promise.race([getDigitalRelease(imdbId), new Promise(r => setTimeout(() => r(null), 6000))]);
+      digitalTag = digitalTagText(info);
+    }
+    const jpeg = await getBadgedPoster(imdbId, { detail, title, digitalTag, band });
     res.setHeader('Content-Type', 'image/jpeg');
     res.setHeader('Cache-Control', 'public, max-age=86400');
     res.send(jpeg);

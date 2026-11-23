@@ -5,6 +5,7 @@
  */
 
 const db = require('../database');
+const { newDigitalReleases } = require('../utils/digitalRelease');
 
 const BASE_URL = () => process.env.CLEANSTREAM_BASE_URL || `http://localhost:${process.env.PORT || 7000}`;
 const PAGE_SIZE = 100;
@@ -12,9 +13,10 @@ const PAGE_SIZE = 100;
 /**
  * URL of the badged poster served by this addon.
  */
-function posterUrl(imdbId, detail, title) {
+function posterUrl(imdbId, detail, title, { band = true } = {}) {
   const params = new URLSearchParams({ d: detail });
   if (title) params.set('t', title);
+  if (!band) params.set('band', '0');
   return `${BASE_URL()}/poster/${imdbId}.jpg?${params}`;
 }
 
@@ -64,6 +66,32 @@ function showMeta(show) {
 }
 
 /**
+ * "New digital releases": films that came out to stream or rent in the last
+ * two months. Titles with CleanStream skips also get the CleanStream band.
+ */
+async function digitalReleaseMetas(skip) {
+  const page = Math.floor(skip / 20) + 1; // TMDB pages hold 20 results
+  const movies = await newDigitalReleases({ page });
+  return Promise.all(movies.map(async movie => {
+    const filters = await db.getFilters(movie.imdbId);
+    const count = filters ? filters.segments.length : 0;
+    return {
+      id: movie.imdbId,
+      type: 'movie',
+      name: movie.title,
+      poster: count
+        ? posterUrl(movie.imdbId, plural(count, 'skip'), movie.title)
+        : posterUrl(movie.imdbId, '', movie.title, { band: false }),
+      posterShape: 'poster',
+      description: count
+        ? `New on digital. CleanStream: ${plural(count, 'skip segment')} available. ${movie.overview || ''}`
+        : `New on digital. No CleanStream skips yet: add some with the ♥ button. ${movie.overview || ''}`,
+      releaseInfo: movie.year ? String(movie.year) : undefined,
+    };
+  }));
+}
+
+/**
  * Handle catalog requests from Stremio
  * @param {object} args - { type, id, extra }
  */
@@ -82,6 +110,10 @@ async function catalogHandler({ type, id, extra }) {
     }
 
     if (type !== 'movie') return { metas: [] };
+
+    if (id === 'cleanstream-digital') {
+      return { metas: await digitalReleaseMetas(skip), cacheMaxAge: 3600 };
+    }
 
     const sortBy = { 'cleanstream-popular': 'popular', 'cleanstream-year': 'year', 'cleanstream-all': 'title', 'cleanstream-movies': 'title' }[id] || 'recent';
 
