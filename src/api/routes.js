@@ -297,8 +297,9 @@ router.get('/refs/:refId', async (req, res) => {
 
 /**
  * GET /api/badges?ids=tt1,tmdb:movie:2,tmdb:tv:3,...  (at most 40)
- * For poster tags in the app: whether a title has confirmed skips ("clean")
- * and, for movies, its digital release status. Catalogs that use TMDB
+ * For poster tags in the app: whether a title has confirmed skips ("clean"),
+ * how many unconfirmed ones it has ("pending"), and for movies its digital
+ * release status. Catalogs that use TMDB
  * numbers instead of IMDb ids are looked up through TMDB. Answers are keyed
  * by the id exactly as asked.
  */
@@ -325,6 +326,10 @@ router.get('/badges', async (req, res) => {
         db.searchTitles(imdbId).catch(() => []),
       ]);
       let approved = filters ? filters.segments.filter(seg => trust.statusOf(seg) === 'approved').length : 0;
+      // Unconfirmed skips (marked by one viewer, or imported) that nobody has voted down
+      const pending = filters
+        ? filters.segments.filter(seg => trust.statusOf(seg) === 'pending' && ((seg.votes?.down || 0) - (seg.votes?.up || 0)) < 3).length
+        : 0;
       if (approved === 0) {
         approved = (episodes || [])
           .filter(t => String(t.imdbId).startsWith(imdbId + ':'))
@@ -334,6 +339,7 @@ router.get('/badges', async (req, res) => {
         imdbId,
         clean: approved > 0,
         skips: approved,
+        pending,
         digital: digital ? { status: digital.status, date: digital.date } : null,
       }];
     }));
