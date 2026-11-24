@@ -55,6 +55,14 @@ function imdbIdForTmdb(tmdbId) {
   });
 }
 
+/** IMDb id of a TV show by its TMDB id. */
+function imdbIdForTmdbShow(tmdbId) {
+  return cached(`imdbtv:${tmdbId}`, async () => {
+    const data = await tmdb(`/tv/${tmdbId}/external_ids`);
+    return data && data.imdb_id ? data.imdb_id : null;
+  });
+}
+
 /**
  * Work out the digital status from TMDB release_dates results.
  * Exported separately so it can be tested without the network.
@@ -148,4 +156,4 @@ function digitalTagText(info, now = new Date()) {
   return null;
 }
 
-module.exports = { getDigitalRelease, newDigitalReleases, digitalStatusFromReleases, digitalTagText, tmdb, cached, imdbIdForTmdb };
+module.exports = { imdbIdForTmdbShow, getDigitalRelease, newDigitalReleases, digitalStatusFromReleases, digitalTagText, tmdb, cached, imdbIdForTmdb };

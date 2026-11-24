@@ -9,7 +9,7 @@ const db = require('../database');
 const cache = require('../cache');
 const { generateSkips, generatePendingSkips, generateSkipVTT, generateSkipJSON } = require('../utils/skipGenerator');
 const trust = require('../community/trust');
-const { getDigitalRelease } = require('../utils/digitalRelease');
+const { getDigitalRelease, imdbIdForTmdb, imdbIdForTmdbShow } = require('../utils/digitalRelease');
 const { parseMCF, generateMCF, mcfToDBSegments, dbToMCFSegments } = require('../utils/mcf');
 
 const router = express.Router();
@@ -296,24 +296,42 @@ router.get('/refs/:refId', async (req, res) => {
 });
 
 /**
- * GET /api/badges?ids=tt1,tt2,...  (at most 40)
+ * GET /api/badges?ids=tt1,tmdb:movie:2,tmdb:tv:3,...  (at most 40)
  * For poster tags in the app: whether a title has confirmed skips ("clean")
- * and, for movies, its digital release status.
+ * and, for movies, its digital release status. Catalogs that use TMDB
+ * numbers instead of IMDb ids are looked up through TMDB. Answers are keyed
+ * by the id exactly as asked.
  */
 router.get('/badges', async (req, res) => {
-  const ids = String(req.query.ids || '')
+  const keys = String(req.query.ids || '')
     .split(',')
     .map(s => s.trim())
-    .filter(id => /^tt\d{1,10}$/.test(id))
+    .filter(id => /^(tt\d{1,10}|tmdb:(movie|tv):\d{1,10})$/.test(id))
     .slice(0, 40);
   try {
-    const entries = await Promise.all(ids.map(async id => {
-      const [filters, digital] = await Promise.all([
-        db.getFilters(id).catch(() => null),
-        getDigitalRelease(id).catch(() => null),
+    const entries = await Promise.all(keys.map(async key => {
+      let imdbId = key;
+      let isShow = false;
+      if (key.startsWith('tmdb:')) {
+        const [, kind, tmdbId] = key.split(':');
+        isShow = kind === 'tv';
+        imdbId = await (isShow ? imdbIdForTmdbShow(tmdbId) : imdbIdForTmdb(tmdbId)).catch(() => null);
+        if (!imdbId) return [key, { clean: false, skips: 0, digital: null }];
+      }
+      const [filters, digital, episodes] = await Promise.all([
+        db.getFilters(imdbId).catch(() => null),
+        isShow ? null : getDigitalRelease(imdbId).catch(() => null),
+        // A show counts as clean when any of its episodes has skips
+        db.searchTitles(imdbId).catch(() => []),
       ]);
-      const approved = filters ? filters.segments.filter(seg => trust.statusOf(seg) === 'approved').length : 0;
-      return [id, {
+      let approved = filters ? filters.segments.filter(seg => trust.statusOf(seg) === 'approved').length : 0;
+      if (approved === 0) {
+        approved = (episodes || [])
+          .filter(t => String(t.imdbId).startsWith(imdbId + ':'))
+          .reduce((sum, t) => sum + (t.segmentCount || 0), 0);
+      }
+      return [key, {
+        imdbId,
         clean: approved > 0,
         skips: approved,
         digital: digital ? { status: digital.status, date: digital.date } : null,
