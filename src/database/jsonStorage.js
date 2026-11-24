@@ -153,6 +153,17 @@ function setSegmentStatus(imdbId, segmentId, status) {
   return true;
 }
 
+/** Attach a timing fingerprint to a segment that has none yet. */
+function setSegmentRef(imdbId, segmentId, refId, durationMs) {
+  const filterData = getFilters(imdbId);
+  const segment = filterData && filterData.segments.find(s => s.id === segmentId);
+  if (!segment || segment.refId) return false;
+  segment.refId = refId;
+  if (Number.isInteger(durationMs)) segment.durationMs = durationMs;
+  saveFilters(imdbId, filterData);
+  return true;
+}
+
 /** Pending segments across all titles, newest first. */
 function listPending({ limit = 100 } = {}) {
   const out = [];
@@ -272,6 +283,7 @@ module.exports = {
   searchTitles,
   voteSegment,
   setSegmentStatus,
+  setSegmentRef,
   listPending,
   getContributor,
   saveContributor,

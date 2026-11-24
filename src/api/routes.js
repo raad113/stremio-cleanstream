@@ -9,6 +9,7 @@ const db = require('../database');
 const cache = require('../cache');
 const { generateSkips, generatePendingSkips, generateSkipVTT, generateSkipJSON } = require('../utils/skipGenerator');
 const trust = require('../community/trust');
+const { getDigitalRelease } = require('../utils/digitalRelease');
 const { parseMCF, generateMCF, mcfToDBSegments, dbToMCFSegments } = require('../utils/mcf');
 
 const router = express.Router();
@@ -126,6 +127,37 @@ router.param('imdbId', (req, res, next, imdbId) => {
   }
   next();
 });
+
+/**
+ * Check a timing fingerprint sent with a skip: the subtitle cue times of the
+ * copy it was marked on. Returns { refId, ref } or null when absent or invalid.
+ * Only times are stored, never subtitle text.
+ */
+const REF_KINDS = ['embedded', 'subtitle'];
+function validateRef(input) {
+  if (!input || typeof input !== 'object') return null;
+  const { kind, cues } = input;
+  const durationMs = Number(input.durationMs);
+  if (!REF_KINDS.includes(kind) || !Array.isArray(cues)) return null;
+  if (cues.length < 50 || cues.length > 6000) return null;
+  const clean = [];
+  let last = -1;
+  for (const c of cues) {
+    if (!Array.isArray(c) || c.length !== 2) return null;
+    const [start, end] = c.map(Number);
+    if (!Number.isInteger(start) || !Number.isInteger(end) || start < 0 || end <= start || end > MAX_POSITION_MS) return null;
+    if (start < last) return null; // must be in time order
+    last = start;
+    clean.push([start, end]);
+  }
+  const ref = {
+    kind,
+    durationMs: Number.isInteger(durationMs) && durationMs > 0 && durationMs <= MAX_POSITION_MS ? durationMs : null,
+    cues: clean,
+  };
+  const refId = crypto.createHash('sha256').update(JSON.stringify(clean)).digest('hex').slice(0, 16);
+  return { refId, ref };
+}
 
 /**
  * Check and normalise one contributed segment. Returns { segment } or { error }.
@@ -248,6 +280,51 @@ async function sendSkipJSON(req, res) {
 }
 
 router.get('/skips/:imdbId', sendSkipJSON);
+
+/** GET /api/refs/:refId: a timing fingerprint (cue times only). Never changes once saved. */
+router.get('/refs/:refId', async (req, res) => {
+  const { refId } = req.params;
+  if (!/^[0-9a-f]{16}$/.test(refId)) return res.status(400).json({ error: 'Invalid reference id' });
+  try {
+    const ref = await db.getTimingRef(refId);
+    if (!ref) return res.status(404).json({ error: 'Not found' });
+    res.set('Cache-Control', 'public, max-age=31536000, immutable');
+    res.json({ refId, ...ref });
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to load reference' });
+  }
+});
+
+/**
+ * GET /api/badges?ids=tt1,tt2,...  (at most 40)
+ * For poster tags in the app: whether a title has confirmed skips ("clean")
+ * and, for movies, its digital release status.
+ */
+router.get('/badges', async (req, res) => {
+  const ids = String(req.query.ids || '')
+    .split(',')
+    .map(s => s.trim())
+    .filter(id => /^tt\d{1,10}$/.test(id))
+    .slice(0, 40);
+  try {
+    const entries = await Promise.all(ids.map(async id => {
+      const [filters, digital] = await Promise.all([
+        db.getFilters(id).catch(() => null),
+        getDigitalRelease(id).catch(() => null),
+      ]);
+      const approved = filters ? filters.segments.filter(seg => trust.statusOf(seg) === 'approved').length : 0;
+      return [id, {
+        clean: approved > 0,
+        skips: approved,
+        digital: digital ? { status: digital.status, date: digital.date } : null,
+      }];
+    }));
+    res.set('Cache-Control', 'public, max-age=3600');
+    res.json(Object.fromEntries(entries));
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to load badges' });
+  }
+});
 router.get('/skips/:imdbId/json', sendSkipJSON);
 
 router.get('/skips/:imdbId/vtt', async (req, res) => {
@@ -293,7 +370,7 @@ router.get('/skips/:imdbId/mcf', async (req, res) => {
  * POST /api/contribute/:imdbId
  * Add a new skip segment. It is used straight away and can be voted on.
  */
-router.post('/contribute/:imdbId', contributeLimiter, express.json({ limit: '10kb' }), async (req, res) => {
+router.post('/contribute/:imdbId', contributeLimiter, express.json({ limit: '400kb' }), async (req, res) => {
   const { segment, error } = validateSegment(req.body || {});
   if (error) {
     return res.status(400).json({ error });
@@ -304,7 +381,13 @@ router.post('/contribute/:imdbId', contributeLimiter, express.json({ limit: '10k
     const contributorHash = visitorIdFor(req);
     const [contributor, filterData] = await Promise.all([db.getContributor(contributorHash), db.getFilters(imdbId)]);
     const existing = filterData ? filterData.segments : [];
-    const candidate = { ...segment, contributorHash };
+    const timing = validateRef(req.body.ref);
+    const candidate = {
+      ...segment,
+      contributorHash,
+      refId: timing ? timing.refId : null,
+      durationMs: timing && timing.ref.durationMs ? timing.ref.durationMs : null,
+    };
 
     const limitError = trust.checkLimits(candidate, contributor, existing);
     if (limitError) {
@@ -312,6 +395,7 @@ router.post('/contribute/:imdbId', contributeLimiter, express.json({ limit: '10k
     }
 
     const { status, corroborates } = trust.decideNewStatus(candidate, contributor, existing);
+    if (timing) await db.saveTimingRef(timing.refId, timing.ref);
     const saved = await db.addSegment(imdbId, { ...candidate, status });
 
     // A matching mark from another viewer confirms both
@@ -378,7 +462,7 @@ router.post('/contribute/:imdbId/mcf', requireAdmin, express.text({ type: '*/*',
  * One vote per visitor per segment. Segments with 3+ more downvotes than
  * upvotes stop being served.
  */
-router.post('/vote/:imdbId/:segmentId', voteLimiter, express.json({ limit: '1kb' }), async (req, res) => {
+router.post('/vote/:imdbId/:segmentId', voteLimiter, express.json({ limit: '400kb' }), async (req, res) => {
   const { imdbId, segmentId } = req.params;
   const { vote } = req.body || {};
 
@@ -403,6 +487,16 @@ router.post('/vote/:imdbId/:segmentId', voteLimiter, express.json({ limit: '1kb'
     }
     if (result.reason === 'already_voted') {
       return res.status(409).json({ error: 'You already voted on this segment' });
+    }
+
+    // A viewer who confirms a skip that has no timing fingerprint yet supplies
+    // theirs, so the skip can be lined up on other copies from now on
+    if (vote === 'up' && !target.refId) {
+      const timing = validateRef(req.body.ref);
+      if (timing) {
+        await db.saveTimingRef(timing.refId, timing.ref);
+        await db.setSegmentRef(imdbId, segmentId, timing.refId, timing.ref.durationMs);
+      }
     }
 
     // Votes can confirm a pending skip or hide a wrong one

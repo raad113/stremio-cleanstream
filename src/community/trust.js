@@ -116,7 +116,11 @@ function statusAfterVotes(segment) {
   const votes = segment.votes || { up: 0, down: 0 };
   const net = (votes.up || 0) - (votes.down || 0);
   const current = statusOf(segment);
-  if (current !== 'rejected' && -net >= RULES.REJECT_NET_VOTES) return 'rejected';
+  // A confirmed skip that viewers report as wrong goes back to "unconfirmed"
+  // (a button instead of an automatic skip) and to the moderation list, rather
+  // than disappearing: it may only be wrong for some copies of the film.
+  if (current === 'approved' && -net >= RULES.REJECT_NET_VOTES) return 'pending';
+  if (current === 'pending' && -net >= RULES.REJECT_NET_VOTES) return 'rejected';
   if (current === 'pending' && net >= RULES.APPROVE_NET_VOTES) return 'approved';
   return null;
 }

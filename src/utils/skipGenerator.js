@@ -103,6 +103,8 @@ async function generateSkips(imdbId, userConfig = {}, { requesterHash = null } =
         severity,
         channel: segment.channel || 'both',
         sourceIds: [segment.id],
+        refId: segment.refId || null,
+        durationMs: segment.durationMs || null,
         description: segment.comment || generateDescription(category, severity),
       });
     }
@@ -133,6 +135,8 @@ async function generatePendingSkips(imdbId, userConfig = {}, { requesterHash = n
       severity: seg.severity,
       channel: seg.channel || 'both',
       sourceIds: [seg.id],
+      refId: seg.refId || null,
+      durationMs: seg.durationMs || null,
       description: seg.comment || generateDescription(seg.category, seg.severity),
       votes: seg.votes || { up: 0, down: 0 },
     }));
@@ -150,8 +154,9 @@ function mergeOverlappingSkips(skips) {
     const current = skips[i];
     const last = merged[merged.length - 1];
     
-    // Check if overlapping or adjacent (within 500ms)
-    if (current.startMs <= last.endMs + 500) {
+    // Merge when overlapping or adjacent (within 500ms), but only skips timed on
+    // the same copy: the player lines up each copy's times separately
+    if (current.startMs <= last.endMs + 500 && (current.refId || null) === (last.refId || null)) {
       // Extend the last segment
       last.endMs = Math.max(last.endMs, current.endMs);
       last.endTime = formatTimeForDisplay(last.endMs);

@@ -103,6 +103,8 @@ async function getFilters(imdbId) {
       contributor: seg.contributor,
       contributorHash: seg.contributorHash,
       status: seg.status,
+      refId: seg.refId,
+      durationMs: seg.durationMs,
       votes: { up: seg.upvotes, down: seg.downvotes },
       verified: seg.verified,
       createdAt: seg.createdAt,
@@ -143,6 +145,8 @@ async function addSegment(imdbId, segmentData) {
       contributor: segmentData.contributor || 'anonymous',
       contributorHash: segmentData.contributorHash || null,
       status: segmentData.status || 'approved',
+      refId: segmentData.refId || null,
+      durationMs: Number.isInteger(segmentData.durationMs) ? segmentData.durationMs : null,
     },
   });
   
@@ -157,6 +161,8 @@ async function addSegment(imdbId, segmentData) {
     comment: segment.comment,
     contributor: segment.contributor,
     status: segment.status,
+    refId: segment.refId,
+    durationMs: segment.durationMs,
     votes: { up: 0, down: 0 },
     createdAt: segment.createdAt,
   };
@@ -324,6 +330,27 @@ async function saveContributor(hash, data) {
 }
 
 /** Progress of automatic imports (any JSON value), keyed by name. */
+/** Attach a timing fingerprint to a segment that has none yet. */
+async function setSegmentRef(imdbId, segmentId, refId, durationMs) {
+  if (!isPostgresAvailable()) return jsonDb.setSegmentRef(imdbId, segmentId, refId, durationMs);
+  const prisma = getClient();
+  const result = await prisma.segment.updateMany({
+    where: { id: segmentId, title: { imdbId }, refId: null },
+    data: { refId, durationMs: Number.isInteger(durationMs) ? durationMs : null },
+  });
+  return result.count > 0;
+}
+
+/** Timing fingerprints are stored as key/value pairs next to the import progress. */
+async function getTimingRef(refId) {
+  return (await getImportState(`ref:${refId}`)) || null;
+}
+
+async function saveTimingRef(refId, ref) {
+  if (await getImportState(`ref:${refId}`)) return;
+  await setImportState(`ref:${refId}`, ref);
+}
+
 async function getImportState(key) {
   if (!isPostgresAvailable()) return jsonDb.getImportState(key);
   const row = await getClient().importState.findUnique({ where: { key } });
@@ -541,6 +568,9 @@ module.exports = {
   getOrCreateTitle,
   getFilters,
   addSegment,
+  setSegmentRef,
+  getTimingRef,
+  saveTimingRef,
   updateTitleMetadata,
   voteSegment,
   deleteSegment,

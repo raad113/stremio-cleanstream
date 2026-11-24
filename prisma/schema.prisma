@@ -67,6 +67,11 @@ model Segment {
 
   // Community trust: "pending" until confirmed, then "approved"; "rejected" is hidden
   status      String   @default("approved")
+
+  // Timing fingerprint (subtitle cue times) of the copy this skip was marked on,
+  // stored in ImportState as "ref:<refId>", and that copy's length
+  refId       String?
+  durationMs  Int?
   
   // Community voting
   upvotes     Int      @default(0)
