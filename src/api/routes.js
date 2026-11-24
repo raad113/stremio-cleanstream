@@ -9,7 +9,7 @@ const db = require('../database');
 const cache = require('../cache');
 const { generateSkips, generatePendingSkips, generateSkipVTT, generateSkipJSON } = require('../utils/skipGenerator');
 const trust = require('../community/trust');
-const { getDigitalRelease, imdbIdForTmdb, imdbIdForTmdbShow } = require('../utils/digitalRelease');
+const { getDigitalRelease, getMovieUpcoming, getShowUpcoming, imdbIdForTmdb, imdbIdForTmdbShow } = require('../utils/digitalRelease');
 const { parseMCF, generateMCF, mcfToDBSegments, dbToMCFSegments } = require('../utils/mcf');
 
 const router = express.Router();
@@ -300,6 +300,7 @@ router.get('/refs/:refId', async (req, res) => {
 
 /**
  * GET /api/badges?ids=tt1,tmdb:movie:2,tmdb:tv:3,...  (at most 40)
+ *                 [&shows=tt4,...]  IMDb ids among them that are shows
  * For poster tags in the app: whether a title has confirmed skips ("clean"),
  * how many unconfirmed ones it has ("pending"), and for movies its digital
  * release status. Catalogs that use TMDB
@@ -315,18 +316,24 @@ router.get('/badges', async (req, res) => {
   try {
     const entries = await Promise.all(keys.map(async key => {
       let imdbId = key;
-      let isShow = false;
+      let isShow = req.query.shows && String(req.query.shows).split(',').includes(key);
+      let tmdbId = null;
       if (key.startsWith('tmdb:')) {
-        const [, kind, tmdbId] = key.split(':');
+        const [, kind, id] = key.split(':');
+        tmdbId = id;
         isShow = kind === 'tv';
         imdbId = await (isShow ? imdbIdForTmdbShow(tmdbId) : imdbIdForTmdb(tmdbId)).catch(() => null);
-        if (!imdbId) return [key, { clean: false, skips: 0, digital: null }];
+        if (!imdbId) {
+          const upcoming = isShow ? await getShowUpcoming({ tmdbId }).catch(() => null) : null;
+          return [key, { clean: false, skips: 0, pending: 0, digital: null, upcoming }];
+        }
       }
-      const [filters, digital, episodes] = await Promise.all([
+      const [filters, digital, episodes, upcoming] = await Promise.all([
         db.getFilters(imdbId).catch(() => null),
         isShow ? null : getDigitalRelease(imdbId).catch(() => null),
         // A show counts as clean when any of its episodes has skips
         db.searchTitles(imdbId).catch(() => []),
+        (isShow ? getShowUpcoming({ imdbId, tmdbId }) : getMovieUpcoming(imdbId)).catch(() => null),
       ]);
       let approved = filters ? filters.segments.filter(seg => trust.statusOf(seg) === 'approved').length : 0;
       // Unconfirmed skips (marked by one viewer, or imported) that nobody has voted down
@@ -344,6 +351,8 @@ router.get('/badges', async (req, res) => {
         skips: approved,
         pending,
         digital: digital ? { status: digital.status, date: digital.date } : null,
+        // What the title is still waiting for (release, digital, premiere, next episode)
+        upcoming: upcoming || null,
       }];
     }));
     res.set('Cache-Control', 'public, max-age=3600');

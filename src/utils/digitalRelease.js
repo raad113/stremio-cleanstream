@@ -141,6 +141,73 @@ function newDigitalReleases({ page = 1, days = 60 } = {}) {
 }
 
 /**
+ * What a movie is still waiting for, from TMDB release_dates results:
+ *   { kind: 'release', date }  not out anywhere yet (first release date)
+ *   { kind: 'digital', date }  in cinemas, digital release date known
+ *   { kind: 'cinema', date: null }  in cinemas, no digital date yet
+ * or null when it can already be watched at home (or nothing is known).
+ * Exported separately so it can be tested without the network.
+ */
+function movieUpcomingFromReleases(results, now = new Date(), region = REGION) {
+  const all = [];
+  for (const country of results || []) {
+    for (const r of country.release_dates || []) {
+      const date = new Date(r.release_date);
+      if (!isNaN(date)) all.push({ region: country.iso_3166_1, type: r.type, date });
+    }
+  }
+  if (all.length === 0) return null;
+  const day = d => d.toISOString().slice(0, 10);
+  const earliestFirst = list => [...list].sort((a, b) => a.date - b.date);
+
+  if (!all.some(r => r.date <= now)) {
+    return { kind: 'release', date: day(earliestFirst(all)[0].date) };
+  }
+  const status = digitalStatusFromReleases(results, now, region);
+  if (status.status === 'upcoming' && status.date) return { kind: 'digital', date: status.date };
+  if (status.status === 'cinema') return { kind: 'cinema', date: null };
+  return null;
+}
+
+/** What a movie is still waiting for (see movieUpcomingFromReleases), by IMDb id. */
+function getMovieUpcoming(imdbId) {
+  return cached(`upmovie:${imdbId}`, async () => {
+    const id = await tmdbMovieId(imdbId);
+    if (!id) return null;
+    const data = await tmdb(`/movie/${id}/release_dates`);
+    return data ? movieUpcomingFromReleases(data.results) : null;
+  });
+}
+
+/**
+ * What a show is still waiting for:
+ *   { kind: 'premiere', date }  first episode not aired yet
+ *   { kind: 'episode', date, label: 'S2E5' }  next episode, when TMDB knows it
+ * or null. Pass the TMDB id when known, otherwise the IMDb id.
+ */
+function getShowUpcoming({ imdbId, tmdbId }) {
+  return cached(`upshow:${tmdbId || imdbId}`, async () => {
+    let id = tmdbId;
+    if (!id && imdbId) {
+      const found = await tmdb(`/find/${imdbId}`, { external_source: 'imdb_id' });
+      id = found && found.tv_results && found.tv_results[0] && found.tv_results[0].id;
+    }
+    if (!id) return null;
+    const show = await tmdb(`/tv/${id}`);
+    if (!show) return null;
+    const today = new Date().toISOString().slice(0, 10);
+    if (show.first_air_date && show.first_air_date > today) {
+      return { kind: 'premiere', date: show.first_air_date };
+    }
+    const next = show.next_episode_to_air;
+    if (next && next.air_date && next.air_date >= today) {
+      return { kind: 'episode', date: next.air_date, label: `S${next.season_number}E${next.episode_number}` };
+    }
+    return null;
+  });
+}
+
+/**
  * Short text for the poster tag, e.g. "DIGITAL", "DIGITAL 12 DEC", "IN CINEMAS".
  */
 function digitalTagText(info, now = new Date()) {
@@ -156,4 +223,4 @@ function digitalTagText(info, now = new Date()) {
   return null;
 }
 
-module.exports = { imdbIdForTmdbShow, getDigitalRelease, newDigitalReleases, digitalStatusFromReleases, digitalTagText, tmdb, cached, imdbIdForTmdb };
+module.exports = { imdbIdForTmdbShow, getMovieUpcoming, getShowUpcoming, movieUpcomingFromReleases, getDigitalRelease, newDigitalReleases, digitalStatusFromReleases, digitalTagText, tmdb, cached, imdbIdForTmdb };

@@ -249,3 +249,13 @@ test('daily import runs at the configured hour', () => {
   assert.strictEqual(msUntilNextRun(3, now), 77 * 60 * 1000);
   assert.strictEqual(msUntilNextRun(1, now), (23 * 60 + 17) * 60 * 1000);
 });
+
+test('upcoming release: only titles that are not out yet get a date', () => {
+  const { movieUpcomingFromReleases } = require('../src/utils/digitalRelease');
+  const now = new Date('2026-11-24');
+  const R = (type, date, country = 'US') => ({ iso_3166_1: country, release_dates: [{ type, release_date: date }] });
+  assert.deepStrictEqual(movieUpcomingFromReleases([R(3, '2026-12-19')], now), { kind: 'release', date: '2026-12-19' });
+  assert.deepStrictEqual(movieUpcomingFromReleases([R(3, '2026-11-01'), R(4, '2026-12-10')], now), { kind: 'digital', date: '2026-12-10' });
+  assert.deepStrictEqual(movieUpcomingFromReleases([R(3, '2026-11-01')], now), { kind: 'cinema', date: null });
+  assert.strictEqual(movieUpcomingFromReleases([R(3, '2020-01-01'), R(4, '2020-03-01')], now), null);
+});
