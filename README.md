@@ -131,6 +131,13 @@ Skips are shared through the server the add-on is installed from. Everyone who u
 * **Series:** skips are stored per episode (`tt0944947:1:2`), because timings differ between episodes.
 * **Abuse limits:** contributions and votes are rate-limited per IP (`CONTRIBUTE_LIMIT_PER_HOUR`, `VOTE_LIMIT_PER_HOUR`). Set `TRUST_PROXY=1` behind a reverse proxy so the limits see real client addresses.
 
+**Importing skips from another CleanStream server.** `scripts/public-cleanstream-import.js` copies the skips from another server (by default the public `cleanstream.elfhosted.com`) as **unconfirmed** skips, leaving out duplicates, broken entries and skips that server's viewers voted down. Run it with `--dry-run` first:
+
+```bash
+docker compose exec cleanstream node scripts/public-cleanstream-import.js --dry-run
+docker compose exec cleanstream node scripts/public-cleanstream-import.js
+```
+
 A self-hosted server starts with the bundled data (376 titles, 1,608 skips) but does not sync with other servers, including the public instance. To pool contributions, a group of people should install the add-on from one shared server.
 
 ## How It Works
