@@ -189,7 +189,9 @@ test('trust rules: new skips are pending until another viewer confirms', () => {
 test('trust rules: votes confirm or reject, and repeat offenders are blocked', () => {
   const trust = require('../src/community/trust');
   assert.strictEqual(trust.statusAfterVotes({ status: 'pending', votes: { up: 2, down: 0 } }), 'approved');
-  assert.strictEqual(trust.statusAfterVotes({ status: 'approved', votes: { up: 0, down: 3 } }), 'rejected');
+  // A confirmed skip reported wrong goes back to unconfirmed; an unconfirmed one is rejected
+  assert.strictEqual(trust.statusAfterVotes({ status: 'approved', votes: { up: 0, down: 3 } }), 'pending');
+  assert.strictEqual(trust.statusAfterVotes({ status: 'pending', votes: { up: 0, down: 3 } }), 'rejected');
   assert.strictEqual(trust.statusAfterVotes({ status: 'pending', votes: { up: 1, down: 1 } }), null);
 
   let c = null;
