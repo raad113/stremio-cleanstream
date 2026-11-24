@@ -92,6 +92,13 @@ model Segment {
   @@index([contributorHash])
 }
 
+// Progress of automatic imports (JSON text), e.g. VideoSkip files already imported
+model ImportState {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
 // Anonymous contributor reputation (hash of IP + browser with a secret salt)
 model Contributor {
   hash      String   @id

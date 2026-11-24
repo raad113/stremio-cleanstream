@@ -191,6 +191,24 @@ function saveContributor(hash, data) {
   return all[hash];
 }
 
+// Progress of automatic imports, keyed by name
+const IMPORT_STATE_FILE = path.join(DATA_DIR, '_import_state.json');
+
+function getImportState(key) {
+  try {
+    return JSON.parse(fs.readFileSync(IMPORT_STATE_FILE, 'utf8'))[key] ?? null;
+  } catch (e) {
+    return null;
+  }
+}
+
+function setImportState(key, value) {
+  let all = {};
+  try { all = JSON.parse(fs.readFileSync(IMPORT_STATE_FILE, 'utf8')); } catch (e) { /* first write */ }
+  all[key] = value;
+  fs.writeFileSync(IMPORT_STATE_FILE, JSON.stringify(all) + '\n');
+}
+
 function listAllFilters() {
   return [...loadIndex().keys()];
 }
@@ -257,6 +275,8 @@ module.exports = {
   listPending,
   getContributor,
   saveContributor,
+  getImportState,
+  setImportState,
   getStats,
   DATA_DIR,
 };

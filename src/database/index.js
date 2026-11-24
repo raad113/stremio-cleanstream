@@ -32,6 +32,8 @@ module.exports = {
   listPending: repository.listPending,
   getContributor: repository.getContributor,
   saveContributor: repository.saveContributor,
+  getImportState: repository.getImportState,
+  setImportState: repository.setImportState,
   listTitles: repository.listTitles,
   searchTitles: repository.searchTitles,
   bulkImportSegments: repository.bulkImportSegments,

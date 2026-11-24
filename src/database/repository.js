@@ -323,6 +323,19 @@ async function saveContributor(hash, data) {
   });
 }
 
+/** Progress of automatic imports (any JSON value), keyed by name. */
+async function getImportState(key) {
+  if (!isPostgresAvailable()) return jsonDb.getImportState(key);
+  const row = await getClient().importState.findUnique({ where: { key } });
+  return row ? JSON.parse(row.value) : null;
+}
+
+async function setImportState(key, value) {
+  if (!isPostgresAvailable()) return jsonDb.setImportState(key, value);
+  const text = JSON.stringify(value);
+  await getClient().importState.upsert({ where: { key }, update: { value: text }, create: { key, value: text } });
+}
+
 /**
  * Delete a segment
  */
@@ -521,6 +534,8 @@ module.exports = {
   listPending,
   getContributor,
   saveContributor,
+  getImportState,
+  setImportState,
   isValidContentId: jsonDb.isValidContentId,
   isPostgresAvailable,
   getOrCreateTitle,

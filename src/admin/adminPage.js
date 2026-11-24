@@ -74,7 +74,8 @@ const ADMIN_PAGE = `<!DOCTYPE html>
           '<p>' + fmt(s.startMs) + ' – ' + fmt(s.endMs) + ' (' + Math.round((s.endMs - s.startMs) / 1000) + ' s) · ' + esc(s.category) + ' · ' + esc(s.severity) +
           (s.comment ? ' · “' + esc(s.comment) + '”' : '') + '</p>' +
           '<p class="meta">Votes: 👍 ' + (s.votes?.up || 0) + ' · 👎 ' + (s.votes?.down || 0) +
-          ' — contributor ' + esc(c.id || 'unknown') + ': ' + c.approved + ' confirmed, ' + c.rejected + ' rejected' + (c.blocked ? ' (blocked)' : '') + '</p>' +
+          (c.id ? ' — viewer ' + esc(c.id) + ': ' + c.approved + ' confirmed, ' + c.rejected + ' rejected' + (c.blocked ? ' (blocked)' : '')
+                : ' — imported from ' + esc(s.contributor || 'another source')) + '</p>' +
           '<div class="row"><span></span><span>' +
           '<button class="ok" data-action="approve">Approve</button> ' +
           '<button class="bad" data-action="reject">Reject</button> ' +

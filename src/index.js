@@ -483,6 +483,9 @@ async function startServer() {
     console.warn('ℹ️  No TMDB_API_KEY set: posters fall back to Stremio images, and digital release tags and Discover rows are off');
   }
 
+  // Daily VideoSkip / weekly public CleanStream imports (as unconfirmed skips)
+  require('./community/dailyImport').startDailyImport();
+
   app.listen(PORT, () => {
     console.log('');
     console.log('🎬 CleanStream - Stremio Addon');

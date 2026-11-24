@@ -196,3 +196,54 @@ test('trust rules: votes confirm or reject, and repeat offenders are blocked', (
   for (let i = 0; i < 5; i++) c = trust.contributorAfterDecision(c, 'rejected');
   assert.strictEqual(c.blocked, true);
 });
+
+test('VideoSkip .skp files are converted to CleanStream skips', () => {
+  const { parseSkp } = require('../src/importers/videoskip');
+  const sample = `-1:59:59.95
+nudity video 3 (naked breasts)0:36:21.23
+
+0:35:30.95 --> 0:35:55.71
+nudity video 3 (naked breasts)0:36:21.23
+
+0:40:05.09 --> 0:40:21.62
+sex 2 (passionate kissing)
+
+0:50:00.00 --> 0:50:01.50
+profane word 2 (f-word)
+
+1:01:02.04
+Bill Murray's hand comes onto the screen from the right side.
+
+1:10:00.00 --> 1:10:05.00
+logo wave (screenshot note)
+`;
+  const segs = parseSkp(sample);
+  assert.strictEqual(segs.length, 3);
+  assert.deepStrictEqual(segs[0], {
+    startMs: 2130950, endMs: 2155710, category: 'nudity', subcategory: 'nudity',
+    severity: 'high', channel: 'both', comment: 'naked breasts',
+  });
+  assert.strictEqual(segs[1].category, 'sex');
+  assert.strictEqual(segs[1].severity, 'medium');
+  assert.strictEqual(segs[2].category, 'language');
+  assert.strictEqual(segs[2].channel, 'audio');
+});
+
+test('VideoSkip parser reads every bundled .skp file without errors', () => {
+  const fs = require('fs');
+  const path = require('path');
+  const { parseSkp } = require('../src/importers/videoskip');
+  const dir = path.join(__dirname, '../data/videoskip-imports');
+  let total = 0;
+  for (const f of fs.readdirSync(dir).filter(n => n.endsWith('.skp'))) {
+    total += parseSkp(fs.readFileSync(path.join(dir, f), 'utf8')).length;
+  }
+  assert.ok(total > 1000, `expected many skips from bundled files, got ${total}`);
+});
+
+test('daily import runs at the configured hour', () => {
+  const { msUntilNextRun } = require('../src/community/dailyImport');
+  const now = new Date('2026-11-24T02:00:00Z');
+  assert.strictEqual(msUntilNextRun(3, now), 77 * 60 * 1000);
+  assert.strictEqual(msUntilNextRun(1, now), (23 * 60 + 17) * 60 * 1000);
+});

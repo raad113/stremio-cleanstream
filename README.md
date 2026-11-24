@@ -131,6 +131,15 @@ Skips are shared through the server the add-on is installed from. Everyone who u
 * **Series:** skips are stored per episode (`tt0944947:1:2`), because timings differ between episodes.
 * **Abuse limits:** contributions and votes are rate-limited per IP (`CONTRIBUTE_LIMIT_PER_HOUR`, `VOTE_LIMIT_PER_HOUR`). Set `TRUST_PROXY=1` behind a reverse proxy so the limits see real client addresses.
 
+**Automatic imports.** Once a day the server checks the [VideoSkip](https://videoskip.org) exchange for newly shared skip files (films, and episodes when `TMDB_API_KEY` is set), and every Sunday the public CleanStream server for new skips. Everything imported is saved as **unconfirmed**, leaving out duplicates. Set `DAILY_IMPORT=off` to stop this, or `DAILY_IMPORT_HOUR_UTC` to change the hour (default 3). Run the VideoSkip import by hand with:
+
+```bash
+docker compose exec cleanstream node scripts/videoskip-import.js --dry-run
+docker compose exec cleanstream node scripts/videoskip-import.js
+```
+
+Viewers' own skips need no schedule: apps load the latest skips each time a title starts playing.
+
 **Importing skips from another CleanStream server.** `scripts/public-cleanstream-import.js` copies the skips from another server (by default the public `cleanstream.elfhosted.com`) as **unconfirmed** skips, leaving out duplicates, broken entries and skips that server's viewers voted down. Run it with `--dry-run` first:
 
 ```bash
@@ -194,6 +203,8 @@ This runs with JSON file storage (no database required).
 | `CLEANSTREAM_DATA_DIR` | Folder for JSON storage | `data/filters` |
 | `TRUST_PROXY` | Express `trust proxy` setting, e.g. `1` behind one proxy | (off) |
 | `CLEANSTREAM_VOTE_SALT` | Secret salt for anonymous voter ids (set a long random value) | random at each start |
+| `DAILY_IMPORT` | `off` stops the automatic VideoSkip / CleanStream imports | `on` |
+| `DAILY_IMPORT_HOUR_UTC` | Hour (UTC) of the automatic imports | `3` |
 | `ADMIN_TOKEN` | Password for the moderation page `/admin` (16+ characters) | (admin off) |
 | `CONTRIBUTE_LIMIT_PER_HOUR` | Contributions per IP per hour | `60` |
 | `VOTE_LIMIT_PER_HOUR` | Votes per IP per hour | `300` |
