@@ -5,6 +5,7 @@
 
 const db = require('../database');
 const { CATEGORIES } = require('./mcf');
+const { statusOf } = require('../community/trust');
 
 // A segment is hidden once the community has clearly rejected it:
 // at least this many more downvotes than upvotes.
@@ -43,7 +44,7 @@ function meetsFilterLevel(severity, userLevel) {
  * @param {object} userConfig - User's filter preferences
  * @returns {array} Array of skip segments
  */
-async function generateSkips(imdbId, userConfig = {}) {
+async function generateSkips(imdbId, userConfig = {}, { requesterHash = null } = {}) {
   const filterData = await db.getFilters(imdbId);
   
   if (!filterData || !filterData.segments || filterData.segments.length === 0) {
@@ -75,6 +76,14 @@ async function generateSkips(imdbId, userConfig = {}) {
     if (isDisputed(segment)) {
       continue;
     }
+
+    // Only confirmed skips apply automatically; a viewer's own pending skips
+    // also apply for that viewer. Others' pending skips are offered as prompts.
+    const status = statusOf(segment);
+    const ownPending = status === 'pending' && requesterHash && segment.contributorHash === requesterHash;
+    if (status !== 'approved' && !ownPending) {
+      continue;
+    }
     
     // Skip if user hasn't enabled this category
     if (!userThreshold || userThreshold === 'off') {
@@ -101,6 +110,32 @@ async function generateSkips(imdbId, userConfig = {}) {
   
   // Sort by start time and merge overlapping segments
   return mergeOverlappingSkips(skips.sort((a, b) => a.startMs - b.startMs));
+}
+
+/**
+ * Other viewers' pending (unconfirmed) skips that match the user's filters.
+ * They are not merged, so each can be confirmed or rejected on its own.
+ */
+async function generatePendingSkips(imdbId, userConfig = {}, { requesterHash = null } = {}) {
+  const filterData = await db.getFilters(imdbId);
+  if (!filterData || !filterData.segments) return [];
+  return filterData.segments
+    .filter(seg => statusOf(seg) === 'pending' && !isDisputed(seg))
+    .filter(seg => !requesterHash || seg.contributorHash !== requesterHash)
+    .filter(seg => meetsFilterLevel(seg.severity, userConfig[seg.category]))
+    .sort((a, b) => a.startMs - b.startMs)
+    .map(seg => ({
+      id: seg.id,
+      startMs: seg.startMs,
+      endMs: seg.endMs,
+      duration: seg.endMs - seg.startMs,
+      category: seg.category,
+      severity: seg.severity,
+      channel: seg.channel || 'both',
+      sourceIds: [seg.id],
+      description: seg.comment || generateDescription(seg.category, seg.severity),
+      votes: seg.votes || { up: 0, down: 0 },
+    }));
 }
 
 /**
@@ -224,6 +259,7 @@ function formatVTTTimestamp(ms) {
 
 module.exports = {
   generateSkips,
+  generatePendingSkips,
   generateSkipVTT,
   generateSkipJSON,
   mergeOverlappingSkips,

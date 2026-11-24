@@ -36,7 +36,8 @@ function loadIndex() {
   if (index) return index;
   index = new Map();
   for (const file of fs.readdirSync(DATA_DIR)) {
-    if (!file.endsWith('.json')) continue;
+    // Files starting with "_" hold other data (for example contributors)
+    if (!file.endsWith('.json') || file.startsWith('_')) continue;
     try {
       const data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, file), 'utf8'));
       if (data && data.imdbId) index.set(data.imdbId, data);
@@ -97,6 +98,7 @@ function addSegment(imdbId, segment) {
     addedAt: new Date().toISOString(),
     votes: { up: 0, down: 0 },
     verified: false,
+    status: clean.status || 'approved',
   };
 
   if (!filterData.title && titleName) filterData.title = titleName;
@@ -136,6 +138,57 @@ function voteSegment(imdbId, segmentId, voteType, visitorId) {
   filterData.updatedAt = new Date().toISOString();
   saveFilters(imdbId, filterData);
   return { success: true, changed: Boolean(previous) };
+}
+
+/**
+ * Change a segment's status ("pending", "approved" or "rejected").
+ */
+function setSegmentStatus(imdbId, segmentId, status) {
+  const filterData = getFilters(imdbId);
+  const segment = filterData && filterData.segments.find(s => s.id === segmentId);
+  if (!segment) return false;
+  segment.status = status;
+  filterData.updatedAt = new Date().toISOString();
+  saveFilters(imdbId, filterData);
+  return true;
+}
+
+/** Pending segments across all titles, newest first. */
+function listPending({ limit = 100 } = {}) {
+  const out = [];
+  for (const t of loadIndex().values()) {
+    for (const s of t.segments || []) {
+      if (s.status === 'pending') out.push({ imdbId: t.imdbId, title: t.title, segment: s });
+    }
+  }
+  out.sort((a, b) => String(b.segment.addedAt || '').localeCompare(String(a.segment.addedAt || '')));
+  return out.slice(0, limit);
+}
+
+// Contributor reputation, keyed by anonymous hash
+const CONTRIBUTORS_FILE = path.join(DATA_DIR, '_contributors.json');
+let contributors = null;
+
+function loadContributors() {
+  if (contributors) return contributors;
+  try {
+    contributors = JSON.parse(fs.readFileSync(CONTRIBUTORS_FILE, 'utf8'));
+  } catch (e) {
+    contributors = {};
+  }
+  return contributors;
+}
+
+function getContributor(hash) {
+  return hash ? loadContributors()[hash] || null : null;
+}
+
+function saveContributor(hash, data) {
+  if (!hash) return null;
+  const all = loadContributors();
+  all[hash] = { ...all[hash], ...data, updatedAt: new Date().toISOString() };
+  fs.writeFileSync(CONTRIBUTORS_FILE, JSON.stringify(all, null, 2) + '\n');
+  return all[hash];
 }
 
 function listAllFilters() {
@@ -200,6 +253,10 @@ module.exports = {
   listTitles,
   searchTitles,
   voteSegment,
+  setSegmentStatus,
+  listPending,
+  getContributor,
+  saveContributor,
   getStats,
   DATA_DIR,
 };

@@ -79,6 +79,15 @@ function sendSkipper(req, res) {
 app.get('/skipper/cleanstream.user.js', sendSkipper);
 
 /**
+ * Moderation page for unconfirmed skips (needs ADMIN_TOKEN).
+ */
+const { ADMIN_PAGE } = require('./admin/adminPage');
+app.get('/admin', (req, res) => {
+  res.setHeader('X-Robots-Tag', 'noindex');
+  res.send(ADMIN_PAGE);
+});
+
+/**
  * Ready-made Nuvio collection (Settings > Collections > Import > URL).
  */
 const { buildCollection } = require('./collection/buildCollection');

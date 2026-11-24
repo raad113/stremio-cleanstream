@@ -61,8 +61,12 @@ model Segment {
   comment     String?
   
   // Contribution tracking
-  contributor   String   @default("anonymous")
-  contributorIp String?
+  contributor     String   @default("anonymous")
+  contributorIp   String?
+  contributorHash String?  // anonymous salted hash of the contributing device
+
+  // Community trust: "pending" until confirmed, then "approved"; "rejected" is hidden
+  status      String   @default("approved")
   
   // Community voting
   upvotes     Int      @default(0)
@@ -84,6 +88,18 @@ model Segment {
   @@index([titleId])
   @@index([category])
   @@index([verified])
+  @@index([status])
+  @@index([contributorHash])
+}
+
+// Anonymous contributor reputation (hash of IP + browser with a secret salt)
+model Contributor {
+  hash      String   @id
+  approved  Int      @default(0)
+  rejected  Int      @default(0)
+  blocked   Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 enum Category {

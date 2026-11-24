@@ -7,7 +7,8 @@ const crypto = require('crypto');
 const express = require('express');
 const db = require('../database');
 const cache = require('../cache');
-const { generateSkips, generateSkipVTT, generateSkipJSON } = require('../utils/skipGenerator');
+const { generateSkips, generatePendingSkips, generateSkipVTT, generateSkipJSON } = require('../utils/skipGenerator');
+const trust = require('../community/trust');
 const { parseMCF, generateMCF, mcfToDBSegments, dbToMCFSegments } = require('../utils/mcf');
 
 const router = express.Router();
@@ -82,6 +83,39 @@ function rateLimit({ windowMs, max }) {
 
 const contributeLimiter = rateLimit({ windowMs: 60 * 60 * 1000, max: Number(process.env.CONTRIBUTE_LIMIT_PER_HOUR) || 60 });
 const voteLimiter = rateLimit({ windowMs: 60 * 60 * 1000, max: Number(process.env.VOTE_LIMIT_PER_HOUR) || 300 });
+
+/**
+ * Admin access: Authorization: Bearer <ADMIN_TOKEN>. Disabled when ADMIN_TOKEN is not set.
+ */
+function requireAdmin(req, res, next) {
+  const token = process.env.ADMIN_TOKEN || '';
+  const given = (req.get('authorization') || '').replace(/^Bearer\s+/i, '');
+  const ok = token.length >= 16 && given.length === token.length &&
+    crypto.timingSafeEqual(Buffer.from(given), Buffer.from(token));
+  if (!ok) return res.status(401).json({ error: 'Admin token required' });
+  next();
+}
+
+/**
+ * Record that one of a contributor's skips was approved or rejected.
+ */
+async function creditContributor(hash, newStatus) {
+  if (!hash) return;
+  const current = await db.getContributor(hash);
+  await db.saveContributor(hash, trust.contributorAfterDecision(current, newStatus));
+}
+
+/**
+ * Change a segment's status and update its contributor's reputation.
+ */
+async function decideSegment(imdbId, segment, newStatus) {
+  if (trust.statusOf(segment) === newStatus) return;
+  await db.setSegmentStatus(imdbId, segment.id, newStatus);
+  await creditContributor(segment.contributorHash, newStatus);
+}
+
+/** Public copy of a segment: never reveal who contributed it. */
+const publicSegment = ({ contributorHash, voters, ...seg }) => seg;
 
 /**
  * Reject malformed ids early (also protects the JSON file storage).
@@ -186,7 +220,7 @@ router.get('/filters/:imdbId', async (req, res) => {
     if (!filterData) {
       return res.status(404).json({ error: 'No filter data found for this ID' });
     }
-    res.json(filterData);
+    res.json({ ...filterData, segments: filterData.segments.map(publicSegment) });
   } catch (error) {
     res.status(500).json({ error: 'Failed to get filter data' });
   }
@@ -196,9 +230,18 @@ async function sendSkipJSON(req, res) {
   try {
     const { imdbId } = req.params;
     const config = parseConfig(req.query);
-    const [skips, filterData] = await Promise.all([generateSkips(imdbId, config), db.getFilters(imdbId)]);
+    const requesterHash = visitorIdFor(req);
+    const [skips, filterData] = await Promise.all([
+      generateSkips(imdbId, config, { requesterHash }),
+      db.getFilters(imdbId),
+    ]);
     const metadata = filterData ? { title: filterData.title, year: filterData.year, type: filterData.type } : {};
-    res.json(generateSkipJSON(skips, imdbId, metadata));
+    const body = generateSkipJSON(skips, imdbId, metadata);
+    // ?pending=1 adds other viewers' unconfirmed skips, for "Skip / Not a scene" prompts
+    if (req.query.pending === '1') {
+      body.pending = await generatePendingSkips(imdbId, config, { requesterHash });
+    }
+    res.json(body);
   } catch (error) {
     res.status(500).json({ error: 'Failed to generate skips' });
   }
@@ -257,9 +300,34 @@ router.post('/contribute/:imdbId', contributeLimiter, express.json({ limit: '10k
   }
 
   try {
-    const saved = await db.addSegment(req.params.imdbId, segment);
-    await cache.invalidateTitle?.(req.params.imdbId);
-    res.status(201).json({ message: 'Segment added successfully', segment: saved });
+    const { imdbId } = req.params;
+    const contributorHash = visitorIdFor(req);
+    const [contributor, filterData] = await Promise.all([db.getContributor(contributorHash), db.getFilters(imdbId)]);
+    const existing = filterData ? filterData.segments : [];
+    const candidate = { ...segment, contributorHash };
+
+    const limitError = trust.checkLimits(candidate, contributor, existing);
+    if (limitError) {
+      return res.status(contributor && contributor.blocked ? 403 : 400).json({ error: limitError });
+    }
+
+    const { status, corroborates } = trust.decideNewStatus(candidate, contributor, existing);
+    const saved = await db.addSegment(imdbId, { ...candidate, status });
+
+    // A matching mark from another viewer confirms both
+    for (const other of corroborates) {
+      await decideSegment(imdbId, other, 'approved');
+    }
+    if (corroborates.length > 0) await creditContributor(contributorHash, 'approved');
+    await cache.invalidateTitle?.(imdbId);
+
+    res.status(201).json({
+      message: status === 'approved'
+        ? 'Skip added and applied for everyone'
+        : 'Skip added. It applies to you now and to everyone once another viewer confirms it',
+      status,
+      segment: publicSegment(saved),
+    });
   } catch (err) {
     console.error('[API] Contribution failed:', err.message);
     res.status(500).json({ error: 'Failed to save segment' });
@@ -270,7 +338,7 @@ router.post('/contribute/:imdbId', contributeLimiter, express.json({ limit: '10k
  * POST /api/contribute/:imdbId/mcf
  * Bulk import a MovieContentFilter (MCF) file.
  */
-router.post('/contribute/:imdbId/mcf', contributeLimiter, express.text({ type: '*/*', limit: '200kb' }), async (req, res) => {
+router.post('/contribute/:imdbId/mcf', requireAdmin, express.text({ type: '*/*', limit: '200kb' }), async (req, res) => {
   const { imdbId } = req.params;
 
   let mcfData;
@@ -319,15 +387,32 @@ router.post('/vote/:imdbId/:segmentId', voteLimiter, express.json({ limit: '1kb'
   }
 
   try {
-    const result = await db.voteSegment(imdbId, segmentId, vote, visitorIdFor(req));
+    const visitorId = visitorIdFor(req);
+    const before = await db.getFilters(imdbId);
+    const target = before && before.segments.find(s => s.id === segmentId);
+    if (!target) {
+      return res.status(404).json({ error: 'Segment not found' });
+    }
+    if (target.contributorHash && target.contributorHash === visitorId) {
+      return res.status(403).json({ error: 'You cannot vote on your own skip' });
+    }
+
+    const result = await db.voteSegment(imdbId, segmentId, vote, visitorId);
     if (result.reason === 'not_found') {
       return res.status(404).json({ error: 'Segment not found' });
     }
     if (result.reason === 'already_voted') {
       return res.status(409).json({ error: 'You already voted on this segment' });
     }
+
+    // Votes can confirm a pending skip or hide a wrong one
+    const after = await db.getFilters(imdbId);
+    const updated = after && after.segments.find(s => s.id === segmentId);
+    const newStatus = updated && trust.statusAfterVotes(updated);
+    if (newStatus) await decideSegment(imdbId, updated, newStatus);
+
     await cache.invalidateTitle?.(imdbId);
-    res.json({ message: result.changed ? 'Vote changed' : 'Vote recorded' });
+    res.json({ message: result.changed ? 'Vote changed' : 'Vote recorded', status: newStatus || trust.statusOf(updated || target) });
   } catch (err) {
     console.error('[API] Vote failed:', err.message);
     res.status(500).json({ error: 'Failed to record vote' });
@@ -351,6 +436,50 @@ router.put('/filters/:imdbId/metadata', contributeLimiter, express.json({ limit:
   } catch (err) {
     res.status(500).json({ error: 'Failed to update metadata' });
   }
+});
+
+/* ------------------------------------------------------------------ */
+/* Admin (moderation)                                                  */
+/* ------------------------------------------------------------------ */
+
+/** GET /api/admin/pending: unconfirmed skips, newest first, with contributor standing. */
+router.get('/admin/pending', requireAdmin, async (req, res) => {
+  const items = await db.listPending({ limit: Math.min(Number(req.query.limit) || 100, 500) });
+  const withStanding = await Promise.all(items.map(async item => {
+    const c = await db.getContributor(item.segment.contributorHash);
+    return {
+      imdbId: item.imdbId,
+      title: item.title,
+      segment: publicSegment(item.segment),
+      contributor: {
+        id: (item.segment.contributorHash || '').slice(0, 8) || null,
+        approved: c?.approved || 0,
+        rejected: c?.rejected || 0,
+        blocked: !!c?.blocked,
+      },
+    };
+  }));
+  res.json({ count: withStanding.length, items: withStanding });
+});
+
+/** POST /api/admin/segments/:imdbId/:segmentId  body: { action: "approve" | "reject" | "block" } */
+router.post('/admin/segments/:imdbId/:segmentId', requireAdmin, express.json({ limit: '1kb' }), async (req, res) => {
+  const { imdbId, segmentId } = req.params;
+  const { action } = req.body || {};
+  if (!['approve', 'reject', 'block'].includes(action)) {
+    return res.status(400).json({ error: 'action must be approve, reject or block' });
+  }
+  const filterData = await db.getFilters(imdbId);
+  const segment = filterData && filterData.segments.find(s => s.id === segmentId);
+  if (!segment) return res.status(404).json({ error: 'Segment not found' });
+
+  await decideSegment(imdbId, segment, action === 'approve' ? 'approved' : 'rejected');
+  if (action === 'block' && segment.contributorHash) {
+    const c = await db.getContributor(segment.contributorHash);
+    await db.saveContributor(segment.contributorHash, { approved: 0, rejected: 0, ...c, blocked: true });
+  }
+  await cache.invalidateTitle?.(imdbId);
+  res.json({ message: `Done: ${action}` });
 });
 
 module.exports = router;

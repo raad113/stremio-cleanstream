@@ -101,6 +101,8 @@ async function getFilters(imdbId) {
       channel: seg.channel,
       comment: seg.comment,
       contributor: seg.contributor,
+      contributorHash: seg.contributorHash,
+      status: seg.status,
       votes: { up: seg.upvotes, down: seg.downvotes },
       verified: seg.verified,
       createdAt: seg.createdAt,
@@ -139,7 +141,8 @@ async function addSegment(imdbId, segmentData) {
       channel: segmentData.channel || 'both',
       comment: segmentData.comment,
       contributor: segmentData.contributor || 'anonymous',
-      contributorIp: segmentData.contributorIp,
+      contributorHash: segmentData.contributorHash || null,
+      status: segmentData.status || 'approved',
     },
   });
   
@@ -153,6 +156,7 @@ async function addSegment(imdbId, segmentData) {
     channel: segment.channel,
     comment: segment.comment,
     contributor: segment.contributor,
+    status: segment.status,
     votes: { up: 0, down: 0 },
     createdAt: segment.createdAt,
   };
@@ -265,6 +269,58 @@ async function voteSegment(imdbId, segmentId, voteType, visitorId) {
   ]);
   
   return { success: true };
+}
+
+/**
+ * Change a segment's status ("pending", "approved" or "rejected").
+ */
+async function setSegmentStatus(imdbId, segmentId, status) {
+  if (!isPostgresAvailable()) return jsonDb.setSegmentStatus(imdbId, segmentId, status);
+  const prisma = getClient();
+  const result = await prisma.segment.updateMany({
+    where: { id: segmentId, title: { imdbId } },
+    data: { status },
+  });
+  return result.count > 0;
+}
+
+/** Pending segments across all titles, newest first (for the admin page). */
+async function listPending({ limit = 100 } = {}) {
+  if (!isPostgresAvailable()) return jsonDb.listPending({ limit });
+  const prisma = getClient();
+  const rows = await prisma.segment.findMany({
+    where: { status: 'pending' },
+    orderBy: { createdAt: 'desc' },
+    take: limit,
+    include: { title: { select: { imdbId: true, title: true } } },
+  });
+  return rows.map(seg => ({
+    imdbId: seg.title.imdbId,
+    title: seg.title.title,
+    segment: {
+      id: seg.id, startMs: seg.startMs, endMs: seg.endMs, category: seg.category,
+      severity: seg.severity, channel: seg.channel, comment: seg.comment,
+      contributorHash: seg.contributorHash, status: seg.status,
+      votes: { up: seg.upvotes, down: seg.downvotes }, addedAt: seg.createdAt,
+    },
+  }));
+}
+
+async function getContributor(hash) {
+  if (!hash) return null;
+  if (!isPostgresAvailable()) return jsonDb.getContributor(hash);
+  return getClient().contributor.findUnique({ where: { hash } });
+}
+
+async function saveContributor(hash, data) {
+  if (!hash) return null;
+  if (!isPostgresAvailable()) return jsonDb.saveContributor(hash, data);
+  const { approved = 0, rejected = 0, blocked = false } = data;
+  return getClient().contributor.upsert({
+    where: { hash },
+    update: { approved, rejected, blocked },
+    create: { hash, approved, rejected, blocked },
+  });
 }
 
 /**
@@ -461,6 +517,10 @@ async function bulkImportSegments(imdbId, segments, metadata = {}) {
 }
 
 module.exports = {
+  setSegmentStatus,
+  listPending,
+  getContributor,
+  saveContributor,
   isValidContentId: jsonDb.isValidContentId,
   isPostgresAvailable,
   getOrCreateTitle,

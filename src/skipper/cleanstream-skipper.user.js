@@ -109,6 +109,9 @@
   const state = {
     contentId: null,
     skips: [],
+    pending: [],            // other viewers' unconfirmed skips, shown as prompts
+    answered: new Set(),    // pending skips this viewer already answered
+    promptedFor: null,
     loading: false,
     enabled: store.get('enabled', true),
     config: Object.assign({}, DEFAULT_CONFIG, store.get('config', {})),
@@ -147,14 +150,17 @@
   async function loadSkips(id) {
     state.loading = true;
     state.skips = [];
+    state.pending = [];
+    state.answered.clear();
     state.allowed.clear();
     state.offsetMs = store.get('offset:' + id, 0);
     renderBadge();
     try {
       const query = encodeURIComponent(JSON.stringify(state.config));
-      const res = await request('GET', `/api/skips/${encodeURIComponent(id)}?config=${query}`);
+      const res = await request('GET', `/api/skips/${encodeURIComponent(id)}?pending=1&config=${query}`);
       if (id !== state.contentId) return; // the viewer moved on meanwhile
       state.skips = res.ok && res.data ? res.data.skips || [] : [];
+      state.pending = res.ok && res.data ? res.data.pending || [] : [];
     } catch (e) {
       toast('CleanStream: could not reach the server (' + e.message + ')');
     } finally {
@@ -178,7 +184,7 @@
     }
     renderQuickButton();
     // Pause auto-skip while the viewer is timing a scene, so the end mark is right
-    if (!id || !state.enabled || state.formOpen || quick.startMs !== null || state.skips.length === 0) return;
+    if (!id || !state.enabled || state.formOpen || quick.startMs !== null || (state.skips.length === 0 && state.pending.length === 0)) return;
 
     const video = findVideo();
     if (!video || video.seeking || !(video.duration > 0)) return;
@@ -191,7 +197,10 @@
       video.muted = false;
       state.mutedBySkip = null;
     }
-    if (!active) return;
+    if (!active) {
+      promptForPending(video, nowMs);
+      return;
+    }
 
     if (active.channel === 'audio') {
       if (state.mutedBySkip === null) {
@@ -290,6 +299,32 @@
     toastNode = el('div', { className: 'cs-toast' }, children);
     document.body.appendChild(toastNode);
     toastTimer = setTimeout(() => { if (toastNode) toastNode.remove(); toastNode = null; }, skip ? 7000 : 4000);
+  }
+
+  /**
+   * Unconfirmed skips from other viewers are never skipped silently. When one
+   * starts, ask: "Skip" confirms it (and skips), "Not a scene" rejects it.
+   */
+  function promptForPending(video, nowMs) {
+    const p = state.pending.find(s => nowMs >= s.startMs && nowMs < s.endMs - 250 && !state.answered.has(s.id));
+    if (!p || state.promptedFor === p.id) return;
+    state.promptedFor = p.id;
+    if (toastNode) toastNode.remove();
+    clearTimeout(toastTimer);
+    const answer = async (vote, skipIt) => {
+      state.answered.add(p.id);
+      if (toastNode) { toastNode.remove(); toastNode = null; }
+      if (skipIt) video.currentTime = (p.endMs + state.offsetMs) / 1000 + 0.05;
+      try { await request('POST', `/api/vote/${encodeURIComponent(state.contentId)}/${encodeURIComponent(p.id)}`, { vote }); } catch (e) { /* offline: answer still applied locally */ }
+      toast(vote === 'up' ? 'Thanks, skip confirmed.' : 'Thanks, marked as not a scene.');
+    };
+    toastNode = el('div', { className: 'cs-toast' }, [
+      el('span', { textContent: `A viewer marked this as ${p.description} (unconfirmed)` }),
+      el('button', { textContent: 'Skip', title: 'Skip it and confirm the scene', onclick: () => answer('up', true) }),
+      el('button', { textContent: 'Not a scene', title: 'Keep watching and report the mark as wrong', onclick: () => answer('down', false) }),
+    ]);
+    document.body.appendChild(toastNode);
+    toastTimer = setTimeout(() => { if (toastNode) toastNode.remove(); toastNode = null; }, Math.min(p.duration, 15000));
   }
 
   function undoSkip(skip) {
@@ -404,7 +439,9 @@
           });
           if (!res.ok) throw new Error((res.data && res.data.error) || 'HTTP ' + res.status);
           closePanel();
-          toast('Thank you! Your skip is now shared with other viewers.');
+          toast(res.data && res.data.status === 'approved'
+            ? 'Thank you! Your skip now applies for everyone.'
+            : 'Thank you! It applies for you now, and for everyone once another viewer confirms it.');
           loadSkips(state.contentId);
         } catch (err) {
           submit.disabled = false;
@@ -525,7 +562,9 @@
         title: document.title.replace(/\s*[-|]\s*Stremio.*$/i, '') || undefined,
       });
       if (!res.ok) throw new Error((res.data && res.data.error) || 'HTTP ' + res.status);
-      toast(`Shared ✓  ${formatClock(startMs)} – ${formatClock(endMs)}. Thank you!`);
+      toast(res.data && res.data.status === 'approved'
+        ? `Shared ✓  ${formatClock(startMs)} – ${formatClock(endMs)}. It now applies for everyone.`
+        : `Shared ✓  ${formatClock(startMs)} – ${formatClock(endMs)}. It applies for you now, and for everyone once another viewer confirms it.`);
       if (contentId === state.contentId) loadSkips(contentId);
     } catch (err) {
       toast('Could not share the scene: ' + err.message);

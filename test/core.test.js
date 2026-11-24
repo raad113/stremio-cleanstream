@@ -156,3 +156,43 @@ test('ready-made collection passes the same checks as Nuvio import', () => {
   const json = JSON.stringify(collections);
   assert.ok(!/erotic/i.test(json), 'adult list must not be included');
 });
+
+test('trust rules: new skips are pending until another viewer confirms', () => {
+  const trust = require('../src/community/trust');
+  const mine = { startMs: 60000, endMs: 90000, category: 'sex', contributorHash: 'A' };
+
+  // A first-time contributor's skip waits for confirmation
+  assert.strictEqual(trust.decideNewStatus(mine, null, []).status, 'pending');
+
+  // A matching mark by someone else confirms both
+  const theirs = { id: 's1', startMs: 62000, endMs: 91000, category: 'sex', contributorHash: 'B', status: 'pending' };
+  const d = trust.decideNewStatus(mine, null, [theirs]);
+  assert.strictEqual(d.status, 'approved');
+  assert.deepStrictEqual(d.corroborates.map(s => s.id), ['s1']);
+
+  // The same person marking twice does not confirm their own skip
+  assert.strictEqual(trust.decideNewStatus(mine, null, [{ ...theirs, contributorHash: 'A' }]).status, 'pending');
+
+  // Stretching a short real scene into a long cut does not count as a match
+  const stretched = { startMs: 0, endMs: 240000, category: 'sex', contributorHash: 'C' };
+  assert.strictEqual(trust.decideNewStatus(stretched, null, [theirs]).status, 'pending');
+
+  // Trusted contributors apply straight away; blocked ones are refused
+  assert.strictEqual(trust.decideNewStatus(mine, { approved: 5, rejected: 0 }, []).status, 'approved');
+  assert.ok(trust.checkLimits(mine, { blocked: true }, []));
+
+  // Limits: new contributors max 4 minutes per skip
+  assert.ok(trust.checkLimits({ ...mine, endMs: 60000 + 5 * 60000 }, null, []));
+  assert.strictEqual(trust.checkLimits(mine, null, []), null);
+});
+
+test('trust rules: votes confirm or reject, and repeat offenders are blocked', () => {
+  const trust = require('../src/community/trust');
+  assert.strictEqual(trust.statusAfterVotes({ status: 'pending', votes: { up: 2, down: 0 } }), 'approved');
+  assert.strictEqual(trust.statusAfterVotes({ status: 'approved', votes: { up: 0, down: 3 } }), 'rejected');
+  assert.strictEqual(trust.statusAfterVotes({ status: 'pending', votes: { up: 1, down: 1 } }), null);
+
+  let c = null;
+  for (let i = 0; i < 5; i++) c = trust.contributorAfterDecision(c, 'rejected');
+  assert.strictEqual(c.blocked, true);
+});

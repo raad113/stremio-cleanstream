@@ -121,8 +121,13 @@ NuvioTV has built-in skipping for intros and credits, but its skip sources (Intr
 
 Skips are shared through the server the add-on is installed from. Everyone who uses the same server sees the same data.
 
-* **Adding skips:** use the ♥ button (two clicks) or `Alt+S` / `Alt+E` in Stremio Web, the `npm run contribute` CLI, or `POST /api/contribute/:id`. A new skip is served to everyone straight away.
-* **Voting:** each viewer gets one vote per skip (stored as an anonymous salted hash, never the IP address). A skip with three more 👎 than 👍 stops being served.
+* **Adding skips:** use the ♥ button (two clicks), `Alt+S` / `Alt+E` in Stremio Web, the remote button in NuvioTv-Family, or `POST /api/contribute/:id`.
+* **New skips start as "pending".** They apply straight away for the person who made them, but are never skipped silently for anyone else. Other viewers see a prompt instead: *"A viewer marked this as kissing (unconfirmed): Skip / Not a scene"*.
+* **Confirmation.** A pending skip goes live for everyone when a different viewer marks the same scene with closely matching times (at least 60% overlap of the longer mark, so a short scene cannot be stretched into a long cut), or when two more viewers confirm it than reject it.
+* **Rejection.** Any skip stops being served once three more viewers reject it than confirm it.
+* **Trust.** Each device has an anonymous contributor record. Contributors with confirmed skips (score = confirmed − 3 × rejected ≥ 3) become trusted and their skips apply at once; five rejected skips (more than confirmed) block a contributor automatically. Nobody can vote on their own skip.
+* **Limits.** A single skip can be at most 4 minutes (15 for trusted contributors), with at most 10 unconfirmed skips per viewer per title. Bulk MCF imports need the admin token.
+* **Moderation page.** Set `ADMIN_TOKEN` and open `/admin` to approve, reject, or reject and block.
 * **Series:** skips are stored per episode (`tt0944947:1:2`), because timings differ between episodes.
 * **Abuse limits:** contributions and votes are rate-limited per IP (`CONTRIBUTE_LIMIT_PER_HOUR`, `VOTE_LIMIT_PER_HOUR`). Set `TRUST_PROXY=1` behind a reverse proxy so the limits see real client addresses.
 
@@ -182,6 +187,7 @@ This runs with JSON file storage (no database required).
 | `CLEANSTREAM_DATA_DIR` | Folder for JSON storage | `data/filters` |
 | `TRUST_PROXY` | Express `trust proxy` setting, e.g. `1` behind one proxy | (off) |
 | `CLEANSTREAM_VOTE_SALT` | Secret salt for anonymous voter ids (set a long random value) | random at each start |
+| `ADMIN_TOKEN` | Password for the moderation page `/admin` (16+ characters) | (admin off) |
 | `CONTRIBUTE_LIMIT_PER_HOUR` | Contributions per IP per hour | `60` |
 | `VOTE_LIMIT_PER_HOUR` | Votes per IP per hour | `300` |
 | `TMDB_API_KEY` | Your own free TMDB key (posters, digital release tags, Discover rows) | (none: those features are off) |

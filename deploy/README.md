@@ -73,8 +73,8 @@ openssl rand -hex 32   # run twice: one value for POSTGRES_PASSWORD, one for CLE
 nano .env
 ```
 
-Set `DOMAIN` (without `https://`), your `TMDB_API_KEY`, `POSTGRES_PASSWORD` and
-`CLEANSTREAM_VOTE_SALT`. Save with Ctrl+O, Enter, Ctrl+X. The `.env` file stays on the
+Set `DOMAIN` (without `https://`), your `TMDB_API_KEY`, `POSTGRES_PASSWORD`,
+`CLEANSTREAM_VOTE_SALT` and `ADMIN_TOKEN` (password for the moderation page `/admin`). Save with Ctrl+O, Enter, Ctrl+X. The `.env` file stays on the
 server only; it is never uploaded to GitHub.
 
 ## 7. Start it
