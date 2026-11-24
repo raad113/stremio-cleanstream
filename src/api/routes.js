@@ -273,6 +273,9 @@ async function sendSkipJSON(req, res) {
     if (req.query.pending === '1') {
       body.pending = await generatePendingSkips(imdbId, config, { requesterHash });
     }
+    // Timing corrections viewers made for skips that have no fingerprint, per copy
+    body.corrections = ((await db.getImportState(`timing:${imdbId}`)) || [])
+      .map(({ refId, offsetMs }) => ({ refId, offsetMs }));
     res.json(body);
   } catch (error) {
     res.status(500).json({ error: 'Failed to generate skips' });
@@ -439,6 +442,40 @@ router.post('/contribute/:imdbId', contributeLimiter, express.json({ limit: '400
   } catch (err) {
     console.error('[API] Contribution failed:', err.message);
     res.status(500).json({ error: 'Failed to save segment' });
+  }
+});
+
+/**
+ * POST /api/timing/:imdbId  { offsetMs, ref }
+ * A viewer moved this title's skips by offsetMs on their copy (identified by
+ * its timing fingerprint) because they were early or late. Other viewers whose
+ * copy matches that fingerprint get the same correction for skips that have
+ * no fingerprint of their own. One correction is kept per copy; the latest wins.
+ */
+const MAX_TIMING_CORRECTION_MS = 5 * 60 * 1000;
+router.post('/timing/:imdbId', contributeLimiter, express.json({ limit: '400kb' }), async (req, res) => {
+  const offsetMs = Number(req.body && req.body.offsetMs);
+  if (!Number.isInteger(offsetMs) || Math.abs(offsetMs) > MAX_TIMING_CORRECTION_MS) {
+    return res.status(400).json({ error: 'offsetMs must be a whole number of milliseconds, at most 5 minutes' });
+  }
+  const timing = validateRef(req.body.ref);
+  if (!timing) return res.status(400).json({ error: 'A valid timing fingerprint (ref) is required' });
+  try {
+    const { imdbId } = req.params;
+    const contributor = await db.getContributor(visitorIdFor(req));
+    if (contributor && contributor.blocked) {
+      return res.status(403).json({ error: 'Contributions from this device have been disabled' });
+    }
+    await db.saveTimingRef(timing.refId, timing.ref);
+    const key = `timing:${imdbId}`;
+    const list = ((await db.getImportState(key)) || []).filter(c => c.refId !== timing.refId);
+    if (offsetMs !== 0) list.unshift({ refId: timing.refId, offsetMs, updatedAt: new Date().toISOString() });
+    await db.setImportState(key, list.slice(0, 20));
+    await cache.invalidateTitle?.(imdbId);
+    res.json({ message: 'Timing correction saved', refId: timing.refId, offsetMs });
+  } catch (err) {
+    console.error('[API] Timing correction failed:', err.message);
+    res.status(500).json({ error: 'Failed to save timing correction' });
   }
 });
 
