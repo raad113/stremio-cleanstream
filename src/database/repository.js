@@ -152,6 +152,7 @@ async function addSegment(imdbId, segmentData) {
     },
   });
   
+  await touchTitle(imdbId);
   return {
     id: segment.id,
     startMs: segment.startMs,
@@ -280,6 +281,18 @@ async function voteSegment(imdbId, segmentId, voteType, visitorId) {
 }
 
 /**
+ * Mark a title as just changed, so "Recently added" rows show titles whose
+ * skips were just added, confirmed or corrected first.
+ */
+async function touchTitle(imdbId) {
+  try {
+    await getClient().title.updateMany({ where: { imdbId }, data: { updatedAt: new Date() } });
+  } catch (err) {
+    console.warn('[DB] Could not touch title:', err.message);
+  }
+}
+
+/**
  * Change a segment's status ("pending", "approved" or "rejected").
  */
 async function setSegmentStatus(imdbId, segmentId, status) {
@@ -289,6 +302,7 @@ async function setSegmentStatus(imdbId, segmentId, status) {
     where: { id: segmentId, title: { imdbId } },
     data: { status },
   });
+  if (result.count > 0) await touchTitle(imdbId);
   return result.count > 0;
 }
 
@@ -299,6 +313,7 @@ async function setSegmentCategory(imdbId, segmentId, category) {
     where: { id: segmentId, title: { imdbId } },
     data: { category, subcategory: category },
   });
+  if (result.count > 0) await touchTitle(imdbId);
   return result.count > 0;
 }
 
