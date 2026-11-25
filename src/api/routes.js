@@ -105,6 +105,12 @@ function agreedCorrections(entries) {
   }
   const out = [];
   for (const [refId, list] of byRef) {
+    // A trusted editor's correction is used straight away (the newest one wins)
+    const fromEditor = list.find(o => o.editor);
+    if (fromEditor) {
+      out.push({ refId, offsetMs: fromEditor.offsetMs });
+      continue;
+    }
     let best = [];
     for (const e of list) {
       const group = list.filter(o => Math.abs(o.offsetMs - e.offsetMs) <= 1500);
@@ -148,6 +154,36 @@ function requireAdmin(req, res, next) {
     crypto.timingSafeEqual(Buffer.from(given), Buffer.from(token));
   if (!ok) return res.status(401).json({ error: 'Admin token required' });
   next();
+}
+
+/* ------------------------------------------------------------------ */
+/* Trusted editors                                                     */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Editors are people the owner trusts with skips and timing. Each has a
+ * personal key, created on the /admin page and entered in the app
+ * (Settings > Nuvio Clean > Editor key); the app sends it as the
+ * X-CleanStream-Editor header. Only a hash of each key is stored.
+ * An editor's marks apply for everyone straight away, their confirmations and
+ * "wrong skip" reports decide a skip at once, and their timing corrections
+ * and fingerprints are used without waiting for a second viewer.
+ */
+const EDITORS_KEY = 'editors';
+const hashKey = key => crypto.createHash('sha256').update(`editor|${key}`).digest('hex');
+
+async function listEditors() {
+  return (await db.getImportState(EDITORS_KEY)) || [];
+}
+
+/** The editor whose key came with this request, or null. */
+async function editorFor(req) {
+  const key = String(req.get('x-cleanstream-editor') || '').trim();
+  if (key.length < 20) return null;
+  const hash = hashKey(key);
+  const editors = await listEditors();
+  return editors.find(e => e.keyHash.length === hash.length &&
+    crypto.timingSafeEqual(Buffer.from(e.keyHash), Buffer.from(hash))) || null;
 }
 
 /**
@@ -477,12 +513,21 @@ router.post('/contribute/:imdbId', contributeLimiter, express.json({ limit: '400
       durationMs: timing && timing.ref.durationMs ? timing.ref.durationMs : null,
     };
 
-    const limitError = trust.checkLimits(candidate, contributor, existing);
+    // A trusted editor counts as a trusted contributor whatever this connection's record says
+    const editor = await editorFor(req);
+    const asContributor = editor ? { approved: trust.RULES.TRUSTED_SCORE, rejected: 0, blocked: false } : contributor;
+
+    const limitError = trust.checkLimits(candidate, asContributor, existing);
     if (limitError) {
-      return res.status(contributor && contributor.blocked ? 403 : 400).json({ error: limitError });
+      return res.status(asContributor && asContributor.blocked ? 403 : 400).json({ error: limitError });
     }
 
-    const { status, corroborates } = trust.decideNewStatus(candidate, contributor, existing);
+    const decision = trust.decideNewStatus(candidate, asContributor, existing);
+    const status = editor ? 'approved' : decision.status;
+    const corroborates = editor
+      ? existing.filter(s => trust.statusOf(s) === 'pending' && trust.overlapShare(s, candidate) >= trust.RULES.CORROBORATE_OVERLAP)
+      : decision.corroborates;
+    if (editor) candidate.contributor = `editor:${editor.name}`.slice(0, 40);
     if (timing) await db.saveTimingRef(timing.refId, timing.ref);
     const saved = await db.addSegment(imdbId, { ...candidate, status });
 
@@ -534,7 +579,14 @@ router.post('/timing/:imdbId', contributeLimiter, express.json({ limit: '400kb' 
     const key = `timing:${imdbId}`;
     const list = ((await db.getImportState(key)) || [])
       .filter(c => c.device && !(c.refId === timing.refId && c.device === device));
-    if (offsetMs !== 0) list.unshift({ refId: timing.refId, offsetMs, device, updatedAt: new Date().toISOString() });
+    const editor = await editorFor(req);
+    if (editor) {
+      // An editor's correction replaces everyone else's for this copy
+      for (let i = list.length - 1; i >= 0; i--) if (list[i].refId === timing.refId) list.splice(i, 1);
+    }
+    if (offsetMs !== 0) {
+      list.unshift({ refId: timing.refId, offsetMs, device, editor: editor ? editor.id : undefined, updatedAt: new Date().toISOString() });
+    }
     await db.setImportState(key, list.slice(0, 200));
     await cache.invalidateTitle?.(imdbId);
     res.json({ message: 'Timing correction saved', refId: timing.refId, offsetMs });
@@ -603,8 +655,26 @@ router.post('/vote/:imdbId/:segmentId', voteLimiter, express.json({ limit: '400k
     if (!target) {
       return res.status(404).json({ error: 'Segment not found' });
     }
-    if (target.contributorHash && target.contributorHash === visitorId) {
+    const editor = await editorFor(req);
+    if (!editor && target.contributorHash && target.contributorHash === visitorId) {
       return res.status(403).json({ error: 'You cannot vote on your own skip' });
+    }
+
+    // A trusted editor's confirmation or report decides the skip straight away
+    if (editor) {
+      const current = trust.statusOf(target);
+      const decided = vote === 'up' ? 'approved' : (current === 'approved' ? 'pending' : 'rejected');
+      await decideSegment(imdbId, target, decided);
+      await db.resetVotes(imdbId, segmentId);
+      if (vote === 'up' && !target.refId) {
+        const timing = validateRef(req.body.ref);
+        if (timing) {
+          await db.saveTimingRef(timing.refId, timing.ref);
+          await db.setSegmentRef(imdbId, segmentId, timing.refId, timing.ref.durationMs);
+        }
+      }
+      await cache.invalidateTitle?.(imdbId);
+      return res.json({ message: `Editor decision: ${decided}`, status: decided });
     }
 
     const result = await db.voteSegment(imdbId, segmentId, vote, visitorId);
@@ -717,6 +787,33 @@ router.post('/admin/segments/:imdbId/:segmentId', requireAdmin, express.json({ l
   }
   await cache.invalidateTitle?.(imdbId);
   res.json({ message: `Done: ${action}` });
+});
+
+/** GET /api/admin/editors: trusted editors (names only, never keys). */
+router.get('/admin/editors', requireAdmin, async (req, res) => {
+  const editors = await listEditors();
+  res.json({ editors: editors.map(({ id, name, createdAt }) => ({ id, name, createdAt })) });
+});
+
+/** POST /api/admin/editors { name }: create an editor; the key is shown only in this answer. */
+router.post('/admin/editors', requireAdmin, express.json({ limit: '1kb' }), async (req, res) => {
+  const name = String((req.body && req.body.name) || '').trim().slice(0, 40);
+  if (!name) return res.status(400).json({ error: 'Give the editor a name' });
+  const key = crypto.randomBytes(24).toString('base64url');
+  const editor = { id: crypto.randomBytes(6).toString('hex'), name, keyHash: hashKey(key), createdAt: new Date().toISOString() };
+  const editors = await listEditors();
+  editors.push(editor);
+  await db.setImportState(EDITORS_KEY, editors);
+  res.status(201).json({ id: editor.id, name, key });
+});
+
+/** DELETE /api/admin/editors/:id: the key stops working at once. */
+router.delete('/admin/editors/:id', requireAdmin, async (req, res) => {
+  const editors = await listEditors();
+  const left = editors.filter(e => e.id !== req.params.id);
+  if (left.length === editors.length) return res.status(404).json({ error: 'Editor not found' });
+  await db.setImportState(EDITORS_KEY, left);
+  res.json({ message: 'Editor removed' });
 });
 
 module.exports = router;

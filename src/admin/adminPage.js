@@ -40,6 +40,13 @@ const ADMIN_PAGE = `<!DOCTYPE html>
     <input id="token" type="password" autocomplete="off" placeholder="Admin token">
     <p><button id="go" class="ok">Show unconfirmed skips</button></p>
   </div>
+  <div id="editors" class="card" style="display:none">
+    <div class="row"><strong>Trusted editors</strong></div>
+    <p class="meta">Editors' marks apply for everyone at once, their confirmations and "wrong skip" reports decide a skip straight away, and their timing corrections are shared without waiting for a second viewer. Give each person their own key; they enter it in the app under Settings &gt; Nuvio Clean &gt; Editor key. Removing an editor stops their key at once.</p>
+    <div id="editorList"></div>
+    <p class="row"><input id="editorName" placeholder="Name, e.g. Raad" maxlength="40"> <button id="addEditor" class="ok">Create key</button></p>
+    <p id="newKey" class="meta"></p>
+  </div>
   <div id="list"></div>
 </main>
 <script>
@@ -87,6 +94,44 @@ const ADMIN_PAGE = `<!DOCTYPE html>
     }
   }
 
+  const editorsCard = document.getElementById('editors');
+  const editorList = document.getElementById('editorList');
+  const newKey = document.getElementById('newKey');
+
+  async function loadEditors() {
+    try {
+      const data = await api('/editors');
+      editorsCard.style.display = '';
+      editorList.innerHTML = data.editors.length
+        ? data.editors.map(ed => '<div class="row" data-editor="' + esc(ed.id) + '"><span>' + esc(ed.name) +
+            ' <span class="meta">since ' + esc(String(ed.createdAt).slice(0, 10)) + '</span></span>' +
+            '<button class="bad" data-remove="' + esc(ed.id) + '">Remove</button></div>').join('')
+        : '<p class="meta">No editors yet.</p>';
+    } catch (e) { /* shown with the skip list */ }
+  }
+
+  document.getElementById('addEditor').addEventListener('click', async () => {
+    const name = document.getElementById('editorName').value.trim();
+    if (!name) return;
+    const res = await fetch('/api/admin/editors', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name }),
+    });
+    const data = await res.json();
+    if (!res.ok) { newKey.textContent = data.error || 'Could not create the key'; return; }
+    newKey.innerHTML = 'Key for <strong>' + esc(data.name) + '</strong> (shown only now, copy it): <code style="user-select:all">' + esc(data.key) + '</code>';
+    document.getElementById('editorName').value = '';
+    loadEditors();
+  });
+
+  editorList.addEventListener('click', async e => {
+    const id = e.target.dataset && e.target.dataset.remove;
+    if (!id || !confirm('Remove this editor? Their key stops working at once.')) return;
+    await fetch('/api/admin/editors/' + encodeURIComponent(id), { method: 'DELETE', headers: { 'Authorization': 'Bearer ' + token } });
+    loadEditors();
+  });
+
   list.addEventListener('click', async e => {
     const action = e.target.dataset && e.target.dataset.action;
     if (!action) return;
@@ -102,8 +147,9 @@ const ADMIN_PAGE = `<!DOCTYPE html>
     token = tokenInput.value.trim();
     try { sessionStorage.setItem('cs-admin', token); } catch (e) {}
     load();
+    loadEditors();
   });
-  if (token) load();
+  if (token) { load(); loadEditors(); }
 </script>
 </body>
 </html>`;
