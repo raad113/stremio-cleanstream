@@ -844,7 +844,7 @@ const reportLimiter = rateLimit({ windowMs: 60 * 60 * 1000, max: 20 });
  * Only the newest MAX_REPORTS are kept.
  */
 router.post('/reports', reportLimiter, express.json({ limit: '64kb' }), async (req, res) => {
-  const kind = req.body && req.body.kind === 'crash' ? 'crash' : 'error';
+  const kind = ['crash', 'sync'].includes(req.body && req.body.kind) ? req.body.kind : 'error';
   const text = typeof (req.body && req.body.text) === 'string'
     ? req.body.text.slice(0, MAX_REPORT_CHARS).replace(/https?:\/\/[^\s"')]+/g, '[address removed]')
     : '';
