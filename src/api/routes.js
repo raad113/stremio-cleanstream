@@ -68,6 +68,20 @@ function visitorIdFor(req) {
 }
 
 /**
+ * Anonymous, stable id of the app that made the request: a hash of the random
+ * app ID the app sends (X-CleanStream-Device), so a contributor's record
+ * follows their TV when their internet address changes. Null when absent.
+ */
+function deviceIdFor(req) {
+  const id = String(req.get('x-cleanstream-device') || '').trim();
+  if (!/^[A-Za-z0-9_-]{16,64}$/.test(id)) return null;
+  return crypto.createHash('sha256').update(`${VOTE_SALT}|device|${id}`).digest('hex').slice(0, 32);
+}
+
+/** Whose record a contribution counts towards: the app when known, else the connection. */
+const contributorIdFor = req => deviceIdFor(req) || visitorIdFor(req);
+
+/**
  * Do two timing fingerprints describe the same copy with the same timing?
  * True when most subtitle lines of the shorter one start within 0.4 s of a
  * line in the other (no shift allowed). Used to require two independent
@@ -205,7 +219,7 @@ async function decideSegment(imdbId, segment, newStatus) {
 }
 
 /** Public copy of a segment: never reveal who contributed it. */
-const publicSegment = ({ contributorHash, voters, ...seg }) => seg;
+const publicSegment = ({ contributorHash, connectionHash, voters, ...seg }) => seg;
 
 /**
  * Reject malformed ids early (also protects the JSON file storage).
@@ -351,7 +365,7 @@ async function sendSkipJSON(req, res) {
   try {
     const { imdbId } = req.params;
     const config = parseConfig(req.query);
-    const requesterHash = visitorIdFor(req);
+    const requesterHash = contributorIdFor(req);
     const [skips, filterData] = await Promise.all([
       generateSkips(imdbId, config, { requesterHash }),
       db.getFilters(imdbId),
@@ -502,13 +516,24 @@ router.post('/contribute/:imdbId', contributeLimiter, express.json({ limit: '400
 
   try {
     const { imdbId } = req.params;
-    const contributorHash = visitorIdFor(req);
-    const [contributor, filterData] = await Promise.all([db.getContributor(contributorHash), db.getFilters(imdbId)]);
+    // The record follows the app; the connection is kept to stop self-confirmation
+    const contributorHash = contributorIdFor(req);
+    const connectionHash = visitorIdFor(req);
+    const [deviceRecord, connectionRecord, filterData] = await Promise.all([
+      db.getContributor(contributorHash),
+      contributorHash !== connectionHash ? db.getContributor(connectionHash) : null,
+      db.getFilters(imdbId),
+    ]);
+    // A block on the connection also applies to a fresh app ID from it
+    const contributor = connectionRecord && connectionRecord.blocked
+      ? { ...(deviceRecord || {}), blocked: true }
+      : deviceRecord;
     const existing = filterData ? filterData.segments : [];
     const timing = validateRef(req.body.ref);
     const candidate = {
       ...segment,
       contributorHash,
+      connectionHash,
       refId: timing ? timing.refId : null,
       durationMs: timing && timing.ref.durationMs ? timing.ref.durationMs : null,
     };
@@ -656,7 +681,10 @@ router.post('/vote/:imdbId/:segmentId', voteLimiter, express.json({ limit: '400k
       return res.status(404).json({ error: 'Segment not found' });
     }
     const editor = await editorFor(req);
-    if (!editor && target.contributorHash && target.contributorHash === visitorId) {
+    const deviceId = deviceIdFor(req);
+    const ownSkip = (target.contributorHash && (target.contributorHash === visitorId || target.contributorHash === deviceId)) ||
+      (target.connectionHash && target.connectionHash === visitorId);
+    if (!editor && ownSkip) {
       return res.status(403).json({ error: 'You cannot vote on your own skip' });
     }
 
@@ -781,9 +809,12 @@ router.post('/admin/segments/:imdbId/:segmentId', requireAdmin, express.json({ l
   await decideSegment(imdbId, segment, action === 'approve' ? 'approved' : 'rejected');
   // The admin's decision replaces the votes: old reports must not keep hiding an approved skip
   if (action === 'approve') await db.resetVotes(imdbId, segmentId);
-  if (action === 'block' && segment.contributorHash) {
-    const c = await db.getContributor(segment.contributorHash);
-    await db.saveContributor(segment.contributorHash, { approved: 0, rejected: 0, ...c, blocked: true });
+  if (action === 'block') {
+    // Block both the app and the connection it used
+    for (const hash of [segment.contributorHash, segment.connectionHash].filter(Boolean)) {
+      const c = await db.getContributor(hash);
+      await db.saveContributor(hash, { approved: 0, rejected: 0, ...c, blocked: true });
+    }
   }
   await cache.invalidateTitle?.(imdbId);
   res.json({ message: `Done: ${action}` });

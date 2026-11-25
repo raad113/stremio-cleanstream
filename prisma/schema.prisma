@@ -63,7 +63,8 @@ model Segment {
   // Contribution tracking
   contributor     String   @default("anonymous")
   contributorIp   String?
-  contributorHash String?  // anonymous salted hash of the contributing device
+  contributorHash String?  // anonymous salted hash of the contributing app (or connection)
+  connectionHash  String?  // anonymous salted hash of the connection it came from
 
   // Community trust: "pending" until confirmed, then "approved"; "rejected" is hidden
   status      String   @default("approved")

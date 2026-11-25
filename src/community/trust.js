@@ -98,6 +98,8 @@ function decideNewStatus(segment, contributor, existingSegments) {
     statusOf(s) !== 'rejected' &&
     groupOf(s.category) === groupOf(segment.category) &&
     (!s.contributorHash || s.contributorHash !== segment.contributorHash) &&
+    // ...and from another connection: a second device in the same home is not a second viewer
+    (!s.connectionHash || s.connectionHash !== segment.connectionHash) &&
     overlapShare(s, segment) >= RULES.CORROBORATE_OVERLAP);
 
   if (matches.length > 0) {
