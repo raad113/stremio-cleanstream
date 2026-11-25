@@ -378,6 +378,14 @@ async function sendSkipJSON(req, res) {
     }
     // Timing corrections viewers made for skips that have no fingerprint, per copy
     body.corrections = agreedCorrections(await db.getImportState(`timing:${imdbId}`));
+    // Dialogue anchors: imported strong-language entries quote the spoken line
+    // ("What the h*ll?"). Apps find these lines in a subtitle to work out the
+    // timing of skips that have no fingerprint, whatever the viewer's filters are.
+    body.anchors = (filterData ? filterData.segments : [])
+      .filter(seg => !seg.refId && seg.category === 'language' && trust.statusOf(seg) !== 'rejected' &&
+        typeof seg.comment === 'string' && (seg.comment.match(/[a-z]/gi) || []).length >= 4)
+      .slice(0, 400)
+      .map(seg => ({ t: seg.startMs, text: seg.comment.slice(0, 120) }));
     res.json(body);
   } catch (error) {
     res.status(500).json({ error: 'Failed to generate skips' });
