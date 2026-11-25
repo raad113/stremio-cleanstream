@@ -820,6 +820,54 @@ router.post('/admin/segments/:imdbId/:segmentId', requireAdmin, express.json({ l
   res.json({ message: `Done: ${action}` });
 });
 
+/* ------------------------------------------------------------------ */
+/* Crash reports (sent by apps whose viewer turned this on)            */
+/* ------------------------------------------------------------------ */
+
+const REPORTS_KEY = 'crashReports';
+const MAX_REPORTS = 100;
+const MAX_REPORT_CHARS = 20000;
+const reportLimiter = rateLimit({ windowMs: 60 * 60 * 1000, max: 20 });
+
+/**
+ * POST /api/reports  { kind: "crash" | "error", text }
+ * A crash or error report from an app whose viewer chose to send them. The
+ * app removes web addresses first; the server also blanks any that remain.
+ * Only the newest MAX_REPORTS are kept.
+ */
+router.post('/reports', reportLimiter, express.json({ limit: '64kb' }), async (req, res) => {
+  const kind = req.body && req.body.kind === 'crash' ? 'crash' : 'error';
+  const text = typeof (req.body && req.body.text) === 'string'
+    ? req.body.text.slice(0, MAX_REPORT_CHARS).replace(/https?:\/\/[^\s"')]+/g, '[address removed]')
+    : '';
+  if (!text.trim()) return res.status(400).json({ error: 'Empty report' });
+  try {
+    const reports = (await db.getImportState(REPORTS_KEY)) || [];
+    reports.unshift({
+      id: crypto.randomBytes(6).toString('hex'),
+      kind,
+      receivedAt: new Date().toISOString(),
+      app: contributorIdFor(req).slice(0, 8), // anonymous, to see if reports come from one TV
+      text,
+    });
+    await db.setImportState(REPORTS_KEY, reports.slice(0, MAX_REPORTS));
+    res.status(201).json({ message: 'Thank you, report received' });
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to save report' });
+  }
+});
+
+/** GET /api/admin/reports: the received reports, newest first. */
+router.get('/admin/reports', requireAdmin, async (req, res) => {
+  res.json({ reports: (await db.getImportState(REPORTS_KEY)) || [] });
+});
+
+/** DELETE /api/admin/reports: clear all reports. */
+router.delete('/admin/reports', requireAdmin, async (req, res) => {
+  await db.setImportState(REPORTS_KEY, []);
+  res.json({ message: 'Reports cleared' });
+});
+
 /** GET /api/admin/editors: trusted editors (names only, never keys). */
 router.get('/admin/editors', requireAdmin, async (req, res) => {
   const editors = await listEditors();

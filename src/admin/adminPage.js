@@ -47,6 +47,11 @@ const ADMIN_PAGE = `<!DOCTYPE html>
     <p class="row"><input id="editorName" placeholder="Name, e.g. Raad" maxlength="40"> <button id="addEditor" class="ok">Create key</button></p>
     <p id="newKey" class="meta"></p>
   </div>
+  <div id="reports" class="card" style="display:none">
+    <div class="row"><strong>Crash reports</strong><button id="clearReports" class="bad">Clear all</button></div>
+    <p class="meta">Sent by apps whose viewer turned on "Send crash reports". Web addresses are removed before sending. Click a report to see it all; select its text to copy it.</p>
+    <div id="reportList"></div>
+  </div>
   <div id="list"></div>
 </main>
 <script>
@@ -132,6 +137,30 @@ const ADMIN_PAGE = `<!DOCTYPE html>
     loadEditors();
   });
 
+  const reportsCard = document.getElementById('reports');
+  const reportList = document.getElementById('reportList');
+
+  async function loadReports() {
+    try {
+      const data = await api('/reports');
+      reportsCard.style.display = '';
+      reportList.innerHTML = data.reports.length
+        ? data.reports.map(r => {
+            const firstLines = esc(r.text.split('\\n').slice(1, 3).join(' \u00b7 '));
+            return '<details class="card"><summary><strong>' + esc(r.kind) + '</strong> <span class="meta">' +
+              esc(String(r.receivedAt).replace('T', ' ').slice(0, 16)) + ' \u00b7 app ' + esc(r.app) + ' \u00b7 ' + firstLines +
+              '</span></summary><pre style="white-space:pre-wrap;font-size:.8rem;user-select:all">' + esc(r.text) + '</pre></details>';
+          }).join('')
+        : '<p class="meta">No reports yet.</p>';
+    } catch (e) { /* shown with the skip list */ }
+  }
+
+  document.getElementById('clearReports').addEventListener('click', async () => {
+    if (!confirm('Delete all crash reports?')) return;
+    await fetch('/api/admin/reports', { method: 'DELETE', headers: { 'Authorization': 'Bearer ' + token } });
+    loadReports();
+  });
+
   list.addEventListener('click', async e => {
     const action = e.target.dataset && e.target.dataset.action;
     if (!action) return;
@@ -148,8 +177,9 @@ const ADMIN_PAGE = `<!DOCTYPE html>
     try { sessionStorage.setItem('cs-admin', token); } catch (e) {}
     load();
     loadEditors();
+    loadReports();
   });
-  if (token) { load(); loadEditors(); }
+  if (token) { load(); loadEditors(); loadReports(); }
 </script>
 </body>
 </html>`;
