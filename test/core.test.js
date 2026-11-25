@@ -259,3 +259,27 @@ test('upcoming release: only titles that are not out yet get a date', () => {
   assert.deepStrictEqual(movieUpcomingFromReleases([R(3, '2026-11-01')], now), { kind: 'cinema', date: null });
   assert.strictEqual(movieUpcomingFromReleases([R(3, '2020-01-01'), R(4, '2020-03-01')], now), null);
 });
+
+test('timing corrections are shared only when two connections agree', () => {
+  const { agreedCorrections } = require('../src/api/routes');
+  assert.deepStrictEqual(agreedCorrections([{ refId: 'a', offsetMs: -6000, device: 'x' }]), []);
+  assert.deepStrictEqual(agreedCorrections([
+    { refId: 'a', offsetMs: -6000, device: 'x' },
+    { refId: 'a', offsetMs: -5500, device: 'y' },
+    { refId: 'a', offsetMs: 290000, device: 'z' },
+  ]), [{ refId: 'a', offsetMs: -5500 }]);
+  // The same connection twice does not count as agreement
+  assert.deepStrictEqual(agreedCorrections([
+    { refId: 'a', offsetMs: 5000, device: 'x' },
+    { refId: 'a', offsetMs: 5000, device: 'x' },
+  ]), []);
+});
+
+test('fingerprints agree only for the same timing', () => {
+  const { refsAgree } = require('../src/api/routes');
+  const cues = Array.from({ length: 100 }, (_, i) => [i * 7000 + (i % 3) * 900, i * 7000 + 2000]);
+  const jittered = { cues: cues.map(([s, e], i) => [s + (i % 2 ? 150 : -150), e]) };
+  const shifted = { cues: cues.map(([s, e]) => [s + 3000, e + 3000]) };
+  assert.strictEqual(refsAgree({ cues }, jittered), true);
+  assert.strictEqual(refsAgree({ cues }, shifted), false);
+});

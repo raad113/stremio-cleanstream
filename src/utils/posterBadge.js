@@ -70,7 +70,20 @@ async function tmdbPosterUrl(imdbId) {
 /**
  * Download the original poster for a title, or null if no source works.
  */
+// Downloaded base posters, so new badge texts do not download the same poster again
+const baseCache = new Map();
+
 async function fetchBasePoster(imdbId) {
+  if (baseCache.has(imdbId)) return baseCache.get(imdbId);
+  const buf = await downloadBasePoster(imdbId);
+  if (buf) {
+    baseCache.set(imdbId, buf);
+    if (baseCache.size > CACHE_LIMIT) baseCache.delete(baseCache.keys().next().value);
+  }
+  return buf;
+}
+
+async function downloadBasePoster(imdbId) {
   const template = process.env.POSTER_SOURCE_TEMPLATE;
   if (template) {
     const buf = await fetchBuffer(template.replace('{imdbId}', imdbId));
@@ -154,8 +167,18 @@ function digitalTagSvg(text) {
  * @param {object} options - { detail: second badge line, title: fallback title,
  *   digitalTag: text for the corner tag (or null), band: false to leave out the CleanStream band }
  */
+/** Cache key for a finished poster; the title matters for the placeholder poster. */
+function posterKey(imdbId, { detail = 'Family-friendly skips', title, digitalTag = null, band = true } = {}) {
+  return `${imdbId}|${detail}|${title || ''}|${digitalTag || ''}|${band}`;
+}
+
+/** True when this exact poster is already rendered (no download or drawing needed). */
+function isPosterCached(imdbId, options) {
+  return cache.has(posterKey(imdbId, options));
+}
+
 async function getBadgedPoster(imdbId, { detail = 'Family-friendly skips', title, digitalTag = null, band = true } = {}) {
-  const key = `${imdbId}|${detail}|${digitalTag || ''}|${band}`;
+  const key = posterKey(imdbId, { detail, title, digitalTag, band });
   if (cache.has(key)) return cache.get(key);
 
   const base = await fetchBasePoster(imdbId);
@@ -184,4 +207,4 @@ async function getBadgedPoster(imdbId, { detail = 'Family-friendly skips', title
   return base ? remember(key, output) : output;
 }
 
-module.exports = { getBadgedPoster, badgeSvg, digitalTagSvg };
+module.exports = { getBadgedPoster, badgeSvg, digitalTagSvg, isPosterCached };

@@ -20,6 +20,10 @@ const { isDuplicate } = require('./cleanstreamServer');
 
 const BASE = 'https://videoskip.herokuapp.com';
 const STATE_KEY = 'videoskip.importedSkipIds';
+// Files that could not be matched to a title yet (e.g. no TMDB key, or TMDB does not
+// know the episode yet): tried again on later runs, at most MAX_MATCH_TRIES times
+const RETRY_KEY = 'videoskip.unmatchedTries';
+const MAX_MATCH_TRIES = 7;
 const MAX_SEGMENT_MS = 15 * 60 * 1000;
 const LISTS = ['recent-uploaded-movie-skips', 'recent-uploaded-episode-skips'];
 const MAX_LIST_PAGES = 60;
@@ -111,6 +115,7 @@ async function episodeContentId(episodeImdbId) {
 async function importFromVideoSkip({ dryRun = false, delayMs = 1500, maxPages = MAX_LIST_PAGES, log = console.log } = {}) {
   log(`Importing from the VideoSkip exchange${dryRun ? ' (dry run: nothing will be saved)' : ''}`);
   const imported = new Set((await db.getImportState(STATE_KEY)) || []);
+  const tries = (await db.getImportState(RETRY_KEY)) || {};
   const totals = { files: 0, newFiles: 0, segments: 0, imported: 0, duplicates: 0, unmatched: 0, failed: 0 };
 
   // 1. Collect skip file ids from the "recently uploaded" lists (newest first)
@@ -148,7 +153,16 @@ async function importFromVideoSkip({ dryRun = false, delayMs = 1500, maxPages = 
       const contentId = !imdbId ? null : isEpisode ? await episodeContentId(imdbId) : imdbId;
       if (!contentId) {
         totals.unmatched++;
-        if (!dryRun) imported.add(skipId);
+        if (!dryRun) {
+          // A page without an IMDb link will never match; an episode TMDB cannot map yet may later
+          tries[skipId] = (tries[skipId] || 0) + 1;
+          if (!imdbId || tries[skipId] >= MAX_MATCH_TRIES) {
+            imported.add(skipId);
+            delete tries[skipId];
+            await db.setImportState(STATE_KEY, [...imported]);
+          }
+          await db.setImportState(RETRY_KEY, tries);
+        }
         continue;
       }
 
@@ -177,6 +191,10 @@ async function importFromVideoSkip({ dryRun = false, delayMs = 1500, maxPages = 
       if (!dryRun) {
         imported.add(skipId);
         await db.setImportState(STATE_KEY, [...imported]);
+        if (tries[skipId]) {
+          delete tries[skipId];
+          await db.setImportState(RETRY_KEY, tries);
+        }
       }
     } catch (err) {
       totals.failed++;

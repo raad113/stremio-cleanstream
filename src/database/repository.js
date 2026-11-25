@@ -351,6 +351,39 @@ async function saveTimingRef(refId, ref) {
   await setImportState(`ref:${refId}`, ref);
 }
 
+/**
+ * Confirmed and unconfirmed skips across a show's episodes (tt123:1:2, ...),
+ * leaving out unconfirmed ones the community has voted down.
+ * @returns {{approved: number, pending: number}}
+ */
+async function countEpisodeSegments(showId) {
+  if (!isPostgresAvailable()) return jsonDb.countEpisodeSegments(showId);
+  const rows = await getClient().segment.findMany({
+    where: { title: { imdbId: { startsWith: `${showId}:` } } },
+    select: { status: true, upvotes: true, downvotes: true },
+  });
+  let approved = 0;
+  let pending = 0;
+  for (const r of rows) {
+    if (r.status === 'approved') approved++;
+    else if (r.status === 'pending' && r.downvotes - r.upvotes < 3) pending++;
+  }
+  return { approved, pending };
+}
+
+/** Clear a segment's votes (after the admin decides) so old reports no longer hide it. */
+async function resetVotes(imdbId, segmentId) {
+  if (!isPostgresAvailable()) return jsonDb.resetVotes(imdbId, segmentId);
+  const prisma = getClient();
+  const segment = await prisma.segment.findFirst({ where: { id: segmentId, title: { imdbId } }, select: { id: true } });
+  if (!segment) return false;
+  await prisma.$transaction([
+    prisma.vote.deleteMany({ where: { segmentId } }),
+    prisma.segment.update({ where: { id: segmentId }, data: { upvotes: 0, downvotes: 0, verified: true, verifiedAt: new Date(), verifiedBy: 'admin' } }),
+  ]);
+  return true;
+}
+
 async function getImportState(key) {
   if (!isPostgresAvailable()) return jsonDb.getImportState(key);
   const row = await getClient().importState.findUnique({ where: { key } });
@@ -459,9 +492,11 @@ async function listTitles(options = {}) {
       break;
   }
   
+  // Only confirmed skips count: a title whose skips are all unconfirmed or
+  // rejected would play unfiltered, so it must not be listed as clean
   const titles = await prisma.title.findMany({
     where: {
-      ...(hasSegments ? { segments: { some: {} } } : {}),
+      ...(hasSegments ? { segments: { some: { status: 'approved' } } } : {}),
       ...(type ? { type } : {}),
     },
     take: limit,
@@ -469,7 +504,7 @@ async function listTitles(options = {}) {
     orderBy: orderBy,
     include: {
       _count: {
-        select: { segments: true },
+        select: { segments: { where: { status: 'approved' } } },
       },
     },
   });
@@ -569,6 +604,8 @@ module.exports = {
   getFilters,
   addSegment,
   setSegmentRef,
+  countEpisodeSegments,
+  resetVotes,
   getTimingRef,
   saveTimingRef,
   updateTitleMetadata,

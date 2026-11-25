@@ -30,6 +30,8 @@ module.exports = {
   getStats: repository.getStats,
   setSegmentStatus: repository.setSegmentStatus,
   setSegmentRef: repository.setSegmentRef,
+  countEpisodeSegments: repository.countEpisodeSegments,
+  resetVotes: repository.resetVotes,
   getTimingRef: repository.getTimingRef,
   saveTimingRef: repository.saveTimingRef,
   listPending: repository.listPending,

@@ -58,12 +58,65 @@ if (!process.env.CLEANSTREAM_VOTE_SALT) {
 }
 
 function visitorIdFor(req) {
-  const salt = VOTE_SALT;
+  // Based on the connection only (not the device), so the same household cannot
+  // confirm its own marks or vote twice by using a second device or browser
   return crypto
     .createHash('sha256')
-    .update(`${salt}|${req.ip}|${req.get('user-agent') || ''}`)
+    .update(`${VOTE_SALT}|${req.ip}`)
     .digest('hex')
     .slice(0, 32);
+}
+
+/**
+ * Do two timing fingerprints describe the same copy with the same timing?
+ * True when most subtitle lines of the shorter one start within 0.4 s of a
+ * line in the other (no shift allowed). Used to require two independent
+ * viewers to agree before a fingerprint is attached to a skip.
+ */
+function refsAgree(a, b) {
+  const [small, large] = a.cues.length <= b.cues.length ? [a.cues, b.cues] : [b.cues, a.cues];
+  const starts = large.map(c => c[0]);
+  let matched = 0;
+  for (const [start] of small) {
+    let lo = 0;
+    let hi = starts.length - 1;
+    while (lo < hi) {
+      const mid = (lo + hi) >> 1;
+      if (starts[mid] < start) lo = mid + 1; else hi = mid;
+    }
+    const near = [starts[lo], starts[lo - 1]].filter(v => v !== undefined);
+    if (near.some(v => Math.abs(v - start) <= 400)) matched++;
+  }
+  return matched >= 0.8 * small.length;
+}
+
+/**
+ * Timing corrections that are safe to share: for each copy, only when at least
+ * two different connections sent nearly the same correction (within 1.5 s);
+ * the shared value is the middle one of that group. A single device's
+ * correction stays on that device until someone else confirms it.
+ */
+function agreedCorrections(entries) {
+  const byRef = new Map();
+  for (const e of entries || []) {
+    if (!e || !e.refId || !Number.isInteger(e.offsetMs)) continue;
+    if (!byRef.has(e.refId)) byRef.set(e.refId, []);
+    byRef.get(e.refId).push(e);
+  }
+  const out = [];
+  for (const [refId, list] of byRef) {
+    let best = [];
+    for (const e of list) {
+      const group = list.filter(o => Math.abs(o.offsetMs - e.offsetMs) <= 1500);
+      const devices = new Set(group.map(o => o.device));
+      if (devices.size >= 2 && group.length > best.length) best = group;
+    }
+    if (best.length) {
+      const sorted = best.map(o => o.offsetMs).sort((x, y) => x - y);
+      out.push({ refId, offsetMs: sorted[Math.floor(sorted.length / 2)] });
+    }
+  }
+  return out;
 }
 
 /**
@@ -274,8 +327,7 @@ async function sendSkipJSON(req, res) {
       body.pending = await generatePendingSkips(imdbId, config, { requesterHash });
     }
     // Timing corrections viewers made for skips that have no fingerprint, per copy
-    body.corrections = ((await db.getImportState(`timing:${imdbId}`)) || [])
-      .map(({ refId, offsetMs }) => ({ refId, offsetMs }));
+    body.corrections = agreedCorrections(await db.getImportState(`timing:${imdbId}`));
     res.json(body);
   } catch (error) {
     res.status(500).json({ error: 'Failed to generate skips' });
@@ -328,22 +380,22 @@ router.get('/badges', async (req, res) => {
           return [key, { clean: false, skips: 0, pending: 0, digital: null, upcoming }];
         }
       }
-      const [filters, digital, episodes, upcoming] = await Promise.all([
+      const [filters, digital, upcoming] = await Promise.all([
         db.getFilters(imdbId).catch(() => null),
         isShow ? null : getDigitalRelease(imdbId).catch(() => null),
-        // A show counts as clean when any of its episodes has skips
-        db.searchTitles(imdbId).catch(() => []),
         (isShow ? getShowUpcoming({ imdbId, tmdbId }) : getMovieUpcoming(imdbId)).catch(() => null),
       ]);
       let approved = filters ? filters.segments.filter(seg => trust.statusOf(seg) === 'approved').length : 0;
       // Unconfirmed skips (marked by one viewer, or imported) that nobody has voted down
-      const pending = filters
+      let pending = filters
         ? filters.segments.filter(seg => trust.statusOf(seg) === 'pending' && ((seg.votes?.down || 0) - (seg.votes?.up || 0)) < 3).length
         : 0;
-      if (approved === 0) {
-        approved = (episodes || [])
-          .filter(t => String(t.imdbId).startsWith(imdbId + ':'))
-          .reduce((sum, t) => sum + (t.segmentCount || 0), 0);
+      // Shows keep their skips per episode (tt123:1:2); also checked for ids the
+      // app did not mark as shows when nothing is stored under the id itself
+      if (isShow || !filters) {
+        const episodes = await db.countEpisodeSegments(imdbId).catch(() => ({ approved: 0, pending: 0 }));
+        approved += episodes.approved;
+        pending += episodes.pending;
       }
       return [key, {
         imdbId,
@@ -459,7 +511,8 @@ router.post('/contribute/:imdbId', contributeLimiter, express.json({ limit: '400
  * A viewer moved this title's skips by offsetMs on their copy (identified by
  * its timing fingerprint) because they were early or late. Other viewers whose
  * copy matches that fingerprint get the same correction for skips that have
- * no fingerprint of their own. One correction is kept per copy; the latest wins.
+ * no fingerprint of their own. Each connection has one correction per copy, and
+ * a correction is shared only when two connections agree (see agreedCorrections).
  */
 const MAX_TIMING_CORRECTION_MS = 5 * 60 * 1000;
 router.post('/timing/:imdbId', contributeLimiter, express.json({ limit: '400kb' }), async (req, res) => {
@@ -476,10 +529,13 @@ router.post('/timing/:imdbId', contributeLimiter, express.json({ limit: '400kb' 
       return res.status(403).json({ error: 'Contributions from this device have been disabled' });
     }
     await db.saveTimingRef(timing.refId, timing.ref);
+    // One entry per connection and copy; shared only once two connections agree
+    const device = visitorIdFor(req);
     const key = `timing:${imdbId}`;
-    const list = ((await db.getImportState(key)) || []).filter(c => c.refId !== timing.refId);
-    if (offsetMs !== 0) list.unshift({ refId: timing.refId, offsetMs, updatedAt: new Date().toISOString() });
-    await db.setImportState(key, list.slice(0, 20));
+    const list = ((await db.getImportState(key)) || [])
+      .filter(c => c.device && !(c.refId === timing.refId && c.device === device));
+    if (offsetMs !== 0) list.unshift({ refId: timing.refId, offsetMs, device, updatedAt: new Date().toISOString() });
+    await db.setImportState(key, list.slice(0, 200));
     await cache.invalidateTitle?.(imdbId);
     res.json({ message: 'Timing correction saved', refId: timing.refId, offsetMs });
   } catch (err) {
@@ -564,8 +620,23 @@ router.post('/vote/:imdbId/:segmentId', voteLimiter, express.json({ limit: '400k
     if (vote === 'up' && !target.refId) {
       const timing = validateRef(req.body.ref);
       if (timing) {
+        // Keep it as a candidate; attach once a second connection sends a fingerprint
+        // with the same timing, so one wrong or made-up fingerprint cannot stick
+        const key = `refcand:${imdbId}:${segmentId}`;
+        const candidates = ((await db.getImportState(key)) || []).filter(c => c.device !== visitorId);
+        let agreed = null;
+        for (const c of candidates) {
+          const other = await db.getTimingRef(c.refId);
+          if (other && refsAgree(other, timing.ref)) { agreed = { refId: c.refId, ref: other }; break; }
+        }
         await db.saveTimingRef(timing.refId, timing.ref);
-        await db.setSegmentRef(imdbId, segmentId, timing.refId, timing.ref.durationMs);
+        if (agreed) {
+          await db.setSegmentRef(imdbId, segmentId, agreed.refId, agreed.ref.durationMs);
+          await db.setImportState(key, []);
+        } else {
+          candidates.unshift({ refId: timing.refId, device: visitorId });
+          await db.setImportState(key, candidates.slice(0, 10));
+        }
       }
     }
 
@@ -638,6 +709,8 @@ router.post('/admin/segments/:imdbId/:segmentId', requireAdmin, express.json({ l
   if (!segment) return res.status(404).json({ error: 'Segment not found' });
 
   await decideSegment(imdbId, segment, action === 'approve' ? 'approved' : 'rejected');
+  // The admin's decision replaces the votes: old reports must not keep hiding an approved skip
+  if (action === 'approve') await db.resetVotes(imdbId, segmentId);
   if (action === 'block' && segment.contributorHash) {
     const c = await db.getContributor(segment.contributorHash);
     await db.saveContributor(segment.contributorHash, { approved: 0, rejected: 0, ...c, blocked: true });
@@ -649,3 +722,5 @@ router.post('/admin/segments/:imdbId/:segmentId', requireAdmin, express.json({ l
 module.exports = router;
 module.exports.parseConfig = parseConfig;
 module.exports.validateSegment = validateSegment;
+module.exports.refsAgree = refsAgree;
+module.exports.agreedCorrections = agreedCorrections;

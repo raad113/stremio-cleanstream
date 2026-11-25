@@ -100,12 +100,20 @@ app.get('/collection.json', (req, res) => {
  * Poster with a "CleanStream" badge, used by the CleanStream catalog rows.
  * ?d= second badge line (e.g. "12 skips"), ?t= title for the fallback poster.
  */
-const { getBadgedPoster } = require('./utils/posterBadge');
+const { getBadgedPoster, isPosterCached } = require('./utils/posterBadge');
 const { getDigitalRelease, digitalTagText } = require('./utils/digitalRelease');
+// Badge texts the catalogs produce; anything else gets the default text, so random
+// query strings cannot make the server draw endless new posters
+const POSTER_DETAIL = /^(\d{1,5} (skip|skips|episode ready|episodes ready)|Family-friendly skips)$/;
+const POSTER_RENDERS_PER_MINUTE = 120;
+const posterRenders = new Map();
+setInterval(() => posterRenders.clear(), 60 * 1000).unref();
+
 app.get('/poster/:imdbId.jpg', async (req, res) => {
   const { imdbId } = req.params;
   if (!/^tt\d{1,10}$/.test(imdbId)) return res.status(400).end();
-  const detail = String(req.query.d || 'Family-friendly skips').slice(0, 30);
+  const wanted = String(req.query.d || '');
+  const detail = POSTER_DETAIL.test(wanted) ? wanted : 'Family-friendly skips';
   const title = req.query.t ? String(req.query.t).slice(0, 80) : undefined;
   const band = req.query.band !== '0';
   try {
@@ -114,6 +122,12 @@ app.get('/poster/:imdbId.jpg', async (req, res) => {
     if (req.query.digital !== '0') {
       const info = await Promise.race([getDigitalRelease(imdbId), new Promise(r => setTimeout(() => r(null), 6000))]);
       digitalTag = digitalTagText(info);
+    }
+    // Drawing a new poster costs CPU: limit how many one address can ask for
+    if (!isPosterCached(imdbId, { detail, title, digitalTag, band })) {
+      const count = (posterRenders.get(req.ip) || 0) + 1;
+      posterRenders.set(req.ip, count);
+      if (count > POSTER_RENDERS_PER_MINUTE) return res.status(429).end();
     }
     const jpeg = await getBadgedPoster(imdbId, { detail, title, digitalTag, band });
     res.setHeader('Content-Type', 'image/jpeg');

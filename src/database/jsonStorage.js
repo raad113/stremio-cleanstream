@@ -224,26 +224,56 @@ function listAllFilters() {
   return [...loadIndex().keys()];
 }
 
+// Segments without a status are bundled data, which counts as confirmed
+const isApproved = s => (s.status || 'approved') === 'approved';
+const approvedCount = t => (t.segments || []).filter(isApproved).length;
+
 function summarize(t) {
   return {
     imdbId: t.imdbId,
     title: t.title,
     year: t.year,
     type: t.type,
-    segmentCount: (t.segments || []).length,
+    // Only confirmed skips count towards a title being "clean"
+    segmentCount: approvedCount(t),
     updatedAt: t.updatedAt,
   };
+}
+
+function countEpisodeSegments(showId) {
+  let approved = 0;
+  let pending = 0;
+  for (const [id, t] of loadIndex()) {
+    if (!id.startsWith(`${showId}:`)) continue;
+    for (const s of t.segments || []) {
+      const net = ((s.votes && s.votes.down) || 0) - ((s.votes && s.votes.up) || 0);
+      if (isApproved(s)) approved++;
+      else if (s.status === 'pending' && net < 3) pending++;
+    }
+  }
+  return { approved, pending };
+}
+
+function resetVotes(imdbId, segmentId) {
+  const filterData = getFilters(imdbId);
+  const segment = filterData && filterData.segments.find(s => s.id === segmentId);
+  if (!segment) return false;
+  segment.votes = { up: 0, down: 0 };
+  segment.voters = {};
+  segment.verified = true;
+  saveFilters(imdbId, filterData);
+  return true;
 }
 
 /**
  * List titles that have segments, with the same sort options as PostgreSQL.
  */
 function listTitles({ limit = 100, offset = 0, sortBy = 'recent', type } = {}) {
-  let titles = [...loadIndex().values()].filter(t => (t.segments || []).length > 0);
+  let titles = [...loadIndex().values()].filter(t => approvedCount(t) > 0);
   if (type) titles = titles.filter(t => (t.type || 'movie') === type);
 
   const sorters = {
-    popular: (a, b) => b.segments.length - a.segments.length,
+    popular: (a, b) => approvedCount(b) - approvedCount(a),
     year: (a, b) => (b.year || 0) - (a.year || 0),
     title: (a, b) => String(a.title || a.imdbId).localeCompare(String(b.title || b.imdbId)),
     recent: (a, b) => String(b.updatedAt || '').localeCompare(String(a.updatedAt || '')),
@@ -284,6 +314,8 @@ module.exports = {
   voteSegment,
   setSegmentStatus,
   setSegmentRef,
+  countEpisodeSegments,
+  resetVotes,
   listPending,
   getContributor,
   saveContributor,
