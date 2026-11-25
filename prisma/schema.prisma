@@ -67,7 +67,7 @@ model Segment {
   connectionHash  String?  // anonymous salted hash of the connection it came from
 
   // Community trust: "pending" until confirmed, then "approved"; "rejected" is hidden
-  status      String   @default("approved")
+  status      String   @default("pending")
 
   // Timing fingerprint (subtitle cue times) of the copy this skip was marked on,
   // stored in ImportState as "ref:<refId>", and that copy's length

@@ -146,7 +146,7 @@ async function addSegment(imdbId, segmentData) {
       contributor: segmentData.contributor || 'anonymous',
       contributorHash: segmentData.contributorHash || null,
       connectionHash: segmentData.connectionHash || null,
-      status: segmentData.status || 'approved',
+      status: segmentData.status || 'pending',
       refId: segmentData.refId || null,
       durationMs: Number.isInteger(segmentData.durationMs) ? segmentData.durationMs : null,
     },

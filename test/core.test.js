@@ -59,7 +59,8 @@ test('config can come from JSON or single query params', () => {
 
 test('JSON storage: add, vote once, change vote, and hide disputed', async () => {
   const id = 'tt0944947:1:2';
-  const seg = jsonDb.addSegment(id, { startMs: 1000, endMs: 4000, category: 'violence', severity: 'high', channel: 'both' });
+  // Unconfirmed by default; this test is about votes on a confirmed segment
+  const seg = jsonDb.addSegment(id, { startMs: 1000, endMs: 4000, category: 'violence', severity: 'high', channel: 'both', status: 'approved' });
   assert.ok(fs.existsSync(path.join(tmp, 'tt0944947_1_2.json')), 'episode file name is OS-safe');
 
   assert.deepStrictEqual(jsonDb.voteSegment(id, seg.id, 'down', 'v1'), { success: true, changed: false });
@@ -73,6 +74,16 @@ test('JSON storage: add, vote once, change vote, and hide disputed', async () =>
   for (const v of ['a', 'b', 'c', 'd']) jsonDb.voteSegment(id, seg.id, 'down', v);
   skips = await generateSkips(id, { violence: 'high' });
   assert.strictEqual(skips.length, 0, 'disputed segment is no longer served');
+});
+
+test('segments without a status are unconfirmed, and imported data does not confirm a mark', () => {
+  const trust = require('../src/community/trust');
+  assert.strictEqual(trust.statusOf({}), 'pending');
+  const imported = { startMs: 1000, endMs: 5000, category: 'sex', status: 'pending' };
+  const mark = { startMs: 1100, endMs: 5100, category: 'sex', contributorHash: 'a', connectionHash: 'x' };
+  assert.strictEqual(trust.decideNewStatus(mark, null, [imported]).status, 'pending');
+  const other = { ...imported, contributorHash: 'b', connectionHash: 'y' };
+  assert.strictEqual(trust.decideNewStatus(mark, null, [other]).status, 'approved');
 });
 
 test('bundled data is present', () => {

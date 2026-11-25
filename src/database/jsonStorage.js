@@ -98,7 +98,7 @@ function addSegment(imdbId, segment) {
     addedAt: new Date().toISOString(),
     votes: { up: 0, down: 0 },
     verified: false,
-    status: clean.status || 'approved',
+    status: clean.status || 'pending',
   };
 
   if (!filterData.title && titleName) filterData.title = titleName;
@@ -224,8 +224,8 @@ function listAllFilters() {
   return [...loadIndex().keys()];
 }
 
-// Segments without a status are bundled data, which counts as confirmed
-const isApproved = s => (s.status || 'approved') === 'approved';
+// Segments without a status (bundled data) are unconfirmed until someone confirms them
+const isApproved = s => (s.status || 'pending') === 'approved';
 const approvedCount = t => (t.segments || []).filter(isApproved).length;
 
 function summarize(t) {

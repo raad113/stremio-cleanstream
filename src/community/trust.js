@@ -56,9 +56,9 @@ function isTrusted(contributor) {
   return !!contributor && !contributor.blocked && trustScore(contributor) >= RULES.TRUSTED_SCORE;
 }
 
-/** Legacy and bundled segments have no status; treat them as approved. */
+/** Legacy and bundled segments have no status: unconfirmed until someone confirms them. */
 function statusOf(segment) {
-  return segment.status || 'approved';
+  return segment.status || 'pending';
 }
 
 function overlapShare(a, b) {
@@ -93,11 +93,12 @@ function checkLimits(segment, contributor, existingSegments) {
  * @returns {{status: 'approved'|'pending', corroborates: Array}} segments it confirms
  */
 function decideNewStatus(segment, contributor, existingSegments) {
-  // Marks of the same scene by OTHER viewers (bundled data counts as another source)
+  // Marks of the same scene by OTHER viewers
   const matches = existingSegments.filter(s =>
     statusOf(s) !== 'rejected' &&
     groupOf(s.category) === groupOf(segment.category) &&
-    (!s.contributorHash || s.contributorHash !== segment.contributorHash) &&
+    // Imported and bundled data has no contributor and does not count as a second viewer
+    !!s.contributorHash && s.contributorHash !== segment.contributorHash &&
     // ...and from another connection: a second device in the same home is not a second viewer
     (!s.connectionHash || s.connectionHash !== segment.connectionHash) &&
     overlapShare(s, segment) >= RULES.CORROBORATE_OVERLAP);
