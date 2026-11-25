@@ -292,6 +292,16 @@ async function setSegmentStatus(imdbId, segmentId, status) {
   return result.count > 0;
 }
 
+/** Change a segment's category (and subcategory), e.g. when the admin corrects it. */
+async function setSegmentCategory(imdbId, segmentId, category) {
+  if (!isPostgresAvailable()) return jsonDb.setSegmentCategory(imdbId, segmentId, category);
+  const result = await getClient().segment.updateMany({
+    where: { id: segmentId, title: { imdbId } },
+    data: { category, subcategory: category },
+  });
+  return result.count > 0;
+}
+
 /** Pending segments across all titles, newest first (for the admin page). */
 async function listPending({ limit = 100 } = {}) {
   if (!isPostgresAvailable()) return jsonDb.listPending({ limit });
@@ -595,6 +605,7 @@ async function bulkImportSegments(imdbId, segments, metadata = {}) {
 
 module.exports = {
   setSegmentStatus,
+  setSegmentCategory,
   listPending,
   getContributor,
   saveContributor,

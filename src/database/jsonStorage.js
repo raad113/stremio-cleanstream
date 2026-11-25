@@ -153,6 +153,18 @@ function setSegmentStatus(imdbId, segmentId, status) {
   return true;
 }
 
+/** Change a segment's category (and subcategory). */
+function setSegmentCategory(imdbId, segmentId, category) {
+  const filterData = getFilters(imdbId);
+  const segment = filterData && filterData.segments.find(s => s.id === segmentId);
+  if (!segment) return false;
+  segment.category = category;
+  segment.subcategory = category;
+  filterData.updatedAt = new Date().toISOString();
+  saveFilters(imdbId, filterData);
+  return true;
+}
+
 /** Attach a timing fingerprint to a segment that has none yet. */
 function setSegmentRef(imdbId, segmentId, refId, durationMs) {
   const filterData = getFilters(imdbId);
@@ -313,6 +325,7 @@ module.exports = {
   searchTitles,
   voteSegment,
   setSegmentStatus,
+  setSegmentCategory,
   setSegmentRef,
   countEpisodeSegments,
   resetVotes,

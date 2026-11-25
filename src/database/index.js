@@ -29,6 +29,7 @@ module.exports = {
   verifySegment: repository.verifySegment,
   getStats: repository.getStats,
   setSegmentStatus: repository.setSegmentStatus,
+  setSegmentCategory: repository.setSegmentCategory,
   setSegmentRef: repository.setSegmentRef,
   countEpisodeSegments: repository.countEpisodeSegments,
   resetVotes: repository.resetVotes,

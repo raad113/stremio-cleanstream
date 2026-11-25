@@ -27,6 +27,7 @@ const ADMIN_PAGE = `<!DOCTYPE html>
            border-radius:6px; padding:6px 12px; cursor:pointer; }
   button.ok { border-color:var(--ok); color:var(--ok); }
   button.bad { border-color:var(--bad); color:var(--bad); }
+  select { font:inherit; padding:5px; border-radius:6px; border:1px solid var(--line); background:#0e1222; color:var(--text); }
   input { font:inherit; padding:8px; border-radius:6px; border:1px solid var(--line); background:#0e1222; color:var(--text); width:100%; max-width:420px; }
   .empty { color:var(--muted); text-align:center; padding:30px 0; }
   a { color:#64ffda; }
@@ -46,6 +47,17 @@ const ADMIN_PAGE = `<!DOCTYPE html>
     <div id="editorList"></div>
     <p class="row"><input id="editorName" placeholder="Name, e.g. Raad" maxlength="40"> <button id="addEditor" class="ok">Create key</button></p>
     <p id="newKey" class="meta"></p>
+  </div>
+  <div id="decisions" class="card" style="display:none">
+    <div class="row"><strong>Recent decisions</strong><button id="reloadDecisions">Refresh</button></div>
+    <p class="meta">What editors and you decided, newest first. Changed your mind? Press Undo to put the scene back as it was, or open the film to change it.</p>
+    <div id="decisionList"></div>
+  </div>
+  <div id="finder" class="card" style="display:none">
+    <div class="row"><strong>Find a film</strong></div>
+    <p class="meta">Every scene of a film, whatever its state: confirm it, make it unconfirmed again, reject it, or change what kind of scene it is. Enter the IMDb id (tt1234567, or tt1234567:1:2 for an episode).</p>
+    <p class="row"><input id="findId" placeholder="tt0088763" maxlength="30"> <button id="findGo" class="ok">Show scenes</button></p>
+    <div id="titleView"></div>
   </div>
   <div id="reports" class="card" style="display:none">
     <div class="row"><strong>Crash reports</strong><button id="clearReports" class="bad">Clear all</button></div>
@@ -137,6 +149,88 @@ const ADMIN_PAGE = `<!DOCTYPE html>
     loadEditors();
   });
 
+  const CATEGORIES = ['sex', 'nudity', 'violence', 'language', 'drugs', 'fear', 'discrimination', 'dispensable', 'commercial'];
+  const STATE = { approved: 'confirmed', pending: 'unconfirmed', rejected: 'rejected', 'new': 'new' };
+  const stateText = s => String(s).startsWith('category:') ? String(s).slice(9) : (STATE[s] || s);
+  const decisionsCard = document.getElementById('decisions');
+  const decisionList = document.getElementById('decisionList');
+
+  async function loadDecisions() {
+    try {
+      const data = await api('/decisions');
+      decisionsCard.style.display = '';
+      decisionList.innerHTML = data.decisions.length
+        ? data.decisions.slice(0, 60).map((d, i) => {
+            const isCategory = String(d.to).startsWith('category:');
+            const canUndo = d.from !== 'new' || d.to !== 'rejected';
+            return '<div class="row" style="border-top:1px solid var(--line);padding:6px 0" data-i="' + i + '">' +
+              '<span><strong>' + esc(d.title || d.imdbId) + '</strong> ' + fmt(d.startMs) + '–' + fmt(d.endMs) + ' · ' + esc(d.category) +
+              '<br><span class="meta">' + esc(String(d.at).replace('T', ' ').slice(0, 16)) + ' · ' + esc(d.by) + ': ' +
+              esc(stateText(d.from)) + ' → ' + esc(stateText(d.to)) + '</span></span>' +
+              '<span><button data-open="' + esc(d.imdbId) + '">Open film</button> ' +
+              (canUndo ? '<button class="bad" data-undo="' + i + '">Undo</button>' : '') + '</span></div>';
+          }).join('')
+        : '<p class="meta">No decisions yet.</p>';
+      decisionList._items = data.decisions;
+    } catch (e) { /* shown with the skip list */ }
+  }
+
+  async function segmentAction(imdbId, segmentId, body) {
+    return api('/segments/' + encodeURIComponent(imdbId) + '/' + encodeURIComponent(segmentId), { method: 'POST', body: JSON.stringify(body) });
+  }
+
+  decisionList.addEventListener('click', async e => {
+    const open = e.target.dataset && e.target.dataset.open;
+    if (open) { document.getElementById('findId').value = open; showTitle(open); return; }
+    const i = e.target.dataset && e.target.dataset.undo;
+    if (i == null) return;
+    const d = decisionList._items[Number(i)];
+    let body;
+    if (String(d.from).startsWith('category:')) body = { action: 'category', category: String(d.from).slice(9) };
+    else if (d.from === 'new') body = { action: 'reject' };
+    else body = { action: d.from === 'approved' ? 'approve' : d.from === 'pending' ? 'unconfirm' : 'reject' };
+    if (!confirm('Undo: put this scene back to "' + stateText(d.from === 'new' ? 'rejected' : d.from) + '"?')) return;
+    await segmentAction(d.imdbId, d.segmentId, body);
+    loadDecisions();
+  });
+
+  const titleView = document.getElementById('titleView');
+  async function showTitle(imdbId) {
+    imdbId = String(imdbId || '').trim();
+    if (!imdbId) return;
+    titleView.innerHTML = '<p class="meta">Loading…</p>';
+    try {
+      const data = await api('/titles/' + encodeURIComponent(imdbId));
+      if (data.error) { titleView.innerHTML = '<p class="meta">' + esc(data.error) + '</p>'; return; }
+      titleView.innerHTML = '<p><strong>' + esc(data.title || imdbId) + '</strong> <span class="meta">' + data.segments.length + ' scenes</span></p>' +
+        data.segments.map(s => '<div class="row" style="border-top:1px solid var(--line);padding:6px 0" data-seg="' + esc(imdbId) + '|' + esc(s.id) + '">' +
+          '<span>' + fmt(s.startMs) + '–' + fmt(s.endMs) + ' · <strong>' + esc(stateText(s.status)) + '</strong>' +
+          (s.comment ? ' · “' + esc(String(s.comment).slice(0, 60)) + '”' : '') + '</span>' +
+          '<span><select data-cat>' + CATEGORIES.map(c => '<option' + (c === s.category ? ' selected' : '') + '>' + c + '</option>').join('') + '</select> ' +
+          '<button class="ok" data-act="approve">Confirm</button> ' +
+          '<button data-act="unconfirm">Unconfirm</button> ' +
+          '<button class="bad" data-act="reject">Reject</button></span></div>').join('');
+    } catch (e) {
+      titleView.innerHTML = '<p class="meta">' + esc(e.message) + '</p>';
+    }
+  }
+  document.getElementById('findGo').addEventListener('click', () => showTitle(document.getElementById('findId').value));
+  document.getElementById('reloadDecisions').addEventListener('click', loadDecisions);
+  titleView.addEventListener('click', async e => {
+    const act = e.target.dataset && e.target.dataset.act;
+    if (!act) return;
+    const [imdbId, segmentId] = e.target.closest('[data-seg]').dataset.seg.split('|');
+    await segmentAction(imdbId, segmentId, { action: act });
+    showTitle(imdbId);
+    loadDecisions();
+  });
+  titleView.addEventListener('change', async e => {
+    if (!e.target.matches('[data-cat]')) return;
+    const [imdbId, segmentId] = e.target.closest('[data-seg]').dataset.seg.split('|');
+    await segmentAction(imdbId, segmentId, { action: 'category', category: e.target.value });
+    loadDecisions();
+  });
+
   const reportsCard = document.getElementById('reports');
   const reportList = document.getElementById('reportList');
 
@@ -177,9 +271,11 @@ const ADMIN_PAGE = `<!DOCTYPE html>
     try { sessionStorage.setItem('cs-admin', token); } catch (e) {}
     load();
     loadEditors();
+    loadDecisions();
+    document.getElementById('finder').style.display = '';
     loadReports();
   });
-  if (token) { load(); loadEditors(); loadReports(); }
+  if (token) { load(); loadEditors(); loadDecisions(); document.getElementById('finder').style.display = ''; loadReports(); }
 </script>
 </body>
 </html>`;

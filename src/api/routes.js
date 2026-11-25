@@ -218,6 +218,27 @@ async function decideSegment(imdbId, segment, newStatus) {
   await creditContributor(segment.contributorHash, newStatus);
 }
 
+/*
+ * Log of decisions by editors and the admin, so the owner can see and undo
+ * them on the admin page (the newest DECISIONS_MAX are kept).
+ */
+const DECISIONS_KEY = 'decisions';
+const DECISIONS_MAX = 300;
+async function logDecision(imdbId, segment, from, to, by) {
+  try {
+    const title = (await db.getFilters(imdbId))?.title || null;
+    const log = (await db.getImportState(DECISIONS_KEY)) || [];
+    log.unshift({
+      at: new Date().toISOString(), imdbId, title, segmentId: segment.id,
+      startMs: segment.startMs, endMs: segment.endMs, category: segment.category,
+      from, to, by,
+    });
+    await db.setImportState(DECISIONS_KEY, log.slice(0, DECISIONS_MAX));
+  } catch (err) {
+    console.warn('[API] Could not log decision:', err.message);
+  }
+}
+
 /** Public copy of a segment: never reveal who contributed it. */
 const publicSegment = ({ contributorHash, connectionHash, voters, ...seg }) => seg;
 
@@ -563,6 +584,7 @@ router.post('/contribute/:imdbId', contributeLimiter, express.json({ limit: '400
     if (editor) candidate.contributor = `editor:${editor.name}`.slice(0, 40);
     if (timing) await db.saveTimingRef(timing.refId, timing.ref);
     const saved = await db.addSegment(imdbId, { ...candidate, status });
+    if (editor && saved) await logDecision(imdbId, { ...candidate, id: saved.id }, 'new', status, `editor:${editor.name}`);
 
     // A matching mark from another viewer confirms both
     for (const other of corroborates) {
@@ -701,6 +723,7 @@ router.post('/vote/:imdbId/:segmentId', voteLimiter, express.json({ limit: '400k
       const current = trust.statusOf(target);
       const decided = vote === 'up' ? 'approved' : (current === 'approved' ? 'pending' : 'rejected');
       await decideSegment(imdbId, target, decided);
+      await logDecision(imdbId, target, current, decided, `editor:${editor.name}`);
       await db.resetVotes(imdbId, segmentId);
       if (vote === 'up' && !target.refId) {
         const timing = validateRef(req.body.ref);
@@ -803,20 +826,35 @@ router.get('/admin/pending', requireAdmin, async (req, res) => {
   res.json({ count: withStanding.length, items: withStanding });
 });
 
-/** POST /api/admin/segments/:imdbId/:segmentId  body: { action: "approve" | "reject" | "block" } */
+/**
+ * POST /api/admin/segments/:imdbId/:segmentId
+ * body: { action: "approve" | "unconfirm" | "reject" | "block" | "category", category? }
+ */
 router.post('/admin/segments/:imdbId/:segmentId', requireAdmin, express.json({ limit: '1kb' }), async (req, res) => {
   const { imdbId, segmentId } = req.params;
-  const { action } = req.body || {};
-  if (!['approve', 'reject', 'block'].includes(action)) {
-    return res.status(400).json({ error: 'action must be approve, reject or block' });
+  const { action, category } = req.body || {};
+  if (!['approve', 'unconfirm', 'reject', 'block', 'category'].includes(action)) {
+    return res.status(400).json({ error: 'action must be approve, unconfirm, reject, block or category' });
   }
   const filterData = await db.getFilters(imdbId);
   const segment = filterData && filterData.segments.find(s => s.id === segmentId);
   if (!segment) return res.status(404).json({ error: 'Segment not found' });
 
-  await decideSegment(imdbId, segment, action === 'approve' ? 'approved' : 'rejected');
-  // The admin's decision replaces the votes: old reports must not keep hiding an approved skip
-  if (action === 'approve') await db.resetVotes(imdbId, segmentId);
+  // Correct what kind of scene it is (e.g. marked as kissing but it is violence)
+  if (action === 'category') {
+    if (!VALID_CATEGORIES.includes(category)) return res.status(400).json({ error: 'Unknown category' });
+    await db.setSegmentCategory(imdbId, segmentId, category);
+    await logDecision(imdbId, segment, `category:${segment.category}`, `category:${category}`, 'admin');
+    await cache.invalidateTitle?.(imdbId);
+    return res.json({ message: `Category changed to ${category}` });
+  }
+
+  const before = trust.statusOf(segment);
+  const newStatus = action === 'approve' ? 'approved' : action === 'unconfirm' ? 'pending' : 'rejected';
+  await decideSegment(imdbId, segment, newStatus);
+  await logDecision(imdbId, segment, before, newStatus, 'admin');
+  // The admin's decision replaces the votes: old reports must not keep hiding a skip
+  if (action === 'approve' || action === 'unconfirm') await db.resetVotes(imdbId, segmentId);
   if (action === 'block') {
     // Block both the app and the connection it used
     for (const hash of [segment.contributorHash, segment.connectionHash].filter(Boolean)) {
@@ -826,6 +864,24 @@ router.post('/admin/segments/:imdbId/:segmentId', requireAdmin, express.json({ l
   }
   await cache.invalidateTitle?.(imdbId);
   res.json({ message: `Done: ${action}` });
+});
+
+/** GET /api/admin/decisions: recent decisions by editors and the admin, newest first. */
+router.get('/admin/decisions', requireAdmin, async (req, res) => {
+  res.json({ decisions: (await db.getImportState(DECISIONS_KEY)) || [] });
+});
+
+/** GET /api/admin/titles/:imdbId: every skip of a title, whatever its status. */
+router.get('/admin/titles/:imdbId', requireAdmin, async (req, res) => {
+  const filterData = await db.getFilters(req.params.imdbId);
+  if (!filterData) return res.status(404).json({ error: 'No skips for this title' });
+  res.json({
+    imdbId: req.params.imdbId,
+    title: filterData.title || null,
+    segments: filterData.segments
+      .map(seg => ({ ...publicSegment(seg), status: trust.statusOf(seg) }))
+      .sort((a, b) => a.startMs - b.startMs),
+  });
 });
 
 /* ------------------------------------------------------------------ */
